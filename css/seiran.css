@@ -1,103 +1,119 @@
-```css
 /* =========================================================
-   ✦ SEIRAN ACADEMY — ONE MORE TOMORROW ✦
-   Pink + Sage Green / Creative Academy
-   This file is made specifically for seiran.html
+   ✿ SEIRAN ACADEMY — SAKURA ARTIST DESK
+   ONE MORE TOMORROW
 ========================================================= */
 
 
 /* =========================================================
-   SEIRAN COLOR PALETTE
+   ROOT
 ========================================================= */
 
 .seiran-page {
 
-    --seiran-pink: #d85f78;
-    --seiran-pink-dark: #a8445b;
-    --seiran-pink-soft: #f6dfe5;
-    --seiran-pink-pale: #fff3f5;
+    --sakura: #d86b78;
+    --sakura-dark: #a94c5b;
+    --sakura-soft: #f3cdd2;
 
-    --seiran-green: #789985;
-    --seiran-green-dark: #557461;
-    --seiran-green-soft: #dfece2;
-    --seiran-green-pale: #f1f7f2;
+    --cream: #fffaf0;
+    --paper: #fffdf7;
+    --paper-shadow: rgba(61, 39, 27, .20);
 
-    --seiran-cream: #faf3ec;
-    --seiran-paper: #fffdfa;
+    --ink: #403735;
+    --muted: #8b7c77;
 
-    --seiran-text: #40393a;
-    --seiran-muted: #887d7f;
+    --wood-1: #b8895f;
+    --wood-2: #9e704d;
+    --wood-3: #c99c70;
 
-    --seiran-border: #e5d9d4;
-
-    --seiran-shadow:
-        0 20px 50px rgba(83, 61, 61, .12);
-
-    --seiran-small-shadow:
-        0 10px 28px rgba(83, 61, 61, .10);
+    --line: #e5d5ca;
 
 }
 
 
 /* =========================================================
-   IMPORTANT:
-   OVERRIDE THE BROWN BODY FROM style.css
+   PAGE / DESK
 ========================================================= */
 
-body.seiran-page {
+.seiran-page {
 
     min-height: 100vh;
 
-    color: var(--seiran-text);
+    background:
 
-    background-color: #fff7f4 !important;
+        /* tiny wood grain */
 
-    background-image:
-
-        radial-gradient(
-            circle at 7% 10%,
-            rgba(246, 223, 229, .95) 0,
-            rgba(246, 223, 229, .55) 12%,
-            transparent 34%
+        repeating-linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 0px,
+            rgba(255,255,255,.035) 2px,
+            transparent 2px,
+            transparent 85px
         ),
 
-        radial-gradient(
-            circle at 94% 18%,
-            rgba(225, 237, 227, .95) 0,
-            rgba(225, 237, 227, .55) 13%,
-            transparent 35%
-        ),
-
-        radial-gradient(
-            circle at 4% 75%,
-            rgba(246, 223, 229, .65) 0,
-            transparent 32%
-        ),
-
-        radial-gradient(
-            circle at 96% 78%,
-            rgba(220, 235, 224, .75) 0,
-            transparent 34%
+        repeating-linear-gradient(
+            0deg,
+            rgba(70,40,20,.025) 0px,
+            rgba(70,40,20,.025) 1px,
+            transparent 1px,
+            transparent 110px
         ),
 
         linear-gradient(
-            135deg,
-            #fffaf7 0%,
-            #fff3f4 32%,
-            #faf1ed 58%,
-            #f0f6f1 100%
-        ) !important;
+            115deg,
+            var(--wood-1),
+            var(--wood-2) 48%,
+            var(--wood-3)
+        );
 
-    background-attachment: fixed !important;
+    color: var(--ink);
 
 }
 
 
 /* =========================================================
-   SOFT PAPER TEXTURE OVER WHOLE PAGE
+   SAKURA PETALS
 ========================================================= */
 
-body.seiran-page::before {
+.seiran-page::before {
+
+    content:
+        "✿    ❀          ✿       ❀"
+        "      ✿              ❀"
+        "  ❀         ✿"
+        "        ✿          ❀";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    color: rgba(255, 225, 225, .78);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 24px;
+
+    line-height: 5;
+
+    letter-spacing: 35px;
+
+    transform: rotate(-8deg);
+
+    opacity: .75;
+
+}
+
+
+/* =========================================================
+   EXTRA DESK SHADOW
+========================================================= */
+
+.seiran-page::after {
 
     content: "";
 
@@ -109,41 +125,13 @@ body.seiran-page::before {
 
     pointer-events: none;
 
-    opacity: .22;
+    background:
 
-    background-image:
-
-        repeating-linear-gradient(
-            0deg,
-            rgba(100, 80, 80, .025) 0,
-            rgba(100, 80, 80, .025) 1px,
-            transparent 1px,
-            transparent 6px
-        ),
-
-        repeating-linear-gradient(
-            90deg,
-            rgba(100, 80, 80, .018) 0,
-            rgba(100, 80, 80, .018) 1px,
-            transparent 1px,
-            transparent 8px
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(49, 29, 18, .18)
         );
-
-    pointer-events: none;
-
-}
-
-
-/* =========================================================
-   MAKE CONTENT SIT ABOVE BACKGROUND
-========================================================= */
-
-.seiran-page main,
-.seiran-page header,
-.seiran-page footer,
-.seiran-page .academy-floating {
-
-    position: relative;
 
 }
 
@@ -154,44 +142,62 @@ body.seiran-page::before {
 
 .seiran-page .site-header {
 
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
     background:
-        rgba(255, 253, 250, .92) !important;
+        rgba(255, 250, 240, .94);
 
     border-bottom:
-        1px solid rgba(216, 198, 198, .55) !important;
+        1px solid rgba(107, 73, 54, .16);
 
     box-shadow:
-        0 5px 20px rgba(100, 75, 75, .05);
+        0 4px 20px rgba(58, 38, 27, .10);
 
-    backdrop-filter: blur(14px);
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.seiran-page .header-inner {
+
+    max-width: 1250px;
 
 }
 
 
 .seiran-page .mini-logo {
 
-    color: var(--seiran-text);
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: var(--ink);
 
 }
 
 
 .seiran-page .mini-logo span {
 
-    color: var(--seiran-pink);
+    color: var(--sakura);
 
 }
 
 
 .seiran-page .nav-item {
 
-    color: var(--seiran-muted);
+    color: #82736e;
 
 }
 
 
 .seiran-page .nav-item span {
 
-    color: var(--seiran-green);
+    color: var(--sakura);
 
 }
 
@@ -199,23 +205,24 @@ body.seiran-page::before {
 .seiran-page .nav-item:hover,
 .seiran-page .nav-item.active {
 
-    color: var(--seiran-pink-dark);
-
     background:
-        var(--seiran-pink-soft);
+        var(--sakura-soft);
+
+    color:
+        var(--ink);
 
 }
 
 
 /* =========================================================
-   FLOATING DECORATIONS
+   FLOATING DESK DOODLES
 ========================================================= */
 
-.seiran-page .academy-floating {
+.academy-floating {
 
     position: fixed;
 
-    z-index: 50;
+    z-index: 10;
 
     pointer-events: none;
 
@@ -226,60 +233,53 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .academy-pencil {
+.academy-pencil {
 
-    left: 22px;
+    left: 25px;
 
-    top: 40%;
+    top: 35%;
 
-    color: var(--seiran-green);
+    color: #f5dcc2;
 
-    font-size: 40px;
+    font-size: 48px;
 
-    opacity: .55;
-
-    transform: rotate(-28deg);
-
-}
-
-
-.seiran-page .academy-star {
-
-    right: 25px;
-
-    top: 25%;
-
-    color: var(--seiran-pink);
-
-    font-size: 35px;
-
-    opacity: .45;
-
-    transform: rotate(12deg);
+    transform:
+        rotate(-30deg);
 
 }
 
 
-.seiran-page .academy-heart {
+.academy-star {
 
-    right: 25px;
+    right: 30px;
+
+    top: 24%;
+
+    color: #ffe7c0;
+
+    font-size: 36px;
+
+}
+
+
+.academy-heart {
+
+    right: 35px;
 
     bottom: 18%;
 
-    color: var(--seiran-pink);
+    color: #f6c9ce;
 
-    font-size: 52px;
-
-    opacity: .35;
+    font-size: 48px;
 
 }
 
 
 /* =========================================================
-   HERO
+   HERO — OPEN SKETCHBOOK
 ========================================================= */
 
-.seiran-page .academy-hero {
+.academy-hero {
 
     position: relative;
 
@@ -287,11 +287,11 @@ body.seiran-page::before {
 
     max-width: 1280px;
 
-    min-height: 760px;
+    min-height: 780px;
 
     margin: 0 auto;
 
-    padding: 110px 30px;
+    padding: 105px 30px 120px;
 
     display: flex;
 
@@ -302,40 +302,105 @@ body.seiran-page::before {
 }
 
 
+/* little desk shadow underneath */
+
+.academy-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 820px;
+
+    height: 100px;
+
+    bottom: 75px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(54, 31, 19, .22);
+
+    filter:
+        blur(30px);
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+}
+
+
 /* =========================================================
-   MAIN WHITE PAPER
+   MAIN PAPER
 ========================================================= */
 
-.seiran-page .academy-paper {
+.academy-paper {
 
     position: relative;
 
     z-index: 5;
 
-    width: min(900px, 92vw);
+    width: min(900px, 91vw);
 
-    min-height: 560px;
+    min-height: 610px;
 
-    padding: 78px 75px 58px;
+    padding: 78px 85px 65px;
 
-    background-color: var(--seiran-paper) !important;
+    background:
 
-    background-image:
+        /* notebook lines */
 
         repeating-linear-gradient(
             0deg,
-            transparent 0,
-            transparent 31px,
-            rgba(120, 153, 133, .07) 32px
-        ) !important;
+            transparent 0px,
+            transparent 34px,
+            rgba(214, 166, 174, .11) 35px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(246, 211, 211, .22) 0,
+            rgba(246, 211, 211, .22) 1px,
+            transparent 1px
+        ),
+
+        var(--paper);
 
     border:
-        1px solid var(--seiran-border) !important;
+        1px solid #eaded3;
 
     box-shadow:
-        0 28px 65px rgba(70, 50, 50, .17) !important;
+        0 28px 55px
+        var(--paper-shadow);
 
-    transform: rotate(.6deg);
+    transform:
+        rotate(-.8deg);
+
+}
+
+
+/* left notebook margin */
+
+.academy-paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 52px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        rgba(216, 107, 120, .14);
 
 }
 
@@ -344,24 +409,53 @@ body.seiran-page::before {
    TAPE
 ========================================================= */
 
-.seiran-page .paper-tape {
+.paper-tape {
 
     position: absolute;
 
-    top: -17px;
+    width: 155px;
+
+    height: 38px;
+
+    top: -18px;
 
     left: 50%;
-
-    width: 150px;
-
-    height: 34px;
 
     transform:
         translateX(-50%)
         rotate(-2deg);
 
     background:
-        rgba(232, 207, 167, .68);
+        rgba(232, 207, 161, .72);
+
+    box-shadow:
+        0 2px 4px rgba(70,40,20,.08);
+
+}
+
+
+/* =========================================================
+   PAPER HOLES
+========================================================= */
+
+.academy-paper::after {
+
+    content:
+        "•\A •\A •";
+
+    white-space: pre;
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 115px;
+
+    color: #d7cec5;
+
+    font-size: 21px;
+
+    line-height: 10.5;
 
 }
 
@@ -370,17 +464,22 @@ body.seiran-page::before {
    HERO NUMBER
 ========================================================= */
 
-.seiran-page .academy-number {
+.academy-number {
+
+    position: relative;
+
+    z-index: 2;
 
     margin-bottom: 24px;
 
-    color: var(--seiran-green);
+    color:
+        var(--sakura);
 
     font-size: 9px;
 
     font-weight: 700;
 
-    letter-spacing: .24em;
+    letter-spacing: .25em;
 
 }
 
@@ -389,7 +488,11 @@ body.seiran-page::before {
    HERO TITLE
 ========================================================= */
 
-.seiran-page .academy-heading {
+.academy-heading {
+
+    position: relative;
+
+    z-index: 2;
 
     display: flex;
 
@@ -397,51 +500,56 @@ body.seiran-page::before {
 
     justify-content: center;
 
-    gap: 20px;
+    gap: 18px;
 
 }
 
 
-.seiran-page .heading-heart {
+.heading-heart {
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 45px;
+    font-size: 43px;
+
+    transform:
+        rotate(-12deg);
 
 }
 
 
-.seiran-page .academy-heading h1 {
+.academy-heading h1 {
 
     margin: 0;
 
-    color: var(--seiran-text);
+    color: #3c3432;
 
     font-family:
         "Playfair Display",
         serif;
 
     font-size:
-        clamp(60px, 9vw, 105px);
+        clamp(60px, 8vw, 100px);
+
+    line-height: .88;
 
     font-weight: 600;
-
-    line-height: .86;
 
     text-align: center;
 
 }
 
 
-.seiran-page .academy-heading h1 em {
+.academy-heading h1 em {
 
     display: block;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
     font-weight: 600;
 
@@ -449,14 +557,15 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   MOTTO
+   HANDWRITTEN MOTTO
 ========================================================= */
 
-.seiran-page .academy-motto {
+.academy-motto {
 
-    margin-top: 30px;
+    margin-top: 28px;
 
-    color: var(--seiran-green-dark);
+    color:
+        #756865;
 
     font-family:
         "Patrick Hand",
@@ -469,47 +578,49 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .academy-motto span {
+.academy-motto span {
 
     margin: 0 8px;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
 }
 
 
 /* =========================================================
-   HERO DESCRIPTION
+   HERO TEXT
 ========================================================= */
 
-.seiran-page .academy-lead {
+.academy-lead {
 
     max-width: 610px;
 
-    margin: 32px auto 0;
+    margin: 30px auto 0;
 
-    color: #62595a;
+    color: #544a47;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 20px;
+    font-size: 19px;
 
-    line-height: 1.55;
+    line-height: 1.65;
 
     text-align: center;
 
 }
 
 
-.seiran-page .academy-description {
+.academy-description {
 
     max-width: 620px;
 
-    margin: 22px auto 0;
+    margin: 20px auto 0;
 
-    color: var(--seiran-muted);
+    color:
+        var(--muted);
 
     font-size: 13px;
 
@@ -521,38 +632,38 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   HERO DIVIDER
+   DIVIDER
 ========================================================= */
 
-.seiran-page .academy-divider {
+.academy-divider {
 
     width: 100%;
 
-    margin: 38px auto 25px;
+    margin: 35px auto 25px;
 
     border-top:
-        1px dashed var(--seiran-border);
+        1px dashed #decfc7;
 
 }
 
 
 /* =========================================================
-   HERO FACTS
+   FACTS
 ========================================================= */
 
-.seiran-page .academy-facts {
+.academy-facts {
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 20px;
 
 }
 
 
-.seiran-page .academy-facts div {
+.academy-facts div {
 
     display: flex;
 
@@ -565,22 +676,24 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .academy-facts span {
+.academy-facts span {
 
-    color: var(--seiran-green-dark);
+    color:
+        #a3938e;
 
     font-size: 8px;
 
     font-weight: 700;
 
-    letter-spacing: .16em;
+    letter-spacing: .17em;
 
 }
 
 
-.seiran-page .academy-facts strong {
+.academy-facts strong {
 
-    color: var(--seiran-text);
+    color:
+        #514744;
 
     font-size: 11px;
 
@@ -588,20 +701,20 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   HERO STAMP
+   LITTLE STAMP
 ========================================================= */
 
-.seiran-page .academy-stamp {
+.academy-stamp {
 
     position: absolute;
 
-    top: 42px;
+    right: 55px;
 
-    right: 40px;
+    top: 50px;
 
-    width: 88px;
+    width: 86px;
 
-    height: 88px;
+    height: 86px;
 
     display: flex;
 
@@ -610,12 +723,12 @@ body.seiran-page::before {
     justify-content: center;
 
     border:
-        2px solid rgba(120, 153, 133, .48);
+        2px dashed rgba(216,107,120,.5);
 
     border-radius: 50%;
 
     color:
-        rgba(85, 116, 97, .65);
+        rgba(169,76,91,.68);
 
     font-size: 7px;
 
@@ -623,53 +736,55 @@ body.seiran-page::before {
 
     line-height: 1.7;
 
-    letter-spacing: .1em;
+    letter-spacing: .12em;
 
     text-align: center;
 
-    transform: rotate(10deg);
+    transform:
+        rotate(10deg);
 
 }
 
 
 /* =========================================================
-   HERO POLAROID
+   POLAROID — CAMPUS PHOTO
 ========================================================= */
 
-.seiran-page .academy-polaroid {
+.academy-polaroid {
 
     position: absolute;
 
-    z-index: 10;
+    z-index: 12;
 
-    width: 205px;
+    width: 215px;
 
-    padding: 11px 11px 17px;
+    padding: 11px 11px 18px;
 
-    background: #ffffff !important;
-
-    border: 1px solid rgba(220, 210, 205, .55);
+    background: #fff;
 
     box-shadow:
-        0 14px 32px rgba(60, 45, 40, .15);
+        0 18px 32px rgba(52, 34, 24, .22);
 
 }
 
 
-.seiran-page .polaroid-campus {
+.polaroid-campus {
 
     left: 2%;
 
-    top: 115px;
+    top: 120px;
 
-    transform: rotate(-8deg);
+    transform:
+        rotate(-8deg);
 
 }
 
 
-.seiran-page .polaroid-image {
+.polaroid-image {
 
-    height: 175px;
+    position: relative;
+
+    height: 178px;
 
     display: flex;
 
@@ -679,38 +794,65 @@ body.seiran-page::before {
 
     overflow: hidden;
 
-    text-align: center;
-
     background:
+
         linear-gradient(
             135deg,
-            #f4dfe4,
-            #e2eee4
+            #f1d5d3,
+            #f4e7d9
         );
 
+}
+
+
+.polaroid-image::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
     color:
-        rgba(85, 116, 97, .55);
+        rgba(216,107,120,.5);
+
+    font-size: 30px;
+
+}
+
+
+.polaroid-image span {
+
+    color:
+        #9d8984;
 
     font-size: 8px;
 
     font-weight: 700;
 
+    line-height: 1.7;
+
     letter-spacing: .14em;
+
+    text-align: center;
 
 }
 
 
-.seiran-page .academy-polaroid p {
+.academy-polaroid p {
 
     margin: 10px 0 0;
 
-    color: var(--seiran-green-dark);
+    color:
+        #625754;
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 15px;
+    font-size: 16px;
 
     text-align: center;
 
@@ -718,34 +860,31 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   HERO PINK NOTE
+   YELLOW NOTE
 ========================================================= */
 
-.seiran-page .academy-note {
+.academy-note {
 
     position: absolute;
 
-    z-index: 11;
+    z-index: 13;
 
     right: 3%;
 
-    top: 105px;
+    top: 110px;
 
-    width: 165px;
+    width: 170px;
 
-    padding: 22px;
+    padding: 23px;
 
     background:
-        linear-gradient(
-            135deg,
-            #fff0b8,
-            #f7e6a8
-        ) !important;
+        #f7e9ad;
 
     box-shadow:
-        0 12px 27px rgba(60, 43, 30, .12);
+        0 15px 30px rgba(56, 38, 26, .16);
 
-    transform: rotate(6deg);
+    transform:
+        rotate(6deg);
 
     font-family:
         "Patrick Hand",
@@ -754,75 +893,96 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .academy-note small {
+.academy-note::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 72px;
+
+    height: 20px;
+
+    top: -9px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(231, 204, 158, .68);
+
+}
+
+
+.academy-note small {
 
     display: block;
 
-    color: #777067;
+    color:
+        #746760;
 
     font-size: 13px;
 
 }
 
 
-.seiran-page .academy-note strong {
+.academy-note strong {
 
     display: block;
 
-    margin-top: 7px;
+    margin-top: 8px;
 
-    color: var(--seiran-pink-dark);
+    color:
+        #86515a;
 
-    font-size: 22px;
+    font-size: 23px;
 
     line-height: 1.05;
 
 }
 
 
-.seiran-page .academy-note > span {
+.academy-note > span {
 
     display: block;
 
-    margin-top: 10px;
+    margin-top: 11px;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
-    font-size: 22px;
+    font-size: 23px;
 
 }
 
 
 /* =========================================================
-   SMALL GREEN NOTE
+   GREEN MINI NOTE
 ========================================================= */
 
-.seiran-page .academy-mini-note {
+.academy-mini-note {
 
     position: absolute;
 
     right: 7%;
 
-    bottom: 95px;
+    bottom: 75px;
 
-    z-index: 8;
+    z-index: 11;
 
-    padding: 18px 22px;
+    padding: 18px 23px;
 
     background:
-        linear-gradient(
-            135deg,
-            #edf6ef,
-            #dcebdc
-        ) !important;
-
-    border:
-        1px solid #ccddcf;
+        #dce8d6;
 
     box-shadow:
-        0 10px 25px rgba(60, 80, 60, .10);
+        0 13px 27px rgba(45, 43, 34, .13);
 
-    transform: rotate(-5deg);
+    transform:
+        rotate(-5deg);
 
     font-family:
         "Patrick Hand",
@@ -831,39 +991,41 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .academy-mini-note span {
+.academy-mini-note span {
 
     display: block;
 
-    color: var(--seiran-green);
+    color:
+        #73786b;
 
     font-size: 10px;
 
-    letter-spacing: .1em;
+    letter-spacing: .12em;
 
 }
 
 
-.seiran-page .academy-mini-note strong {
+.academy-mini-note strong {
 
     display: block;
 
     margin-top: 5px;
 
-    color: var(--seiran-green-dark);
+    color:
+        #56644f;
 
-    font-size: 18px;
+    font-size: 19px;
 
-    line-height: 1.1;
+    line-height: 1.05;
 
 }
 
 
 /* =========================================================
-   MAIN WHITE SECTIONS
+   GENERAL SECTIONS
 ========================================================= */
 
-.seiran-page .academy-section {
+.academy-section {
 
     position: relative;
 
@@ -871,20 +1033,41 @@ body.seiran-page::before {
 
     max-width: 1180px;
 
-    margin:
-        0 auto 70px;
+    margin: 0 auto 75px;
 
-    padding:
-        75px 60px;
+    padding: 75px 65px;
 
     background:
-        var(--seiran-paper) !important;
+        var(--paper);
 
     border:
-        1px solid var(--seiran-border) !important;
+        1px solid #e7d9ce;
 
     box-shadow:
-        var(--seiran-shadow) !important;
+        0 22px 48px rgba(57, 38, 27, .17);
+
+}
+
+
+/* small paper corner */
+
+.academy-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    border-style: solid;
+
+    border-width:
+        0 45px 45px 0;
+
+    border-color:
+        transparent #f1e7dc transparent transparent;
 
 }
 
@@ -893,16 +1076,16 @@ body.seiran-page::before {
    SECTION HEADINGS
 ========================================================= */
 
-.seiran-page .section-title {
+.section-title {
 
     max-width: 720px;
 
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 
 }
 
 
-.seiran-page .section-title.centered {
+.section-title.centered {
 
     margin-left: auto;
 
@@ -913,13 +1096,14 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .section-title > span {
+.section-title > span {
 
     display: block;
 
     margin-bottom: 13px;
 
-    color: var(--seiran-green-dark);
+    color:
+        var(--sakura);
 
     font-size: 9px;
 
@@ -930,11 +1114,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .section-title h2 {
+.section-title h2 {
 
     margin: 0;
 
-    color: var(--seiran-text);
+    color:
+        #393230;
 
     font-family:
         "Playfair Display",
@@ -950,18 +1135,20 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .section-title h2 em {
+.section-title h2 em {
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
 }
 
 
-.seiran-page .section-title p {
+.section-title p {
 
     margin-top: 18px;
 
-    color: var(--seiran-muted);
+    color:
+        #887a75;
 
     font-size: 13px;
 
@@ -972,7 +1159,7 @@ body.seiran-page::before {
    ABOUT
 ========================================================= */
 
-.seiran-page .about-layout {
+.about-layout {
 
     display: grid;
 
@@ -985,11 +1172,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .about-text p {
+.about-text p {
 
     margin-bottom: 20px;
 
-    color: #776e70;
+    color:
+        #776c68;
 
     font-size: 13px;
 
@@ -998,9 +1186,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .about-text .about-big {
+.about-text .about-big {
 
-    color: var(--seiran-pink-dark);
+    color:
+        #423a37;
 
     font-family:
         "Playfair Display",
@@ -1014,10 +1203,10 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   NOTEBOOK
+   NOTEBOOK CARD
 ========================================================= */
 
-.seiran-page .notebook-card {
+.notebook-card {
 
     position: relative;
 
@@ -1026,26 +1215,45 @@ body.seiran-page::before {
     padding: 32px;
 
     background:
-        linear-gradient(
-            145deg,
-            #fff0f3,
-            #f8e2e8
-        ) !important;
-
-    border:
-        1px solid #edced7;
+        #f7dfe2;
 
     box-shadow:
-        var(--seiran-small-shadow);
+        8px 9px 0 rgba(169,76,91,.10);
 
-    transform: rotate(1.5deg);
+    transform:
+        rotate(1.5deg);
 
 }
 
 
-.seiran-page .notebook-label {
+.notebook-card::before {
 
-    color: var(--seiran-green-dark);
+    content: "";
+
+    position: absolute;
+
+    width: 65px;
+
+    height: 20px;
+
+    top: -9px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
+
+    background:
+        rgba(229,203,159,.7);
+
+}
+
+
+.notebook-label {
+
+    color:
+        var(--sakura-dark);
 
     font-size: 8px;
 
@@ -1056,11 +1264,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .notebook-card h3 {
+.notebook-card h3 {
 
     margin: 16px 0 22px;
 
-    color: var(--seiran-text);
+    color:
+        #443b38;
 
     font-family:
         "Playfair Display",
@@ -1073,7 +1282,7 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .notebook-card ul {
+.notebook-card ul {
 
     margin: 0;
 
@@ -1084,7 +1293,7 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .notebook-card li {
+.notebook-card li {
 
     position: relative;
 
@@ -1092,31 +1301,35 @@ body.seiran-page::before {
 
     padding-left: 18px;
 
-    color: #6e6265;
+    color:
+        #6e6260;
 
     font-size: 11px;
 
 }
 
 
-.seiran-page .notebook-card li::before {
+.notebook-card li::before {
 
-    content: "♡";
+    content:
+        "♡";
 
     position: absolute;
 
     left: 0;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
 }
 
 
-.seiran-page .notebook-doodle {
+.notebook-doodle {
 
     margin-top: 20px;
 
-    color: var(--seiran-green);
+    color:
+        var(--sakura);
 
     font-family:
         "Patrick Hand",
@@ -1130,10 +1343,10 @@ body.seiran-page::before {
 
 
 /* =========================================================
-   CAMPUS GRID
+   CAMPUS LIFE
 ========================================================= */
 
-.seiran-page .campus-grid {
+.campus-grid {
 
     display: grid;
 
@@ -1145,49 +1358,56 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .campus-card {
+.campus-card {
 
     position: relative;
 
-    padding: 32px 28px 35px;
+    padding: 35px 28px;
 
     background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #f4f8f4
-        ) !important;
+        #fff;
 
     border:
-        1px solid #d9e2db;
+        1px solid var(--line);
 
     box-shadow:
-        0 8px 22px rgba(80, 100, 85, .06);
+        4px 5px 0 rgba(116, 78, 59, .06);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
+        .3s ease;
 
 }
 
 
-.seiran-page .campus-card:hover {
+.campus-card:nth-child(2) {
 
     transform:
-        translateY(-7px)
-        rotate(-.5deg);
-
-    border-color:
-        #b9cfbe;
-
-    box-shadow:
-        0 16px 32px rgba(80, 100, 85, .11);
+        rotate(1deg);
 
 }
 
 
-.seiran-page .campus-number {
+.campus-card:nth-child(3) {
+
+    transform:
+        rotate(-.8deg);
+
+}
+
+
+.campus-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0deg);
+
+    box-shadow:
+        0 16px 30px rgba(57,38,27,.13);
+
+}
+
+
+.campus-number {
 
     position: absolute;
 
@@ -1195,22 +1415,22 @@ body.seiran-page::before {
 
     right: 20px;
 
-    color: #b8c9bd;
+    color:
+        #cfc0ba;
 
     font-size: 9px;
 
     font-weight: 700;
 
-    letter-spacing: .1em;
-
 }
 
 
-.seiran-page .campus-icon {
+.campus-icon {
 
     margin-bottom: 18px;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
     font-family:
         "Patrick Hand",
@@ -1221,11 +1441,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .campus-card h3 {
+.campus-card h3 {
 
     margin: 0 0 12px;
 
-    color: var(--seiran-text);
+    color:
+        #413a37;
 
     font-family:
         "Playfair Display",
@@ -1236,11 +1457,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .campus-card p {
+.campus-card p {
 
     margin: 0;
 
-    color: var(--seiran-muted);
+    color:
+        #817673;
 
     font-size: 11px;
 
@@ -1253,20 +1475,20 @@ body.seiran-page::before {
    STUDENTS
 ========================================================= */
 
-.seiran-page .students-section {
+.students-section {
 
-    overflow: hidden;
+    overflow: visible;
 
 }
 
 
-.seiran-page .student-total {
+.student-total {
 
     position: absolute;
 
     top: 75px;
 
-    right: 60px;
+    right: 65px;
 
     display: flex;
 
@@ -1274,25 +1496,24 @@ body.seiran-page::before {
 
     gap: 7px;
 
+    color:
+        var(--sakura);
+
 }
 
 
-.seiran-page .student-total strong {
-
-    color: var(--seiran-pink);
+.student-total strong {
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 28px;
+    font-size: 30px;
 
 }
 
 
-.seiran-page .student-total span {
-
-    color: var(--seiran-green-dark);
+.student-total span {
 
     font-size: 8px;
 
@@ -1303,81 +1524,79 @@ body.seiran-page::before {
 }
 
 
-/* =========================================================
-   STUDENT GRID
-========================================================= */
-
-.seiran-page .students-grid {
+.students-grid {
 
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 18px;
+    gap: 23px;
 
 }
 
 
-.seiran-page .student-card {
+/* =========================================================
+   STUDENT CARD
+========================================================= */
+
+.student-card {
+
+    position: relative;
 
     display: block;
 
     overflow: hidden;
 
     background:
-        #ffffff !important;
+        #fff;
 
     border:
-        1px solid var(--seiran-border);
+        1px solid #e3d7cf;
 
     box-shadow:
-        0 8px 22px rgba(80, 60, 60, .05);
+        5px 6px 0 rgba(100, 67, 48, .06);
 
     text-decoration: none;
 
     transition:
         transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
+        box-shadow .3s ease;
 
 }
 
 
-.seiran-page .student-card:nth-child(2n) {
-
-    transform: rotate(.6deg);
-
-}
-
-
-.seiran-page .student-card:nth-child(3n) {
-
-    transform: rotate(-.6deg);
-
-}
-
-
-.seiran-page .student-card:hover {
+.student-card:nth-child(3n) {
 
     transform:
-        translateY(-8px)
-        rotate(0deg);
-
-    border-color:
-        #d5b8c0;
-
-    box-shadow:
-        0 18px 35px rgba(90, 65, 70, .13);
+        rotate(-1deg);
 
 }
 
 
-/* =========================================================
-   STUDENT IMAGE
-========================================================= */
+.student-card:nth-child(3n+2) {
 
-.seiran-page .student-image {
+    transform:
+        rotate(.8deg);
+
+}
+
+
+.student-card:hover {
+
+    transform:
+        translateY(-9px)
+        rotate(0deg);
+
+    box-shadow:
+        0 18px 34px rgba(55, 37, 26, .16);
+
+}
+
+
+/* image */
+
+.student-image {
 
     position: relative;
 
@@ -1392,26 +1611,60 @@ body.seiran-page::before {
     justify-content: center;
 
     background:
+
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(255,255,255,.65) 0,
+            rgba(255,255,255,.65) 3px,
+            transparent 4px
+        ),
+
         linear-gradient(
             145deg,
-            #f8e1e6,
-            #e4efe6
-        ) !important;
+            #f4dfe0,
+            #f3e9df
+        );
 
 }
 
 
-.seiran-page .student-index {
+.student-image::after {
+
+    content:
+        "✿  ✿  ✿";
 
     position: absolute;
 
-    z-index: 2;
+    right: 10px;
+
+    bottom: 7px;
+
+    color:
+        rgba(216,107,120,.35);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 15px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.student-index {
+
+    position: absolute;
+
+    z-index: 3;
 
     top: 12px;
 
     left: 13px;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
     font-family:
         "Patrick Hand",
@@ -1422,10 +1675,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .image-placeholder {
+.image-placeholder {
 
     color:
-        rgba(85, 116, 97, .48);
+        #a58f89;
 
     font-size: 8px;
 
@@ -1440,20 +1693,21 @@ body.seiran-page::before {
 }
 
 
-/* =========================================================
-   STUDENT TEXT
-========================================================= */
+/* student info */
 
-.seiran-page .student-content {
+.student-content {
 
-    padding: 18px;
+    position: relative;
+
+    padding: 19px;
 
 }
 
 
-.seiran-page .student-content > span {
+.student-content > span {
 
-    color: var(--seiran-green-dark);
+    color:
+        var(--sakura);
 
     font-size: 7px;
 
@@ -1464,11 +1718,12 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .student-content h3 {
+.student-content h3 {
 
     margin: 7px 0 0;
 
-    color: var(--seiran-text);
+    color:
+        #403936;
 
     font-family:
         "Playfair Display",
@@ -1481,33 +1736,36 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .student-content p {
+.student-content p {
 
     margin: 9px 0 0;
 
-    color: var(--seiran-pink);
+    color:
+        #9a8b86;
 
     font-size: 9px;
 
     font-weight: 700;
 
-    transition: color .2s ease;
+    transition:
+        color .2s ease;
 
 }
 
 
-.seiran-page .student-card:hover .student-content p {
+.student-card:hover .student-content p {
 
-    color: var(--seiran-green-dark);
+    color:
+        var(--sakura);
 
 }
 
 
 /* =========================================================
-   MEMORY BOARD
+   MEMORIES — PHOTO BOARD
 ========================================================= */
 
-.seiran-page .memory-board {
+.memory-board {
 
     position: relative;
 
@@ -1516,14 +1774,50 @@ body.seiran-page::before {
     overflow: hidden;
 
     background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.35),
+            transparent 20%
+        ),
+
         linear-gradient(
             135deg,
-            #f6e4e2,
-            #e1eee3
-        ) !important;
+            #dfc29b,
+            #edd9b9
+        );
 
     border:
-        1px solid #d9e0d9;
+        1px solid #d2b792;
+
+    box-shadow:
+        inset 0 0 40px rgba(95,63,37,.08);
+
+}
+
+
+/* petals on board */
+
+.memory-board::before {
+
+    content:
+        "✿    ❀          ✿       ❀      ✿";
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 25px;
+
+    color:
+        rgba(255, 232, 232, .75);
+
+    font-size: 22px;
+
+    letter-spacing: 18px;
+
+    transform:
+        rotate(-5deg);
 
 }
 
@@ -1532,7 +1826,7 @@ body.seiran-page::before {
    MEMORY PHOTOS
 ========================================================= */
 
-.seiran-page .memory-photo {
+.memory-photo {
 
     position: absolute;
 
@@ -1549,15 +1843,15 @@ body.seiran-page::before {
     justify-content: center;
 
     background:
-        #ffffff !important;
+        #fff;
 
     box-shadow:
-        0 12px 28px rgba(70, 60, 55, .13);
+        0 15px 27px rgba(55,39,27,.18);
 
 }
 
 
-.seiran-page .memory-photo::before {
+.memory-photo::before {
 
     content: "";
 
@@ -1566,23 +1860,24 @@ body.seiran-page::before {
     inset: 11px;
 
     background:
+
         linear-gradient(
             135deg,
-            #f5dfe4,
-            #e0ede3
+            #f0d9d6,
+            #e7d9ca
         );
 
 }
 
 
-.seiran-page .memory-photo span {
+.memory-photo span {
 
     position: relative;
 
     z-index: 2;
 
     color:
-        rgba(85, 116, 97, .55);
+        #9b8983;
 
     font-size: 8px;
 
@@ -1593,35 +1888,38 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .memory-one {
+.memory-one {
 
-    left: 9%;
+    left: 8%;
 
     top: 55px;
 
-    transform: rotate(-7deg);
+    transform:
+        rotate(-7deg);
 
 }
 
 
-.seiran-page .memory-two {
+.memory-two {
 
     right: 9%;
 
     top: 55px;
 
-    transform: rotate(6deg);
+    transform:
+        rotate(6deg);
 
 }
 
 
-.seiran-page .memory-three {
+.memory-three {
 
     left: 29%;
 
-    bottom: 40px;
+    bottom: 38px;
 
-    transform: rotate(4deg);
+    transform:
+        rotate(4deg);
 
 }
 
@@ -1630,7 +1928,7 @@ body.seiran-page::before {
    MEMORY PAPER
 ========================================================= */
 
-.seiran-page .memory-paper {
+.memory-paper {
 
     position: absolute;
 
@@ -1640,23 +1938,19 @@ body.seiran-page::before {
 
     top: 50%;
 
-    width: 205px;
+    width: 215px;
 
-    padding: 25px;
+    padding: 27px;
 
     transform:
         translate(-50%, -50%)
         rotate(-2deg);
 
     background:
-        linear-gradient(
-            135deg,
-            #fff0b8,
-            #f7e6a8
-        ) !important;
+        #f7e9ad;
 
     box-shadow:
-        0 12px 27px rgba(57, 42, 32, .13);
+        0 15px 30px rgba(57,42,32,.18);
 
     text-align: center;
 
@@ -1667,11 +1961,36 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .memory-paper small {
+.memory-paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 19px;
+
+    top: -9px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(231,204,158,.72);
+
+}
+
+
+.memory-paper small {
 
     display: block;
 
-    color: var(--seiran-green-dark);
+    color:
+        #7b7068;
 
     font-size: 9px;
 
@@ -1680,28 +1999,30 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .memory-paper strong {
+.memory-paper strong {
 
     display: block;
 
     margin-top: 10px;
 
-    color: var(--seiran-pink-dark);
+    color:
+        #765556;
 
-    font-size: 24px;
+    font-size: 25px;
 
     line-height: 1.05;
 
 }
 
 
-.seiran-page .memory-paper > span {
+.memory-paper > span {
 
     display: block;
 
     margin-top: 10px;
 
-    color: var(--seiran-pink);
+    color:
+        var(--sakura);
 
     font-size: 23px;
 
@@ -1712,7 +2033,7 @@ body.seiran-page::before {
    BOTTOM NAVIGATION
 ========================================================= */
 
-.seiran-page .academy-bottom-nav {
+.academy-bottom-nav {
 
     position: relative;
 
@@ -1721,7 +2042,7 @@ body.seiran-page::before {
     max-width: 1180px;
 
     margin:
-        0 auto 80px;
+        0 auto 85px;
 
     padding:
         0 60px;
@@ -1735,9 +2056,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .back-academies {
+.back-academies {
 
-    color: var(--seiran-green-dark);
+    color:
+        #fff7ee;
 
     font-size: 9px;
 
@@ -1745,17 +2067,21 @@ body.seiran-page::before {
 
     letter-spacing: .16em;
 
-}
-
-
-.seiran-page .back-academies:hover {
-
-    color: var(--seiran-pink);
+    transition:
+        .2s ease;
 
 }
 
 
-.seiran-page .next-academy {
+.back-academies:hover {
+
+    color:
+        #ffd9dd;
+
+}
+
+
+.next-academy {
 
     display: flex;
 
@@ -1768,9 +2094,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .next-academy span {
+.next-academy span {
 
-    color: var(--seiran-green);
+    color:
+        rgba(255,255,255,.58);
 
     font-size: 8px;
 
@@ -1779,9 +2106,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .next-academy strong {
+.next-academy strong {
 
-    color: var(--seiran-pink-dark);
+    color:
+        white;
 
     font-family:
         "Playfair Display",
@@ -1794,9 +2122,10 @@ body.seiran-page::before {
 }
 
 
-.seiran-page .next-academy:hover strong {
+.next-academy:hover strong {
 
-    color: var(--seiran-green-dark);
+    color:
+        #ffd9dd;
 
 }
 
@@ -1813,170 +2142,25 @@ body.seiran-page::before {
 
     max-width: 1180px;
 
-    margin: 0 auto;
-
-    color: var(--seiran-text);
-
-    background:
-        linear-gradient(
-            135deg,
-            #e9f2eb,
-            #f8e5e8
-        ) !important;
-
-    border-top:
-        1px solid #d5dfd7;
-
-}
-
-
-.seiran-page .footer-logo span {
-
-    color: var(--seiran-pink);
-
-}
-
-
-.seiran-page .footer-logo h2 {
-
-    color: var(--seiran-text);
-
-}
-
-
-.seiran-page .footer-logo h2 em {
-
-    color: var(--seiran-pink);
-
-}
-
-
-.seiran-page .footer-logo p {
-
-    color: var(--seiran-muted);
-
-}
-
-
-.seiran-page .footer-links span {
-
-    color: var(--seiran-green-dark);
-
-}
-
-
-.seiran-page .footer-links a {
-
-    color: var(--seiran-text);
-
-}
-
-
-.seiran-page .footer-links a:hover {
-
-    color: var(--seiran-pink);
-
-}
-
-
-.seiran-page .footer-bottom {
-
-    color: var(--seiran-green-dark);
-
 }
 
 
 /* =========================================================
-   EXTRA DECORATION
-========================================================= */
-
-.seiran-page .academy-hero::before {
-
-    content:
-        "✿";
-
-    position: absolute;
-
-    left: 5%;
-
-    top: 110px;
-
-    color:
-        rgba(216, 95, 120, .22);
-
-    font-family:
-        "Patrick Hand",
-        cursive;
-
-    font-size: 34px;
-
-    transform: rotate(18deg);
-
-    pointer-events: none;
-
-}
-
-
-.seiran-page .academy-hero::after {
-
-    content:
-        "❀";
-
-    position: absolute;
-
-    right: 5%;
-
-    bottom: 100px;
-
-    color:
-        rgba(120, 153, 133, .25);
-
-    font-size: 35px;
-
-    transform: rotate(-15deg);
-
-    pointer-events: none;
-
-}
-
-
-.seiran-page .campus-section::after {
-
-    content:
-        "⌁  ❧";
-
-    position: absolute;
-
-    left: 4%;
-
-    bottom: 22px;
-
-    color:
-        rgba(85, 116, 97, .20);
-
-    font-size: 38px;
-
-    pointer-events: none;
-
-}
-
-
-/* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1050px) {
 
-    .seiran-page .academy-polaroid,
-    .seiran-page .academy-note,
-    .seiran-page .academy-mini-note {
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note {
 
-        opacity: .55;
+        opacity: .5;
 
     }
 
 
-    .seiran-page .students-grid {
+    .students-grid {
 
         grid-template-columns:
             repeat(3, 1fr);
@@ -1986,63 +2170,74 @@ body.seiran-page::before {
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 800px) {
 
-    .seiran-page .academy-hero {
+    .academy-hero {
 
         min-height: auto;
 
         padding:
-            80px 15px;
+            75px 15px 100px;
 
     }
 
 
-    .seiran-page .academy-paper {
+    .academy-paper {
 
         width: 100%;
 
         padding:
-            70px 30px 45px;
+            70px 30px 50px;
 
     }
 
 
-    .seiran-page .academy-stamp {
+    .academy-paper::before {
+
+        left: 28px;
+
+    }
+
+
+    .academy-paper::after {
 
         display: none;
 
     }
 
 
-    .seiran-page .academy-facts {
+    .academy-stamp {
 
-        grid-template-columns: 1fr;
-
-        gap: 15px;
+        display: none;
 
     }
 
 
-    .seiran-page .about-layout {
+    .academy-facts {
 
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .seiran-page .campus-grid {
-
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
 
-    .seiran-page .students-grid {
+    .about-layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .campus-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .students-grid {
 
         grid-template-columns:
             repeat(2, 1fr);
@@ -2050,7 +2245,7 @@ body.seiran-page::before {
     }
 
 
-    .seiran-page .student-total {
+    .student-total {
 
         position: static;
 
@@ -2061,7 +2256,7 @@ body.seiran-page::before {
     }
 
 
-    .seiran-page .academy-section {
+    .academy-section {
 
         padding:
             60px 25px;
@@ -2069,7 +2264,7 @@ body.seiran-page::before {
     }
 
 
-    .seiran-page .academy-bottom-nav {
+    .academy-bottom-nav {
 
         padding:
             0 25px;
@@ -2079,130 +2274,145 @@ body.seiran-page::before {
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 560px) {
 
-    .seiran-page .academy-heading {
+    .academy-heading {
 
         gap: 5px;
 
     }
 
 
-    .seiran-page .heading-heart {
+    .heading-heart {
 
         font-size: 25px;
 
     }
 
 
-    .seiran-page .academy-heading h1 {
+    .academy-heading h1 {
 
-        font-size: 52px;
-
-    }
-
-
-    .seiran-page .academy-motto {
-
-        font-size: 19px;
+        font-size:
+            52px;
 
     }
 
 
-    .seiran-page .academy-polaroid,
-    .seiran-page .academy-note,
-    .seiran-page .academy-mini-note,
-    .seiran-page .academy-floating {
+    .academy-motto {
+
+        font-size:
+            19px;
+
+    }
+
+
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note,
+    .academy-floating {
 
         display: none;
 
     }
 
 
-    .seiran-page .students-grid {
+    .students-grid {
 
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .seiran-page .student-image {
-
-        height: 350px;
+        grid-template-columns:
+            1fr;
 
     }
 
 
-    .seiran-page .memory-board {
+    .student-image {
 
-        min-height: 650px;
-
-    }
-
-
-    .seiran-page .memory-photo {
-
-        width: 180px;
-
-        height: 135px;
+        height:
+            350px;
 
     }
 
 
-    .seiran-page .memory-one {
+    .memory-board {
 
-        left: 3%;
-
-        top: 35px;
-
-    }
-
-
-    .seiran-page .memory-two {
-
-        right: 3%;
-
-        top: 190px;
+        min-height:
+            650px;
 
     }
 
 
-    .seiran-page .memory-three {
+    .memory-photo {
 
-        left: 8%;
+        width:
+            180px;
 
-        bottom: 40px;
-
-    }
-
-
-    .seiran-page .memory-paper {
-
-        width: 160px;
-
-        padding: 18px;
+        height:
+            135px;
 
     }
 
 
-    .seiran-page .academy-bottom-nav {
+    .memory-one {
 
-        flex-direction: column;
+        left:
+            3%;
 
-        align-items: flex-start;
-
-        gap: 30px;
+        top:
+            35px;
 
     }
 
 
-    .seiran-page .next-academy {
+    .memory-two {
 
-        align-items: flex-start;
+        right:
+            3%;
+
+        top:
+            190px;
+
+    }
+
+
+    .memory-three {
+
+        left:
+            8%;
+
+        bottom:
+            40px;
+
+    }
+
+
+    .memory-paper {
+
+        width:
+            160px;
+
+        padding:
+            18px;
+
+    }
+
+
+    .academy-bottom-nav {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            30px;
+
+    }
+
+
+    .next-academy {
+
+        align-items:
+            flex-start;
 
     }
 
