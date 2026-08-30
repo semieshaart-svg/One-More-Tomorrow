@@ -1,88 +1,155 @@
+/* =========================================================
+   ✦ SEIRAN ACADEMY — ONE MORE TOMORROW ✦
+   Pink + Sage Green / Creative School
+========================================================= */
+
 .seiran-page {
 
-    --academy-accent: #d95b63;
-    --academy-accent-dark: #a9454e;
+    /* =====================================================
+       COLOR PALETTE
+    ===================================================== */
 
-    --academy-soft: #f7dfe0;
-    --academy-pale: #fff6f4;
+    --academy-accent: #d95b78;
+    --academy-accent-dark: #a9425b;
+
+    --academy-green: #789b83;
+    --academy-green-dark: #52745e;
+    --academy-green-soft: #dce9df;
+
+    --academy-soft: #f7dfe5;
+    --academy-pale: #fff6f7;
 
     --academy-paper: #fffdf9;
-    --academy-cream: #f4eadc;
+    --academy-cream: #f3eadf;
 
     --academy-border: #e5d8d0;
 
+    --academy-text: #40393b;
+    --academy-muted: #8c8083;
+
 
     /* =====================================================
-       SAKURA / CREATIVE SCHOOL BACKGROUND
+       PAGE
     ===================================================== */
 
     position: relative;
 
     min-height: 100vh;
 
-    background:
+    color: var(--academy-text);
 
-        /* tiny sakura petals */
+    background-color: #fff8f5;
+
+    background-image:
+
+        /* tiny pink petals */
+
         radial-gradient(
-            circle at 12% 18%,
-            rgba(217,91,99,.20) 0 3px,
+            circle at 8% 12%,
+            rgba(217,91,120,.25) 0 3px,
             transparent 4px
         ),
 
         radial-gradient(
-            circle at 86% 12%,
-            rgba(217,91,99,.15) 0 4px,
+            circle at 17% 35%,
+            rgba(217,91,120,.18) 0 4px,
             transparent 5px
         ),
 
         radial-gradient(
-            circle at 92% 42%,
-            rgba(217,91,99,.13) 0 3px,
+            circle at 91% 16%,
+            rgba(217,91,120,.20) 0 3px,
             transparent 4px
         ),
 
         radial-gradient(
-            circle at 7% 68%,
-            rgba(217,91,99,.12) 0 4px,
+            circle at 82% 62%,
+            rgba(217,91,120,.16) 0 4px,
             transparent 5px
         ),
 
-        /* soft pink glow */
         radial-gradient(
-            ellipse at 15% 10%,
-            rgba(247,223,224,.9),
-            transparent 38%
+            circle at 13% 78%,
+            rgba(217,91,120,.14) 0 3px,
+            transparent 4px
+        ),
+
+
+        /* tiny green leaves */
+
+        radial-gradient(
+            ellipse at 93% 38%,
+            rgba(120,155,131,.24) 0 4px,
+            transparent 5px
         ),
 
         radial-gradient(
-            ellipse at 88% 25%,
-            rgba(247,223,224,.75),
-            transparent 35%
+            ellipse at 6% 55%,
+            rgba(120,155,131,.20) 0 4px,
+            transparent 5px
         ),
 
         radial-gradient(
-            ellipse at 50% 100%,
-            rgba(244,234,220,.9),
-            transparent 45%
+            ellipse at 73% 91%,
+            rgba(120,155,131,.18) 0 5px,
+            transparent 6px
         ),
 
-        /* warm paper background */
+
+        /* pink glow */
+
+        radial-gradient(
+            ellipse at 12% 8%,
+            rgba(247,223,229,.9),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            ellipse at 92% 24%,
+            rgba(250,226,231,.8),
+            transparent 32%
+        ),
+
+
+        /* green glow */
+
+        radial-gradient(
+            ellipse at 5% 70%,
+            rgba(220,233,223,.85),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            ellipse at 96% 78%,
+            rgba(220,233,223,.8),
+            transparent 36%
+        ),
+
+        radial-gradient(
+            ellipse at 52% 105%,
+            rgba(229,238,228,.9),
+            transparent 42%
+        ),
+
+
+        /* soft base */
+
         linear-gradient(
             135deg,
-            #fff8f5 0%,
-            #fdf1ef 45%,
-            #f8eee5 100%
+            #fffaf7 0%,
+            #fff4f4 30%,
+            #f9f1eb 58%,
+            #f0f5ef 100%
         );
 
     background-attachment: fixed;
 
     overflow: hidden;
-
 }
 
 
 /* =========================================================
-   SUBTLE PAPER TEXTURE
+   PAPER TEXTURE
 ========================================================= */
 
 .seiran-page::before {
@@ -95,25 +162,32 @@
 
     pointer-events: none;
 
-    opacity: .35;
+    opacity: .28;
 
     background-image:
 
         repeating-linear-gradient(
             0deg,
-            rgba(120,90,80,.025) 0px,
-            rgba(120,90,80,.025) 1px,
+            rgba(100,80,70,.025) 0px,
+            rgba(100,80,70,.025) 1px,
             transparent 1px,
-            transparent 4px
+            transparent 5px
+        ),
+
+        repeating-linear-gradient(
+            90deg,
+            rgba(120,100,90,.018) 0px,
+            rgba(120,100,90,.018) 1px,
+            transparent 1px,
+            transparent 7px
         );
 
     z-index: 0;
-
 }
 
 
 /* =========================================================
-   SAKURA BRANCH DECORATION
+   DECORATIVE SAKURA / LEAVES
 ========================================================= */
 
 .seiran-page::after {
@@ -123,9 +197,10 @@
     position: absolute;
 
     top: 35px;
+
     right: -15px;
 
-    color: rgba(217,91,99,.16);
+    color: rgba(217,91,120,.17);
 
     font-family:
         "Playfair Display",
@@ -135,11 +210,884 @@
 
     letter-spacing: 18px;
 
-    transform:
-        rotate(-12deg);
+    transform: rotate(-12deg);
 
     pointer-events: none;
 
     z-index: 1;
+}
 
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.seiran-page .academy-floating {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    opacity: .55;
+
+    color: var(--academy-accent);
+}
+
+
+.seiran-page .academy-pencil {
+
+    color: var(--academy-green);
+
+}
+
+
+.seiran-page .academy-star {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .academy-heart {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.seiran-page .academy-hero {
+
+    position: relative;
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.seiran-page .academy-paper {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(255,250,247,.96)
+        );
+
+    border-color: var(--academy-border);
+
+    box-shadow:
+        0 20px 50px rgba(120,90,90,.10),
+        0 4px 12px rgba(120,90,90,.06);
+}
+
+
+/* paper accent */
+
+.seiran-page .academy-number {
+
+    color: var(--academy-green);
+}
+
+
+.seiran-page .academy-heading h1 {
+
+    color: var(--academy-text);
+}
+
+
+.seiran-page .academy-heading h1 em {
+
+    color: var(--academy-accent);
+}
+
+
+.seiran-page .heading-heart {
+
+    color: var(--academy-accent);
+}
+
+
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.seiran-page .academy-motto {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .academy-motto span {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.seiran-page .academy-lead {
+
+    color: var(--academy-accent-dark);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.seiran-page .academy-divider {
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--academy-soft),
+            var(--academy-green-soft),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.seiran-page .academy-facts span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .academy-facts strong {
+
+    color: var(--academy-text);
+
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.seiran-page .academy-stamp {
+
+    color: rgba(120,155,131,.55);
+
+    border-color: rgba(120,155,131,.45);
+}
+
+
+/* =========================================================
+   POLAROID
+========================================================= */
+
+.seiran-page .academy-polaroid {
+
+    background: #fffdfb;
+
+    box-shadow:
+        0 18px 35px rgba(100,80,75,.12);
+}
+
+
+.seiran-page .polaroid-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8dfe4,
+            #e1eee3
+        );
+}
+
+
+.seiran-page .academy-polaroid p {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.seiran-page .academy-note {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f2,
+            #f8e3e7
+        );
+
+    border-color: #ebcbd2;
+
+    box-shadow:
+        0 12px 25px rgba(150,90,105,.10);
+}
+
+
+.seiran-page .academy-note small {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .academy-note strong {
+
+    color: var(--academy-accent-dark);
+
+}
+
+
+.seiran-page .academy-note span {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   MINI NOTE
+========================================================= */
+
+.seiran-page .academy-mini-note {
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5ef,
+            #e3eee5
+        );
+
+    border-color: #cbdccf;
+
+    box-shadow:
+        0 12px 25px rgba(80,110,90,.09);
+}
+
+
+.seiran-page .academy-mini-note span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .academy-mini-note strong {
+
+    color: #486450;
+
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.seiran-page .section-title > span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .section-title h2 {
+
+    color: var(--academy-text);
+
+}
+
+
+.seiran-page .section-title h2 em {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .section-title p {
+
+    color: var(--academy-muted);
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.seiran-page .about-big {
+
+    color: var(--academy-accent-dark);
+
+}
+
+
+/* =========================================================
+   NOTEBOOK CARD
+========================================================= */
+
+.seiran-page .notebook-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf9,
+            #f4f8f2
+        );
+
+    border-color: #d5dfd6;
+
+    box-shadow:
+        0 15px 35px rgba(80,100,85,.08);
+}
+
+
+.seiran-page .notebook-label {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .notebook-card h3 {
+
+    color: var(--academy-text);
+
+}
+
+
+.seiran-page .notebook-card li::marker {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .notebook-doodle {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   CAMPUS SECTION
+========================================================= */
+
+.seiran-page .campus-section {
+
+    position: relative;
+
+}
+
+
+.seiran-page .campus-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(249,246,239,.95)
+        );
+
+    border-color: var(--academy-border);
+
+    box-shadow:
+        0 15px 30px rgba(100,80,75,.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+.seiran-page .campus-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #d8b9c0;
+
+    box-shadow:
+        0 20px 40px rgba(120,80,90,.12);
+}
+
+
+.seiran-page .campus-number {
+
+    color: var(--academy-green);
+
+}
+
+
+.seiran-page .campus-icon {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .campus-card h3 {
+
+    color: var(--academy-text);
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.seiran-page .student-total strong {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .student-total span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+/* =========================================================
+   STUDENT CARDS
+========================================================= */
+
+.seiran-page .student-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdfb,
+            #f5f8f3
+        );
+
+    border-color: var(--academy-border);
+
+    box-shadow:
+        0 12px 28px rgba(100,80,75,.07);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+.seiran-page .student-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #d9b8c0;
+
+    box-shadow:
+        0 20px 40px rgba(120,80,90,.12);
+}
+
+
+.seiran-page .student-index {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .student-content > span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .student-content h3 {
+
+    color: var(--academy-text);
+
+}
+
+
+.seiran-page .student-content p {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDER
+========================================================= */
+
+.seiran-page .image-placeholder {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8dfe4,
+            #e1eee4
+        );
+
+    color: rgba(80,70,70,.45);
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.seiran-page .memories-section {
+
+    position: relative;
+
+}
+
+
+.seiran-page .memory-board {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,249,245,.7),
+            rgba(237,245,238,.7)
+        );
+}
+
+
+.seiran-page .memory-photo {
+
+    box-shadow:
+        0 12px 25px rgba(100,80,75,.12);
+}
+
+
+.seiran-page .memory-one {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7dfe4,
+            #e5eee4
+        );
+}
+
+
+.seiran-page .memory-two {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0eee3,
+            #f8e1e5
+        );
+}
+
+
+.seiran-page .memory-three {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6e4d8,
+            #dcebe0
+        );
+}
+
+
+/* =========================================================
+   MEMORY PAPER
+========================================================= */
+
+.seiran-page .memory-paper {
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff8f6,
+            #edf5ef
+        );
+
+    border-color: #d9dcd1;
+
+    box-shadow:
+        0 15px 30px rgba(90,90,75,.10);
+}
+
+
+.seiran-page .memory-paper small {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .memory-paper strong {
+
+    color: var(--academy-accent-dark);
+
+}
+
+
+.seiran-page .memory-paper span {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.seiran-page .academy-bottom-nav {
+
+    border-color: var(--academy-border);
+
+}
+
+
+.seiran-page .back-academies {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .next-academy span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .next-academy strong {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.seiran-page .site-header {
+
+    background:
+        rgba(255,250,247,.90);
+
+    border-bottom-color:
+        rgba(220,200,200,.55);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.seiran-page .mini-logo {
+
+    color: var(--academy-text);
+
+}
+
+
+.seiran-page .mini-logo span {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .nav-item {
+
+    color: var(--academy-muted);
+
+}
+
+
+.seiran-page .nav-item:hover,
+.seiran-page .nav-item.active {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .nav-item span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.seiran-page .site-footer {
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf4ee,
+            #f9e9eb
+        );
+
+    border-top-color: #d7ddd6;
+
+}
+
+
+.seiran-page .footer-logo span {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .footer-logo h2 em {
+
+    color: var(--academy-accent);
+
+}
+
+
+.seiran-page .footer-links span {
+
+    color: var(--academy-green-dark);
+
+}
+
+
+.seiran-page .footer-links a:hover {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   EXTRA SAKURA PETALS
+========================================================= */
+
+.seiran-page .academy-hero::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 120px;
+    left: 4%;
+
+    font-size: 32px;
+
+    color: rgba(217,91,120,.20);
+
+    transform: rotate(20deg);
+
+    pointer-events: none;
+}
+
+
+.seiran-page .academy-section:nth-of-type(2)::before {
+
+    content: "❀";
+
+    position: absolute;
+
+    right: 5%;
+    margin-top: -20px;
+
+    font-size: 28px;
+
+    color: rgba(217,91,120,.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GREEN LEAF DECORATION
+========================================================= */
+
+.seiran-page .campus-section::after {
+
+    content: "⌁  ❧";
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 4%;
+
+    color: rgba(82,116,94,.20);
+
+    font-size: 38px;
+
+    transform: rotate(-10deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SEIRAN BODY BACKGROUND
+   This overrides the old brown academy background.
+========================================================= */
+
+body.seiran-page {
+
+    background-color: #fff8f5 !important;
+
+    background-image:
+        radial-gradient(
+            ellipse at 10% 10%,
+            rgba(247,223,229,.9),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 90% 20%,
+            rgba(250,226,231,.8),
+            transparent 32%
+        ),
+        radial-gradient(
+            ellipse at 5% 75%,
+            rgba(220,233,223,.85),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 95% 80%,
+            rgba(220,233,223,.75),
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf7 0%,
+            #fff4f4 35%,
+            #f8f0ea 60%,
+            #eef5ef 100%
+        ) !important;
+
+    background-attachment: fixed !important;
 }
