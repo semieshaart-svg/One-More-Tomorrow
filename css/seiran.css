@@ -1,138 +1,136 @@
-```css
 /* =========================================================
-   ✿ SEIRAN ACADEMY — SAKURA ARTIST DESK
+   🌸 SEIRAN ACADEMY
    ONE MORE TOMORROW
+   SOFT PINK / SAKURA EDITION
 ========================================================= */
 
 
 /* =========================================================
-   ROOT
+   VARIABLES
 ========================================================= */
 
 .seiran-page {
 
-    --sakura: #d86b78;
-    --sakura-dark: #a94c5b;
-    --sakura-soft: #f3cdd2;
+    --pink-main: #e7a5b3;
+    --pink-dark: #c87588;
+    --pink-deep: #a9586d;
 
-    --cream: #fffaf0;
-    --paper: #fffdf7;
-    --paper-shadow: rgba(61, 39, 27, .20);
+    --pink-soft: #f9dfe5;
+    --pink-pale: #fff4f6;
+    --pink-whisper: #fff9fa;
 
-    --ink: #403735;
-    --muted: #8b7c77;
+    --cream: #fffdf9;
+    --paper: #fffefe;
 
-    --wood-1: #b8895f;
-    --wood-2: #9e704d;
-    --wood-3: #c99c70;
+    --text: #514249;
+    --text-soft: #88767c;
+    --text-light: #aa969d;
 
-    --line: #e5d5ca;
+    --border: #efd9df;
+
+    --shadow:
+        0 18px 45px rgba(184, 112, 132, .12);
+
+    --shadow-small:
+        0 8px 25px rgba(184, 112, 132, .14);
 
 }
 
 
 /* =========================================================
-   PAGE / DESK
+   PAGE BACKGROUND
 ========================================================= */
 
 .seiran-page {
 
     min-height: 100vh;
 
-    background:
-
-        /* tiny wood grain */
-
-        repeating-linear-gradient(
-            90deg,
-            rgba(255,255,255,.035) 0px,
-            rgba(255,255,255,.035) 2px,
-            transparent 2px,
-            transparent 85px
-        ),
-
-        repeating-linear-gradient(
-            0deg,
-            rgba(70,40,20,.025) 0px,
-            rgba(70,40,20,.025) 1px,
-            transparent 1px,
-            transparent 110px
-        ),
-
-        linear-gradient(
-            115deg,
-            var(--wood-1),
-            var(--wood-2) 48%,
-            var(--wood-3)
-        );
-
-    color: var(--ink);
-
-}
-
-
-/* =========================================================
-   SAKURA PETALS
-========================================================= */
-
-.seiran-page::before {
-
-    content:
-        "✿    ❀          ✿       ❀"
-        "      ✿              ❀"
-        "  ❀         ✿"
-        "        ✿          ❀";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 0;
-
-    pointer-events: none;
-
-    color: rgba(255, 225, 225, .78);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size: 24px;
-
-    line-height: 5;
-
-    letter-spacing: 35px;
-
-    transform: rotate(-8deg);
-
-    opacity: .75;
-
-}
-
-
-/* =========================================================
-   EXTRA DESK SHADOW
-========================================================= */
-
-.seiran-page::after {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 0;
-
-    pointer-events: none;
+    color: var(--text);
 
     background:
 
         radial-gradient(
-            ellipse at center,
-            transparent 35%,
-            rgba(49, 29, 18, .18)
+            circle at 12% 15%,
+            rgba(255,255,255,.95) 0,
+            rgba(255,255,255,0) 24%
+        ),
+
+        radial-gradient(
+            circle at 88% 28%,
+            rgba(248,207,218,.55) 0,
+            rgba(248,207,218,0) 28%
+        ),
+
+        radial-gradient(
+            circle at 20% 82%,
+            rgba(255,229,235,.7) 0,
+            rgba(255,229,235,0) 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f8dfe5,
+            #fcebef 45%,
+            #f6d8e0
         );
+
+}
+
+
+/* =========================================================
+   LITTLE SAKURA PETALS
+========================================================= */
+
+.seiran-page::before {
+
+    content: "✿   ❀      ♡       ✿        ❀    ♡       ✿";
+
+    position: fixed;
+
+    z-index: 1;
+
+    top: 90px;
+    left: 0;
+
+    width: 100%;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 22px;
+
+    letter-spacing: 30px;
+
+    line-height: 180px;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.seiran-page::after {
+
+    content: "❀        ✿      ♡       ❀          ✿";
+
+    position: fixed;
+
+    z-index: 1;
+
+    right: 0;
+    bottom: 40px;
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 18px;
+
+    letter-spacing: 35px;
+
+    pointer-events: none;
+
+    transform: rotate(8deg);
 
 }
 
@@ -149,56 +147,106 @@
 
     z-index: 100;
 
-    background:
-        rgba(255, 250, 240, .94);
+    background: rgba(255,250,251,.88);
 
-    border-bottom:
-        1px solid rgba(107, 73, 54, .16);
+    border-bottom: 1px solid rgba(231,165,179,.28);
 
     box-shadow:
-        0 4px 20px rgba(58, 38, 27, .10);
+        0 5px 20px rgba(190,120,140,.06);
 
-    backdrop-filter:
-        blur(10px);
+    backdrop-filter: blur(14px);
 
 }
 
 
 .seiran-page .header-inner {
 
-    max-width: 1250px;
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
 
 }
 
 
 .seiran-page .mini-logo {
 
+    color: var(--text);
+
     font-family:
         "Playfair Display",
         serif;
 
-    color: var(--ink);
+    font-size: 19px;
+
+    font-weight: 600;
 
 }
 
 
 .seiran-page .mini-logo span {
 
-    color: var(--sakura);
+    color: var(--pink-main);
+
+    margin-right: 5px;
+
+}
+
+
+.seiran-page .main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
 
 }
 
 
 .seiran-page .nav-item {
 
-    color: #82736e;
+    padding: 8px 11px;
+
+    border-radius: 20px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    transition: .25s ease;
 
 }
 
 
 .seiran-page .nav-item span {
 
-    color: var(--sakura);
+    margin-right: 4px;
+
+    color: var(--pink-main);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 13px;
 
 }
 
@@ -206,17 +254,17 @@
 .seiran-page .nav-item:hover,
 .seiran-page .nav-item.active {
 
-    background:
-        var(--sakura-soft);
+    color: var(--pink-deep);
 
-    color:
-        var(--ink);
+    background: var(--pink-soft);
+
+    transform: translateY(-1px);
 
 }
 
 
 /* =========================================================
-   FLOATING DESK DOODLES
+   FLOATING DECORATIONS
 ========================================================= */
 
 .academy-floating {
@@ -237,47 +285,43 @@
 .academy-pencil {
 
     left: 25px;
+    top: 38%;
 
-    top: 35%;
+    color: #efb9c6;
 
-    color: #f5dcc2;
+    font-size: 38px;
 
-    font-size: 48px;
-
-    transform:
-        rotate(-30deg);
+    transform: rotate(-25deg);
 
 }
 
 
 .academy-star {
 
-    right: 30px;
-
+    right: 28px;
     top: 24%;
 
-    color: #ffe7c0;
+    color: #e9b1c0;
 
-    font-size: 36px;
+    font-size: 30px;
 
 }
 
 
 .academy-heart {
 
-    right: 35px;
+    right: 25px;
+    bottom: 20%;
 
-    bottom: 18%;
+    color: #f2c3cf;
 
-    color: #f6c9ce;
-
-    font-size: 48px;
+    font-size: 50px;
 
 }
 
 
 /* =========================================================
-   HERO — OPEN SKETCHBOOK
+   HERO
 ========================================================= */
 
 .academy-hero {
@@ -288,11 +332,11 @@
 
     max-width: 1280px;
 
-    min-height: 780px;
+    min-height: 760px;
 
     margin: 0 auto;
 
-    padding: 105px 30px 120px;
+    padding: 100px 30px;
 
     display: flex;
 
@@ -303,40 +347,8 @@
 }
 
 
-/* little desk shadow underneath */
-
-.academy-hero::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 820px;
-
-    height: 100px;
-
-    bottom: 75px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%);
-
-    background:
-        rgba(54, 31, 19, .22);
-
-    filter:
-        blur(30px);
-
-    border-radius: 50%;
-
-    z-index: -1;
-
-}
-
-
 /* =========================================================
-   MAIN PAPER
+   HERO PAPER
 ========================================================= */
 
 .academy-paper {
@@ -345,46 +357,33 @@
 
     z-index: 5;
 
-    width: min(900px, 91vw);
+    width: min(900px, 92vw);
 
-    min-height: 610px;
-
-    padding: 78px 85px 65px;
+    padding: 78px 75px 58px;
 
     background:
 
-        /* notebook lines */
-
-        repeating-linear-gradient(
-            0deg,
-            transparent 0px,
-            transparent 34px,
-            rgba(214, 166, 174, .11) 35px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(246, 211, 211, .22) 0,
-            rgba(246, 211, 211, .22) 1px,
-            transparent 1px
+        radial-gradient(
+            circle at 50% 0,
+            rgba(255,221,230,.45),
+            transparent 38%
         ),
 
         var(--paper);
 
-    border:
-        1px solid #eaded3;
+    border: 1px solid #f0dce1;
+
+    border-radius: 8px;
 
     box-shadow:
-        0 28px 55px
-        var(--paper-shadow);
+        0 25px 70px rgba(170,93,115,.16);
 
-    transform:
-        rotate(-.8deg);
+    transform: rotate(-.4deg);
 
 }
 
 
-/* left notebook margin */
+/* soft inner border */
 
 .academy-paper::before {
 
@@ -392,16 +391,13 @@
 
     position: absolute;
 
-    left: 52px;
+    inset: 12px;
 
-    top: 0;
+    border: 1px dashed rgba(231,165,179,.3);
 
-    bottom: 0;
+    border-radius: 5px;
 
-    width: 1px;
-
-    background:
-        rgba(216, 107, 120, .14);
+    pointer-events: none;
 
 }
 
@@ -414,49 +410,23 @@
 
     position: absolute;
 
-    width: 155px;
+    z-index: 3;
 
-    height: 38px;
-
-    top: -18px;
-
+    top: -14px;
     left: 50%;
+
+    width: 125px;
+    height: 31px;
+
+    background:
+        rgba(247,204,216,.72);
 
     transform:
         translateX(-50%)
         rotate(-2deg);
 
-    background:
-        rgba(232, 207, 161, .72);
-
     box-shadow:
-        0 2px 4px rgba(70,40,20,.08);
-
-}
-
-
-/* =========================================================
-   PAPER HOLES
-========================================================= */
-
-.academy-paper::after {
-
-    content:
-        "•\A •\A •";
-
-    white-space: pre;
-
-    position: absolute;
-
-    left: 18px;
-
-    top: 115px;
-
-    color: #d7cec5;
-
-    font-size: 21px;
-
-    line-height: 10.5;
+        0 3px 8px rgba(190,110,130,.08);
 
 }
 
@@ -469,18 +439,17 @@
 
     position: relative;
 
-    z-index: 2;
+    margin-bottom: 22px;
 
-    margin-bottom: 24px;
-
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
     font-size: 9px;
 
     font-weight: 700;
 
     letter-spacing: .25em;
+
+    text-align: center;
 
 }
 
@@ -493,23 +462,20 @@
 
     position: relative;
 
-    z-index: 2;
-
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 18px;
+    gap: 15px;
 
 }
 
 
 .heading-heart {
 
-    color:
-        var(--sakura);
+    color: var(--pink-main);
 
     font-family:
         "Patrick Hand",
@@ -517,8 +483,7 @@
 
     font-size: 43px;
 
-    transform:
-        rotate(-12deg);
+    transform: rotate(-12deg);
 
 }
 
@@ -527,18 +492,18 @@
 
     margin: 0;
 
-    color: #3c3432;
+    color: #4c3d43;
 
     font-family:
         "Playfair Display",
         serif;
 
     font-size:
-        clamp(60px, 8vw, 100px);
-
-    line-height: .88;
+        clamp(55px, 8vw, 100px);
 
     font-weight: 600;
+
+    line-height: .88;
 
     text-align: center;
 
@@ -549,8 +514,7 @@
 
     display: block;
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
     font-weight: 600;
 
@@ -558,21 +522,22 @@
 
 
 /* =========================================================
-   HANDWRITTEN MOTTO
+   MOTTO
 ========================================================= */
 
 .academy-motto {
 
-    margin-top: 28px;
+    position: relative;
 
-    color:
-        #756865;
+    margin-top: 25px;
+
+    color: #8b727a;
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 24px;
+    font-size: 23px;
 
     text-align: center;
 
@@ -583,23 +548,24 @@
 
     margin: 0 8px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-main);
 
 }
 
 
 /* =========================================================
-   HERO TEXT
+   HERO DESCRIPTION
 ========================================================= */
 
 .academy-lead {
+
+    position: relative;
 
     max-width: 610px;
 
     margin: 30px auto 0;
 
-    color: #544a47;
+    color: #64545a;
 
     font-family:
         "Playfair Display",
@@ -607,7 +573,7 @@
 
     font-size: 19px;
 
-    line-height: 1.65;
+    line-height: 1.6;
 
     text-align: center;
 
@@ -616,14 +582,15 @@
 
 .academy-description {
 
-    max-width: 620px;
+    position: relative;
+
+    max-width: 610px;
 
     margin: 20px auto 0;
 
-    color:
-        var(--muted);
+    color: var(--text-soft);
 
-    font-size: 13px;
+    font-size: 12px;
 
     line-height: 1.9;
 
@@ -633,17 +600,44 @@
 
 
 /* =========================================================
-   DIVIDER
+   HERO DIVIDER
 ========================================================= */
 
 .academy-divider {
 
-    width: 100%;
+    position: relative;
 
-    margin: 35px auto 25px;
+    width: 80%;
 
-    border-top:
-        1px dashed #decfc7;
+    margin: 35px auto 23px;
+
+    border-top: 1px dashed #e8cbd3;
+
+}
+
+
+.academy-divider::after {
+
+    content: "♡";
+
+    position: absolute;
+
+    left: 50%;
+    top: -11px;
+
+    padding: 0 10px;
+
+    color: var(--pink-main);
+
+    background: var(--paper);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 16px;
+
+    transform: translateX(-50%);
 
 }
 
@@ -653,6 +647,8 @@
 ========================================================= */
 
 .academy-facts {
+
+    position: relative;
 
     display: grid;
 
@@ -666,35 +662,40 @@
 
 .academy-facts div {
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
+    padding: 14px 8px;
 
     text-align: center;
 
 }
 
 
+.academy-facts div + div {
+
+    border-left: 1px solid #f0dfe3;
+
+}
+
+
 .academy-facts span {
 
-    color:
-        #a3938e;
+    display: block;
 
-    font-size: 8px;
+    margin-bottom: 5px;
+
+    color: #a9949b;
+
+    font-size: 7px;
 
     font-weight: 700;
 
-    letter-spacing: .17em;
+    letter-spacing: .18em;
 
 }
 
 
 .academy-facts strong {
 
-    color:
-        #514744;
+    color: #584a50;
 
     font-size: 11px;
 
@@ -702,36 +703,31 @@
 
 
 /* =========================================================
-   LITTLE STAMP
+   STAMP
 ========================================================= */
 
 .academy-stamp {
 
     position: absolute;
 
-    right: 55px;
+    right: 38px;
+    top: 38px;
 
-    top: 50px;
-
-    width: 86px;
-
-    height: 86px;
+    width: 76px;
+    height: 76px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border:
-        2px dashed rgba(216,107,120,.5);
+    border: 1px solid rgba(211,122,143,.35);
 
     border-radius: 50%;
 
-    color:
-        rgba(169,76,91,.68);
+    color: rgba(190,103,124,.55);
 
-    font-size: 7px;
+    font-size: 6px;
 
     font-weight: 700;
 
@@ -741,30 +737,31 @@
 
     text-align: center;
 
-    transform:
-        rotate(10deg);
+    transform: rotate(10deg);
 
 }
 
 
 /* =========================================================
-   POLAROID — CAMPUS PHOTO
+   POLAROID
 ========================================================= */
 
 .academy-polaroid {
 
     position: absolute;
 
-    z-index: 12;
+    z-index: 10;
 
-    width: 215px;
+    width: 200px;
 
-    padding: 11px 11px 18px;
+    padding: 10px 10px 15px;
 
     background: #fff;
 
+    border: 1px solid #f1e1e5;
+
     box-shadow:
-        0 18px 32px rgba(52, 34, 24, .22);
+        0 14px 32px rgba(173,101,123,.13);
 
 }
 
@@ -772,88 +769,51 @@
 .polaroid-campus {
 
     left: 2%;
-
     top: 120px;
 
-    transform:
-        rotate(-8deg);
+    transform: rotate(-7deg);
 
 }
 
 
 .polaroid-image {
 
-    position: relative;
-
-    height: 178px;
+    height: 170px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    overflow: hidden;
-
     background:
-
         linear-gradient(
-            135deg,
-            #f1d5d3,
-            #f4e7d9
+            145deg,
+            #f8dfe5,
+            #fff0f3
         );
 
-}
-
-
-.polaroid-image::before {
-
-    content: "✿";
-
-    position: absolute;
-
-    top: 15px;
-
-    right: 18px;
-
-    color:
-        rgba(216,107,120,.5);
-
-    font-size: 30px;
-
-}
-
-
-.polaroid-image span {
-
-    color:
-        #9d8984;
+    color: #bc919d;
 
     font-size: 8px;
 
     font-weight: 700;
 
-    line-height: 1.7;
-
     letter-spacing: .14em;
-
-    text-align: center;
 
 }
 
 
 .academy-polaroid p {
 
-    margin: 10px 0 0;
+    margin: 9px 0 0;
 
-    color:
-        #625754;
+    color: #806c73;
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 16px;
+    font-size: 15px;
 
     text-align: center;
 
@@ -861,59 +821,34 @@
 
 
 /* =========================================================
-   YELLOW NOTE
+   YELLOW NOTE → PINK NOTE
 ========================================================= */
 
 .academy-note {
 
     position: absolute;
 
-    z-index: 13;
+    z-index: 11;
 
     right: 3%;
+    top: 105px;
 
-    top: 110px;
+    width: 160px;
 
-    width: 170px;
+    padding: 20px;
 
-    padding: 23px;
+    background: #fff0bd;
 
-    background:
-        #f7e9ad;
+    border: 1px solid rgba(221,190,126,.3);
 
     box-shadow:
-        0 15px 30px rgba(56, 38, 26, .16);
+        0 10px 25px rgba(175,130,80,.10);
 
-    transform:
-        rotate(6deg);
+    transform: rotate(5deg);
 
     font-family:
         "Patrick Hand",
         cursive;
-
-}
-
-
-.academy-note::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 72px;
-
-    height: 20px;
-
-    top: -9px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%)
-        rotate(-2deg);
-
-    background:
-        rgba(231, 204, 158, .68);
 
 }
 
@@ -922,10 +857,9 @@
 
     display: block;
 
-    color:
-        #746760;
+    color: #8d7c70;
 
-    font-size: 13px;
+    font-size: 12px;
 
 }
 
@@ -934,12 +868,11 @@
 
     display: block;
 
-    margin-top: 8px;
+    margin-top: 6px;
 
-    color:
-        #86515a;
+    color: #a65e70;
 
-    font-size: 23px;
+    font-size: 21px;
 
     line-height: 1.05;
 
@@ -950,18 +883,17 @@
 
     display: block;
 
-    margin-top: 11px;
+    margin-top: 9px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
-    font-size: 23px;
+    font-size: 21px;
 
 }
 
 
 /* =========================================================
-   GREEN MINI NOTE
+   MINI NOTE
 ========================================================= */
 
 .academy-mini-note {
@@ -969,21 +901,20 @@
     position: absolute;
 
     right: 7%;
+    bottom: 90px;
 
-    bottom: 75px;
+    z-index: 8;
 
-    z-index: 11;
+    padding: 17px 21px;
 
-    padding: 18px 23px;
+    background: #f8dce5;
 
-    background:
-        #dce8d6;
+    border: 1px solid rgba(208,135,154,.18);
 
     box-shadow:
-        0 13px 27px rgba(45, 43, 34, .13);
+        0 10px 25px rgba(160,95,115,.1);
 
-    transform:
-        rotate(-5deg);
+    transform: rotate(-4deg);
 
     font-family:
         "Patrick Hand",
@@ -996,12 +927,11 @@
 
     display: block;
 
-    color:
-        #73786b;
+    color: #a17e89;
 
-    font-size: 10px;
+    font-size: 9px;
 
-    letter-spacing: .12em;
+    letter-spacing: .1em;
 
 }
 
@@ -1010,14 +940,13 @@
 
     display: block;
 
-    margin-top: 5px;
+    margin-top: 4px;
 
-    color:
-        #56644f;
+    color: #9b5e71;
 
-    font-size: 19px;
+    font-size: 18px;
 
-    line-height: 1.05;
+    line-height: 1.1;
 
 }
 
@@ -1034,54 +963,60 @@
 
     max-width: 1180px;
 
-    margin: 0 auto 75px;
+    margin: 0 auto 60px;
 
-    padding: 75px 65px;
+    padding: 70px 60px;
 
     background:
+
+        radial-gradient(
+            circle at 90% 0,
+            rgba(249,218,227,.55),
+            transparent 25%
+        ),
+
         var(--paper);
 
-    border:
-        1px solid #e7d9ce;
+    border: 1px solid var(--border);
 
-    box-shadow:
-        0 22px 48px rgba(57, 38, 27, .17);
+    border-radius: 8px;
+
+    box-shadow: var(--shadow);
 
 }
 
 
-/* small paper corner */
+/* little corner decoration */
 
-.academy-section::before {
+.academy-section::after {
 
-    content: "";
+    content: "♡";
 
     position: absolute;
 
-    top: 0;
+    right: 25px;
+    bottom: 20px;
 
-    right: 0;
+    color: rgba(231,165,179,.35);
 
-    border-style: solid;
+    font-family:
+        "Patrick Hand",
+        cursive;
 
-    border-width:
-        0 45px 45px 0;
-
-    border-color:
-        transparent #f1e7dc transparent transparent;
+    font-size: 25px;
 
 }
 
 
 /* =========================================================
-   SECTION HEADINGS
+   SECTION TITLES
 ========================================================= */
 
 .section-title {
 
     max-width: 720px;
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 
 }
 
@@ -1089,7 +1024,6 @@
 .section-title.centered {
 
     margin-left: auto;
-
     margin-right: auto;
 
     text-align: center;
@@ -1101,12 +1035,11 @@
 
     display: block;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 700;
 
@@ -1119,15 +1052,14 @@
 
     margin: 0;
 
-    color:
-        #393230;
+    color: #493d43;
 
     font-family:
         "Playfair Display",
         serif;
 
     font-size:
-        clamp(40px, 5vw, 62px);
+        clamp(40px, 5vw, 61px);
 
     font-weight: 600;
 
@@ -1138,20 +1070,18 @@
 
 .section-title h2 em {
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
 }
 
 
 .section-title p {
 
-    margin-top: 18px;
+    margin-top: 16px;
 
-    color:
-        #887a75;
+    color: var(--text-soft);
 
-    font-size: 13px;
+    font-size: 12px;
 
 }
 
@@ -1165,46 +1095,44 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.6fr)
+        minmax(0, 1.5fr)
         minmax(260px, .8fr);
 
-    gap: 65px;
+    gap: 60px;
 
 }
 
 
 .about-text p {
 
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 
-    color:
-        #776c68;
+    color: var(--text-soft);
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.95;
+    line-height: 2;
 
 }
 
 
 .about-text .about-big {
 
-    color:
-        #423a37;
+    color: #54454c;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 25px;
+    font-size: 24px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
 }
 
 
 /* =========================================================
-   NOTEBOOK CARD
+   NOTEBOOK
 ========================================================= */
 
 .notebook-card {
@@ -1213,50 +1141,41 @@
 
     align-self: start;
 
-    padding: 32px;
+    padding: 30px;
 
-    background:
-        #f7dfe2;
+    background: var(--pink-pale);
+
+    border: 1px solid #f0d6dd;
 
     box-shadow:
-        8px 9px 0 rgba(169,76,91,.10);
+        8px 8px 0 rgba(240,199,210,.35);
 
-    transform:
-        rotate(1.5deg);
+    transform: rotate(1.2deg);
 
 }
 
 
 .notebook-card::before {
 
-    content: "";
+    content: "✿";
 
     position: absolute;
 
-    width: 65px;
+    right: 18px;
+    top: 15px;
 
-    height: 20px;
+    color: var(--pink-main);
 
-    top: -9px;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%)
-        rotate(-3deg);
-
-    background:
-        rgba(229,203,159,.7);
+    font-size: 18px;
 
 }
 
 
 .notebook-label {
 
-    color:
-        var(--sakura-dark);
+    color: var(--pink-dark);
 
-    font-size: 8px;
+    font-size: 7px;
 
     font-weight: 700;
 
@@ -1267,16 +1186,15 @@
 
 .notebook-card h3 {
 
-    margin: 16px 0 22px;
+    margin: 14px 0 20px;
 
-    color:
-        #443b38;
+    color: #54454b;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 24px;
+    font-size: 23px;
 
     line-height: 1.2;
 
@@ -1285,11 +1203,10 @@
 
 .notebook-card ul {
 
-    margin: 0;
-
-    padding: 0;
-
     list-style: none;
+
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -1298,53 +1215,49 @@
 
     position: relative;
 
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
     padding-left: 18px;
 
-    color:
-        #6e6260;
+    color: #77656c;
 
-    font-size: 11px;
+    font-size: 10px;
 
 }
 
 
 .notebook-card li::before {
 
-    content:
-        "♡";
+    content: "♡";
 
     position: absolute;
 
     left: 0;
 
-    color:
-        var(--sakura);
+    color: var(--pink-main);
 
 }
 
 
 .notebook-doodle {
 
-    margin-top: 20px;
+    margin-top: 18px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-main);
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 24px;
+    font-size: 21px;
 
-    letter-spacing: 7px;
+    letter-spacing: 6px;
 
 }
 
 
 /* =========================================================
-   CAMPUS LIFE
+   CAMPUS
 ========================================================= */
 
 .campus-grid {
@@ -1354,7 +1267,7 @@
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 20px;
+    gap: 18px;
 
 }
 
@@ -1363,35 +1276,33 @@
 
     position: relative;
 
-    padding: 35px 28px;
+    padding: 30px 26px 32px;
 
-    background:
-        #fff;
+    background: #fff;
 
-    border:
-        1px solid var(--line);
+    border: 1px solid var(--border);
 
-    box-shadow:
-        4px 5px 0 rgba(116, 78, 59, .06);
+    border-radius: 5px;
 
     transition:
-        .3s ease;
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }
 
 
 .campus-card:nth-child(2) {
 
-    transform:
-        rotate(1deg);
+    background: #fff8fa;
+
+    transform: translateY(7px);
 
 }
 
 
 .campus-card:nth-child(3) {
 
-    transform:
-        rotate(-.8deg);
+    background: #fffaf6;
 
 }
 
@@ -1399,11 +1310,10 @@
 .campus-card:hover {
 
     transform:
-        translateY(-8px)
-        rotate(0deg);
+        translateY(-6px)
+        rotate(-.5deg);
 
-    box-shadow:
-        0 16px 30px rgba(57,38,27,.13);
+    box-shadow: var(--shadow-small);
 
 }
 
@@ -1412,62 +1322,57 @@
 
     position: absolute;
 
-    top: 17px;
+    top: 15px;
+    right: 17px;
 
-    right: 20px;
+    color: #ddc6cd;
 
-    color:
-        #cfc0ba;
-
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 700;
+
+    letter-spacing: .1em;
 
 }
 
 
 .campus-icon {
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-main);
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 38px;
+    font-size: 35px;
 
 }
 
 
 .campus-card h3 {
 
-    margin: 0 0 12px;
+    margin-bottom: 11px;
 
-    color:
-        #413a37;
+    color: #514249;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 24px;
+    font-size: 23px;
 
 }
 
 
 .campus-card p {
 
-    margin: 0;
+    color: var(--text-soft);
 
-    color:
-        #817673;
+    font-size: 10px;
 
-    font-size: 11px;
-
-    line-height: 1.8;
+    line-height: 1.85;
 
 }
 
@@ -1478,7 +1383,7 @@
 
 .students-section {
 
-    overflow: visible;
+    overflow: hidden;
 
 }
 
@@ -1487,18 +1392,16 @@
 
     position: absolute;
 
-    top: 75px;
-
-    right: 65px;
+    top: 70px;
+    right: 60px;
 
     display: flex;
 
     align-items: baseline;
 
-    gap: 7px;
+    gap: 6px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
 }
 
@@ -1509,14 +1412,14 @@
         "Patrick Hand",
         cursive;
 
-    font-size: 30px;
+    font-size: 27px;
 
 }
 
 
 .student-total span {
 
-    font-size: 8px;
+    font-size: 7px;
 
     font-weight: 700;
 
@@ -1525,6 +1428,10 @@
 }
 
 
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
 .students-grid {
 
     display: grid;
@@ -1532,14 +1439,10 @@
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 23px;
+    gap: 17px;
 
 }
 
-
-/* =========================================================
-   STUDENT CARD
-========================================================= */
 
 .student-card {
 
@@ -1549,14 +1452,11 @@
 
     overflow: hidden;
 
-    background:
-        #fff;
+    background: #fff;
 
-    border:
-        1px solid #e3d7cf;
+    border: 1px solid var(--border);
 
-    box-shadow:
-        5px 6px 0 rgba(100, 67, 48, .06);
+    border-radius: 5px;
 
     text-decoration: none;
 
@@ -1567,18 +1467,16 @@
 }
 
 
-.student-card:nth-child(3n) {
+.student-card:nth-child(2n) {
 
-    transform:
-        rotate(-1deg);
+    transform: rotate(.5deg);
 
 }
 
 
-.student-card:nth-child(3n+2) {
+.student-card:nth-child(3n) {
 
-    transform:
-        rotate(.8deg);
+    transform: rotate(-.5deg);
 
 }
 
@@ -1586,16 +1484,18 @@
 .student-card:hover {
 
     transform:
-        translateY(-9px)
+        translateY(-7px)
         rotate(0deg);
 
     box-shadow:
-        0 18px 34px rgba(55, 37, 26, .16);
+        0 16px 35px rgba(184,112,132,.16);
 
 }
 
 
-/* image */
+/* =========================================================
+   STUDENT IMAGE
+========================================================= */
 
 .student-image {
 
@@ -1608,22 +1508,20 @@
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
 
         radial-gradient(
-            circle at 75% 20%,
-            rgba(255,255,255,.65) 0,
-            rgba(255,255,255,.65) 3px,
-            transparent 4px
+            circle at 50% 20%,
+            #fff,
+            transparent 45%
         ),
 
         linear-gradient(
             145deg,
-            #f4dfe0,
-            #f3e9df
+            #f8dce4,
+            #fcecef
         );
 
 }
@@ -1631,25 +1529,20 @@
 
 .student-image::after {
 
-    content:
-        "✿  ✿  ✿";
+    content: "♡";
 
     position: absolute;
 
-    right: 10px;
+    right: 12px;
+    bottom: 9px;
 
-    bottom: 7px;
-
-    color:
-        rgba(216,107,120,.35);
+    color: rgba(255,255,255,.8);
 
     font-family:
-        Georgia,
-        serif;
+        "Patrick Hand",
+        cursive;
 
-    font-size: 15px;
-
-    letter-spacing: 5px;
+    font-size: 23px;
 
 }
 
@@ -1658,30 +1551,27 @@
 
     position: absolute;
 
-    z-index: 3;
+    z-index: 2;
 
-    top: 12px;
+    top: 11px;
+    left: 12px;
 
-    left: 13px;
-
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    font-size: 18px;
+    font-size: 17px;
 
 }
 
 
 .image-placeholder {
 
-    color:
-        #a58f89;
+    color: #b2949d;
 
-    font-size: 8px;
+    font-size: 7px;
 
     font-weight: 700;
 
@@ -1694,27 +1584,26 @@
 }
 
 
-/* student info */
+/* =========================================================
+   STUDENT CONTENT
+========================================================= */
 
 .student-content {
 
-    position: relative;
-
-    padding: 19px;
+    padding: 17px;
 
 }
 
 
 .student-content > span {
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
-    font-size: 7px;
+    font-size: 6px;
 
     font-weight: 700;
 
-    letter-spacing: .15em;
+    letter-spacing: .14em;
 
 }
 
@@ -1723,14 +1612,13 @@
 
     margin: 7px 0 0;
 
-    color:
-        #403936;
+    color: #514249;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.2;
 
@@ -1739,31 +1627,28 @@
 
 .student-content p {
 
-    margin: 9px 0 0;
+    margin-top: 8px;
 
-    color:
-        #9a8b86;
+    color: #a58e96;
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 700;
 
-    transition:
-        color .2s ease;
+    transition: .2s ease;
 
 }
 
 
 .student-card:hover .student-content p {
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
 }
 
 
 /* =========================================================
-   MEMORIES — PHOTO BOARD
+   MEMORY BOARD
 ========================================================= */
 
 .memory-board {
@@ -1777,48 +1662,41 @@
     background:
 
         radial-gradient(
-            circle at 15% 20%,
-            rgba(255,255,255,.35),
-            transparent 20%
+            circle at 20% 20%,
+            rgba(255,255,255,.75),
+            transparent 25%
         ),
 
         linear-gradient(
             135deg,
-            #dfc29b,
-            #edd9b9
+            #f8dce4,
+            #fcebef
         );
 
     border:
-        1px solid #d2b792;
+        1px solid #eed1da;
 
-    box-shadow:
-        inset 0 0 40px rgba(95,63,37,.08);
+    border-radius: 6px;
 
 }
 
 
-/* petals on board */
+/* decorative petals */
 
 .memory-board::before {
 
-    content:
-        "✿    ❀          ✿       ❀      ✿";
+    content: "❀   ✿       ❀        ✿";
 
     position: absolute;
 
+    top: 20px;
     left: 30px;
 
-    bottom: 25px;
+    color: rgba(205,116,140,.25);
 
-    color:
-        rgba(255, 232, 232, .75);
+    font-size: 18px;
 
-    font-size: 22px;
-
-    letter-spacing: 18px;
-
-    transform:
-        rotate(-5deg);
+    letter-spacing: 22px;
 
 }
 
@@ -1832,22 +1710,21 @@
     position: absolute;
 
     width: 255px;
-
     height: 190px;
 
-    padding: 11px;
+    padding: 10px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    background:
-        #fff;
+    background: #fff;
+
+    border: 1px solid #f0dfe3;
 
     box-shadow:
-        0 15px 27px rgba(55,39,27,.18);
+        0 11px 27px rgba(175,100,123,.14);
 
 }
 
@@ -1858,14 +1735,13 @@
 
     position: absolute;
 
-    inset: 11px;
+    inset: 10px;
 
     background:
-
         linear-gradient(
             135deg,
-            #f0d9d6,
-            #e7d9ca
+            #f7dfe5,
+            #fff0f3
         );
 
 }
@@ -1877,26 +1753,23 @@
 
     z-index: 2;
 
-    color:
-        #9b8983;
+    color: #b08e98;
 
     font-size: 8px;
 
     font-weight: 700;
 
-    letter-spacing: .16em;
+    letter-spacing: .15em;
 
 }
 
 
 .memory-one {
 
-    left: 8%;
-
+    left: 9%;
     top: 55px;
 
-    transform:
-        rotate(-7deg);
+    transform: rotate(-6deg);
 
 }
 
@@ -1904,11 +1777,9 @@
 .memory-two {
 
     right: 9%;
-
     top: 55px;
 
-    transform:
-        rotate(6deg);
+    transform: rotate(6deg);
 
 }
 
@@ -1916,11 +1787,9 @@
 .memory-three {
 
     left: 29%;
+    bottom: 40px;
 
-    bottom: 38px;
-
-    transform:
-        rotate(4deg);
+    transform: rotate(3deg);
 
 }
 
@@ -1936,22 +1805,18 @@
     z-index: 5;
 
     left: 50%;
-
     top: 50%;
 
-    width: 215px;
+    width: 210px;
 
-    padding: 27px;
+    padding: 25px;
 
-    transform:
-        translate(-50%, -50%)
-        rotate(-2deg);
+    background: #fff7dc;
 
-    background:
-        #f7e9ad;
+    border: 1px solid #f0dfb9;
 
     box-shadow:
-        0 15px 30px rgba(57,42,32,.18);
+        0 12px 27px rgba(150,115,70,.12);
 
     text-align: center;
 
@@ -1959,29 +1824,9 @@
         "Patrick Hand",
         cursive;
 
-}
-
-
-.memory-paper::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 80px;
-
-    height: 19px;
-
-    top: -9px;
-
-    left: 50%;
-
     transform:
-        translateX(-50%)
+        translate(-50%, -50%)
         rotate(-2deg);
-
-    background:
-        rgba(231,204,158,.72);
 
 }
 
@@ -1990,10 +1835,9 @@
 
     display: block;
 
-    color:
-        #7b7068;
+    color: #9b8778;
 
-    font-size: 9px;
+    font-size: 8px;
 
     letter-spacing: .13em;
 
@@ -2004,12 +1848,11 @@
 
     display: block;
 
-    margin-top: 10px;
+    margin-top: 9px;
 
-    color:
-        #765556;
+    color: #765961;
 
-    font-size: 25px;
+    font-size: 24px;
 
     line-height: 1.05;
 
@@ -2022,16 +1865,15 @@
 
     margin-top: 10px;
 
-    color:
-        var(--sakura);
+    color: var(--pink-dark);
 
-    font-size: 23px;
+    font-size: 22px;
 
 }
 
 
 /* =========================================================
-   BOTTOM NAVIGATION
+   BOTTOM NAV
 ========================================================= */
 
 .academy-bottom-nav {
@@ -2042,11 +1884,9 @@
 
     max-width: 1180px;
 
-    margin:
-        0 auto 85px;
+    margin: 0 auto 70px;
 
-    padding:
-        0 60px;
+    padding: 0 60px;
 
     display: flex;
 
@@ -2059,25 +1899,24 @@
 
 .back-academies {
 
-    color:
-        #fff7ee;
+    color: white;
 
-    font-size: 9px;
+    font-size: 8px;
 
     font-weight: 700;
 
     letter-spacing: .16em;
 
-    transition:
-        .2s ease;
+    transition: .2s ease;
 
 }
 
 
 .back-academies:hover {
 
-    color:
-        #ffd9dd;
+    color: #fff;
+
+    transform: translateX(-3px);
 
 }
 
@@ -2090,17 +1929,16 @@
 
     align-items: flex-end;
 
-    gap: 5px;
+    gap: 4px;
 
 }
 
 
 .next-academy span {
 
-    color:
-        rgba(255,255,255,.58);
+    color: rgba(255,255,255,.6);
 
-    font-size: 8px;
+    font-size: 7px;
 
     letter-spacing: .15em;
 
@@ -2109,14 +1947,13 @@
 
 .next-academy strong {
 
-    color:
-        white;
+    color: white;
 
     font-family:
         "Playfair Display",
         serif;
 
-    font-size: 20px;
+    font-size: 19px;
 
     font-weight: 500;
 
@@ -2125,8 +1962,7 @@
 
 .next-academy:hover strong {
 
-    color:
-        #ffd9dd;
+    color: #ffe3ea;
 
 }
 
@@ -2143,11 +1979,149 @@
 
     max-width: 1180px;
 
+    margin: 0 auto;
+
+    padding: 60px 55px 28px;
+
+    color: white;
+
+}
+
+
+.seiran-page .footer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.35);
+
+}
+
+
+.seiran-page .footer-logo span {
+
+    color: #ffe1e8;
+
+    font-size: 27px;
+
+}
+
+
+.seiran-page .footer-logo h2 {
+
+    margin-top: 7px;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 36px;
+
+    line-height: 1;
+
+}
+
+
+.seiran-page .footer-logo h2 em {
+
+    display: block;
+
+    color: #ffd9e2;
+
+}
+
+
+.seiran-page .footer-logo p {
+
+    margin-top: 13px;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 10px;
+
+}
+
+
+.seiran-page .footer-links {
+
+    display: flex;
+
+    gap: 70px;
+
+}
+
+
+.seiran-page .footer-links > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.seiran-page .footer-links span {
+
+    margin-bottom: 7px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 7px;
+
+    letter-spacing: .18em;
+
+}
+
+
+.seiran-page .footer-links a {
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 10px;
+
+    transition: .2s ease;
+
+}
+
+
+.seiran-page .footer-links a:hover {
+
+    color: #ffe1e8;
+
+    transform: translateX(3px);
+
+}
+
+
+.seiran-page .footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: 7px;
+
+    letter-spacing: .1em;
+
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -2171,38 +2145,40 @@
 }
 
 
+/* =========================================================
+   TABLET / SMALL
+========================================================= */
+
 @media (max-width: 800px) {
+
+    .seiran-page .header-inner {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+
+    .seiran-page .main-nav {
+
+        justify-content: center;
+
+    }
+
 
     .academy-hero {
 
         min-height: auto;
 
-        padding:
-            75px 15px 100px;
+        padding: 70px 15px;
 
     }
 
 
     .academy-paper {
 
-        width: 100%;
-
-        padding:
-            70px 30px 50px;
-
-    }
-
-
-    .academy-paper::before {
-
-        left: 28px;
-
-    }
-
-
-    .academy-paper::after {
-
-        display: none;
+        padding: 70px 30px 45px;
 
     }
 
@@ -2216,24 +2192,39 @@
 
     .academy-facts {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .academy-facts div + div {
+
+        border-left: 0;
+
+        border-top: 1px solid #f0dfe3;
 
     }
 
 
     .about-layout {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
     }
 
 
     .campus-grid {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .campus-card:nth-child(2) {
+
+        transform: none;
 
     }
 
@@ -2250,36 +2241,54 @@
 
         position: static;
 
-        margin-top: -25px;
+        margin-top: -20px;
 
-        margin-bottom: 30px;
+        margin-bottom: 28px;
 
     }
 
 
     .academy-section {
 
-        padding:
-            60px 25px;
+        padding: 60px 25px;
 
     }
 
 
     .academy-bottom-nav {
 
-        padding:
-            0 25px;
+        padding: 0 25px;
 
     }
 
 }
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 560px) {
+
+    .seiran-page .nav-item {
+
+        padding: 6px 7px;
+
+        font-size: 7px;
+
+    }
+
+
+    .seiran-page .nav-item span {
+
+        display: none;
+
+    }
+
 
     .academy-heading {
 
-        gap: 5px;
+        gap: 4px;
 
     }
 
@@ -2293,16 +2302,21 @@
 
     .academy-heading h1 {
 
-        font-size:
-            52px;
+        font-size: 51px;
 
     }
 
 
     .academy-motto {
 
-        font-size:
-            19px;
+        font-size: 19px;
+
+    }
+
+
+    .academy-lead {
+
+        font-size: 16px;
 
     }
 
@@ -2319,101 +2333,142 @@
 
     .students-grid {
 
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
     }
 
 
     .student-image {
 
-        height:
-            350px;
+        height: 350px;
 
     }
 
 
     .memory-board {
 
-        min-height:
-            650px;
+        min-height: 650px;
 
     }
 
 
     .memory-photo {
 
-        width:
-            180px;
+        width: 180px;
 
-        height:
-            135px;
+        height: 135px;
 
     }
 
 
     .memory-one {
 
-        left:
-            3%;
-
-        top:
-            35px;
+        left: 3%;
+        top: 35px;
 
     }
 
 
     .memory-two {
 
-        right:
-            3%;
-
-        top:
-            190px;
+        right: 3%;
+        top: 190px;
 
     }
 
 
     .memory-three {
 
-        left:
-            8%;
-
-        bottom:
-            40px;
+        left: 8%;
+        bottom: 40px;
 
     }
 
 
     .memory-paper {
 
-        width:
-            160px;
+        width: 160px;
 
-        padding:
-            18px;
+        padding: 18px;
 
     }
 
 
     .academy-bottom-nav {
 
-        flex-direction:
-            column;
+        flex-direction: column;
 
-        align-items:
-            flex-start;
+        align-items: flex-start;
 
-        gap:
-            30px;
+        gap: 25px;
 
     }
 
 
     .next-academy {
 
-        align-items:
-            flex-start;
+        align-items: flex-start;
+
+    }
+
+
+    .seiran-page .footer-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .seiran-page .footer-links {
+
+        gap: 40px;
+
+    }
+
+
+    .seiran-page .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 9px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .academy-paper {
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+
+    .academy-heading h1 {
+
+        font-size: 44px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .academy-section {
+
+        padding-left: 18px;
+        padding-right: 18px;
 
     }
 
