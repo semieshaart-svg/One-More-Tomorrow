@@ -1,0 +1,1858 @@
+/* =========================================================
+   KAZEHA ACADEMY
+   03 / ACADEMY
+   sport • energy • teamwork
+========================================================= */
+
+.kazeha-page {
+
+    --kazeha-accent: #4aa9df;
+    --kazeha-accent-dark: #2477aa;
+
+    --kazeha-blue: #e8f6fd;
+    --kazeha-pale: #f7fcff;
+
+    --kazeha-paper: #ffffff;
+    --kazeha-cream: #f5f7f8;
+
+    --kazeha-dark: #24343d;
+    --kazeha-muted: #71818a;
+
+    --kazeha-border: #dce8ed;
+
+    background:
+        linear-gradient(
+            rgba(74,169,223,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(74,169,223,.035) 1px,
+            transparent 1px
+        ),
+        #f4f9fb;
+
+    background-size: 42px 42px;
+
+    color: var(--kazeha-dark);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   SPORT DECORATIONS
+========================================================= */
+
+.kazeha-floating {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    color: var(--kazeha-accent);
+
+    opacity: .18;
+}
+
+
+/* large numbers */
+
+.kazeha-number {
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 7rem;
+
+    font-weight: 700;
+
+    letter-spacing: -.08em;
+
+    line-height: 1;
+
+}
+
+
+/* diagonal speed lines */
+
+.kazeha-speed-lines {
+
+    position: absolute;
+
+    width: 190px;
+    height: 80px;
+
+    transform: rotate(-18deg);
+
+    opacity: .16;
+}
+
+
+.kazeha-speed-lines::before,
+.kazeha-speed-lines::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--kazeha-accent);
+
+}
+
+
+.kazeha-speed-lines::before {
+    top: 25px;
+}
+
+
+.kazeha-speed-lines::after {
+    top: 50px;
+}
+
+
+/* ball-like circles */
+
+.kazeha-circle {
+
+    width: 90px;
+    height: 90px;
+
+    border: 2px solid var(--kazeha-accent);
+
+    border-radius: 50%;
+
+    opacity: .14;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.kazeha-page .academy-hero {
+
+    position: relative;
+
+    min-height: 760px;
+
+    padding: 100px 40px 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND SPORT LINES
+========================================================= */
+
+.kazeha-page .academy-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            105deg,
+            transparent 0 44%,
+            rgba(74,169,223,.06) 44% 45%,
+            transparent 45% 100%
+        ),
+
+        linear-gradient(
+            105deg,
+            transparent 0 58%,
+            rgba(74,169,223,.05) 58% 59%,
+            transparent 59% 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.kazeha-page .academy-paper {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, 90%);
+
+    padding: 70px 80px 65px;
+
+    background: var(--kazeha-paper);
+
+    border: 1px solid var(--kazeha-border);
+
+    box-shadow:
+        0 22px 55px rgba(41,91,116,.12),
+        8px 8px 0 rgba(74,169,223,.08);
+
+    transform: rotate(-.6deg);
+
+    overflow: hidden;
+}
+
+
+/* sport stripe */
+
+.kazeha-page .academy-paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 8px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--kazeha-accent) 0 42px,
+            white 42px 52px,
+            var(--kazeha-accent-dark) 52px 94px
+        );
+}
+
+
+/* =========================================================
+   TAPE
+========================================================= */
+
+.kazeha-page .paper-tape {
+
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(2deg);
+
+    width: 135px;
+    height: 32px;
+
+    background: rgba(170,220,242,.55);
+
+    border: 1px solid rgba(74,169,223,.15);
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   ACADEMY NUMBER
+========================================================= */
+
+.kazeha-page .academy-number {
+
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    padding: 7px 14px;
+
+    background: var(--kazeha-blue);
+
+    border-left: 4px solid var(--kazeha-accent);
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.kazeha-page .academy-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.kazeha-page .heading-heart {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--kazeha-accent);
+
+    color: white;
+
+    font-size: 1.45rem;
+
+    box-shadow:
+        4px 4px 0 var(--kazeha-blue);
+}
+
+
+.kazeha-page .academy-heading h1 {
+
+    margin: 0;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: .95;
+
+    letter-spacing: -.04em;
+}
+
+
+.kazeha-page .academy-heading h1 em {
+
+    display: block;
+
+    color: var(--kazeha-accent);
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.kazeha-page .academy-motto {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    align-items: center;
+
+    margin-bottom: 27px;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+
+    text-transform: uppercase;
+}
+
+
+.kazeha-page .academy-motto span {
+
+    color: var(--kazeha-accent);
+
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.kazeha-page .academy-lead {
+
+    max-width: 610px;
+
+    margin: 0 0 22px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    font-weight: 600;
+}
+
+
+.kazeha-page .academy-description {
+
+    max-width: 630px;
+
+    margin: 0;
+
+    color: var(--kazeha-muted);
+
+    line-height: 1.9;
+
+    font-size: .96rem;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.kazeha-page .academy-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 38px 0 28px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--kazeha-border) 0 10px,
+            transparent 10px 17px
+        );
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.kazeha-page .academy-facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.kazeha-page .academy-facts > div {
+
+    padding: 17px;
+
+    background: var(--kazeha-pale);
+
+    border: 1px solid var(--kazeha-border);
+
+    border-bottom: 3px solid var(--kazeha-accent);
+}
+
+
+.kazeha-page .academy-facts span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--kazeha-muted);
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+
+.kazeha-page .academy-facts strong {
+
+    font-size: .82rem;
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.kazeha-page .academy-stamp {
+
+    position: absolute;
+
+    right: 35px;
+    bottom: 30px;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 2px solid var(--kazeha-accent);
+
+    border-radius: 50%;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .57rem;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: .08em;
+
+    transform: rotate(12deg);
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   CAMPUS POLAROID
+========================================================= */
+
+.kazeha-page .polaroid-campus {
+
+    position: absolute;
+
+    right: 6%;
+
+    top: 13%;
+
+    z-index: 3;
+
+    width: 230px;
+
+    padding: 13px 13px 20px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(41,91,116,.14);
+
+    transform: rotate(5deg);
+}
+
+
+.kazeha-page .polaroid-campus .polaroid-image {
+
+    height: 155px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(74,169,223,.08) 0 1px,
+            transparent 1px 13px
+        ),
+        var(--kazeha-blue);
+
+    border: 1px solid var(--kazeha-border);
+}
+
+
+.kazeha-page .polaroid-campus .polaroid-image span {
+
+    text-align: center;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+}
+
+
+.kazeha-page .polaroid-campus p {
+
+    margin: 13px 2px 0;
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 1.05rem;
+
+    color: var(--kazeha-dark);
+}
+
+
+/* =========================================================
+   SPORT NOTE
+========================================================= */
+
+.kazeha-page .academy-note {
+
+    position: absolute;
+
+    left: 7%;
+
+    bottom: 13%;
+
+    z-index: 4;
+
+    width: 190px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--kazeha-border);
+
+    box-shadow:
+        7px 8px 0 rgba(74,169,223,.09);
+
+    transform: rotate(-5deg);
+}
+
+
+.kazeha-page .academy-note::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: var(--kazeha-accent);
+}
+
+
+.kazeha-page .academy-note small {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--kazeha-muted);
+
+    font-size: .58rem;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+}
+
+
+.kazeha-page .academy-note strong {
+
+    display: block;
+
+    color: var(--kazeha-dark);
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 1.3rem;
+
+    line-height: 1.05;
+}
+
+
+.kazeha-page .academy-note span {
+
+    position: absolute;
+
+    right: 14px;
+    bottom: 10px;
+
+    color: var(--kazeha-accent);
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   MINI NOTE
+========================================================= */
+
+.kazeha-page .academy-mini-note {
+
+    position: absolute;
+
+    right: 9%;
+
+    bottom: 12%;
+
+    z-index: 4;
+
+    padding: 15px 19px;
+
+    background: #fff;
+
+    border-left: 4px solid var(--kazeha-accent);
+
+    box-shadow:
+        0 10px 25px rgba(41,91,116,.1);
+
+    transform: rotate(-3deg);
+}
+
+
+.kazeha-page .academy-mini-note span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .57rem;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+
+.kazeha-page .academy-mini-note strong {
+
+    font-family: 'Patrick Hand', cursive;
+
+    font-size: 1.1rem;
+
+    line-height: 1.05;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.kazeha-page .academy-section {
+
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 35px;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.kazeha-page .section-title > span {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .68rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+}
+
+
+.kazeha-page .section-title h2 {
+
+    max-width: 650px;
+
+    margin: 0 0 15px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -.04em;
+}
+
+
+.kazeha-page .section-title h2 em {
+
+    color: var(--kazeha-accent);
+
+    font-style: italic;
+}
+
+
+.kazeha-page .section-title p {
+
+    max-width: 570px;
+
+    margin: 0;
+
+    color: var(--kazeha-muted);
+
+    line-height: 1.7;
+}
+
+
+.kazeha-page .section-title.centered {
+
+    text-align: center;
+}
+
+
+.kazeha-page .section-title.centered h2,
+.kazeha-page .section-title.centered p {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.kazeha-page .about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr .7fr;
+
+    gap: 80px;
+
+    margin-top: 55px;
+
+    align-items: start;
+}
+
+
+.kazeha-page .about-text {
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: var(--kazeha-muted);
+}
+
+
+.kazeha-page .about-text p {
+
+    margin: 0 0 25px;
+}
+
+
+.kazeha-page .about-text .about-big {
+
+    color: var(--kazeha-dark);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.8rem;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.kazeha-page .notebook-card {
+
+    position: relative;
+
+    padding: 32px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(74,169,223,.07) 0 1px,
+            transparent 1px 29px
+        ),
+        #fff;
+
+    border: 1px solid var(--kazeha-border);
+
+    box-shadow:
+        8px 8px 0 rgba(74,169,223,.08);
+
+    transform: rotate(1deg);
+}
+
+
+.kazeha-page .notebook-label {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .6rem;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+
+.kazeha-page .notebook-card h3 {
+
+    margin: 0 0 22px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.45rem;
+}
+
+
+.kazeha-page .notebook-card ul {
+
+    margin: 0;
+
+    padding-left: 18px;
+
+    color: var(--kazeha-muted);
+
+    line-height: 2;
+}
+
+
+.kazeha-page .notebook-doodle {
+
+    margin-top: 25px;
+
+    color: var(--kazeha-accent);
+
+    font-size: 1.3rem;
+
+    letter-spacing: .3em;
+}
+
+
+/* =========================================================
+   CAMPUS LIFE
+========================================================= */
+
+.kazeha-page .campus-section {
+
+    max-width: none;
+
+    background: rgba(232,246,253,.5);
+
+    border-top: 1px solid var(--kazeha-border);
+
+    border-bottom: 1px solid var(--kazeha-border);
+}
+
+
+.kazeha-page .campus-grid {
+
+    max-width: 1130px;
+
+    margin: 55px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.kazeha-page .campus-card {
+
+    position: relative;
+
+    padding: 35px;
+
+    min-height: 270px;
+
+    background: white;
+
+    border: 1px solid var(--kazeha-border);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.kazeha-page .campus-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 30px rgba(41,91,116,.1);
+}
+
+
+.kazeha-page .campus-number {
+
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    color: var(--kazeha-accent);
+
+    font-size: .7rem;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+}
+
+
+.kazeha-page .campus-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+    background: var(--kazeha-blue);
+
+    color: var(--kazeha-accent-dark);
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+
+    font-weight: 700;
+}
+
+
+.kazeha-page .campus-card h3 {
+
+    margin: 0 0 12px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.5rem;
+}
+
+
+.kazeha-page .campus-card p {
+
+    margin: 0;
+
+    color: var(--kazeha-muted);
+
+    font-size: .9rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.kazeha-page .students-section {
+
+    max-width: 1200px;
+}
+
+
+.kazeha-page .student-total {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 9px;
+
+    margin: 45px 0 25px;
+
+    color: var(--kazeha-muted);
+}
+
+
+.kazeha-page .student-total strong {
+
+    color: var(--kazeha-accent-dark);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 3rem;
+
+    line-height: 1;
+}
+
+
+.kazeha-page .student-total span {
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.kazeha-page .students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   STUDENT CARD
+========================================================= */
+
+.kazeha-page .student-card {
+
+    position: relative;
+
+    display: block;
+
+    background: white;
+
+    border: 1px solid var(--kazeha-border);
+
+    text-decoration: none;
+
+    color: var(--kazeha-dark);
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.kazeha-page .student-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(41,91,116,.12);
+}
+
+
+/* =========================================================
+   STUDENT IMAGE
+========================================================= */
+
+.kazeha-page .student-image {
+
+    position: relative;
+
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(74,169,223,.08),
+            rgba(74,169,223,.02)
+        );
+
+    overflow: hidden;
+}
+
+
+/* diagonal sports lines */
+
+.kazeha-page .student-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+
+    height: 35px;
+
+    background: rgba(74,169,223,.09);
+
+    transform: rotate(-20deg);
+}
+
+
+.kazeha-page .student-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+
+    height: 2px;
+
+    background: rgba(36,119,170,.17);
+
+    transform: rotate(-20deg) translateY(30px);
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.kazeha-page .student-image .image-placeholder {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .63rem;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+
+    letter-spacing: .13em;
+}
+
+
+/* =========================================================
+   INDEX
+========================================================= */
+
+.kazeha-page .student-index {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 4;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border: 1px solid var(--kazeha-border);
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .65rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TECHNICAL CORNER
+========================================================= */
+
+.kazeha-page .technical-corner {
+
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    z-index: 4;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .55rem;
+
+    font-weight: 700;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   STUDENT CONTENT
+========================================================= */
+
+.kazeha-page .student-content {
+
+    padding: 20px 20px 22px;
+
+    border-top: 3px solid var(--kazeha-accent);
+}
+
+
+.kazeha-page .student-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--kazeha-muted);
+
+    font-size: .55rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+}
+
+
+.kazeha-page .student-content h3 {
+
+    margin: 0 0 14px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.18rem;
+}
+
+
+.kazeha-page .student-content p {
+
+    margin: 0;
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    letter-spacing: .04em;
+}
+
+
+/* =========================================================
+   FUTURE STUDENTS
+========================================================= */
+
+.kazeha-page .student-future {
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #fff 0 12px,
+            #f8fcfe 12px 24px
+        );
+}
+
+
+.kazeha-page .student-future .student-image {
+
+    opacity: .72;
+}
+
+
+.kazeha-page .student-future .student-content {
+
+    border-top-style: dashed;
+}
+
+
+/* =========================================================
+   MEMORY BOARD
+========================================================= */
+
+.kazeha-page .memory-board {
+
+    position: relative;
+
+    min-height: 520px;
+
+    margin-top: 55px;
+
+    padding: 50px;
+
+    background:
+        linear-gradient(
+            rgba(74,169,223,.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(74,169,223,.04) 1px,
+            transparent 1px
+        ),
+        white;
+
+    background-size: 30px 30px;
+
+    border: 1px solid var(--kazeha-border);
+}
+
+
+/* =========================================================
+   MEMORY PHOTOS
+========================================================= */
+
+.kazeha-page .memory-photo {
+
+    position: absolute;
+
+    width: 250px;
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--kazeha-blue);
+
+    border: 9px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(41,91,116,.12);
+}
+
+
+.kazeha-page .memory-photo span {
+
+    color: var(--kazeha-accent-dark);
+
+    font-size: .6rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+}
+
+
+.kazeha-page .memory-one {
+
+    left: 7%;
+    top: 12%;
+
+    transform: rotate(-5deg);
+}
+
+
+.kazeha-page .memory-two {
+
+    right: 8%;
+    top: 8%;
+
+    transform: rotate(4deg);
+}
+
+
+.kazeha-page .memory-three {
+
+    left: 31%;
+    bottom: 8%;
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   MEMORY PAPER
+========================================================= */
+
+.kazeha-page .memory-paper {
+
+    position: absolute;
+
+    left: 50%;
+    top: 35%;
+
+    transform: translate(-50%, -50%) rotate(2deg);
+
+    width: 220px;
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid var(--kazeha-border);
+
+    box-shadow:
+        7px 8px 0 rgba(74,169,223,.09);
+
+    text-align: center;
+}
+
+
+.kazeha-page .memory-paper small {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--kazeha-muted);
+
+    font-size: .55rem;
+
+    font-weight: 700;
+
+    letter-spacing: .14em;
+}
+
+
+.kazeha-page .memory-paper strong {
+
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.25;
+}
+
+
+.kazeha-page .memory-paper > span {
+
+    display: block;
+
+    margin-top: 17px;
+
+    color: var(--kazeha-accent);
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.kazeha-page .academy-bottom-nav {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 55px 35px 100px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.kazeha-page .academy-bottom-nav a {
+
+    color: var(--kazeha-dark);
+
+    text-decoration: none;
+
+    transition: color .2s ease;
+}
+
+
+.kazeha-page .academy-bottom-nav a:hover {
+
+    color: var(--kazeha-accent-dark);
+}
+
+
+.kazeha-page .back-academies {
+
+    font-size: .7rem;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+}
+
+
+.kazeha-page .next-academy {
+
+    text-align: right;
+}
+
+
+.kazeha-page .next-academy span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--kazeha-muted);
+
+    font-size: .6rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+}
+
+
+.kazeha-page .next-academy strong {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .kazeha-page .polaroid-campus {
+        right: 2%;
+        transform: scale(.85) rotate(5deg);
+    }
+
+    .kazeha-page .academy-note {
+        left: 2%;
+        transform: scale(.85) rotate(-5deg);
+    }
+
+    .kazeha-page .academy-mini-note {
+        right: 2%;
+        transform: scale(.85) rotate(-3deg);
+    }
+
+    .kazeha-page .students-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .kazeha-page .academy-hero {
+
+        min-height: auto;
+
+        padding: 80px 20px 90px;
+    }
+
+
+    .kazeha-page .academy-paper {
+
+        width: 100%;
+
+        padding: 60px 30px 45px;
+
+        transform: none;
+    }
+
+
+    .kazeha-page .academy-heading h1 {
+
+        font-size: 3rem;
+    }
+
+
+    .kazeha-page .academy-facts {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .kazeha-page .academy-stamp {
+
+        position: static;
+
+        margin: 30px auto 0;
+    }
+
+
+    .kazeha-page .polaroid-campus,
+    .kazeha-page .academy-note,
+    .kazeha-page .academy-mini-note {
+
+        display: none;
+    }
+
+
+    .kazeha-page .academy-section {
+
+        padding: 80px 22px;
+    }
+
+
+    .kazeha-page .about-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .kazeha-page .campus-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .kazeha-page .students-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .kazeha-page .memory-board {
+
+        min-height: 700px;
+
+        padding: 20px;
+    }
+
+
+    .kazeha-page .memory-photo {
+
+        width: 190px;
+        height: 145px;
+    }
+
+
+    .kazeha-page .memory-one {
+        left: 5%;
+        top: 7%;
+    }
+
+
+    .kazeha-page .memory-two {
+        right: 5%;
+        top: 27%;
+    }
+
+
+    .kazeha-page .memory-three {
+        left: 8%;
+        bottom: 8%;
+    }
+
+
+    .kazeha-page .memory-paper {
+
+        top: 55%;
+
+        width: 190px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .kazeha-page .students-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .kazeha-page .student-image {
+
+        height: 300px;
+    }
+
+
+    .kazeha-page .academy-heading {
+
+        align-items: flex-start;
+    }
+
+
+    .kazeha-page .heading-heart {
+
+        width: 43px;
+        height: 43px;
+
+        flex-shrink: 0;
+    }
+
+
+    .kazeha-page .academy-heading h1 {
+
+        font-size: 2.45rem;
+    }
+
+
+    .kazeha-page .academy-bottom-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .kazeha-page .next-academy {
+
+        text-align: left;
+    }
+
+
+    .kazeha-page .memory-board {
+
+        min-height: 780px;
+    }
+
+
+    .kazeha-page .memory-photo {
+
+        width: 170px;
+        height: 130px;
+    }
+
+
+    .kazeha-page .memory-one {
+        left: 3%;
+    }
+
+
+    .kazeha-page .memory-two {
+        right: 3%;
+    }
+
+
+    .kazeha-page .memory-three {
+        left: 3%;
+    }
+
+}
