@@ -1,0 +1,1096 @@
+/* =========================================================
+   ESORA YANO
+   CSS ONLY
+   NO JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   ESORA COLOR PALETTE
+========================================================= */
+
+:root {
+    --esora-purple: #CBB8F1;
+    --esora-purple-dark: #9D88C8;
+    --esora-purple-soft: #E8DFF8;
+
+    --esora-brown: #BD9E8E;
+    --esora-gray: #97959A;
+    --esora-cream: #F1E1D5;
+
+    --esora-paper: #FFFDFC;
+    --esora-soft: #F8F5F3;
+    --esora-line: #E5DDD8;
+
+    --esora-text: #5F5B60;
+    --esora-text-soft: #88848A;
+    --esora-dark: #51485B;
+}
+
+
+/* =========================================================
+   PAGE RESET
+========================================================= */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+}
+
+body.esora-page {
+    background: #ffffff !important;
+    color: var(--esora-text);
+}
+
+body.esora-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.esora-profile {
+    width: min(1100px, calc(100% - 30px));
+    margin: 40px auto;
+    background: var(--esora-paper);
+    color: var(--esora-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.esora-hero {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    min-height: 390px;
+    background: var(--esora-purple-soft);
+    border: 1px solid var(--esora-line);
+}
+
+.esora-hero-info {
+    padding: 65px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.esora-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--esora-purple-dark);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.esora-hero h1 {
+    margin: 0;
+    color: var(--esora-dark);
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 0.95;
+    font-weight: 700;
+}
+
+.esora-subtitle {
+    margin-top: 20px;
+    color: var(--esora-gray);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.esora-quote {
+    max-width: 520px;
+    margin-top: 35px;
+    padding-left: 20px;
+    border-left: 3px solid var(--esora-purple);
+    color: var(--esora-text);
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.esora-hero-image {
+    min-height: 390px;
+    background: var(--esora-paper);
+    overflow: hidden;
+}
+
+.esora-hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   QUICK DATA
+========================================================= */
+
+.esora-quick-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--esora-line);
+    border-top: 0;
+}
+
+.esora-data-item {
+    padding: 18px;
+    background: var(--esora-paper);
+    border-right: 1px solid var(--esora-line);
+    border-bottom: 1px solid var(--esora-line);
+}
+
+.esora-data-item:nth-child(4n) {
+    border-right: 0;
+}
+
+.esora-data-item span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--esora-gray);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.esora-data-item strong {
+    color: var(--esora-dark);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CURRENT STATUS
+========================================================= */
+
+.esora-status {
+    margin-top: 20px;
+    padding: 22px 25px;
+    background: var(--esora-soft);
+    border: 1px solid var(--esora-line);
+}
+
+.esora-status-title {
+    margin-bottom: 15px;
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.esora-status-grid span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--esora-gray);
+    font-size: 10px;
+}
+
+.esora-status-grid strong {
+    color: var(--esora-dark);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HIDE RADIO BUTTONS
+========================================================= */
+
+.esora-profile > input[type="radio"] {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.esora-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 30px 0 0;
+    padding: 8px;
+    background: var(--esora-soft);
+    border: 1px solid var(--esora-line);
+}
+
+.esora-tab {
+    flex: 1 1 120px;
+    padding: 14px 16px;
+    background: var(--esora-paper);
+    border: 1px solid #DED7D3;
+    color: var(--esora-text-soft);
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.esora-tab:hover {
+    background: var(--esora-purple-soft);
+    border-color: var(--esora-purple);
+    color: var(--esora-dark);
+}
+
+
+/* =========================================================
+   ALL SECTIONS HIDDEN
+========================================================= */
+
+.esora-section,
+.esora-aesthetic {
+    display: none;
+    margin-top: 20px;
+    padding: 40px;
+    background: var(--esora-paper);
+    border: 1px solid var(--esora-line);
+}
+
+
+/* =========================================================
+   SHOW SELECTED TAB
+========================================================= */
+
+#esora-profile-tab:checked ~ .esora-navigation
+    + .esora-section-profile,
+
+#esora-personality-tab:checked ~ .esora-navigation
+    + .esora-section-profile
+    + .esora-section-personality,
+
+#esora-wardrobe-tab:checked ~ .esora-navigation
+    + .esora-section-profile
+    + .esora-section-personality
+    + .esora-section-wardrobe,
+
+#esora-relationships-tab:checked ~ .esora-navigation
+    + .esora-section-profile
+    + .esora-section-personality
+    + .esora-section-wardrobe
+    + .esora-section-relationships,
+
+#esora-story-tab:checked ~ .esora-navigation
+    + .esora-section-profile
+    + .esora-section-personality
+    + .esora-section-wardrobe
+    + .esora-section-relationships
+    + .esora-section-story,
+
+#esora-trivia-tab:checked ~ .esora-navigation
+    + .esora-section-profile
+    + .esora-section-personality
+    + .esora-section-wardrobe
+    + .esora-section-relationships
+    + .esora-section-story
+    + .esora-section-trivia {
+    display: block;
+}
+
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+#esora-profile-tab:checked ~ .esora-navigation label[for="esora-profile-tab"],
+#esora-personality-tab:checked ~ .esora-navigation label[for="esora-personality-tab"],
+#esora-wardrobe-tab:checked ~ .esora-navigation label[for="esora-wardrobe-tab"],
+#esora-relationships-tab:checked ~ .esora-navigation label[for="esora-relationships-tab"],
+#esora-story-tab:checked ~ .esora-navigation label[for="esora-story-tab"],
+#esora-trivia-tab:checked ~ .esora-navigation label[for="esora-trivia-tab"] {
+    background: var(--esora-purple);
+    border-color: var(--esora-purple);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.esora-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.esora-section-heading > span {
+    color: var(--esora-purple-dark);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.esora-section-heading small {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--esora-gray);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.esora-section-heading h2 {
+    margin: 0;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.esora-profile-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 35px;
+}
+
+.esora-description p {
+    margin: 0 0 18px;
+    color: var(--esora-text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.esora-facts {
+    display: grid;
+    gap: 10px;
+}
+
+.esora-fact-card {
+    padding: 15px 18px;
+    background: var(--esora-soft);
+    border-left: 3px solid var(--esora-purple);
+}
+
+.esora-fact-card span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--esora-gray);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.esora-fact-card strong {
+    color: var(--esora-dark);
+    font-size: 13px;
+}
+
+.esora-goal {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 35px;
+    padding: 20px;
+    background: var(--esora-purple-soft);
+}
+
+.esora-goal-icon {
+    color: var(--esora-purple-dark);
+    font-size: 30px;
+}
+
+.esora-goal span {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-goal strong {
+    display: block;
+    color: var(--esora-dark);
+}
+
+.esora-goal small {
+    display: block;
+    margin-top: 5px;
+    color: var(--esora-gray);
+}
+
+.esora-progress,
+.esora-meter {
+    height: 6px;
+    margin-top: 10px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.esora-progress div,
+.esora-meter div {
+    height: 100%;
+    background: var(--esora-purple);
+}
+
+
+/* =========================================================
+   PERSONALITY
+========================================================= */
+
+.esora-personality-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 35px;
+}
+
+.esora-trait {
+    margin-bottom: 22px;
+}
+
+.esora-trait > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    color: var(--esora-text);
+    font-size: 11px;
+}
+
+.esora-meter {
+    margin: 0;
+    background: #EEEAE8;
+}
+
+.esora-like-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.esora-list-box {
+    padding: 20px;
+    background: var(--esora-soft);
+}
+
+.esora-list-box h3 {
+    margin: 0 0 12px;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+}
+
+.esora-list-box ul {
+    margin: 0;
+    padding-left: 17px;
+    color: var(--esora-text);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   WARDROBE
+========================================================= */
+
+.esora-wardrobe-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--esora-purple-soft);
+}
+
+.esora-wardrobe-intro strong {
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.esora-wardrobe-intro p {
+    margin: 7px 0 0;
+    color: var(--esora-text);
+    font-size: 12px;
+}
+
+.esora-outfit-count {
+    color: var(--esora-purple-dark);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.esora-outfit-count small {
+    display: block;
+    color: var(--esora-gray);
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.esora-wardrobe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.esora-outfit {
+    overflow: hidden;
+    background: var(--esora-soft);
+    border: 1px solid var(--esora-line);
+}
+
+.esora-outfit-image {
+    aspect-ratio: 1 / 1.15;
+    overflow: hidden;
+    background: var(--esora-paper);
+}
+
+.esora-outfit-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.esora-outfit-info {
+    padding: 18px;
+}
+
+.esora-outfit-info > span {
+    color: var(--esora-purple-dark);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.esora-outfit-info h3 {
+    margin: 8px 0 5px;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+}
+
+.esora-outfit-info p {
+    margin: 0;
+    color: var(--esora-gray);
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RELATIONSHIPS
+========================================================= */
+
+.esora-relationship-note {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: var(--esora-purple-soft);
+}
+
+.esora-relationship-note span {
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-relationship-note p {
+    margin: 8px 0 0;
+    color: var(--esora-text);
+    font-size: 13px;
+}
+
+.esora-relationship {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    margin-bottom: 20px;
+    border: 1px solid var(--esora-line);
+    background: var(--esora-soft);
+}
+
+.esora-person-image {
+    min-height: 250px;
+    background: var(--esora-paper);
+}
+
+.esora-person-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.esora-person-content {
+    padding: 28px;
+}
+
+.esora-person-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.esora-person-header span {
+    color: var(--esora-purple-dark);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.esora-person-header h3 {
+    margin: 6px 0 0;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.esora-person-header > strong {
+    color: var(--esora-brown);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.esora-heart-level {
+    margin: 15px 0;
+    color: var(--esora-purple-dark);
+    letter-spacing: 3px;
+}
+
+.esora-heart-level small {
+    display: block;
+    margin-top: 5px;
+    color: var(--esora-gray);
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.esora-person-content p {
+    color: var(--esora-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.esora-relationship-footer {
+    padding: 20px;
+    color: var(--esora-purple-dark);
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.esora-story {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+.esora-story-image {
+    min-height: 350px;
+    background: var(--esora-soft);
+}
+
+.esora-story-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.esora-story-content {
+    align-self: center;
+}
+
+.esora-story-content > span,
+.esora-old-note > span {
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-story-content h3 {
+    margin: 10px 0 20px;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.esora-story-content p {
+    color: var(--esora-text);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.esora-story-content blockquote {
+    margin: 25px 0 0;
+    padding: 15px 20px;
+    border-left: 3px solid var(--esora-purple);
+    background: var(--esora-purple-soft);
+    color: var(--esora-text);
+    font-family: Georgia, serif;
+}
+
+.esora-timeline {
+    display: grid;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.esora-timeline-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 18px;
+    padding: 18px;
+    background: var(--esora-soft);
+}
+
+.esora-timeline-item > span {
+    color: var(--esora-purple-dark);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.esora-timeline-item small {
+    color: var(--esora-gray);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.esora-timeline-item h3 {
+    margin: 5px 0;
+    color: var(--esora-dark);
+}
+
+.esora-timeline-item p {
+    margin: 0;
+    color: var(--esora-text);
+    font-size: 12px;
+}
+
+.esora-then-now {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.esora-then-now > div {
+    padding: 25px;
+    background: var(--esora-purple-soft);
+}
+
+.esora-then-now span {
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-then-now h3 {
+    margin: 8px 0 20px;
+    color: var(--esora-dark);
+    font-family: Georgia, serif;
+}
+
+.esora-then-now p {
+    color: var(--esora-text);
+    font-size: 12px;
+}
+
+.esora-then-now strong {
+    margin-right: 5px;
+    color: var(--esora-dark);
+}
+
+.esora-old-note {
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+    background: var(--esora-soft);
+}
+
+.esora-old-note p {
+    color: var(--esora-text);
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TRIVIA
+========================================================= */
+
+.esora-trivia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.esora-trivia-grid article {
+    padding: 25px;
+    background: var(--esora-soft);
+}
+
+.esora-trivia-grid article > span {
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-trivia-grid ul {
+    margin: 15px 0 0;
+    padding-left: 18px;
+    color: var(--esora-text);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.esora-secret {
+    background: var(--esora-purple-soft) !important;
+    text-align: center;
+}
+
+.esora-secret > div {
+    margin: 20px 0;
+    color: var(--esora-purple-dark);
+    font-size: 35px;
+}
+
+.esora-secret p {
+    color: var(--esora-text);
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+.esora-favorites {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 18px;
+    background: var(--esora-dark);
+}
+
+.esora-favorites > span {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-favorites > div {
+    padding: 12px;
+    background: var(--esora-paper);
+    text-align: center;
+}
+
+.esora-favorites strong {
+    display: block;
+    color: var(--esora-dark);
+    font-size: 12px;
+}
+
+.esora-favorites small {
+    display: block;
+    margin-top: 4px;
+    color: var(--esora-gray);
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   AESTHETIC
+========================================================= */
+
+.esora-aesthetic {
+    display: block;
+}
+
+.esora-aesthetic-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 25px;
+}
+
+.esora-aesthetic-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.esora-aesthetic-images div {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--esora-soft);
+}
+
+.esora-aesthetic-images img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.esora-color-palette {
+    padding: 20px;
+    background: var(--esora-soft);
+}
+
+.esora-color-palette > span {
+    color: var(--esora-purple-dark);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.esora-colors {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.esora-colors i {
+    display: block;
+    height: 45px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.esora-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 22px;
+    background: var(--esora-dark);
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .esora-profile {
+        width: calc(100% - 16px);
+        margin: 15px auto;
+    }
+
+    .esora-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-hero-image {
+        min-height: 300px;
+    }
+
+    .esora-hero-info {
+        padding: 40px 25px;
+    }
+
+    .esora-quick-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .esora-data-item:nth-child(4n) {
+        border-right: 1px solid var(--esora-line);
+    }
+
+    .esora-data-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .esora-status-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .esora-section,
+    .esora-aesthetic {
+        padding: 25px 18px;
+    }
+
+    .esora-profile-layout,
+    .esora-personality-layout,
+    .esora-story,
+    .esora-aesthetic-content {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-wardrobe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .esora-relationship {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-person-image {
+        min-height: 280px;
+    }
+
+    .esora-then-now,
+    .esora-trivia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-favorites {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .esora-favorites > span {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .esora-aesthetic-images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .esora-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .esora-tab {
+        min-width: 0;
+    }
+
+    .esora-wardrobe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .esora-aesthetic-images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
