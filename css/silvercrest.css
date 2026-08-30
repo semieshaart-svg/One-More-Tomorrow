@@ -1,0 +1,2043 @@
+/* =========================================================
+   SILVERCREST ACADEMY
+   05 / ACADEMY
+   elite • prestige • excellence
+========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+.silvercrest-page {
+
+    --silver-accent: #b18a42;
+    --silver-accent-dark: #806126;
+
+    --silver-burgundy: #632f3b;
+    --silver-burgundy-dark: #45232b;
+
+    --silver-cream: #f8f3e9;
+    --silver-paper: #fffdf8;
+    --silver-soft: #eee5d5;
+
+    --silver-border: #d9cdb8;
+    --silver-muted: #8c8378;
+
+    --silver-text: #29252a;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(177,138,66,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            rgba(177,138,66,.035) 1px,
+            transparent 1px
+        ),
+        var(--silver-cream);
+
+    background-size: 42px 42px;
+
+    color: var(--silver-text);
+
+}
+
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.silvercrest-floating {
+
+    position: fixed;
+
+    color: var(--silver-accent);
+
+    opacity: .45;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+.crest-star {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 30px;
+
+}
+
+
+.star-one {
+
+    top: 18%;
+
+    left: 4%;
+
+}
+
+
+.star-two {
+
+    right: 5%;
+
+    top: 65%;
+
+    font-size: 22px;
+
+}
+
+
+.crest-cross {
+
+    left: 8%;
+
+    bottom: 25%;
+
+    font-size: 25px;
+
+}
+
+
+.crest-line {
+
+    right: 3%;
+
+    top: 38%;
+
+    writing-mode: vertical-rl;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   CORNER ORNAMENTS
+========================================================= */
+
+.silvercrest-corner {
+
+    position: fixed;
+
+    font-size: 30px;
+
+    color: var(--silver-accent);
+
+    opacity: .35;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+.corner-top {
+
+    top: 110px;
+
+    left: 25px;
+
+}
+
+
+.corner-bottom {
+
+    right: 25px;
+
+    bottom: 25px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.silvercrest-page .academy-hero {
+
+    position: relative;
+
+    min-height: 780px;
+
+    padding: 100px 30px 140px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+/* subtle vertical decorative lines */
+
+.silvercrest-page .academy-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 35px 6%;
+
+    border-left: 1px solid rgba(177,138,66,.16);
+
+    border-right: 1px solid rgba(177,138,66,.16);
+
+    pointer-events: none;
+
+}
+
+
+.silvercrest-page .academy-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 8%;
+
+    right: 8%;
+
+    bottom: 70px;
+
+    height: 1px;
+
+    background: rgba(177,138,66,.18);
+
+}
+
+
+/* =========================================================
+   CREST
+========================================================= */
+
+.silvercrest-crest {
+
+    position: absolute;
+
+    left: 8%;
+
+    top: 22%;
+
+    width: 120px;
+
+    height: 155px;
+
+    border: 1px solid rgba(177,138,66,.55);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 16px 12px;
+
+    transform: rotate(-4deg);
+
+    color: var(--silver-accent);
+
+    background: rgba(255,253,248,.55);
+
+}
+
+
+.silvercrest-crest::before,
+.silvercrest-crest::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    border: 1px solid var(--silver-accent);
+
+}
+
+
+.silvercrest-crest::before {
+
+    top: -7px;
+
+    left: -7px;
+
+    border-right: none;
+
+    border-bottom: none;
+
+}
+
+
+.silvercrest-crest::after {
+
+    bottom: -7px;
+
+    right: -7px;
+
+    border-left: none;
+
+    border-top: none;
+
+}
+
+
+.crest-top {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+}
+
+
+.crest-shield {
+
+    width: 55px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--silver-accent);
+
+    border-radius: 50% 50% 45% 45%;
+
+    font-size: 25px;
+
+}
+
+
+.crest-bottom {
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.silvercrest-page .academy-paper {
+
+    position: relative;
+
+    width: min(720px, 90%);
+
+    padding: 65px 70px 70px;
+
+    background: var(--silver-paper);
+
+    border: 1px solid var(--silver-border);
+
+    box-shadow:
+        0 20px 60px rgba(69,35,43,.08),
+        0 3px 10px rgba(69,35,43,.04);
+
+    text-align: center;
+
+    z-index: 3;
+
+}
+
+
+/* decorative inner frame */
+
+.silvercrest-page .academy-paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(177,138,66,.25);
+
+    pointer-events: none;
+
+}
+
+
+.silvercrest-page .academy-paper::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 5px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: var(--silver-accent);
+
+    background: var(--silver-paper);
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   PAPER TAPE
+========================================================= */
+
+.silvercrest-page .paper-tape {
+
+    position: absolute;
+
+    width: 125px;
+
+    height: 27px;
+
+    background: rgba(177,138,66,.18);
+
+    top: -13px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-1deg);
+
+}
+
+
+/* =========================================================
+   ACADEMY NUMBER
+========================================================= */
+
+.silvercrest-page .academy-number {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: var(--silver-accent-dark);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.silvercrest-page .academy-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+}
+
+
+.silvercrest-page .heading-symbol {
+
+    color: var(--silver-accent);
+
+    font-size: 24px;
+
+}
+
+
+.silvercrest-page .academy-heading h1 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: .95;
+
+    font-weight: 600;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .academy-heading h1 em {
+
+    display: block;
+
+    color: var(--silver-accent);
+
+    font-style: italic;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.silvercrest-page .academy-motto {
+
+    margin-top: 25px;
+
+    color: var(--silver-burgundy);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.silvercrest-page .academy-motto span {
+
+    margin: 0 8px;
+
+    color: var(--silver-accent);
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.silvercrest-page .academy-lead {
+
+    max-width: 500px;
+
+    margin: 32px auto 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #51464a;
+
+}
+
+
+.silvercrest-page .academy-description {
+
+    max-width: 500px;
+
+    margin: 25px auto 0;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    color: var(--silver-muted);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.silvercrest-page .academy-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 35px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--silver-border),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.silvercrest-page .academy-facts {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.silvercrest-page .academy-facts div {
+
+    padding: 14px 8px;
+
+    border-right: 1px solid var(--silver-border);
+
+}
+
+
+.silvercrest-page .academy-facts div:last-child {
+
+    border-right: none;
+
+}
+
+
+.silvercrest-page .academy-facts span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .academy-facts strong {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.silvercrest-page .academy-stamp {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 78px;
+
+    height: 78px;
+
+    border: 1px solid rgba(99,47,59,.35);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    color: var(--silver-burgundy);
+
+    transform: rotate(9deg);
+
+    opacity: .75;
+
+}
+
+
+/* =========================================================
+   POLAROID
+========================================================= */
+
+.silvercrest-page .academy-polaroid {
+
+    position: absolute;
+
+    right: 7%;
+
+    top: 20%;
+
+    width: 210px;
+
+    padding: 13px 13px 25px;
+
+    background: #fff;
+
+    box-shadow: 0 12px 35px rgba(69,35,43,.12);
+
+    transform: rotate(5deg);
+
+    z-index: 4;
+
+}
+
+
+.silvercrest-page .polaroid-image {
+
+    height: 190px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(177,138,66,.08),
+            rgba(99,47,59,.08)
+        );
+
+    border: 1px solid var(--silver-border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.silvercrest-page .polaroid-image span {
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .academy-polaroid p {
+
+    margin: 12px 0 0;
+
+    font-family: "Patrick Hand", cursive;
+
+    text-align: center;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.silvercrest-page .academy-note {
+
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 16%;
+
+    width: 190px;
+
+    padding: 20px;
+
+    background: #f4ecdd;
+
+    border: 1px solid rgba(177,138,66,.25);
+
+    transform: rotate(-3deg);
+
+    box-shadow: 0 8px 25px rgba(69,35,43,.06);
+
+    z-index: 3;
+
+}
+
+
+.silvercrest-page .academy-note small {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .academy-note strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .academy-note > span {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 10px;
+
+    color: var(--silver-accent);
+
+    font-size: 18px;
+
+}
+
+
+.silvercrest-page .academy-mini-note {
+
+    position: absolute;
+
+    left: 8%;
+
+    bottom: 15%;
+
+    padding: 18px;
+
+    background: var(--silver-paper);
+
+    border-left: 3px solid var(--silver-accent);
+
+    box-shadow: 0 8px 25px rgba(69,35,43,.05);
+
+    transform: rotate(3deg);
+
+    z-index: 3;
+
+}
+
+
+.silvercrest-page .academy-mini-note span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .academy-mini-note strong {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.silvercrest-page .academy-section {
+
+    position: relative;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 120px 30px;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.silvercrest-page .section-title > span {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .section-title h2 {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .section-title h2 em {
+
+    color: var(--silver-accent);
+
+    font-style: italic;
+
+}
+
+
+.silvercrest-page .section-title p {
+
+    margin-top: 18px;
+
+    color: var(--silver-muted);
+
+    font-size: 14px;
+
+}
+
+
+.silvercrest-page .section-title.centered {
+
+    text-align: center;
+
+}
+
+
+.silvercrest-page .section-title.centered h2 {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.silvercrest-page .about-layout {
+
+    display: grid;
+
+    grid-template-columns: 1.5fr .8fr;
+
+    gap: 90px;
+
+    margin-top: 60px;
+
+    align-items: start;
+
+}
+
+
+.silvercrest-page .about-text {
+
+    color: #635a5c;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+.silvercrest-page .about-text p {
+
+    margin-bottom: 25px;
+
+}
+
+
+.silvercrest-page .about-text .about-big {
+
+    margin-bottom: 35px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    line-height: 1.55;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.silvercrest-page .notebook-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    background: var(--silver-paper);
+
+    border: 1px solid var(--silver-border);
+
+    box-shadow: 7px 7px 0 rgba(177,138,66,.09);
+
+}
+
+
+.silvercrest-page .notebook-label {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .notebook-card h3 {
+
+    margin: 0 0 20px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .notebook-card ul {
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+}
+
+
+.silvercrest-page .notebook-card li {
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #e8dfd2;
+
+    font-size: 12px;
+
+    color: #71686a;
+
+}
+
+
+.silvercrest-page .notebook-card li::before {
+
+    content: "✦";
+
+    margin-right: 10px;
+
+    color: var(--silver-accent);
+
+}
+
+
+.silvercrest-page .notebook-doodle {
+
+    margin-top: 22px;
+
+    text-align: right;
+
+    font-size: 17px;
+
+    color: var(--silver-accent);
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =========================================================
+   CAMPUS CARDS
+========================================================= */
+
+.silvercrest-page .campus-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 60px;
+
+}
+
+
+.silvercrest-page .campus-card {
+
+    position: relative;
+
+    padding: 42px 35px;
+
+    background: var(--silver-paper);
+
+    border: 1px solid var(--silver-border);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.silvercrest-page .campus-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(69,35,43,.08);
+
+}
+
+
+.silvercrest-page .campus-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .campus-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid var(--silver-accent);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--silver-accent);
+
+    font-size: 20px;
+
+}
+
+
+.silvercrest-page .campus-card h3 {
+
+    margin: 0 0 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .campus-card p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: var(--silver-muted);
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.silvercrest-page .students-section {
+
+    padding-top: 110px;
+
+}
+
+
+.silvercrest-page .student-total {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin: 45px 0 35px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--silver-border);
+
+}
+
+
+.silvercrest-page .student-total strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .student-total span {
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.silvercrest-page .students-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.silvercrest-page .student-card {
+
+    position: relative;
+
+    display: block;
+
+    background: var(--silver-paper);
+
+    border: 1px solid var(--silver-border);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.silvercrest-page .student-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 30px rgba(69,35,43,.09);
+
+}
+
+
+.silvercrest-page .student-image {
+
+    position: relative;
+
+    height: 250px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1eadf,
+            #e8ded0
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.silvercrest-page .student-image::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 8px;
+
+    font-size: 20px;
+
+    color: rgba(177,138,66,.35);
+
+}
+
+
+.silvercrest-page .student-index {
+
+    position: absolute;
+
+    top: 10px;
+
+    left: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .image-placeholder {
+
+    text-align: center;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .technical-corner {
+
+    position: absolute;
+
+    bottom: 9px;
+
+    left: 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+/* =========================================================
+   FUTURE STUDENTS
+========================================================= */
+
+.silvercrest-page .student-future {
+
+    background: #f5f0e7;
+
+}
+
+
+.silvercrest-page .student-future .student-image {
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #eee7db,
+            #eee7db 8px,
+            #f4eee5 8px,
+            #f4eee5 16px
+        );
+
+}
+
+
+.silvercrest-page .student-future .student-content h3 {
+
+    color: var(--silver-muted);
+
+}
+
+
+/* =========================================================
+   STUDENT CONTENT
+========================================================= */
+
+.silvercrest-page .student-content {
+
+    padding: 18px;
+
+}
+
+
+.silvercrest-page .student-content > span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .student-content h3 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .student-content p {
+
+    margin: 10px 0 0;
+
+    font-size: 10px;
+
+    color: var(--silver-muted);
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.silvercrest-page .memory-board {
+
+    position: relative;
+
+    min-height: 500px;
+
+    margin-top: 60px;
+
+    border-top: 1px solid var(--silver-border);
+
+    border-bottom: 1px solid var(--silver-border);
+
+}
+
+
+.silvercrest-page .memory-photo {
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 190px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee6d9,
+            #e5dacb
+        );
+
+    border: 9px solid #fff;
+
+    box-shadow: 0 12px 30px rgba(69,35,43,.10);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.silvercrest-page .memory-photo span {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .memory-one {
+
+    left: 8%;
+
+    top: 70px;
+
+    transform: rotate(-6deg);
+
+}
+
+
+.silvercrest-page .memory-two {
+
+    left: 36%;
+
+    top: 150px;
+
+    transform: rotate(4deg);
+
+}
+
+
+.silvercrest-page .memory-three {
+
+    right: 8%;
+
+    top: 65px;
+
+    transform: rotate(-3deg);
+
+}
+
+
+.silvercrest-page .memory-paper {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 20px;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    width: 250px;
+
+    padding: 25px;
+
+    background: var(--silver-paper);
+
+    border: 1px solid var(--silver-border);
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(69,35,43,.07);
+
+}
+
+
+.silvercrest-page .memory-paper small {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-accent-dark);
+
+}
+
+
+.silvercrest-page .memory-paper strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .memory-paper > span {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: var(--silver-accent);
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.silvercrest-page .academy-bottom-nav {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.silvercrest-page .academy-bottom-nav a {
+
+    text-decoration: none;
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .back-academies {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.silvercrest-page .next-academy {
+
+    text-align: right;
+
+}
+
+
+.silvercrest-page .next-academy span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: var(--silver-muted);
+
+}
+
+
+.silvercrest-page .next-academy strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.silvercrest-page .site-footer {
+
+    border-top: 1px solid var(--silver-border);
+
+    background: var(--silver-paper);
+
+}
+
+
+.silvercrest-page .footer-logo span {
+
+    color: var(--silver-accent);
+
+}
+
+
+.silvercrest-page .footer-logo h2 {
+
+    color: var(--silver-burgundy);
+
+}
+
+
+.silvercrest-page .footer-logo h2 em {
+
+    color: var(--silver-accent);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .silvercrest-crest {
+
+        left: 3%;
+
+        transform: scale(.8) rotate(-4deg);
+
+    }
+
+
+    .silvercrest-page .academy-polaroid {
+
+        right: 2%;
+
+        transform: scale(.8) rotate(5deg);
+
+    }
+
+
+    .silvercrest-page .academy-note {
+
+        right: 2%;
+
+        transform: scale(.8) rotate(-3deg);
+
+    }
+
+
+    .silvercrest-page .academy-mini-note {
+
+        left: 2%;
+
+        transform: scale(.8) rotate(3deg);
+
+    }
+
+
+    .silvercrest-page .students-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .silvercrest-page .academy-hero {
+
+        min-height: auto;
+
+        padding: 90px 18px 100px;
+
+    }
+
+
+    .silvercrest-page .academy-hero::before {
+
+        inset: 20px 3%;
+
+    }
+
+
+    .silvercrest-page .academy-paper {
+
+        width: 100%;
+
+        padding: 55px 25px 60px;
+
+    }
+
+
+    .silvercrest-page .academy-heading {
+
+        gap: 8px;
+
+    }
+
+
+    .silvercrest-page .heading-symbol {
+
+        font-size: 18px;
+
+    }
+
+
+    .silvercrest-page .academy-facts {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .silvercrest-page .academy-facts div {
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--silver-border);
+
+    }
+
+
+    .silvercrest-page .academy-facts div:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .silvercrest-page .academy-stamp {
+
+        display: none;
+
+    }
+
+
+    .silvercrest-crest,
+    .silvercrest-page .academy-polaroid,
+    .silvercrest-page .academy-note,
+    .silvercrest-page .academy-mini-note {
+
+        display: none;
+
+    }
+
+
+    .silvercrest-page .about-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .silvercrest-page .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .silvercrest-page .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .silvercrest-page .memory-board {
+
+        min-height: 750px;
+
+    }
+
+
+    .silvercrest-page .memory-photo {
+
+        width: 190px;
+
+        height: 145px;
+
+    }
+
+
+    .silvercrest-page .memory-one {
+
+        left: 2%;
+
+    }
+
+
+    .silvercrest-page .memory-two {
+
+        left: auto;
+
+        right: 2%;
+
+        top: 220px;
+
+    }
+
+
+    .silvercrest-page .memory-three {
+
+        left: 10%;
+
+        right: auto;
+
+        top: 390px;
+
+    }
+
+
+    .silvercrest-page .memory-paper {
+
+        bottom: 25px;
+
+        width: 220px;
+
+    }
+
+
+    .silvercrest-page .academy-bottom-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .silvercrest-page .next-academy {
+
+        text-align: left;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .silvercrest-page .academy-heading h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .silvercrest-page .academy-lead {
+
+        font-size: 16px;
+
+    }
+
+
+    .silvercrest-page .section-title h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .silvercrest-page .academy-section {
+
+        padding: 85px 20px;
+
+    }
+
+}
