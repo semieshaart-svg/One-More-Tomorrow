@@ -9,10 +9,6 @@
    VARIABLES / MAIN CONTAINER
 ========================================================= */
 .chisa-profile {
-    background: red !important;
-}
-
-.chisa-profile {
     --chisa-accent: #41918A;
     --chisa-accent-dark: #32756f;
 
