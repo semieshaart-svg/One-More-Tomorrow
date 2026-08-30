@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,32 +10,20 @@
 
     <title>Chisa Kamuro</title>
 
-     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/chisa-kamuro.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chisa-kamuro.css">
 
 </head>
 
+
 <body>
 
-<!-- =========================================================
-     CHISA KAMURO
-     ORIGINAL CHARACTER DOSSIER
-========================================================= -->
-
 <div class="chisa-profile">
 
-<!-- =========================================================
-     CHISA KAMURO
-     ORIGINAL CHARACTER DOSSIER
-     NEW STRUCTURE
-     accent: #41918A
-========================================================= -->
 
-<div class="chisa-profile">
-
-    <!-- =====================================================
+    <!-- =========================================================
          HERO
-    ====================================================== -->
+    ========================================================== -->
 
     <header class="chisa-hero">
 
@@ -61,18 +50,21 @@
 
 
         <div class="chisa-hero-image">
+
             <img
-                src="CHISA_MAIN_IMAGE"
+                src="images/chisa-main.png"
                 alt="Chisa Kamuro"
             >
+
         </div>
 
     </header>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
          QUICK DATA
-    ====================================================== -->
+    ========================================================== -->
 
     <section class="chisa-quick-data">
 
@@ -119,9 +111,10 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
          CURRENT STATUS
-    ====================================================== -->
+    ========================================================== -->
 
     <section class="chisa-status">
 
@@ -156,56 +149,125 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
+         CSS-ONLY TAB SYSTEM
+    ========================================================== -->
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-profile"
+        checked
+    >
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-personality"
+    >
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-wardrobe"
+    >
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-relationships"
+    >
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-story"
+    >
+
+    <input
+        type="radio"
+        name="chisa-tabs"
+        id="chisa-tab-trivia"
+    >
+
+
+
+    <!-- =========================================================
          NAVIGATION
-    ====================================================== -->
+    ========================================================== -->
 
     <nav class="chisa-navigation">
 
-        <button class="chisa-tab active" data-section="profile">
+        <label
+            for="chisa-tab-profile"
+            class="chisa-tab"
+        >
             Profile
-        </button>
+        </label>
 
-        <button class="chisa-tab" data-section="personality">
+        <label
+            for="chisa-tab-personality"
+            class="chisa-tab"
+        >
             Personality
-        </button>
+        </label>
 
-        <button class="chisa-tab" data-section="wardrobe">
+        <label
+            for="chisa-tab-wardrobe"
+            class="chisa-tab"
+        >
             Wardrobe
-        </button>
+        </label>
 
-        <button class="chisa-tab" data-section="relationships">
+        <label
+            for="chisa-tab-relationships"
+            class="chisa-tab"
+        >
             Relationships
-        </button>
+        </label>
 
-        <button class="chisa-tab" data-section="story">
+        <label
+            for="chisa-tab-story"
+            class="chisa-tab"
+        >
             Story
-        </button>
+        </label>
 
-        <button class="chisa-tab" data-section="trivia">
+        <label
+            for="chisa-tab-trivia"
+            class="chisa-tab"
+        >
             Trivia
-        </button>
+        </label>
 
     </nav>
 
 
-    <!-- =====================================================
-         PROFILE
-    ====================================================== -->
 
-    <section class="chisa-section active" id="profile">
+    <!-- =========================================================
+         PROFILE
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-profile"
+        id="profile"
+    >
 
         <div class="chisa-section-heading">
+
             <span>01</span>
 
             <div>
                 <small>PROFILE</small>
                 <h2>About Chisa</h2>
             </div>
+
         </div>
 
 
         <div class="chisa-profile-layout">
+
 
             <div class="chisa-description">
 
@@ -275,7 +337,6 @@
         </div>
 
 
-        <!-- PERSONAL GOAL -->
 
         <div class="chisa-goal">
 
@@ -284,6 +345,7 @@
             </div>
 
             <div>
+
                 <span>PERSONAL GOAL</span>
 
                 <strong>
@@ -297,6 +359,7 @@
                 <div class="chisa-progress">
                     <div style="width:100%;"></div>
                 </div>
+
             </div>
 
         </div>
@@ -304,25 +367,33 @@
     </section>
 
 
-    <!-- =====================================================
-         PERSONALITY
-    ====================================================== -->
 
-    <section class="chisa-section" id="personality">
+    <!-- =========================================================
+         PERSONALITY
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-personality"
+        id="personality"
+    >
 
         <div class="chisa-section-heading">
+
             <span>02</span>
 
             <div>
                 <small>CHARACTER</small>
                 <h2>Personality</h2>
             </div>
+
         </div>
 
 
         <div class="chisa-personality-layout">
 
+
             <div class="chisa-traits">
+
 
                 <div class="chisa-trait">
                     <div>
@@ -446,7 +517,9 @@
             </div>
 
 
+
             <div class="chisa-like-columns">
+
 
                 <div class="chisa-list-box">
 
@@ -510,31 +583,41 @@
     </section>
 
 
-    <!-- =====================================================
-         WARDROBE
-    ====================================================== -->
 
-    <section class="chisa-section" id="wardrobe">
+    <!-- =========================================================
+         WARDROBE
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-wardrobe"
+        id="wardrobe"
+    >
 
         <div class="chisa-section-heading">
+
             <span>03</span>
 
             <div>
                 <small>STYLE ARCHIVE</small>
                 <h2>Wardrobe</h2>
             </div>
+
         </div>
 
 
         <div class="chisa-wardrobe-intro">
 
             <div>
-                <strong>Chisa's closet</strong>
+
+                <strong>
+                    Chisa's closet
+                </strong>
 
                 <p>
                     A collection of outfits worn throughout
                     school life, weekends and special occasions.
                 </p>
+
             </div>
 
             <div class="chisa-outfit-count">
@@ -545,6 +628,7 @@
         </div>
 
 
+
         <div class="chisa-wardrobe-grid">
 
 
@@ -552,7 +636,7 @@
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_CASUAL"
+                        src="images/chisa-casual.png"
                         alt="Chisa casual outfit"
                     >
                 </div>
@@ -574,11 +658,12 @@
             </article>
 
 
+
             <article class="chisa-outfit">
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_SCHOOL"
+                        src="images/chisa-school.png"
                         alt="Chisa school uniform"
                     >
                 </div>
@@ -600,11 +685,12 @@
             </article>
 
 
+
             <article class="chisa-outfit">
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_SWIMWEAR"
+                        src="images/chisa-swimwear.png"
                         alt="Chisa swimwear"
                     >
                 </div>
@@ -626,11 +712,12 @@
             </article>
 
 
+
             <article class="chisa-outfit">
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_FORMAL"
+                        src="images/chisa-formal.png"
                         alt="Chisa formal outfit"
                     >
                 </div>
@@ -652,11 +739,12 @@
             </article>
 
 
+
             <article class="chisa-outfit">
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_EVENING"
+                        src="images/chisa-evening.png"
                         alt="Chisa evening outfit"
                     >
                 </div>
@@ -678,11 +766,12 @@
             </article>
 
 
+
             <article class="chisa-outfit">
 
                 <div class="chisa-outfit-image">
                     <img
-                        src="WARDROBE_SPORTS"
+                        src="images/chisa-sports.png"
                         alt="Chisa sports outfit"
                     >
                 </div>
@@ -709,19 +798,25 @@
     </section>
 
 
-    <!-- =====================================================
-         RELATIONSHIPS
-    ====================================================== -->
 
-    <section class="chisa-section" id="relationships">
+    <!-- =========================================================
+         RELATIONSHIPS
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-relationships"
+        id="relationships"
+    >
 
         <div class="chisa-section-heading">
+
             <span>04</span>
 
             <div>
                 <small>SOCIAL ARCHIVE</small>
                 <h2>Relationships</h2>
             </div>
+
         </div>
 
 
@@ -738,27 +833,33 @@
         </div>
 
 
-        <!-- NATSUMI -->
 
         <article class="chisa-relationship">
 
             <div class="chisa-person-image">
+
                 <img
-                    src="RELATIONSHIP_NATSUMI"
+                    src="images/natsumi.png"
                     alt="Natsumi"
                 >
+
             </div>
+
 
             <div class="chisa-person-content">
 
                 <div class="chisa-person-header">
 
                     <div>
-                        <span>01 · INTEREST</span>
+
+                        <span>
+                            01 · INTEREST
+                        </span>
 
                         <h3>
                             Natsumi
                         </h3>
+
                     </div>
 
                     <strong>
@@ -796,27 +897,33 @@
         </article>
 
 
-        <!-- NEZUKO -->
 
         <article class="chisa-relationship">
 
             <div class="chisa-person-image">
+
                 <img
-                    src="RELATIONSHIP_NEZUKO"
+                    src="images/nezuko.png"
                     alt="Nezuko"
                 >
+
             </div>
+
 
             <div class="chisa-person-content">
 
                 <div class="chisa-person-header">
 
                     <div>
-                        <span>02 · IRRITATION / PROTECTION</span>
+
+                        <span>
+                            02 · IRRITATION / PROTECTION
+                        </span>
 
                         <h3>
                             Nezuko
                         </h3>
+
                     </div>
 
                     <strong>
@@ -853,27 +960,33 @@
         </article>
 
 
-        <!-- MARIKA -->
 
         <article class="chisa-relationship">
 
             <div class="chisa-person-image">
+
                 <img
-                    src="RELATIONSHIP_MARIKA"
+                    src="images/marika.png"
                     alt="Marika"
                 >
+
             </div>
+
 
             <div class="chisa-person-content">
 
                 <div class="chisa-person-header">
 
                     <div>
-                        <span>03 · RESPECT</span>
+
+                        <span>
+                            03 · RESPECT
+                        </span>
 
                         <h3>
                             Marika
                         </h3>
+
                     </div>
 
                     <strong>
@@ -910,6 +1023,7 @@
         </article>
 
 
+
         <div class="chisa-relationship-footer">
             connections are always changing ♡
         </div>
@@ -917,19 +1031,25 @@
     </section>
 
 
-    <!-- =====================================================
-         STORY
-    ====================================================== -->
 
-    <section class="chisa-section" id="story">
+    <!-- =========================================================
+         STORY
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-story"
+        id="story"
+    >
 
         <div class="chisa-section-heading">
+
             <span>05</span>
 
             <div>
                 <small>LIFE ARCHIVE</small>
                 <h2>Her Story</h2>
             </div>
+
         </div>
 
 
@@ -938,7 +1058,7 @@
             <div class="chisa-story-image">
 
                 <img
-                    src="CHISA_STORY_IMAGE"
+                    src="images/chisa-story.png"
                     alt="Chisa childhood"
                 >
 
@@ -986,15 +1106,16 @@
         </article>
 
 
-        <!-- TIMELINE -->
 
         <div class="chisa-timeline">
+
 
             <div class="chisa-timeline-item">
 
                 <span>01</span>
 
                 <div>
+
                     <small>CHILDHOOD</small>
 
                     <h3>
@@ -1005,9 +1126,11 @@
                         Her family taught her discipline,
                         culture and self-control.
                     </p>
+
                 </div>
 
             </div>
+
 
 
             <div class="chisa-timeline-item">
@@ -1015,6 +1138,7 @@
                 <span>02</span>
 
                 <div>
+
                     <small>TEENAGE YEARS</small>
 
                     <h3>
@@ -1025,9 +1149,11 @@
                         Her sharp tongue and strong sense
                         of justice often brought trouble.
                     </p>
+
                 </div>
 
             </div>
+
 
 
             <div class="chisa-timeline-item current">
@@ -1035,6 +1161,7 @@
                 <span>03</span>
 
                 <div>
+
                     <small>PRESENT</small>
 
                     <h3>
@@ -1045,16 +1172,18 @@
                         She still helps people, but now
                         prefers to do it from the shadows.
                     </p>
+
                 </div>
 
             </div>
 
+
         </div>
 
 
-        <!-- THEN / NOW -->
 
         <div class="chisa-then-now">
+
 
             <div>
 
@@ -1087,6 +1216,7 @@
             </div>
 
 
+
             <div>
 
                 <span>NOW</span>
@@ -1117,7 +1247,9 @@
 
             </div>
 
+
         </div>
+
 
 
         <div class="chisa-old-note">
@@ -1138,20 +1270,27 @@
     </section>
 
 
-    <!-- =====================================================
-         TRIVIA
-    ====================================================== -->
 
-    <section class="chisa-section" id="trivia">
+    <!-- =========================================================
+         TRIVIA
+    ========================================================== -->
+
+    <section
+        class="chisa-section chisa-section-trivia"
+        id="trivia"
+    >
 
         <div class="chisa-section-heading">
+
             <span>06</span>
 
             <div>
                 <small>SMALL DETAILS</small>
                 <h2>Trivia</h2>
             </div>
+
         </div>
+
 
 
         <div class="chisa-trivia-grid">
@@ -1164,6 +1303,7 @@
                 </span>
 
                 <ul>
+
                     <li>
                         She knows the ruling eras of China and Japan
                         exceptionally well.
@@ -1178,9 +1318,11 @@
                         She has a sharp tongue, but has become
                         much more restrained with age.
                     </li>
+
                 </ul>
 
             </article>
+
 
 
             <article>
@@ -1190,6 +1332,7 @@
                 </span>
 
                 <ul>
+
                     <li>
                         Club — Chess
                     </li>
@@ -1205,9 +1348,11 @@
                     <li>
                         After class — Studying
                     </li>
+
                 </ul>
 
             </article>
+
 
 
             <article>
@@ -1217,6 +1362,7 @@
                 </span>
 
                 <ul>
+
                     <li>
                         Keeps her emotions under control.
                     </li>
@@ -1232,9 +1378,11 @@
                     <li>
                         Visits the theater every month.
                     </li>
+
                 </ul>
 
             </article>
+
 
 
             <article class="chisa-secret">
@@ -1254,14 +1402,16 @@
 
             </article>
 
+
         </div>
 
 
-        <!-- FAVORITES -->
 
         <div class="chisa-favorites">
 
-            <span>FAVORITES</span>
+            <span>
+                FAVORITES
+            </span>
 
             <div>
 
@@ -1316,9 +1466,10 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
          AESTHETIC
-    ====================================================== -->
+    ========================================================== -->
 
     <section class="chisa-aesthetic">
 
@@ -1327,47 +1478,75 @@
             <span>07</span>
 
             <div>
+
                 <small>VISUAL NOTES</small>
-                <h2>Aesthetic</h2>
+
+                <h2>
+                    Aesthetic
+                </h2>
+
             </div>
 
         </div>
 
 
+
         <div class="chisa-aesthetic-content">
+
 
             <div class="chisa-aesthetic-images">
 
                 <div>
-                    <img src="AESTHETIC_01" alt="">
+                    <img
+                        src="images/chisa-aesthetic-01.png"
+                        alt=""
+                    >
                 </div>
 
                 <div>
-                    <img src="AESTHETIC_02" alt="">
+                    <img
+                        src="images/chisa-aesthetic-02.png"
+                        alt=""
+                    >
                 </div>
 
                 <div>
-                    <img src="AESTHETIC_03" alt="">
+                    <img
+                        src="images/chisa-aesthetic-03.png"
+                        alt=""
+                    >
                 </div>
 
                 <div>
-                    <img src="AESTHETIC_04" alt="">
+                    <img
+                        src="images/chisa-aesthetic-04.png"
+                        alt=""
+                    >
                 </div>
 
                 <div>
-                    <img src="AESTHETIC_05" alt="">
+                    <img
+                        src="images/chisa-aesthetic-05.png"
+                        alt=""
+                    >
                 </div>
 
                 <div>
-                    <img src="AESTHETIC_06" alt="">
+                    <img
+                        src="images/chisa-aesthetic-06.png"
+                        alt=""
+                    >
                 </div>
 
             </div>
 
 
+
             <div class="chisa-color-palette">
 
-                <span>COLOR PALETTE</span>
+                <span>
+                    COLOR PALETTE
+                </span>
 
                 <div class="chisa-colors">
 
@@ -1381,14 +1560,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- =========================================================
          FOOTER
-    ====================================================== -->
+    ========================================================== -->
 
     <footer class="chisa-footer">
 
@@ -1402,7 +1583,9 @@
 
     </footer>
 
+
 </div>
 
 </body>
 </html>
+```
