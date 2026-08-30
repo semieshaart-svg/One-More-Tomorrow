@@ -1,0 +1,1687 @@
+/* =========================================================
+   SEIRAN ACADEMY
+   ONE MORE TOMORROW
+========================================================= */
+
+.seiran-page {
+
+    --academy-accent: #d95b63;
+    --academy-accent-dark: #a9454e;
+
+    --academy-soft: #f7dfe0;
+    --academy-pale: #fff6f4;
+
+    --academy-paper: #fffdf9;
+    --academy-cream: #f4eadc;
+
+    --academy-border: #e5d8d0;
+
+}
+
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.academy-floating {
+
+    position: fixed;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.academy-pencil {
+
+    left: 24px;
+    top: 42%;
+
+    color: #d9b894;
+
+    font-size: 42px;
+
+    transform: rotate(-30deg);
+
+}
+
+
+.academy-star {
+
+    right: 28px;
+    top: 28%;
+
+    color: #e6c5a7;
+
+    font-size: 38px;
+
+    transform: rotate(15deg);
+
+}
+
+
+.academy-heart {
+
+    right: 30px;
+    bottom: 20%;
+
+    color: var(--academy-soft);
+
+    font-size: 55px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.academy-hero {
+
+    position: relative;
+
+    max-width: 1280px;
+
+    min-height: 760px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.academy-paper {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(900px, 94vw);
+
+    padding: 80px 80px 60px;
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 31px,
+            rgba(217,91,99,.045) 32px
+        ),
+
+        var(--academy-paper);
+
+    border: 1px solid var(--academy-border);
+
+    box-shadow:
+        0 25px 65px rgba(62,43,35,.17);
+
+    transform: rotate(.6deg);
+
+}
+
+
+.paper-tape {
+
+    position: absolute;
+
+    top: -17px;
+    left: 50%;
+
+    width: 150px;
+    height: 34px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(230,207,166,.68);
+
+}
+
+
+.academy-number {
+
+    margin-bottom: 25px;
+
+    color: var(--academy-accent);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .24em;
+
+}
+
+
+.academy-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+.heading-heart {
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 45px;
+
+}
+
+
+.academy-heading h1 {
+
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(60px, 9vw, 105px);
+
+    font-weight: 600;
+
+    line-height: .86;
+
+    text-align: center;
+
+}
+
+
+.academy-heading h1 em {
+
+    display: block;
+
+    color: var(--academy-accent);
+
+    font-weight: 600;
+
+}
+
+
+.academy-motto {
+
+    margin-top: 28px;
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    color: #756966;
+
+    font-size: 24px;
+
+}
+
+
+.academy-motto span {
+
+    margin: 0 8px;
+
+    color: var(--academy-accent);
+
+}
+
+
+.academy-lead {
+
+    max-width: 610px;
+
+    margin: 32px auto 0;
+
+    color: #5f5754;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    text-align: center;
+
+}
+
+
+.academy-description {
+
+    max-width: 620px;
+
+    margin: 22px auto 0;
+
+    color: #827875;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    text-align: center;
+
+}
+
+
+.academy-divider {
+
+    width: 100%;
+
+    margin: 38px auto 25px;
+
+    border-top:
+        1px dashed var(--academy-border);
+
+}
+
+
+.academy-facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.academy-facts div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    text-align: center;
+
+}
+
+
+.academy-facts span {
+
+    color: #9b918d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.academy-facts strong {
+
+    color: #4d4643;
+
+    font-size: 11px;
+
+}
+
+
+.academy-stamp {
+
+    position: absolute;
+
+    top: 48px;
+
+    right: 45px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border:
+        2px solid rgba(217,91,99,.4);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: rgba(169,69,78,.65);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: .1em;
+
+    transform: rotate(12deg);
+
+}
+
+
+/* =========================================================
+   POLAROIDS
+========================================================= */
+
+.academy-polaroid {
+
+    position: absolute;
+
+    z-index: 10;
+
+    width: 205px;
+
+    padding: 11px 11px 17px;
+
+    background: white;
+
+    box-shadow:
+        0 13px 30px rgba(54,40,32,.17);
+
+}
+
+
+.polaroid-campus {
+
+    left: 2%;
+
+    top: 115px;
+
+    transform: rotate(-8deg);
+
+}
+
+
+.polaroid-image {
+
+    height: 175px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ead4d0,
+            #f1e3d9
+        );
+
+    color: #a18e89;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .14em;
+
+}
+
+
+.academy-polaroid p {
+
+    margin: 10px 0 0;
+
+    color: #655c58;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 15px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.academy-note {
+
+    position: absolute;
+
+    z-index: 11;
+
+    right: 3%;
+
+    top: 105px;
+
+    width: 165px;
+
+    padding: 22px;
+
+    background: #f5e6a9;
+
+    box-shadow:
+        0 10px 25px rgba(60,43,30,.13);
+
+    transform: rotate(6deg);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.academy-note small {
+
+    display: block;
+
+    color: #716660;
+
+    font-size: 13px;
+
+}
+
+
+.academy-note strong {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #8d5055;
+
+    font-size: 22px;
+
+    line-height: 1.05;
+
+}
+
+
+.academy-note > span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--academy-accent);
+
+    font-size: 22px;
+
+}
+
+
+.academy-mini-note {
+
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 95px;
+
+    z-index: 8;
+
+    padding: 18px 22px;
+
+    background: #dcead8;
+
+    box-shadow:
+        0 10px 25px rgba(50,50,40,.10);
+
+    transform: rotate(-5deg);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.academy-mini-note span {
+
+    display: block;
+
+    color: #77786d;
+
+    font-size: 10px;
+
+    letter-spacing: .1em;
+
+}
+
+
+.academy-mini-note strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #59684f;
+
+    font-size: 18px;
+
+    line-height: 1.1;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.academy-section {
+
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 75px 60px;
+
+    background: var(--academy-paper);
+
+    border: 1px solid var(--academy-border);
+
+    box-shadow:
+        0 20px 50px rgba(62,43,35,.13);
+
+}
+
+
+.section-title {
+
+    max-width: 720px;
+
+    margin-bottom: 48px;
+
+}
+
+
+.section-title.centered {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+
+.section-title > span {
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--academy-accent);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: #322d2b;
+
+    font-size:
+        clamp(40px, 5vw, 62px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.section-title h2 em {
+
+    color: var(--academy-accent);
+
+}
+
+
+.section-title p {
+
+    margin-top: 18px;
+
+    color: #837a76;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(260px, .8fr);
+
+    gap: 65px;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 20px;
+
+    color: #766e6a;
+
+    font-size: 13px;
+
+    line-height: 1.95;
+
+}
+
+
+.about-text .about-big {
+
+    color: #403a37;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1.45;
+
+}
+
+
+.notebook-card {
+
+    position: relative;
+
+    align-self: start;
+
+    padding: 32px;
+
+    background: var(--academy-soft);
+
+    transform: rotate(1.5deg);
+
+}
+
+
+.notebook-label {
+
+    color: var(--academy-accent-dark);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .17em;
+
+}
+
+
+.notebook-card h3 {
+
+    margin: 16px 0 22px;
+
+    color: #443b38;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+}
+
+
+.notebook-card ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.notebook-card li {
+
+    position: relative;
+
+    margin-bottom: 11px;
+
+    padding-left: 18px;
+
+    color: #6e6260;
+
+    font-size: 11px;
+
+}
+
+
+.notebook-card li::before {
+
+    content: "♡";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--academy-accent);
+
+}
+
+
+.notebook-doodle {
+
+    margin-top: 20px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 24px;
+
+    letter-spacing: 7px;
+
+}
+
+
+/* =========================================================
+   CAMPUS
+========================================================= */
+
+.campus-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.campus-card {
+
+    position: relative;
+
+    padding: 32px 28px 35px;
+
+    background: white;
+
+    border: 1px solid var(--academy-border);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.campus-card:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(-.5deg);
+
+    box-shadow:
+        0 15px 30px rgba(62,43,35,.11);
+
+}
+
+
+.campus-number {
+
+    position: absolute;
+
+    top: 17px;
+    right: 20px;
+
+    color: #cfc3bd;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+}
+
+
+.campus-icon {
+
+    margin-bottom: 18px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 38px;
+
+}
+
+
+.campus-card h3 {
+
+    margin: 0 0 12px;
+
+    color: #413a37;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+}
+
+
+.campus-card p {
+
+    margin: 0;
+
+    color: #817976;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.students-section {
+
+    overflow: hidden;
+
+}
+
+
+.student-total {
+
+    position: absolute;
+
+    top: 75px;
+
+    right: 60px;
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    color: var(--academy-accent);
+
+}
+
+
+.student-total strong {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 28px;
+
+}
+
+
+.student-total span {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.student-card {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--academy-border);
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.student-card:nth-child(2n) {
+
+    transform: rotate(.6deg);
+
+}
+
+
+.student-card:nth-child(3n) {
+
+    transform: rotate(-.6deg);
+
+}
+
+
+.student-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0deg);
+
+    box-shadow:
+        0 16px 32px rgba(62,43,35,.14);
+
+}
+
+
+.student-image {
+
+    position: relative;
+
+    height: 290px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3dfdc,
+            #f2e9df
+        );
+
+}
+
+
+.student-index {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 12px;
+    left: 13px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 18px;
+
+}
+
+
+.image-placeholder {
+
+    color: #aa9691;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: .14em;
+
+    text-align: center;
+
+}
+
+
+.student-content {
+
+    padding: 18px;
+
+}
+
+
+.student-content > span {
+
+    color: var(--academy-accent);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.student-content h3 {
+
+    margin: 7px 0 0;
+
+    color: #403936;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-content p {
+
+    margin: 9px 0 0;
+
+    color: #948984;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    transition: color .2s ease;
+
+}
+
+
+.student-card:hover .student-content p {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.memory-board {
+
+    position: relative;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7d0ad,
+            #f0dfc4
+        );
+
+    border: 1px solid #d9c3a3;
+
+}
+
+
+.memory-photo {
+
+    position: absolute;
+
+    width: 255px;
+
+    height: 190px;
+
+    padding: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    box-shadow:
+        0 11px 27px rgba(57,42,32,.15);
+
+}
+
+
+.memory-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee0d5,
+            #e4d1ca
+        );
+
+}
+
+
+.memory-photo span {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #9b8983;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.memory-one {
+
+    left: 9%;
+
+    top: 55px;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.memory-two {
+
+    right: 9%;
+
+    top: 55px;
+
+    transform: rotate(6deg);
+
+}
+
+
+.memory-three {
+
+    left: 29%;
+
+    bottom: 40px;
+
+    transform: rotate(4deg);
+
+}
+
+
+.memory-paper {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    top: 50%;
+
+    width: 205px;
+
+    padding: 25px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-2deg);
+
+    background: #f5e6a9;
+
+    box-shadow:
+        0 12px 27px rgba(57,42,32,.15);
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.memory-paper small {
+
+    display: block;
+
+    color: #7b7068;
+
+    font-size: 9px;
+
+    letter-spacing: .13em;
+
+}
+
+
+.memory-paper strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #765556;
+
+    font-size: 24px;
+
+    line-height: 1.05;
+
+}
+
+
+.memory-paper > span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--academy-accent);
+
+    font-size: 23px;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.academy-bottom-nav {
+
+    max-width: 1180px;
+
+    margin:
+        0 auto 80px;
+
+    padding:
+        0 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.back-academies {
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    text-decoration: none;
+
+}
+
+
+.back-academies:hover {
+
+    color: #f3bfc2;
+
+}
+
+
+.next-academy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+
+    text-decoration: none;
+
+}
+
+
+.next-academy span {
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+}
+
+
+.next-academy strong {
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+}
+
+
+.next-academy:hover strong {
+
+    color: #f3bfc2;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note {
+
+        opacity: .45;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .academy-hero {
+
+        min-height: auto;
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .academy-paper {
+
+        padding:
+            70px 30px 45px;
+
+    }
+
+
+    .academy-stamp {
+
+        display: none;
+
+    }
+
+
+    .academy-facts {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .student-total {
+
+        position: static;
+
+        margin-top: -25px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .academy-section {
+
+        padding:
+            60px 25px;
+
+    }
+
+
+    .academy-bottom-nav {
+
+        padding:
+            0 25px;
+
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .academy-heading {
+
+        gap: 5px;
+
+    }
+
+
+    .heading-heart {
+
+        font-size: 25px;
+
+    }
+
+
+    .academy-heading h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .academy-motto {
+
+        font-size: 19px;
+
+    }
+
+
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note,
+    .academy-floating {
+
+        display: none;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-image {
+
+        height: 350px;
+
+    }
+
+
+    .memory-board {
+
+        min-height: 650px;
+
+    }
+
+
+    .memory-photo {
+
+        width: 180px;
+
+        height: 135px;
+
+    }
+
+
+    .memory-one {
+
+        left: 3%;
+        top: 35px;
+
+    }
+
+
+    .memory-two {
+
+        right: 3%;
+        top: 190px;
+
+    }
+
+
+    .memory-three {
+
+        left: 8%;
+        bottom: 40px;
+
+    }
+
+
+    .memory-paper {
+
+        width: 160px;
+
+        padding: 18px;
+
+    }
+
+
+    .academy-bottom-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+    }
+
+
+    .next-academy {
+
+        align-items: flex-start;
+
+    }
+
+}
