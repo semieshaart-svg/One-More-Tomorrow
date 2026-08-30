@@ -1,0 +1,1067 @@
+/* =========================================================
+   ✦ CHISA KAMURO — CHARACTER PAGE ✦
+   Original character profile
+   Accent: #41918A
+========================================================= */
+
+.chisa-page {
+    --chisa-accent: #41918A;
+    --chisa-accent-dark: #32756f;
+    --chisa-soft: #e8f3f1;
+    --chisa-pale: #f4f9f8;
+    --chisa-paper: #fffdfb;
+    --chisa-cream: #f7f3ee;
+    --chisa-text: #292929;
+    --chisa-muted: #8b8886;
+    --chisa-border: #e5e1dd;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 30px 100px;
+    color: var(--chisa-text);
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.chisa-page *,
+.chisa-page *::before,
+.chisa-page *::after {
+    box-sizing: border-box;
+}
+
+.chisa-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.chisa-page img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.chisa-page .character-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+
+    color: var(--chisa-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.chisa-page .character-label::before {
+    content: "";
+    width: 35px;
+    height: 1px;
+    background: var(--chisa-accent);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.chisa-page .character-hero {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    min-height: 650px;
+
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+
+    overflow: hidden;
+}
+
+
+/* IMAGE */
+
+.chisa-page .hero-image {
+    position: relative;
+    min-height: 650px;
+    background: var(--chisa-pale);
+    overflow: hidden;
+}
+
+.chisa-page .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.chisa-page .hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(65,145,138,.35);
+    pointer-events: none;
+}
+
+
+/* HERO INFO */
+
+.chisa-page .hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 55px 50px;
+}
+
+.chisa-page .hero-number {
+    color: var(--chisa-muted);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.chisa-page .hero-name {
+    margin: 12px 0 6px;
+
+    color: var(--chisa-accent);
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 400;
+    line-height: .95;
+}
+
+.chisa-page .hero-alias {
+    color: var(--chisa-muted);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* INTRO */
+
+.chisa-page .hero-intro {
+    margin: 35px 0;
+
+    max-width: 460px;
+
+    color: #5d5a58;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* HERO META */
+
+.chisa-page .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding-top: 25px;
+    border-top: 1px solid var(--chisa-border);
+}
+
+.chisa-page .meta-item span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--chisa-muted);
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .meta-item strong {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.chisa-page .quick-info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    margin-top: 18px;
+    border: 1px solid var(--chisa-border);
+    background: var(--chisa-paper);
+}
+
+.chisa-page .quick-item {
+    padding: 22px 15px;
+    text-align: center;
+    border-right: 1px solid var(--chisa-border);
+}
+
+.chisa-page .quick-item:last-child {
+    border-right: 0;
+}
+
+.chisa-page .quick-item span {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--chisa-muted);
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .quick-item strong {
+    color: var(--chisa-accent-dark);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.chisa-page .character-nav {
+    position: sticky;
+    top: 15px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin: 55px 0 35px;
+    padding: 7px;
+
+    background: rgba(255,253,251,.94);
+    border: 1px solid var(--chisa-border);
+    backdrop-filter: blur(12px);
+}
+
+.chisa-page .character-nav a {
+    padding: 12px 20px;
+
+    color: var(--chisa-muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition: .25s ease;
+}
+
+.chisa-page .character-nav a:hover,
+.chisa-page .character-nav a.active {
+    background: var(--chisa-accent);
+    color: #fff;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.chisa-page .character-section {
+    margin-bottom: 90px;
+}
+
+.chisa-page .section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid var(--chisa-border);
+}
+
+.chisa-page .section-kicker {
+    margin-bottom: 7px;
+
+    color: var(--chisa-accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.chisa-page .section-title {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.chisa-page .section-number {
+    color: var(--chisa-muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.chisa-page .about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 45px;
+}
+
+.chisa-page .about-text {
+    color: #575451;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.chisa-page .about-text p {
+    margin: 0 0 22px;
+}
+
+
+/* QUOTE */
+
+.chisa-page .character-quote {
+    margin-top: 30px;
+    padding: 25px 30px;
+
+    background: var(--chisa-pale);
+    border-left: 3px solid var(--chisa-accent);
+
+    color: var(--chisa-accent-dark);
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.chisa-page .info-card {
+    padding: 25px;
+
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+}
+
+.chisa-page .info-card-title {
+    margin-bottom: 22px;
+
+    color: var(--chisa-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeae6;
+}
+
+.chisa-page .info-row:last-child {
+    border-bottom: 0;
+}
+
+.chisa-page .info-row span {
+    color: var(--chisa-muted);
+    font-size: 10px;
+}
+
+.chisa-page .info-row strong {
+    text-align: right;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   PERSONALITY
+========================================================= */
+
+.chisa-page .personality-layout {
+    display: grid;
+    grid-template-columns: 1fr .65fr;
+    gap: 45px;
+}
+
+.chisa-page .trait {
+    margin-bottom: 22px;
+}
+
+.chisa-page .trait-label {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    color: var(--chisa-muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.chisa-page .trait-bar {
+    height: 5px;
+    background: #e9e7e4;
+}
+
+.chisa-page .trait-fill {
+    height: 100%;
+    background: var(--chisa-accent);
+
+    transition: width .5s ease;
+}
+
+
+/* TAGS */
+
+.chisa-page .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chisa-page .tag {
+    padding: 9px 13px;
+
+    background: var(--chisa-pale);
+    border: 1px solid #dceae8;
+
+    color: var(--chisa-accent-dark);
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   LIKES / DISLIKES
+========================================================= */
+
+.chisa-page .likes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.chisa-page .like-card {
+    padding: 25px;
+
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+}
+
+.chisa-page .like-card h3 {
+    margin: 0 0 15px;
+
+    color: var(--chisa-accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .like-card ul {
+    margin: 0;
+    padding-left: 18px;
+
+    color: #65615e;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   TRIVIA / FACTS
+========================================================= */
+
+.chisa-page .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.chisa-page .fact-card {
+    position: relative;
+
+    min-height: 170px;
+    padding: 25px;
+
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+
+    overflow: hidden;
+}
+
+.chisa-page .fact-card::after {
+    content: "♡";
+
+    position: absolute;
+    right: 18px;
+    bottom: 5px;
+
+    color: var(--chisa-soft);
+    font-family: Georgia, serif;
+    font-size: 60px;
+}
+
+.chisa-page .fact-number {
+    color: var(--chisa-accent);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.chisa-page .fact-card p {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 18px;
+
+    color: #5d5956;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STORY / TIMELINE
+========================================================= */
+
+.chisa-page .timeline {
+    position: relative;
+    padding-left: 35px;
+}
+
+.chisa-page .timeline::before {
+    content: "";
+
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 5px;
+
+    width: 1px;
+    background: var(--chisa-border);
+}
+
+.chisa-page .timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.chisa-page .timeline-item::before {
+    content: "";
+
+    position: absolute;
+    left: -33px;
+    top: 5px;
+
+    width: 9px;
+    height: 9px;
+
+    background: var(--chisa-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px var(--chisa-pale);
+}
+
+.chisa-page .timeline-year {
+    margin-bottom: 7px;
+
+    color: var(--chisa-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .timeline-title {
+    margin-bottom: 10px;
+
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.chisa-page .timeline-text {
+    max-width: 750px;
+
+    color: #65615e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   RELATIONSHIPS
+========================================================= */
+
+.chisa-page .relationships {
+    display: grid;
+    gap: 18px;
+}
+
+.chisa-page .relationship-card {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 25px;
+    align-items: center;
+
+    padding: 22px;
+
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+
+    transition: transform .25s ease,
+                border-color .25s ease;
+}
+
+.chisa-page .relationship-card:hover {
+    transform: translateX(5px);
+    border-color: var(--chisa-accent);
+}
+
+.chisa-page .relationship-avatar {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    background: var(--chisa-pale);
+    border: 4px solid var(--chisa-pale);
+}
+
+.chisa-page .relationship-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chisa-page .relationship-name {
+    margin-bottom: 4px;
+
+    color: var(--chisa-accent-dark);
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.chisa-page .relationship-type {
+    margin-bottom: 12px;
+
+    color: var(--chisa-muted);
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .relationship-text {
+    color: #65615e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* HEART LEVEL */
+
+.chisa-page .relationship-level {
+    min-width: 125px;
+    text-align: center;
+}
+
+.chisa-page .hearts {
+    margin-bottom: 7px;
+
+    color: var(--chisa-accent);
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.chisa-page .level-label {
+    color: var(--chisa-muted);
+    font-size: 7px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   WARDROBE
+========================================================= */
+
+.chisa-page .wardrobe-intro {
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    color: #68635f;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.chisa-page .wardrobe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.chisa-page .outfit-card {
+    background: var(--chisa-paper);
+    border: 1px solid var(--chisa-border);
+
+    overflow: hidden;
+
+    transition: transform .25s ease,
+                box-shadow .25s ease;
+}
+
+.chisa-page .outfit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.07);
+}
+
+.chisa-page .outfit-image {
+    height: 370px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--chisa-pale);
+    overflow: hidden;
+}
+
+.chisa-page .outfit-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform .4s ease;
+}
+
+.chisa-page .outfit-card:hover .outfit-image img {
+    transform: scale(1.03);
+}
+
+.chisa-page .outfit-info {
+    padding: 18px 20px;
+}
+
+.chisa-page .outfit-number {
+    color: var(--chisa-accent);
+    font-size: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .outfit-name {
+    margin-top: 5px;
+
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+.chisa-page .outfit-description {
+    margin-top: 8px;
+
+    color: var(--chisa-muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FAVORITES
+========================================================= */
+
+.chisa-page .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.chisa-page .favorite {
+    padding: 20px;
+
+    background: var(--chisa-pale);
+    border: 1px solid #dfecea;
+
+    text-align: center;
+}
+
+.chisa-page .favorite-icon {
+    margin-bottom: 10px;
+
+    color: var(--chisa-accent);
+    font-size: 20px;
+}
+
+.chisa-page .favorite-label {
+    margin-bottom: 4px;
+
+    color: var(--chisa-muted);
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.chisa-page .favorite-value {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   COLOR PALETTE
+========================================================= */
+
+.chisa-page .palette {
+    display: flex;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.chisa-page .palette span {
+    flex: 1;
+}
+
+
+/* =========================================================
+   SECRET NOTE
+========================================================= */
+
+.chisa-page .secret-note {
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: #f7fbfa;
+    border: 1px solid #d9e9e6;
+
+    text-align: center;
+}
+
+.chisa-page .secret-symbol {
+    margin-bottom: 15px;
+
+    color: var(--chisa-accent);
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+.chisa-page .secret-note p {
+    margin: 0;
+
+    color: #65615e;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.chisa-page .character-footer {
+    margin-top: 90px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--chisa-border);
+
+    text-align: center;
+}
+
+.chisa-page .footer-symbol {
+    margin-bottom: 8px;
+
+    color: var(--chisa-accent);
+    font-size: 18px;
+}
+
+.chisa-page .footer-text {
+    color: var(--chisa-muted);
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .chisa-page {
+        padding: 45px 20px 70px;
+    }
+
+    .chisa-page .character-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-page .hero-image {
+        min-height: 500px;
+    }
+
+    .chisa-page .hero-info {
+        padding: 40px 30px;
+    }
+
+    .chisa-page .quick-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .chisa-page .quick-item:nth-child(3) {
+        border-right: 0;
+    }
+
+    .chisa-page .quick-item:nth-child(-n+3) {
+        border-bottom: 1px solid var(--chisa-border);
+    }
+
+    .chisa-page .about-grid,
+    .chisa-page .personality-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-page .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chisa-page .wardrobe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chisa-page .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .chisa-page {
+        padding: 30px 12px 60px;
+    }
+
+    .chisa-page .character-label {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .chisa-page .hero-image {
+        min-height: 420px;
+    }
+
+    .chisa-page .hero-info {
+        padding: 30px 22px;
+    }
+
+    .chisa-page .hero-name {
+        font-size: 43px;
+    }
+
+    .chisa-page .hero-intro {
+        font-size: 15px;
+    }
+
+    .chisa-page .hero-meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-page .quick-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-page .quick-item {
+        border-bottom: 1px solid var(--chisa-border);
+    }
+
+    .chisa-page .quick-item:nth-child(even) {
+        border-right: 0;
+    }
+
+    .chisa-page .character-nav {
+        top: 8px;
+        justify-content: stretch;
+    }
+
+    .chisa-page .character-nav a {
+        flex: 1 1 30%;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 7px;
+    }
+
+    .chisa-page .section-title {
+        font-size: 26px;
+    }
+
+    .chisa-page .about-grid,
+    .chisa-page .personality-layout,
+    .chisa-page .likes-grid,
+    .chisa-page .facts-grid,
+    .chisa-page .wardrobe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-page .relationship-card {
+        grid-template-columns: 75px 1fr;
+        gap: 15px;
+    }
+
+    .chisa-page .relationship-avatar {
+        width: 75px;
+        height: 75px;
+    }
+
+    .chisa-page .relationship-level {
+        grid-column: 1 / -1;
+        text-align: left;
+    }
+
+    .chisa-page .hearts {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .chisa-page .favorites-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-page .outfit-image {
+        height: 400px;
+    }
+
+    .chisa-page .character-quote {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
