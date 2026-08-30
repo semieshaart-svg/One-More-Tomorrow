@@ -1,21 +1,167 @@
-```css
 /* =========================================================
-   SEIRAN ACADEMY
-   ONE MORE TOMORROW
+   ✦ SEIRAN ACADEMY — ONE MORE TOMORROW ✦
+   Pink + Sage Green / Scrapbook Academy
+========================================================= */
+
+
+/* =========================================================
+   COLOR PALETTE
 ========================================================= */
 
 .seiran-page {
 
-    --academy-accent: #d95b63;
-    --academy-accent-dark: #a9454e;
+    --academy-pink: #d95b78;
+    --academy-pink-dark: #a9425b;
+    --academy-pink-soft: #f7dfe5;
+    --academy-pink-pale: #fff5f6;
 
-    --academy-soft: #f7dfe0;
-    --academy-pale: #fff6f4;
+    --academy-sage: #789b83;
+    --academy-sage-dark: #52745e;
+    --academy-sage-soft: #dce9df;
+    --academy-sage-pale: #f2f7f3;
 
     --academy-paper: #fffdf9;
-    --academy-cream: #f4eadc;
+    --academy-paper-warm: #faf4ee;
+
+    --academy-text: #40393b;
+    --academy-muted: #8c8083;
 
     --academy-border: #e5d8d0;
+
+}
+
+
+/* =========================================================
+   SEIRAN PAGE BACKGROUND
+========================================================= */
+
+body.seiran-page {
+
+    background-color: #fff8f5 !important;
+
+    background-image:
+
+        radial-gradient(
+            ellipse at 8% 8%,
+            rgba(247, 214, 222, .95),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            ellipse at 92% 15%,
+            rgba(248, 220, 226, .85),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            ellipse at 4% 72%,
+            rgba(216, 232, 220, .9),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            ellipse at 96% 78%,
+            rgba(220, 235, 224, .85),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(255, 244, 244, .8),
+            transparent 48%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffaf7 0%,
+            #fff4f5 30%,
+            #f9f1ed 58%,
+            #eef6ef 100%
+        ) !important;
+
+    background-attachment: fixed !important;
+
+}
+
+
+/* =========================================================
+   PAGE DECORATIONS
+========================================================= */
+
+body.seiran-page::before {
+
+    content:
+        "✿     ❀          ✿"
+        "\A"
+        "      ❧       ❀"
+        "\A"
+        "✿          ❧       ✿";
+
+    position: fixed;
+
+    inset: 0;
+
+    padding: 70px 5vw;
+
+    color: rgba(217, 91, 120, .11);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 30px;
+
+    line-height: 8;
+
+    letter-spacing: 10px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    white-space: pre;
+
+}
+
+
+body.seiran-page::after {
+
+    content: "❧       ❧       ❧";
+
+    position: fixed;
+
+    right: -35px;
+
+    bottom: 35px;
+
+    color: rgba(82, 116, 94, .14);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 58px;
+
+    letter-spacing: 18px;
+
+    transform: rotate(-12deg);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+/* =========================================================
+   KEEP PAGE CONTENT ABOVE DECORATIONS
+========================================================= */
+
+body.seiran-page > * {
+
+    position: relative;
+
+    z-index: 1;
 
 }
 
@@ -24,7 +170,7 @@
    FLOATING DECORATIONS
 ========================================================= */
 
-.academy-floating {
+.seiran-page .academy-floating {
 
     position: fixed;
 
@@ -39,12 +185,13 @@
 }
 
 
-.academy-pencil {
+.seiran-page .academy-pencil {
 
     left: 24px;
+
     top: 42%;
 
-    color: #d9b894;
+    color: var(--academy-sage);
 
     font-size: 42px;
 
@@ -53,12 +200,13 @@
 }
 
 
-.academy-star {
+.seiran-page .academy-star {
 
     right: 28px;
+
     top: 28%;
 
-    color: #e6c5a7;
+    color: var(--academy-pink);
 
     font-size: 38px;
 
@@ -67,12 +215,13 @@
 }
 
 
-.academy-heart {
+.seiran-page .academy-heart {
 
     right: 30px;
+
     bottom: 20%;
 
-    color: var(--academy-soft);
+    color: var(--academy-pink-soft);
 
     font-size: 55px;
 
@@ -83,7 +232,7 @@
    HERO
 ========================================================= */
 
-.academy-hero {
+.seiran-page .academy-hero {
 
     position: relative;
 
@@ -104,7 +253,11 @@
 }
 
 
-.academy-paper {
+/* =========================================================
+   HERO PAPER
+========================================================= */
+
+.seiran-page .academy-paper {
 
     position: relative;
 
@@ -120,29 +273,40 @@
             0deg,
             transparent,
             transparent 31px,
-            rgba(217,91,99,.045) 32px
+            rgba(120, 155, 131, .055) 32px
         ),
 
-        var(--academy-paper);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.98),
+            rgba(255,250,247,.98)
+        );
 
     border: 1px solid var(--academy-border);
 
     box-shadow:
-        0 25px 65px rgba(62,43,35,.17);
+        0 25px 65px rgba(80, 55, 65, .14),
+        0 5px 15px rgba(80, 55, 65, .06);
 
     transform: rotate(.6deg);
 
 }
 
 
-.paper-tape {
+/* =========================================================
+   PAPER TAPE
+========================================================= */
+
+.seiran-page .paper-tape {
 
     position: absolute;
 
     top: -17px;
+
     left: 50%;
 
     width: 150px;
+
     height: 34px;
 
     transform:
@@ -150,16 +314,20 @@
         rotate(-2deg);
 
     background:
-        rgba(230,207,166,.68);
+        rgba(238, 207, 218, .68);
 
 }
 
 
-.academy-number {
+/* =========================================================
+   HERO NUMBER
+========================================================= */
+
+.seiran-page .academy-number {
 
     margin-bottom: 25px;
 
-    color: var(--academy-accent);
+    color: var(--academy-sage);
 
     font-size: 9px;
 
@@ -170,7 +338,11 @@
 }
 
 
-.academy-heading {
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.seiran-page .academy-heading {
 
     display: flex;
 
@@ -183,9 +355,9 @@
 }
 
 
-.heading-heart {
+.seiran-page .heading-heart {
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-family:
         "Patrick Hand",
@@ -196,9 +368,11 @@
 }
 
 
-.academy-heading h1 {
+.seiran-page .academy-heading h1 {
 
     margin: 0;
+
+    color: var(--academy-text);
 
     font-family:
         "Playfair Display",
@@ -216,44 +390,52 @@
 }
 
 
-.academy-heading h1 em {
+.seiran-page .academy-heading h1 em {
 
     display: block;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-weight: 600;
 
 }
 
 
-.academy-motto {
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.seiran-page .academy-motto {
 
     margin-top: 28px;
 
-    text-align: center;
+    color: var(--academy-sage-dark);
 
     font-family:
         "Patrick Hand",
         cursive;
 
-    color: #756966;
-
     font-size: 24px;
+
+    text-align: center;
 
 }
 
 
-.academy-motto span {
+.seiran-page .academy-motto span {
 
     margin: 0 8px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
 }
 
 
-.academy-lead {
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.seiran-page .academy-lead {
 
     max-width: 610px;
 
@@ -274,7 +456,7 @@
 }
 
 
-.academy-description {
+.seiran-page .academy-description {
 
     max-width: 620px;
 
@@ -291,19 +473,37 @@
 }
 
 
-.academy-divider {
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.seiran-page .academy-divider {
 
     width: 100%;
 
+    height: 2px;
+
     margin: 38px auto 25px;
 
-    border-top:
-        1px dashed var(--academy-border);
+    border: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #f1cbd3,
+            #d5e5d9,
+            transparent
+        );
 
 }
 
 
-.academy-facts {
+/* =========================================================
+   HERO FACTS
+========================================================= */
+
+.seiran-page .academy-facts {
 
     display: grid;
 
@@ -315,7 +515,7 @@
 }
 
 
-.academy-facts div {
+.seiran-page .academy-facts div {
 
     display: flex;
 
@@ -328,9 +528,9 @@
 }
 
 
-.academy-facts span {
+.seiran-page .academy-facts span {
 
-    color: #9b918d;
+    color: var(--academy-sage);
 
     font-size: 8px;
 
@@ -341,16 +541,20 @@
 }
 
 
-.academy-facts strong {
+.seiran-page .academy-facts strong {
 
-    color: #4d4643;
+    color: var(--academy-text);
 
     font-size: 11px;
 
 }
 
 
-.academy-stamp {
+/* =========================================================
+   STAMP
+========================================================= */
+
+.seiran-page .academy-stamp {
 
     position: absolute;
 
@@ -362,20 +566,18 @@
 
     height: 90px;
 
-    border:
-        2px solid rgba(217,91,99,.4);
-
-    border-radius: 50%;
-
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    text-align: center;
+    border:
+        2px solid rgba(120,155,131,.45);
 
-    color: rgba(169,69,78,.65);
+    border-radius: 50%;
+
+    color: rgba(82,116,94,.65);
 
     font-size: 7px;
 
@@ -385,16 +587,18 @@
 
     letter-spacing: .1em;
 
+    text-align: center;
+
     transform: rotate(12deg);
 
 }
 
 
 /* =========================================================
-   POLAROIDS
+   POLAROID
 ========================================================= */
 
-.academy-polaroid {
+.seiran-page .academy-polaroid {
 
     position: absolute;
 
@@ -404,15 +608,15 @@
 
     padding: 11px 11px 17px;
 
-    background: white;
+    background: #fff;
 
     box-shadow:
-        0 13px 30px rgba(54,40,32,.17);
+        0 15px 30px rgba(70,55,60,.13);
 
 }
 
 
-.polaroid-campus {
+.seiran-page .polaroid-campus {
 
     left: 2%;
 
@@ -423,7 +627,7 @@
 }
 
 
-.polaroid-image {
+.seiran-page .polaroid-image {
 
     height: 175px;
 
@@ -433,16 +637,18 @@
 
     justify-content: center;
 
+    overflow: hidden;
+
     text-align: center;
 
     background:
         linear-gradient(
             135deg,
-            #ead4d0,
-            #f1e3d9
+            #f5dce2,
+            #dfece3
         );
 
-    color: #a18e89;
+    color: #8f8987;
 
     font-size: 8px;
 
@@ -453,11 +659,11 @@
 }
 
 
-.academy-polaroid p {
+.seiran-page .academy-polaroid p {
 
     margin: 10px 0 0;
 
-    color: #655c58;
+    color: var(--academy-sage-dark);
 
     font-family:
         "Patrick Hand",
@@ -471,10 +677,10 @@
 
 
 /* =========================================================
-   NOTES
+   YELLOW NOTE
 ========================================================= */
 
-.academy-note {
+.seiran-page .academy-note {
 
     position: absolute;
 
@@ -488,10 +694,15 @@
 
     padding: 22px;
 
-    background: #f5e6a9;
+    background:
+        linear-gradient(
+            145deg,
+            #fff1c7,
+            #f9e8b5
+        );
 
     box-shadow:
-        0 10px 25px rgba(60,43,30,.13);
+        0 12px 25px rgba(80,65,40,.11);
 
     transform: rotate(6deg);
 
@@ -502,24 +713,24 @@
 }
 
 
-.academy-note small {
+.seiran-page .academy-note small {
 
     display: block;
 
-    color: #716660;
+    color: #6f6961;
 
     font-size: 13px;
 
 }
 
 
-.academy-note strong {
+.seiran-page .academy-note strong {
 
     display: block;
 
     margin-top: 7px;
 
-    color: #8d5055;
+    color: var(--academy-pink-dark);
 
     font-size: 22px;
 
@@ -528,20 +739,24 @@
 }
 
 
-.academy-note > span {
+.seiran-page .academy-note > span {
 
     display: block;
 
     margin-top: 10px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-size: 22px;
 
 }
 
 
-.academy-mini-note {
+/* =========================================================
+   SAGE MINI NOTE
+========================================================= */
+
+.seiran-page .academy-mini-note {
 
     position: absolute;
 
@@ -553,10 +768,17 @@
 
     padding: 18px 22px;
 
-    background: #dcead8;
+    background:
+        linear-gradient(
+            145deg,
+            #edf5ef,
+            #dfece2
+        );
+
+    border: 1px solid #d1dfd4;
 
     box-shadow:
-        0 10px 25px rgba(50,50,40,.10);
+        0 10px 25px rgba(50,70,55,.09);
 
     transform: rotate(-5deg);
 
@@ -567,11 +789,11 @@
 }
 
 
-.academy-mini-note span {
+.seiran-page .academy-mini-note span {
 
     display: block;
 
-    color: #77786d;
+    color: var(--academy-sage-dark);
 
     font-size: 10px;
 
@@ -580,13 +802,13 @@
 }
 
 
-.academy-mini-note strong {
+.seiran-page .academy-mini-note strong {
 
     display: block;
 
     margin-top: 5px;
 
-    color: #59684f;
+    color: #486450;
 
     font-size: 18px;
 
@@ -596,10 +818,10 @@
 
 
 /* =========================================================
-   SECTIONS
+   GENERAL SECTIONS
 ========================================================= */
 
-.academy-section {
+.seiran-page .academy-section {
 
     position: relative;
 
@@ -609,17 +831,26 @@
 
     padding: 75px 60px;
 
-    background: var(--academy-paper);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.98),
+            rgba(255,250,248,.97)
+        );
 
     border: 1px solid var(--academy-border);
 
     box-shadow:
-        0 20px 50px rgba(62,43,35,.13);
+        0 20px 50px rgba(75,55,65,.10);
 
 }
 
 
-.section-title {
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.seiran-page .section-title {
 
     max-width: 720px;
 
@@ -628,9 +859,10 @@
 }
 
 
-.section-title.centered {
+.seiran-page .section-title.centered {
 
     margin-left: auto;
+
     margin-right: auto;
 
     text-align: center;
@@ -638,13 +870,13 @@
 }
 
 
-.section-title > span {
+.seiran-page .section-title > span {
 
     display: block;
 
     margin-bottom: 13px;
 
-    color: var(--academy-accent);
+    color: var(--academy-sage-dark);
 
     font-size: 9px;
 
@@ -655,15 +887,15 @@
 }
 
 
-.section-title h2 {
+.seiran-page .section-title h2 {
 
     margin: 0;
+
+    color: var(--academy-text);
 
     font-family:
         "Playfair Display",
         serif;
-
-    color: #322d2b;
 
     font-size:
         clamp(40px, 5vw, 62px);
@@ -675,18 +907,18 @@
 }
 
 
-.section-title h2 em {
+.seiran-page .section-title h2 em {
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
 }
 
 
-.section-title p {
+.seiran-page .section-title p {
 
     margin-top: 18px;
 
-    color: #837a76;
+    color: var(--academy-muted);
 
     font-size: 13px;
 
@@ -697,7 +929,7 @@
    ABOUT
 ========================================================= */
 
-.about-layout {
+.seiran-page .about-layout {
 
     display: grid;
 
@@ -710,7 +942,7 @@
 }
 
 
-.about-text p {
+.seiran-page .about-text p {
 
     margin-bottom: 20px;
 
@@ -723,7 +955,7 @@
 }
 
 
-.about-text .about-big {
+.seiran-page .about-text .about-big {
 
     color: #403a37;
 
@@ -738,7 +970,11 @@
 }
 
 
-.notebook-card {
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.seiran-page .notebook-card {
 
     position: relative;
 
@@ -746,16 +982,26 @@
 
     padding: 32px;
 
-    background: var(--academy-soft);
+    background:
+        linear-gradient(
+            145deg,
+            #edf5ef,
+            #e2eee5
+        );
+
+    border: 1px solid #ceded2;
+
+    box-shadow:
+        7px 8px 0 rgba(120,155,131,.10);
 
     transform: rotate(1.5deg);
 
 }
 
 
-.notebook-label {
+.seiran-page .notebook-label {
 
-    color: var(--academy-accent-dark);
+    color: var(--academy-sage-dark);
 
     font-size: 8px;
 
@@ -766,7 +1012,7 @@
 }
 
 
-.notebook-card h3 {
+.seiran-page .notebook-card h3 {
 
     margin: 16px 0 22px;
 
@@ -783,7 +1029,7 @@
 }
 
 
-.notebook-card ul {
+.seiran-page .notebook-card ul {
 
     margin: 0;
 
@@ -794,7 +1040,7 @@
 }
 
 
-.notebook-card li {
+.seiran-page .notebook-card li {
 
     position: relative;
 
@@ -809,7 +1055,7 @@
 }
 
 
-.notebook-card li::before {
+.seiran-page .notebook-card li::before {
 
     content: "♡";
 
@@ -817,16 +1063,16 @@
 
     left: 0;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
 }
 
 
-.notebook-doodle {
+.seiran-page .notebook-doodle {
 
     margin-top: 20px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-family:
         "Patrick Hand",
@@ -843,7 +1089,7 @@
    CAMPUS
 ========================================================= */
 
-.campus-grid {
+.seiran-page .campus-grid {
 
     display: grid;
 
@@ -855,43 +1101,52 @@
 }
 
 
-.campus-card {
+.seiran-page .campus-card {
 
     position: relative;
 
     padding: 32px 28px 35px;
 
-    background: white;
+    background:
+        linear-gradient(
+            145deg,
+            #fffdfb,
+            #f4f9f5
+        );
 
     border: 1px solid var(--academy-border);
 
     transition:
         transform .3s ease,
-        box-shadow .3s ease;
+        box-shadow .3s ease,
+        border-color .3s ease;
 
 }
 
 
-.campus-card:hover {
+.seiran-page .campus-card:hover {
 
     transform:
         translateY(-7px)
         rotate(-.5deg);
 
+    border-color: #cbded1;
+
     box-shadow:
-        0 15px 30px rgba(62,43,35,.11);
+        0 15px 30px rgba(70,80,70,.10);
 
 }
 
 
-.campus-number {
+.seiran-page .campus-number {
 
     position: absolute;
 
     top: 17px;
+
     right: 20px;
 
-    color: #cfc3bd;
+    color: var(--academy-sage);
 
     font-size: 9px;
 
@@ -902,11 +1157,11 @@
 }
 
 
-.campus-icon {
+.seiran-page .campus-icon {
 
     margin-bottom: 18px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-family:
         "Patrick Hand",
@@ -917,7 +1172,7 @@
 }
 
 
-.campus-card h3 {
+.seiran-page .campus-card h3 {
 
     margin: 0 0 12px;
 
@@ -932,7 +1187,7 @@
 }
 
 
-.campus-card p {
+.seiran-page .campus-card p {
 
     margin: 0;
 
@@ -949,14 +1204,14 @@
    STUDENTS
 ========================================================= */
 
-.students-section {
+.seiran-page .students-section {
 
     overflow: hidden;
 
 }
 
 
-.student-total {
+.seiran-page .student-total {
 
     position: absolute;
 
@@ -970,12 +1225,12 @@
 
     gap: 7px;
 
-    color: var(--academy-accent);
-
 }
 
 
-.student-total strong {
+.seiran-page .student-total strong {
+
+    color: var(--academy-pink);
 
     font-family:
         "Patrick Hand",
@@ -986,7 +1241,9 @@
 }
 
 
-.student-total span {
+.seiran-page .student-total span {
+
+    color: var(--academy-sage-dark);
 
     font-size: 8px;
 
@@ -997,7 +1254,11 @@
 }
 
 
-.students-grid {
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.seiran-page .students-grid {
 
     display: grid;
 
@@ -1009,13 +1270,18 @@
 }
 
 
-.student-card {
+.seiran-page .student-card {
 
     display: block;
 
     overflow: hidden;
 
-    background: white;
+    background:
+        linear-gradient(
+            145deg,
+            #fffdfb,
+            #f5faf6
+        );
 
     border: 1px solid var(--academy-border);
 
@@ -1023,38 +1289,45 @@
 
     transition:
         transform .3s ease,
-        box-shadow .3s ease;
+        box-shadow .3s ease,
+        border-color .3s ease;
 
 }
 
 
-.student-card:nth-child(2n) {
+.seiran-page .student-card:nth-child(2n) {
 
     transform: rotate(.6deg);
 
 }
 
 
-.student-card:nth-child(3n) {
+.seiran-page .student-card:nth-child(3n) {
 
     transform: rotate(-.6deg);
 
 }
 
 
-.student-card:hover {
+.seiran-page .student-card:hover {
 
     transform:
         translateY(-8px)
         rotate(0deg);
 
+    border-color: #dfc1c8;
+
     box-shadow:
-        0 16px 32px rgba(62,43,35,.14);
+        0 16px 32px rgba(75,55,65,.12);
 
 }
 
 
-.student-image {
+/* =========================================================
+   STUDENT IMAGE
+========================================================= */
+
+.seiran-page .student-image {
 
     position: relative;
 
@@ -1071,23 +1344,24 @@
     background:
         linear-gradient(
             145deg,
-            #f3dfdc,
-            #f2e9df
+            #f6dfe4,
+            #e3eee5
         );
 
 }
 
 
-.student-index {
+.seiran-page .student-index {
 
     position: absolute;
 
     z-index: 2;
 
     top: 12px;
+
     left: 13px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-family:
         "Patrick Hand",
@@ -1098,9 +1372,9 @@
 }
 
 
-.image-placeholder {
+.seiran-page .image-placeholder {
 
-    color: #aa9691;
+    color: #9b8c89;
 
     font-size: 8px;
 
@@ -1115,16 +1389,20 @@
 }
 
 
-.student-content {
+/* =========================================================
+   STUDENT INFO
+========================================================= */
+
+.seiran-page .student-content {
 
     padding: 18px;
 
 }
 
 
-.student-content > span {
+.seiran-page .student-content > span {
 
-    color: var(--academy-accent);
+    color: var(--academy-sage-dark);
 
     font-size: 7px;
 
@@ -1135,7 +1413,7 @@
 }
 
 
-.student-content h3 {
+.seiran-page .student-content h3 {
 
     margin: 7px 0 0;
 
@@ -1152,7 +1430,7 @@
 }
 
 
-.student-content p {
+.seiran-page .student-content p {
 
     margin: 9px 0 0;
 
@@ -1167,18 +1445,18 @@
 }
 
 
-.student-card:hover .student-content p {
+.seiran-page .student-card:hover .student-content p {
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
 }
 
 
 /* =========================================================
-   MEMORIES
+   MEMORY BOARD
 ========================================================= */
 
-.memory-board {
+.seiran-page .memory-board {
 
     position: relative;
 
@@ -1187,18 +1465,35 @@
     overflow: hidden;
 
     background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(247,220,225,.95),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(215,231,219,.95),
+            transparent 32%
+        ),
+
         linear-gradient(
             135deg,
-            #e7d0ad,
-            #f0dfc4
+            #f8e9e8,
+            #eaf2eb
         );
 
-    border: 1px solid #d9c3a3;
+    border: 1px solid #ddd8d1;
 
 }
 
 
-.memory-photo {
+/* =========================================================
+   MEMORY PHOTOS
+========================================================= */
+
+.seiran-page .memory-photo {
 
     position: absolute;
 
@@ -1217,12 +1512,12 @@
     background: white;
 
     box-shadow:
-        0 11px 27px rgba(57,42,32,.15);
+        0 11px 27px rgba(57,42,32,.12);
 
 }
 
 
-.memory-photo::before {
+.seiran-page .memory-photo::before {
 
     content: "";
 
@@ -1233,20 +1528,20 @@
     background:
         linear-gradient(
             135deg,
-            #eee0d5,
-            #e4d1ca
+            #f6dfe2,
+            #dfece3
         );
 
 }
 
 
-.memory-photo span {
+.seiran-page .memory-photo span {
 
     position: relative;
 
     z-index: 2;
 
-    color: #9b8983;
+    color: #8d8985;
 
     font-size: 8px;
 
@@ -1257,7 +1552,11 @@
 }
 
 
-.memory-one {
+/* =========================================================
+   MEMORY POSITIONS
+========================================================= */
+
+.seiran-page .memory-one {
 
     left: 9%;
 
@@ -1268,7 +1567,7 @@
 }
 
 
-.memory-two {
+.seiran-page .memory-two {
 
     right: 9%;
 
@@ -1279,7 +1578,7 @@
 }
 
 
-.memory-three {
+.seiran-page .memory-three {
 
     left: 29%;
 
@@ -1290,13 +1589,18 @@
 }
 
 
-.memory-paper {
+/* =========================================================
+   MEMORY PAPER
+========================================================= */
+
+.seiran-page .memory-paper {
 
     position: absolute;
 
     z-index: 5;
 
     left: 50%;
+
     top: 50%;
 
     width: 205px;
@@ -1307,10 +1611,17 @@
         translate(-50%, -50%)
         rotate(-2deg);
 
-    background: #f5e6a9;
+    background:
+        linear-gradient(
+            145deg,
+            #fff8f5,
+            #edf5ef
+        );
+
+    border: 1px solid #dedbd3;
 
     box-shadow:
-        0 12px 27px rgba(57,42,32,.15);
+        0 12px 27px rgba(57,42,32,.12);
 
     text-align: center;
 
@@ -1321,11 +1632,11 @@
 }
 
 
-.memory-paper small {
+.seiran-page .memory-paper small {
 
     display: block;
 
-    color: #7b7068;
+    color: var(--academy-sage-dark);
 
     font-size: 9px;
 
@@ -1334,13 +1645,13 @@
 }
 
 
-.memory-paper strong {
+.seiran-page .memory-paper strong {
 
     display: block;
 
     margin-top: 10px;
 
-    color: #765556;
+    color: var(--academy-pink-dark);
 
     font-size: 24px;
 
@@ -1349,13 +1660,13 @@
 }
 
 
-.memory-paper > span {
+.seiran-page .memory-paper > span {
 
     display: block;
 
     margin-top: 10px;
 
-    color: var(--academy-accent);
+    color: var(--academy-pink);
 
     font-size: 23px;
 
@@ -1366,7 +1677,7 @@
    BOTTOM NAVIGATION
 ========================================================= */
 
-.academy-bottom-nav {
+.seiran-page .academy-bottom-nav {
 
     max-width: 1180px;
 
@@ -1385,9 +1696,9 @@
 }
 
 
-.back-academies {
+.seiran-page .back-academies {
 
-    color: white;
+    color: var(--academy-sage-dark);
 
     font-size: 9px;
 
@@ -1395,19 +1706,17 @@
 
     letter-spacing: .16em;
 
-    text-decoration: none;
+}
+
+
+.seiran-page .back-academies:hover {
+
+    color: var(--academy-pink);
 
 }
 
 
-.back-academies:hover {
-
-    color: #f3bfc2;
-
-}
-
-
-.next-academy {
+.seiran-page .next-academy {
 
     display: flex;
 
@@ -1422,9 +1731,9 @@
 }
 
 
-.next-academy span {
+.seiran-page .next-academy span {
 
-    color: rgba(255,255,255,.5);
+    color: var(--academy-sage);
 
     font-size: 8px;
 
@@ -1433,9 +1742,9 @@
 }
 
 
-.next-academy strong {
+.seiran-page .next-academy strong {
 
-    color: white;
+    color: var(--academy-pink-dark);
 
     font-family:
         "Playfair Display",
@@ -1448,9 +1757,74 @@
 }
 
 
-.next-academy:hover strong {
+.seiran-page .next-academy:hover strong {
 
-    color: #f3bfc2;
+    color: var(--academy-pink);
+
+}
+
+
+/* =========================================================
+   EXTRA DECORATIONS
+========================================================= */
+
+.seiran-page .academy-hero::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 120px;
+
+    left: 4%;
+
+    color: rgba(217,91,120,.18);
+
+    font-size: 34px;
+
+    transform: rotate(20deg);
+
+    pointer-events: none;
+
+}
+
+
+.seiran-page .academy-section:nth-of-type(2)::before {
+
+    content: "❀";
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 30px;
+
+    color: rgba(217,91,120,.16);
+
+    font-size: 30px;
+
+    pointer-events: none;
+
+}
+
+
+.seiran-page .campus-section::after {
+
+    content: "❧";
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 4%;
+
+    color: rgba(82,116,94,.17);
+
+    font-size: 40px;
+
+    transform: rotate(-10deg);
+
+    pointer-events: none;
 
 }
 
@@ -1461,16 +1835,16 @@
 
 @media (max-width: 1050px) {
 
-    .academy-polaroid,
-    .academy-note,
-    .academy-mini-note {
+    .seiran-page .academy-polaroid,
+    .seiran-page .academy-note,
+    .seiran-page .academy-mini-note {
 
         opacity: .45;
 
     }
 
 
-    .students-grid {
+    .seiran-page .students-grid {
 
         grid-template-columns:
             repeat(3, 1fr);
@@ -1480,9 +1854,13 @@
 }
 
 
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 800px) {
 
-    .academy-hero {
+    .seiran-page .academy-hero {
 
         min-height: auto;
 
@@ -1492,7 +1870,7 @@
     }
 
 
-    .academy-paper {
+    .seiran-page .academy-paper {
 
         padding:
             70px 30px 45px;
@@ -1500,35 +1878,35 @@
     }
 
 
-    .academy-stamp {
+    .seiran-page .academy-stamp {
 
         display: none;
 
     }
 
 
-    .academy-facts {
+    .seiran-page .academy-facts {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .about-layout {
+    .seiran-page .about-layout {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .campus-grid {
+    .seiran-page .campus-grid {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .students-grid {
+    .seiran-page .students-grid {
 
         grid-template-columns:
             repeat(2, 1fr);
@@ -1536,7 +1914,7 @@
     }
 
 
-    .student-total {
+    .seiran-page .student-total {
 
         position: static;
 
@@ -1547,7 +1925,7 @@
     }
 
 
-    .academy-section {
+    .seiran-page .academy-section {
 
         padding:
             60px 25px;
@@ -1555,7 +1933,7 @@
     }
 
 
-    .academy-bottom-nav {
+    .seiran-page .academy-bottom-nav {
 
         padding:
             0 25px;
@@ -1565,68 +1943,72 @@
 }
 
 
+/* =========================================================
+   PHONE
+========================================================= */
+
 @media (max-width: 560px) {
 
-    .academy-heading {
+    .seiran-page .academy-heading {
 
         gap: 5px;
 
     }
 
 
-    .heading-heart {
+    .seiran-page .heading-heart {
 
         font-size: 25px;
 
     }
 
 
-    .academy-heading h1 {
+    .seiran-page .academy-heading h1 {
 
         font-size: 52px;
 
     }
 
 
-    .academy-motto {
+    .seiran-page .academy-motto {
 
         font-size: 19px;
 
     }
 
 
-    .academy-polaroid,
-    .academy-note,
-    .academy-mini-note,
-    .academy-floating {
+    .seiran-page .academy-polaroid,
+    .seiran-page .academy-note,
+    .seiran-page .academy-mini-note,
+    .seiran-page .academy-floating {
 
         display: none;
 
     }
 
 
-    .students-grid {
+    .seiran-page .students-grid {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .student-image {
+    .seiran-page .student-image {
 
         height: 350px;
 
     }
 
 
-    .memory-board {
+    .seiran-page .memory-board {
 
         min-height: 650px;
 
     }
 
 
-    .memory-photo {
+    .seiran-page .memory-photo {
 
         width: 180px;
 
@@ -1635,31 +2017,34 @@
     }
 
 
-    .memory-one {
+    .seiran-page .memory-one {
 
         left: 3%;
+
         top: 35px;
 
     }
 
 
-    .memory-two {
+    .seiran-page .memory-two {
 
         right: 3%;
+
         top: 190px;
 
     }
 
 
-    .memory-three {
+    .seiran-page .memory-three {
 
         left: 8%;
+
         bottom: 40px;
 
     }
 
 
-    .memory-paper {
+    .seiran-page .memory-paper {
 
         width: 160px;
 
@@ -1668,7 +2053,7 @@
     }
 
 
-    .academy-bottom-nav {
+    .seiran-page .academy-bottom-nav {
 
         flex-direction: column;
 
@@ -1679,11 +2064,43 @@
     }
 
 
-    .next-academy {
+    .seiran-page .next-academy {
 
         align-items: flex-start;
 
     }
 
 }
-```
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .seiran-page .academy-heading h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .seiran-page .academy-paper {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .seiran-page .academy-section {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+}
