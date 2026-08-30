@@ -1737,3 +1737,1435 @@
     }
 
 }
+
+/* =========================================================
+   SEIRAN ACADEMY — LAYOUT
+   IMPORTANT: this gives the Seiran HTML its actual structure
+========================================================= */
+
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.seiran-page main {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.seiran-page .academy-hero {
+
+    max-width: 1280px;
+    min-height: 780px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.seiran-page .academy-paper {
+
+    position: relative;
+    z-index: 5;
+
+    width: min(850px, 90vw);
+    min-height: 570px;
+
+    padding: 85px 70px 65px;
+
+    background: #fffdf9;
+
+    border: 1px solid var(--academy-border);
+
+    box-shadow:
+        0 25px 55px rgba(70, 55, 50, .15);
+
+    transform: rotate(-1deg);
+
+}
+
+
+/* =========================================================
+   PAPER TAPE
+========================================================= */
+
+.seiran-page .paper-tape {
+
+    position: absolute;
+
+    width: 145px;
+    height: 35px;
+
+    top: -17px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background: rgba(231,207,160,.62);
+
+}
+
+
+/* =========================================================
+   ACADEMY NUMBER
+========================================================= */
+
+.seiran-page .academy-number {
+
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .2em;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.seiran-page .academy-heading {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.seiran-page .academy-heading h1 {
+
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: .92;
+
+    font-weight: 600;
+
+}
+
+
+.seiran-page .academy-heading h1 em {
+
+    display: block;
+
+    font-weight: 600;
+
+}
+
+
+.seiran-page .heading-heart {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 42px;
+
+}
+
+
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.seiran-page .academy-motto {
+
+    margin-bottom: 28px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+}
+
+
+.seiran-page .academy-motto span {
+
+    margin: 0 8px;
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.seiran-page .academy-lead {
+
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.seiran-page .academy-description {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: var(--academy-muted);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.seiran-page .academy-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 35px 0 25px;
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.seiran-page .academy-facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.seiran-page .academy-facts > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.seiran-page .academy-facts span {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.seiran-page .academy-facts strong {
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.seiran-page .academy-stamp {
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border: 1px dashed;
+
+    border-radius: 50%;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 11px;
+
+    line-height: 1.05;
+
+    transform: rotate(8deg);
+
+}
+
+
+/* =========================================================
+   POLAROID
+========================================================= */
+
+.seiran-page .academy-polaroid {
+
+    position: absolute;
+
+    z-index: 8;
+
+    width: 220px;
+
+    padding: 12px 12px 18px;
+
+}
+
+
+.seiran-page .polaroid-campus {
+
+    left: 2%;
+    top: 110px;
+
+    transform: rotate(-8deg);
+
+}
+
+
+.seiran-page .academy-polaroid .polaroid-image {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.seiran-page .academy-polaroid p {
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================================
+   HERO NOTE
+========================================================= */
+
+.seiran-page .academy-note {
+
+    position: absolute;
+
+    z-index: 10;
+
+    right: 4%;
+    top: 95px;
+
+    width: 170px;
+
+    padding: 20px;
+
+    transform: rotate(6deg);
+
+}
+
+
+.seiran-page .academy-note small {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+
+}
+
+
+.seiran-page .academy-note strong {
+
+    display: block;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 27px;
+
+    line-height: 1.05;
+
+}
+
+
+.seiran-page .academy-note span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    text-align: right;
+
+    font-size: 25px;
+
+}
+
+
+/* =========================================================
+   MINI NOTE
+========================================================= */
+
+.seiran-page .academy-mini-note {
+
+    position: absolute;
+
+    z-index: 9;
+
+    left: 5%;
+    bottom: 90px;
+
+    width: 155px;
+
+    padding: 18px;
+
+    transform: rotate(-6deg);
+
+}
+
+
+.seiran-page .academy-mini-note span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.seiran-page .academy-mini-note strong {
+
+    display: block;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 23px;
+
+    line-height: 1.05;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.seiran-page .academy-section {
+
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 80px 55px;
+
+    background: rgba(255,253,249,.94);
+
+    border: 1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+        0 20px 50px rgba(70,55,50,.10);
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.seiran-page .section-title {
+
+    max-width: 720px;
+
+    margin-bottom: 55px;
+
+}
+
+
+.seiran-page .section-title.centered {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+
+.seiran-page .section-title > span {
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .2em;
+
+}
+
+
+.seiran-page .section-title h2 {
+
+    margin-bottom: 20px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1;
+
+    font-weight: 600;
+
+}
+
+
+.seiran-page .section-title h2 em {
+
+    font-weight: 600;
+
+}
+
+
+.seiran-page .section-title p {
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.seiran-page .about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(280px, .8fr);
+
+    gap: 60px;
+
+    align-items: start;
+
+}
+
+
+.seiran-page .about-text {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+.seiran-page .about-text p {
+
+    margin-bottom: 22px;
+
+}
+
+
+.seiran-page .about-big {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    line-height: 1.35;
+
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.seiran-page .notebook-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    border: 1px solid;
+
+}
+
+
+.seiran-page .notebook-label {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.seiran-page .notebook-card h3 {
+
+    margin-bottom: 20px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.seiran-page .notebook-card ul {
+
+    padding-left: 20px;
+
+}
+
+
+.seiran-page .notebook-card li {
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+}
+
+
+.seiran-page .notebook-doodle {
+
+    margin-top: 25px;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 25px;
+
+}
+
+
+/* =========================================================
+   CAMPUS GRID
+========================================================= */
+
+.seiran-page .campus-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.seiran-page .campus-card {
+
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 32px;
+
+    border: 1px solid;
+
+}
+
+
+.seiran-page .campus-number {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 18px;
+
+}
+
+
+.seiran-page .campus-icon {
+
+    margin-bottom: 20px;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 38px;
+
+}
+
+
+.seiran-page .campus-card h3 {
+
+    margin-bottom: 12px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 26px;
+
+}
+
+
+.seiran-page .campus-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--academy-muted);
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.seiran-page .student-total {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.seiran-page .student-total strong {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 42px;
+
+}
+
+
+.seiran-page .student-total span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.seiran-page .students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.seiran-page .student-card {
+
+    display: block;
+
+    overflow: hidden;
+
+    border: 1px solid;
+
+}
+
+
+.seiran-page .student-image {
+
+    position: relative;
+
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.seiran-page .student-index {
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 2;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 16px;
+
+}
+
+
+.seiran-page .student-content {
+
+    padding: 18px;
+
+}
+
+
+.seiran-page .student-content > span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.seiran-page .student-content h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 18px;
+
+}
+
+
+.seiran-page .student-content p {
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.seiran-page .memory-board {
+
+    position: relative;
+
+    min-height: 520px;
+
+    padding: 50px;
+
+    border: 1px solid var(--academy-border);
+
+    overflow: hidden;
+
+}
+
+
+.seiran-page .memory-photo {
+
+    position: absolute;
+
+    width: 250px;
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 12px 25px rgba(80,70,65,.12);
+
+}
+
+
+.seiran-page .memory-photo span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.seiran-page .memory-one {
+
+    left: 8%;
+    top: 70px;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.seiran-page .memory-two {
+
+    right: 10%;
+    top: 55px;
+
+    transform: rotate(6deg);
+
+}
+
+
+.seiran-page .memory-three {
+
+    left: 30%;
+    bottom: 35px;
+
+    transform: rotate(4deg);
+
+}
+
+
+.seiran-page .memory-paper {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 230px;
+
+    padding: 25px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-2deg);
+
+    text-align: center;
+
+    border: 1px solid;
+
+}
+
+
+.seiran-page .memory-paper small {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+}
+
+
+.seiran-page .memory-paper strong {
+
+    display: block;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+}
+
+
+.seiran-page .memory-paper span {
+
+    display: block;
+
+    margin-top: 12px;
+
+    font-size: 24px;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAV
+========================================================= */
+
+.seiran-page .academy-bottom-nav {
+
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 30px 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+}
+
+
+.seiran-page .back-academies,
+.seiran-page .next-academy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.seiran-page .next-academy {
+
+    text-align: right;
+
+}
+
+
+.seiran-page .back-academies {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.seiran-page .next-academy span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.seiran-page .next-academy strong {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.seiran-page .site-footer {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 65px 55px 30px;
+
+}
+
+
+.seiran-page .footer-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid rgba(100,90,85,.2);
+
+}
+
+
+.seiran-page .footer-logo h2 {
+
+    margin-top: 8px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+}
+
+
+.seiran-page .footer-logo h2 em {
+
+    display: block;
+
+}
+
+
+.seiran-page .footer-logo p {
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    opacity: .7;
+
+}
+
+
+.seiran-page .footer-links {
+
+    display: flex;
+
+    gap: 80px;
+
+}
+
+
+.seiran-page .footer-links > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.seiran-page .footer-links span {
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: .18em;
+
+}
+
+
+.seiran-page .footer-links a {
+
+    font-size: 12px;
+
+    transition: .2s ease;
+
+}
+
+
+.seiran-page .footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    font-size: 9px;
+
+    letter-spacing: .1em;
+
+    opacity: .55;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .seiran-page .academy-polaroid,
+    .seiran-page .academy-note,
+    .seiran-page .academy-mini-note {
+
+        opacity: .75;
+
+        transform: scale(.8);
+
+    }
+
+
+    .seiran-page .students-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .seiran-page .campus-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .seiran-page .about-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .seiran-page .academy-hero {
+
+        min-height: auto;
+
+        padding: 80px 15px;
+
+    }
+
+
+    .seiran-page .academy-paper {
+
+        width: 100%;
+
+        padding: 65px 25px 50px;
+
+    }
+
+
+    .seiran-page .academy-heading {
+
+        gap: 5px;
+
+    }
+
+
+    .seiran-page .academy-heading h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .seiran-page .academy-facts {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .seiran-page .academy-polaroid,
+    .seiran-page .academy-note,
+    .seiran-page .academy-mini-note {
+
+        display: none;
+
+    }
+
+
+    .seiran-page .academy-section {
+
+        margin-bottom: 30px;
+
+        padding: 55px 22px;
+
+    }
+
+
+    .seiran-page .students-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .seiran-page .memory-board {
+
+        min-height: 600px;
+
+    }
+
+
+    .seiran-page .memory-photo {
+
+        width: 180px;
+        height: 135px;
+
+    }
+
+
+    .seiran-page .academy-bottom-nav {
+
+        padding: 25px 22px;
+
+    }
+
+
+    .seiran-page .footer-top {
+
+        flex-direction: column;
+
+    }
+
+
+    .seiran-page .footer-links {
+
+        gap: 45px;
+
+    }
+
+
+    .seiran-page .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .seiran-page .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .seiran-page .academy-heading h1 {
+
+        font-size: 45px;
+
+    }
+
+}
