@@ -1,33 +1,185 @@
 /* =========================================================
-   ✦ CHISA — GITHUB PAGE OVERRIDES ✦
-   CSS ONLY TABS — NO JAVASCRIPT
+   CHISA KAMURO
+   CSS ONLY
+   NO JAVASCRIPT
 ========================================================= */
 
 
 /* =========================================================
-   PAGE BACKGROUND
+   PAGE RESET
 ========================================================= */
 
 html,
 body {
     margin: 0 !important;
     padding: 0 !important;
-
-    background: #fffdfb !important;
+    background: #ffffff !important;
 }
 
-body {
-    min-height: 100vh;
+body.chisa-page {
+    background: #ffffff !important;
+    color: #2d3333;
 }
+
+body.chisa-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
 .chisa-profile {
-    position: relative;
-
-    min-height: 100vh;
-
-    background: #fffdfb;
+    width: min(1100px, calc(100% - 30px));
+    margin: 40px auto;
+    background: #ffffff;
+    color: #2d3333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.chisa-hero {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    min-height: 390px;
+    background: #fce3df;
+    border: 1px solid #e7d8d5;
+}
+
+.chisa-hero-info {
+    padding: 65px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chisa-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #41918a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.chisa-hero h1 {
+    margin: 0;
+    color: #005253;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 0.95;
+    font-weight: 700;
+}
+
+.chisa-subtitle {
+    margin-top: 20px;
+    color: #6f7e7c;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.chisa-quote {
+    max-width: 520px;
+    margin-top: 35px;
+    padding-left: 20px;
+    border-left: 3px solid #41918a;
+    color: #596563;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.chisa-hero-image {
+    min-height: 390px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.chisa-hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   QUICK DATA
+========================================================= */
+
+.chisa-quick-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid #e7d8d5;
+    border-top: 0;
+}
+
+.chisa-data-item {
+    padding: 18px;
+    background: #ffffff;
+    border-right: 1px solid #e7d8d5;
+    border-bottom: 1px solid #e7d8d5;
+}
+
+.chisa-data-item:nth-child(4n) {
+    border-right: 0;
+}
+
+.chisa-data-item span {
+    display: block;
+    margin-bottom: 6px;
+    color: #8b9997;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.chisa-data-item strong {
+    color: #005253;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.chisa-status {
+    margin-top: 20px;
+    padding: 22px 25px;
+    background: #f8f4f2;
+    border: 1px solid #e7d8d5;
+}
+
+.chisa-status-title {
+    margin-bottom: 15px;
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.chisa-status-grid span {
+    display: block;
+    margin-bottom: 5px;
+    color: #8b9997;
+    font-size: 10px;
+}
+
+.chisa-status-grid strong {
+    color: #005253;
+    font-size: 14px;
+}
 
 
 /* =========================================================
@@ -35,16 +187,12 @@ body {
 ========================================================= */
 
 .chisa-profile > input[type="radio"] {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-
-    opacity: 0;
-
-    pointer-events: none;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
-
 
 
 /* =========================================================
@@ -52,277 +200,873 @@ body {
 ========================================================= */
 
 .chisa-navigation {
-    position: sticky;
-
-    top: 12px;
-
-    z-index: 50;
-
     display: flex;
-
-    justify-content: center;
-
     flex-wrap: wrap;
-
-    gap: 5px;
-
-    margin: 50px 0 40px;
-
-    padding: 7px;
-
-    background: rgba(255, 253, 251, .96);
-
-    border: 1px solid var(--chisa-border);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    gap: 8px;
+    margin: 30px 0 0;
+    padding: 8px;
+    background: #f8f4f2;
+    border: 1px solid #e7d8d5;
 }
-
-
-
-/* =========================================================
-   TAB BUTTONS
-========================================================= */
 
 .chisa-tab {
-    display: block;
-
-    padding: 12px 20px;
-
-    color: var(--chisa-muted);
-
-    background: transparent;
-
-    font-family: inherit;
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    text-align: center;
-
+    flex: 1 1 120px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #ded4d1;
+    color: #65716f;
     cursor: pointer;
-
-    transition:
-        background .25s ease,
-        color .25s ease,
-        transform .25s ease;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
 }
-
 
 .chisa-tab:hover {
-    color: var(--chisa-accent);
-
-    background: var(--chisa-pale);
+    background: #fce3df;
+    border-color: #41918a;
+    color: #005253;
 }
-
-
-.chisa-tab:active {
-    transform: scale(.97);
-}
-
 
 
 /* =========================================================
-   HIDE ALL CONTENT SECTIONS
+   ALL SECTIONS HIDDEN
 ========================================================= */
 
-.chisa-profile .chisa-section {
+.chisa-section,
+.chisa-aesthetic {
     display: none;
-
-    margin-bottom: 90px;
+    margin-top: 20px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e7d8d5;
 }
 
+
+/* =========================================================
+   SHOW SELECTED TAB
+========================================================= */
+
+#chisa-profile-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile,
+
+#chisa-personality-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile + .chisa-section-personality,
+
+#chisa-wardrobe-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile
+    + .chisa-section-personality
+    + .chisa-section-wardrobe,
+
+#chisa-relationships-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile
+    + .chisa-section-personality
+    + .chisa-section-wardrobe
+    + .chisa-section-relationships,
+
+#chisa-story-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile
+    + .chisa-section-personality
+    + .chisa-section-wardrobe
+    + .chisa-section-relationships
+    + .chisa-section-story,
+
+#chisa-trivia-tab:checked ~ .chisa-navigation
+    + .chisa-section-profile
+    + .chisa-section-personality
+    + .chisa-section-wardrobe
+    + .chisa-section-relationships
+    + .chisa-section-story
+    + .chisa-section-trivia {
+    display: block;
+}
+
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+#chisa-profile-tab:checked ~ .chisa-navigation label[for="chisa-profile-tab"],
+#chisa-personality-tab:checked ~ .chisa-navigation label[for="chisa-personality-tab"],
+#chisa-wardrobe-tab:checked ~ .chisa-navigation label[for="chisa-wardrobe-tab"],
+#chisa-relationships-tab:checked ~ .chisa-navigation label[for="chisa-relationships-tab"],
+#chisa-story-tab:checked ~ .chisa-navigation label[for="chisa-story-tab"],
+#chisa-trivia-tab:checked ~ .chisa-navigation label[for="chisa-trivia-tab"] {
+    background: #41918a;
+    border-color: #41918a;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.chisa-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.chisa-section-heading > span {
+    color: #41918a;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.chisa-section-heading small {
+    display: block;
+    margin-bottom: 5px;
+    color: #8b9997;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.chisa-section-heading h2 {
+    margin: 0;
+    color: #005253;
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
 
 
 /* =========================================================
    PROFILE
 ========================================================= */
 
-#chisa-tab-profile:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-profile"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-profile-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 35px;
 }
 
+.chisa-description p {
+    margin: 0 0 18px;
+    color: #596563;
+    font-size: 14px;
+    line-height: 1.9;
+}
 
-#chisa-tab-profile:checked ~ .chisa-section-profile {
+.chisa-facts {
+    display: grid;
+    gap: 10px;
+}
+
+.chisa-fact-card {
+    padding: 15px 18px;
+    background: #f8f4f2;
+    border-left: 3px solid #41918a;
+}
+
+.chisa-fact-card span {
     display: block;
-
-    animation: chisaFadeIn .35s ease;
+    margin-bottom: 5px;
+    color: #8b9997;
+    font-size: 10px;
+    text-transform: uppercase;
 }
 
+.chisa-fact-card strong {
+    color: #005253;
+    font-size: 13px;
+}
+
+.chisa-goal {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 35px;
+    padding: 20px;
+    background: #fce3df;
+}
+
+.chisa-goal-icon {
+    color: #dc6a75;
+    font-size: 30px;
+}
+
+.chisa-goal span {
+    display: block;
+    margin-bottom: 5px;
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-goal strong {
+    display: block;
+    color: #005253;
+}
+
+.chisa-goal small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+}
+
+.chisa-progress,
+.chisa-meter {
+    height: 6px;
+    margin-top: 10px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.chisa-progress div,
+.chisa-meter div {
+    height: 100%;
+    background: #41918a;
+}
 
 
 /* =========================================================
    PERSONALITY
 ========================================================= */
 
-#chisa-tab-personality:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-personality"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-personality-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 35px;
 }
 
-
-#chisa-tab-personality:checked ~ .chisa-section-personality {
-    display: block;
-
-    animation: chisaFadeIn .35s ease;
+.chisa-trait {
+    margin-bottom: 22px;
 }
 
+.chisa-trait > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    color: #596563;
+    font-size: 11px;
+}
+
+.chisa-meter {
+    margin: 0;
+    background: #f0e9e6;
+}
+
+.chisa-like-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.chisa-list-box {
+    padding: 20px;
+    background: #f8f4f2;
+}
+
+.chisa-list-box h3 {
+    margin: 0 0 12px;
+    color: #005253;
+    font-family: Georgia, serif;
+}
+
+.chisa-list-box ul {
+    margin: 0;
+    padding-left: 17px;
+    color: #687270;
+    font-size: 12px;
+    line-height: 1.8;
+}
 
 
 /* =========================================================
    WARDROBE
 ========================================================= */
 
-#chisa-tab-wardrobe:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-wardrobe"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-wardrobe-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #fce3df;
 }
 
+.chisa-wardrobe-intro strong {
+    color: #005253;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
 
-#chisa-tab-wardrobe:checked ~ .chisa-section-wardrobe {
+.chisa-wardrobe-intro p {
+    margin: 7px 0 0;
+    color: #687270;
+    font-size: 12px;
+}
+
+.chisa-outfit-count {
+    color: #41918a;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chisa-outfit-count small {
     display: block;
-
-    animation: chisaFadeIn .35s ease;
+    color: #777;
+    font-size: 10px;
+    font-weight: normal;
 }
 
+.chisa-wardrobe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.chisa-outfit {
+    overflow: hidden;
+    background: #f8f4f2;
+    border: 1px solid #e7d8d5;
+}
+
+.chisa-outfit-image {
+    aspect-ratio: 1 / 1.15;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.chisa-outfit-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.chisa-outfit-info {
+    padding: 18px;
+}
+
+.chisa-outfit-info > span {
+    color: #41918a;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.chisa-outfit-info h3 {
+    margin: 8px 0 5px;
+    color: #005253;
+    font-family: Georgia, serif;
+}
+
+.chisa-outfit-info p {
+    margin: 0;
+    color: #777;
+    font-size: 11px;
+}
 
 
 /* =========================================================
    RELATIONSHIPS
 ========================================================= */
 
-#chisa-tab-relationships:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-relationships"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-relationship-note {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #fce3df;
 }
 
+.chisa-relationship-note span {
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-#chisa-tab-relationships:checked ~ .chisa-section-relationships {
+.chisa-relationship-note p {
+    margin: 8px 0 0;
+    color: #687270;
+    font-size: 13px;
+}
+
+.chisa-relationship {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    margin-bottom: 20px;
+    border: 1px solid #e7d8d5;
+    background: #f8f4f2;
+}
+
+.chisa-person-image {
+    min-height: 250px;
+    background: #ffffff;
+}
+
+.chisa-person-image img {
+    width: 100%;
+    height: 100%;
     display: block;
-
-    animation: chisaFadeIn .35s ease;
+    object-fit: cover;
 }
 
+.chisa-person-content {
+    padding: 28px;
+}
+
+.chisa-person-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.chisa-person-header span {
+    color: #41918a;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.chisa-person-header h3 {
+    margin: 6px 0 0;
+    color: #005253;
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.chisa-person-header > strong {
+    color: #dc6a75;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.chisa-heart-level {
+    margin: 15px 0;
+    color: #dc6a75;
+    letter-spacing: 3px;
+}
+
+.chisa-heart-level small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.chisa-person-content p {
+    color: #687270;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.chisa-relationship-footer {
+    padding: 20px;
+    color: #41918a;
+    font-family: Georgia, serif;
+    text-align: center;
+}
 
 
 /* =========================================================
    STORY
 ========================================================= */
 
-#chisa-tab-story:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-story"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-story {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
 }
 
+.chisa-story-image {
+    min-height: 350px;
+    background: #f8f4f2;
+}
 
-#chisa-tab-story:checked ~ .chisa-section-story {
+.chisa-story-image img {
+    width: 100%;
+    height: 100%;
     display: block;
-
-    animation: chisaFadeIn .35s ease;
+    object-fit: cover;
 }
 
+.chisa-story-content {
+    align-self: center;
+}
+
+.chisa-story-content > span,
+.chisa-old-note > span {
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-story-content h3 {
+    margin: 10px 0 20px;
+    color: #005253;
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.chisa-story-content p {
+    color: #687270;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.chisa-story-content blockquote {
+    margin: 25px 0 0;
+    padding: 15px 20px;
+    border-left: 3px solid #41918a;
+    background: #fce3df;
+    color: #596563;
+    font-family: Georgia, serif;
+}
+
+.chisa-timeline {
+    display: grid;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.chisa-timeline-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 18px;
+    padding: 18px;
+    background: #f8f4f2;
+}
+
+.chisa-timeline-item > span {
+    color: #41918a;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.chisa-timeline-item small {
+    color: #8b9997;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.chisa-timeline-item h3 {
+    margin: 5px 0;
+    color: #005253;
+}
+
+.chisa-timeline-item p {
+    margin: 0;
+    color: #687270;
+    font-size: 12px;
+}
+
+.chisa-then-now {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.chisa-then-now > div {
+    padding: 25px;
+    background: #fce3df;
+}
+
+.chisa-then-now span {
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-then-now h3 {
+    margin: 8px 0 20px;
+    color: #005253;
+    font-family: Georgia, serif;
+}
+
+.chisa-then-now p {
+    color: #687270;
+    font-size: 12px;
+}
+
+.chisa-then-now strong {
+    margin-right: 5px;
+    color: #005253;
+}
+
+.chisa-old-note {
+    margin-top: 30px;
+    padding: 25px;
+    text-align: center;
+    background: #f8f4f2;
+}
+
+.chisa-old-note p {
+    color: #596563;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
 
 
 /* =========================================================
    TRIVIA
 ========================================================= */
 
-#chisa-tab-trivia:checked ~ .chisa-navigation .chisa-tab[for="chisa-tab-trivia"] {
-    background: var(--chisa-accent);
-
-    color: #fff;
+.chisa-trivia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
 }
 
+.chisa-trivia-grid article {
+    padding: 25px;
+    background: #f8f4f2;
+}
 
-#chisa-tab-trivia:checked ~ .chisa-section-trivia {
+.chisa-trivia-grid article > span {
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-trivia-grid ul {
+    margin: 15px 0 0;
+    padding-left: 18px;
+    color: #687270;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.chisa-secret {
+    background: #fce3df !important;
+    text-align: center;
+}
+
+.chisa-secret > div {
+    margin: 20px 0;
+    color: #dc6a75;
+    font-size: 35px;
+}
+
+.chisa-secret p {
+    color: #596563;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+.chisa-favorites {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 18px;
+    background: #005253;
+}
+
+.chisa-favorites > span {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-favorites > div {
+    padding: 12px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.chisa-favorites strong {
     display: block;
+    color: #005253;
+    font-size: 12px;
+}
 
-    animation: chisaFadeIn .35s ease;
+.chisa-favorites small {
+    display: block;
+    margin-top: 4px;
+    color: #888;
+    font-size: 9px;
 }
 
 
-
 /* =========================================================
-   ANIMATION
+   AESTHETIC
 ========================================================= */
 
-@keyframes chisaFadeIn {
+.chisa-aesthetic {
+    display: block;
+}
 
-    from {
-        opacity: 0;
+.chisa-aesthetic-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 25px;
+}
 
-        transform: translateY(8px);
-    }
+.chisa-aesthetic-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 
-    to {
-        opacity: 1;
+.chisa-aesthetic-images div {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #f8f4f2;
+}
 
-        transform: translateY(0);
-    }
+.chisa-aesthetic-images img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
 
+.chisa-color-palette {
+    padding: 20px;
+    background: #f8f4f2;
+}
+
+.chisa-color-palette > span {
+    color: #41918a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.chisa-colors {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chisa-colors i {
+    display: block;
+    height: 45px;
 }
 
 
-
 /* =========================================================
-   MOBILE TABS
+   FOOTER
 ========================================================= */
 
-@media (max-width: 600px) {
-
-    .chisa-navigation {
-        top: 7px;
-
-        margin: 35px 0 30px;
-
-        justify-content: stretch;
-    }
-
-
-    .chisa-tab {
-        flex: 1 1 30%;
-
-        padding: 10px 5px;
-
-        font-size: 7px;
-
-        letter-spacing: 1px;
-    }
-
+.chisa-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 22px;
+    background: #005253;
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
 
-
 /* =========================================================
-   VERY SMALL SCREENS
+   MOBILE
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 800px) {
 
-    .chisa-navigation {
-        gap: 3px;
+    .chisa-profile {
+        width: calc(100% - 16px);
+        margin: 15px auto;
+    }
 
+    .chisa-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-hero-image {
+        min-height: 300px;
+    }
+
+    .chisa-hero-info {
+        padding: 40px 25px;
+    }
+
+    .chisa-quick-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chisa-data-item:nth-child(4n) {
+        border-right: 1px solid #e7d8d5;
+    }
+
+    .chisa-data-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .chisa-status-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-section,
+    .chisa-aesthetic {
+        padding: 25px 18px;
+    }
+
+    .chisa-profile-layout,
+    .chisa-personality-layout,
+    .chisa-story,
+    .chisa-aesthetic-content {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-wardrobe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-relationship {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-person-image {
+        min-height: 280px;
+    }
+
+    .chisa-then-now,
+    .chisa-trivia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-favorites {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chisa-favorites > span {
+        grid-column: 1 / -1;
+        text-align: center;
         padding: 5px;
     }
 
+    .chisa-aesthetic-images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
-    .chisa-tab {
-        padding: 9px 3px;
 
-        font-size: 6px;
+@media (max-width: 500px) {
 
-        letter-spacing: .8px;
+    .chisa-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
+    .chisa-tab {
+        min-width: 0;
+    }
+
+    .chisa-wardrobe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chisa-aesthetic-images {
+        grid-template-columns: 1fr 1fr;
+    }
 }
