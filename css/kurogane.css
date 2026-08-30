@@ -1,0 +1,2006 @@
+/* =========================================================
+   KUROGANE ACADEMY
+   ONE MORE TOMORROW
+   02 / TECHNICAL • INTELLIGENT • MODERN
+========================================================= */
+
+.kurogane-page {
+
+    --academy-accent: #3f7182;
+    --academy-accent-dark: #294e5b;
+
+    --academy-soft: #dce9ed;
+    --academy-pale: #f1f6f7;
+
+    --academy-paper: #fbfcfa;
+    --academy-cream: #e7e4dc;
+
+    --academy-border: #ccd8db;
+
+    background:
+        linear-gradient(
+            rgba(63,113,130,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 36px 36px;
+
+}
+
+
+/* =========================================================
+   TECHNICAL FLOATING DECORATIONS
+========================================================= */
+
+.kurogane-floating {
+
+    position: fixed;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    color: rgba(63,113,130,.30);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+}
+
+
+.kurogane-gear {
+
+    font-size: 65px;
+
+}
+
+
+.gear-one {
+
+    left: 25px;
+    top: 22%;
+
+    transform: rotate(-18deg);
+
+}
+
+
+.gear-two {
+
+    right: 30px;
+    bottom: 19%;
+
+    font-size: 48px;
+
+    transform: rotate(25deg);
+
+}
+
+
+.kurogane-cross {
+
+    left: 7%;
+
+    top: 62%;
+
+    font-size: 35px;
+
+}
+
+
+.kurogane-tech {
+
+    right: 5%;
+
+    top: 38%;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .2em;
+
+    writing-mode: vertical-rl;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.academy-hero {
+
+    position: relative;
+
+    max-width: 1280px;
+
+    min-height: 760px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   BLUEPRINT DECORATION
+========================================================= */
+
+.kurogane-blueprint {
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 6%;
+
+    top: 90px;
+
+    width: 250px;
+
+    height: 180px;
+
+    border: 1px solid rgba(63,113,130,.18);
+
+    opacity: .8;
+
+}
+
+
+.kurogane-blueprint > span {
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 10px;
+
+    color: var(--academy-accent);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.blueprint-line {
+
+    position: absolute;
+
+    background: rgba(63,113,130,.18);
+
+}
+
+
+.line-one {
+
+    width: 180px;
+
+    height: 1px;
+
+    left: 25px;
+
+    top: 85px;
+
+    transform: rotate(22deg);
+
+}
+
+
+.line-two {
+
+    width: 130px;
+
+    height: 1px;
+
+    right: 15px;
+
+    bottom: 40px;
+
+    transform: rotate(-32deg);
+
+}
+
+
+.blueprint-dot {
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 6px;
+
+    border: 1px solid var(--academy-accent);
+
+    border-radius: 50%;
+
+}
+
+
+.dot-one {
+
+    left: 45px;
+    top: 48px;
+
+}
+
+
+.dot-two {
+
+    right: 60px;
+    top: 90px;
+
+}
+
+
+.dot-three {
+
+    left: 115px;
+    bottom: 30px;
+
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.academy-paper {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(900px, 94vw);
+
+    padding: 80px 80px 60px;
+
+    background:
+
+        linear-gradient(
+            rgba(63,113,130,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.025) 1px,
+            transparent 1px
+        ),
+
+        var(--academy-paper);
+
+    background-size: 32px 32px;
+
+    border: 1px solid var(--academy-border);
+
+    box-shadow:
+        0 25px 65px rgba(35,50,55,.15);
+
+    transform: rotate(.4deg);
+
+}
+
+
+/* =========================================================
+   TAPE
+========================================================= */
+
+.paper-tape {
+
+    position: absolute;
+
+    top: -17px;
+
+    left: 50%;
+
+    width: 150px;
+
+    height: 34px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background:
+        rgba(185,194,188,.58);
+
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.academy-number {
+
+    margin-bottom: 25px;
+
+    color: var(--academy-accent);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .24em;
+
+}
+
+
+.academy-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+
+.heading-heart {
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 42px;
+
+}
+
+
+.academy-heading h1 {
+
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(60px, 9vw, 105px);
+
+    font-weight: 600;
+
+    line-height: .86;
+
+    text-align: center;
+
+}
+
+
+.academy-heading h1 em {
+
+    display: block;
+
+    color: var(--academy-accent);
+
+    font-weight: 600;
+
+}
+
+
+.academy-motto {
+
+    margin-top: 28px;
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    color: #657277;
+
+    font-size: 24px;
+
+}
+
+
+.academy-motto span {
+
+    margin: 0 8px;
+
+    color: var(--academy-accent);
+
+}
+
+
+.academy-lead {
+
+    max-width: 610px;
+
+    margin: 32px auto 0;
+
+    color: #505b5f;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    text-align: center;
+
+}
+
+
+.academy-description {
+
+    max-width: 620px;
+
+    margin: 22px auto 0;
+
+    color: #778287;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    text-align: center;
+
+}
+
+
+.academy-divider {
+
+    width: 100%;
+
+    margin: 38px auto 25px;
+
+    border-top:
+        1px dashed var(--academy-border);
+
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.academy-facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.academy-facts div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    text-align: center;
+
+}
+
+
+.academy-facts span {
+
+    color: #8b999d;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.academy-facts strong {
+
+    color: #404b4f;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.academy-stamp {
+
+    position: absolute;
+
+    top: 48px;
+
+    right: 45px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border:
+        2px solid rgba(63,113,130,.35);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: rgba(41,78,91,.65);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: .1em;
+
+    transform: rotate(10deg);
+
+}
+
+
+/* =========================================================
+   POLAROID
+========================================================= */
+
+.academy-polaroid {
+
+    position: absolute;
+
+    z-index: 10;
+
+    width: 205px;
+
+    padding: 11px 11px 17px;
+
+    background: white;
+
+    box-shadow:
+        0 13px 30px rgba(35,50,55,.16);
+
+}
+
+
+.polaroid-campus {
+
+    left: 2%;
+
+    top: 115px;
+
+    transform: rotate(-6deg);
+
+}
+
+
+.polaroid-image {
+
+    height: 175px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbe7ea,
+            #edf2f0
+        );
+
+    color: #71878e;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .14em;
+
+}
+
+
+.academy-polaroid p {
+
+    margin: 10px 0 0;
+
+    color: #5e6a6e;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 15px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.academy-note {
+
+    position: absolute;
+
+    z-index: 11;
+
+    right: 3%;
+
+    top: 105px;
+
+    width: 165px;
+
+    padding: 22px;
+
+    background: #dce7dc;
+
+    box-shadow:
+        0 10px 25px rgba(45,55,50,.13);
+
+    transform: rotate(5deg);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.academy-note small {
+
+    display: block;
+
+    color: #66736d;
+
+    font-size: 13px;
+
+}
+
+
+.academy-note strong {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #405d63;
+
+    font-size: 22px;
+
+    line-height: 1.05;
+
+}
+
+
+.academy-note > span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--academy-accent);
+
+    font-size: 24px;
+
+}
+
+
+/* =========================================================
+   MINI NOTE
+========================================================= */
+
+.academy-mini-note {
+
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 95px;
+
+    z-index: 8;
+
+    padding: 18px 22px;
+
+    background: #e3e0d4;
+
+    box-shadow:
+        0 10px 25px rgba(50,50,45,.10);
+
+    transform: rotate(-4deg);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.academy-mini-note span {
+
+    display: block;
+
+    color: #777b76;
+
+    font-size: 10px;
+
+    letter-spacing: .1em;
+
+}
+
+
+.academy-mini-note strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #4c6267;
+
+    font-size: 18px;
+
+    line-height: 1.1;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.academy-section {
+
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 75px 60px;
+
+    background: var(--academy-paper);
+
+    border: 1px solid var(--academy-border);
+
+    box-shadow:
+        0 20px 50px rgba(35,50,55,.12);
+
+}
+
+
+.section-title {
+
+    max-width: 720px;
+
+    margin-bottom: 48px;
+
+}
+
+
+.section-title.centered {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+
+.section-title > span {
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: var(--academy-accent);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+}
+
+
+.section-title h2 {
+
+    margin: 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: #303a3d;
+
+    font-size:
+        clamp(40px, 5vw, 62px);
+
+    font-weight: 600;
+
+    line-height: 1;
+
+}
+
+
+.section-title h2 em {
+
+    color: var(--academy-accent);
+
+}
+
+
+.section-title p {
+
+    margin-top: 18px;
+
+    color: #7b878a;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(260px, .8fr);
+
+    gap: 65px;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 20px;
+
+    color: #707c80;
+
+    font-size: 13px;
+
+    line-height: 1.95;
+
+}
+
+
+.about-text .about-big {
+
+    color: #3d484b;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1.45;
+
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.notebook-card {
+
+    position: relative;
+
+    align-self: start;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            rgba(63,113,130,.045) 1px,
+            transparent 1px
+        ),
+
+        var(--academy-soft);
+
+    background-size: 22px 22px;
+
+    transform: rotate(1.2deg);
+
+}
+
+
+.notebook-label {
+
+    color: var(--academy-accent-dark);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .17em;
+
+}
+
+
+.notebook-card h3 {
+
+    margin: 16px 0 22px;
+
+    color: #3e4a4d;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+}
+
+
+.notebook-card ul {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.notebook-card li {
+
+    position: relative;
+
+    margin-bottom: 11px;
+
+    padding-left: 18px;
+
+    color: #647174;
+
+    font-size: 11px;
+
+}
+
+
+.notebook-card li::before {
+
+    content: "＋";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--academy-accent);
+
+}
+
+
+.notebook-doodle {
+
+    margin-top: 20px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 24px;
+
+    letter-spacing: 7px;
+
+}
+
+
+/* =========================================================
+   CAMPUS
+========================================================= */
+
+.campus-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.campus-card {
+
+    position: relative;
+
+    padding: 32px 28px 35px;
+
+    background: white;
+
+    border: 1px solid var(--academy-border);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.campus-card:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(-.5deg);
+
+    box-shadow:
+        0 15px 30px rgba(35,50,55,.11);
+
+}
+
+
+.campus-number {
+
+    position: absolute;
+
+    top: 17px;
+
+    right: 20px;
+
+    color: #c0cccf;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+}
+
+
+.campus-icon {
+
+    margin-bottom: 18px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 38px;
+
+}
+
+
+.campus-card h3 {
+
+    margin: 0 0 12px;
+
+    color: #3e494c;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+}
+
+
+.campus-card p {
+
+    margin: 0;
+
+    color: #788386;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.students-section {
+
+    overflow: hidden;
+
+}
+
+
+.student-total {
+
+    position: absolute;
+
+    top: 75px;
+
+    right: 60px;
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    color: var(--academy-accent);
+
+}
+
+
+.student-total strong {
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 28px;
+
+}
+
+
+.student-total span {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.student-card {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--academy-border);
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.student-card:nth-child(2n) {
+
+    transform: rotate(.5deg);
+
+}
+
+
+.student-card:nth-child(3n) {
+
+    transform: rotate(-.5deg);
+
+}
+
+
+.student-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0deg);
+
+    box-shadow:
+        0 16px 32px rgba(35,50,55,.14);
+
+}
+
+
+.student-image {
+
+    position: relative;
+
+    height: 290px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            rgba(63,113,130,.06) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.06) 1px,
+            transparent 1px
+        ),
+
+        #edf3f3;
+
+    background-size: 20px 20px;
+
+}
+
+
+.student-index {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 12px;
+
+    left: 13px;
+
+    color: var(--academy-accent);
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+    font-size: 18px;
+
+}
+
+
+.technical-corner {
+
+    position: absolute;
+
+    right: 11px;
+
+    bottom: 10px;
+
+    color: rgba(63,113,130,.5);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+}
+
+
+.image-placeholder {
+
+    color: #819296;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: .14em;
+
+    text-align: center;
+
+}
+
+
+.student-content {
+
+    padding: 18px;
+
+}
+
+
+.student-content > span {
+
+    color: var(--academy-accent);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+}
+
+
+.student-content h3 {
+
+    margin: 7px 0 0;
+
+    color: #3d484b;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+}
+
+
+.student-content p {
+
+    margin: 9px 0 0;
+
+    color: #8a9698;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    transition: color .2s ease;
+
+}
+
+
+.student-card:hover .student-content p {
+
+    color: var(--academy-accent);
+
+}
+
+
+/* =========================================================
+   FUTURE STUDENTS
+========================================================= */
+
+.student-future {
+
+    opacity: .78;
+
+}
+
+
+.student-future .student-image {
+
+    background:
+
+        linear-gradient(
+            rgba(63,113,130,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.035) 1px,
+            transparent 1px
+        ),
+
+        #f3f6f5;
+
+}
+
+
+.student-future .image-placeholder {
+
+    color: #a1abad;
+
+}
+
+
+/* =========================================================
+   MEMORY / ARCHIVE
+========================================================= */
+
+.memory-board {
+
+    position: relative;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(63,113,130,.07) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.07) 1px,
+            transparent 1px
+        ),
+
+        #dfe9eb;
+
+    background-size: 30px 30px;
+
+    border: 1px solid #c6d4d7;
+
+}
+
+
+.memory-board::before {
+
+    content: "TECHNICAL ARCHIVE / KUROGANE 02";
+
+    position: absolute;
+
+    left: 22px;
+
+    top: 18px;
+
+    color: rgba(63,113,130,.45);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+}
+
+
+.memory-photo {
+
+    position: absolute;
+
+    width: 255px;
+
+    height: 190px;
+
+    padding: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    box-shadow:
+        0 11px 27px rgba(35,50,55,.15);
+
+}
+
+
+.memory-photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 11px;
+
+    background:
+
+        linear-gradient(
+            rgba(63,113,130,.05) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(63,113,130,.05) 1px,
+            transparent 1px
+        ),
+
+        #edf3f3;
+
+    background-size: 18px 18px;
+
+}
+
+
+.memory-photo span {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #7d9095;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+}
+
+
+.memory-one {
+
+    left: 9%;
+
+    top: 55px;
+
+    transform: rotate(-6deg);
+
+}
+
+
+.memory-two {
+
+    right: 9%;
+
+    top: 55px;
+
+    transform: rotate(5deg);
+
+}
+
+
+.memory-three {
+
+    left: 29%;
+
+    bottom: 40px;
+
+    transform: rotate(4deg);
+
+}
+
+
+.memory-paper {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 205px;
+
+    padding: 25px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-2deg);
+
+    background: #e4e0d4;
+
+    box-shadow:
+        0 12px 27px rgba(35,50,55,.15);
+
+    text-align: center;
+
+    font-family:
+        "Patrick Hand",
+        cursive;
+
+}
+
+
+.memory-paper small {
+
+    display: block;
+
+    color: #718084;
+
+    font-size: 9px;
+
+    letter-spacing: .13em;
+
+}
+
+
+.memory-paper strong {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #50646a;
+
+    font-size: 24px;
+
+    line-height: 1.05;
+
+}
+
+
+.memory-paper > span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--academy-accent);
+
+    font-size: 23px;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.academy-bottom-nav {
+
+    max-width: 1180px;
+
+    margin:
+        0 auto 80px;
+
+    padding:
+        0 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.back-academies {
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    text-decoration: none;
+
+}
+
+
+.back-academies:hover {
+
+    color: #b9dce4;
+
+}
+
+
+.next-academy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 5px;
+
+    text-decoration: none;
+
+}
+
+
+.next-academy span {
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+}
+
+
+.next-academy strong {
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+}
+
+
+.next-academy:hover strong {
+
+    color: #b9dce4;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note {
+
+        opacity: .45;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .kurogane-blueprint {
+
+        opacity: .35;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .academy-hero {
+
+        min-height: auto;
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .academy-paper {
+
+        padding:
+            70px 30px 45px;
+
+    }
+
+
+    .academy-stamp {
+
+        display: none;
+
+    }
+
+
+    .academy-facts {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .student-total {
+
+        position: static;
+
+        margin-top: -25px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .academy-section {
+
+        padding:
+            60px 25px;
+
+    }
+
+
+    .academy-bottom-nav {
+
+        padding:
+            0 25px;
+
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .academy-heading {
+
+        gap: 5px;
+
+    }
+
+
+    .heading-heart {
+
+        font-size: 25px;
+
+    }
+
+
+    .academy-heading h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .academy-motto {
+
+        font-size: 19px;
+
+    }
+
+
+    .academy-polaroid,
+    .academy-note,
+    .academy-mini-note,
+    .kurogane-floating,
+    .kurogane-blueprint {
+
+        display: none;
+
+    }
+
+
+    .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .student-image {
+
+        height: 350px;
+
+    }
+
+
+    .memory-board {
+
+        min-height: 650px;
+
+    }
+
+
+    .memory-photo {
+
+        width: 180px;
+
+        height: 135px;
+
+    }
+
+
+    .memory-one {
+
+        left: 3%;
+        top: 35px;
+
+    }
+
+
+    .memory-two {
+
+        right: 3%;
+        top: 190px;
+
+    }
+
+
+    .memory-three {
+
+        left: 8%;
+        bottom: 40px;
+
+    }
+
+
+    .memory-paper {
+
+        width: 160px;
+
+        padding: 18px;
+
+    }
+
+
+    .academy-bottom-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+    }
+
+
+    .next-academy {
+
+        align-items: flex-start;
+
+    }
+
+}
