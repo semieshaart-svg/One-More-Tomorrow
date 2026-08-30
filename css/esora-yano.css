@@ -1,36 +1,37 @@
 /* =========================================================
    ESORA YANO
-   LAVENDER SCRAPBOOK / PERSONAL JOURNAL
-   CSS ONLY
-   NO JAVASCRIPT
+   LAVENDER SCRAPBOOK / CHARACTER DOSSIER
+   CSS ONLY — NO JAVASCRIPT
 ========================================================= */
 
 
 /* =========================================================
-   ESORA COLOR PALETTE
+   PALETTE
 ========================================================= */
 
 :root {
-    --esora-purple: #CBB8F1;
-    --esora-purple-dark: #9D88C8;
-    --esora-purple-soft: #E8DFF8;
+    --esora-purple: #c9b5ed;
+    --esora-purple-dark: #8e75bd;
+    --esora-purple-deep: #66547f;
+    --esora-purple-soft: #eee7fa;
+    --esora-purple-pale: #f7f2fc;
 
-    --esora-brown: #BD9E8E;
-    --esora-brown-dark: #9F8172;
+    --esora-lilac: #ddd0f3;
+    --esora-mauve: #b69fca;
 
-    --esora-gray: #97959A;
-    --esora-cream: #F1E1D5;
+    --esora-brown: #b89b8d;
+    --esora-cream: #f5e8df;
 
-    --esora-paper: #FFFDFC;
-    --esora-soft: #F8F5F3;
-    --esora-line: #E5DDD8;
+    --esora-paper: #fffdfb;
+    --esora-paper-soft: #fbf7f4;
+    --esora-white: #ffffff;
 
-    --esora-text: #5F5B60;
-    --esora-text-soft: #88848A;
-    --esora-dark: #51485B;
+    --esora-line: #e5dce8;
+    --esora-line-dark: #d6c9df;
 
-    --esora-pink: #E8C9D9;
-    --esora-pink-soft: #F7EAF0;
+    --esora-text: #625c66;
+    --esora-text-soft: #96909a;
+    --esora-dark: #4e4657;
 }
 
 
@@ -42,57 +43,38 @@ html,
 body {
     margin: 0 !important;
     padding: 0 !important;
+    min-height: 100%;
+}
 
-    background: #e9e1f1 !important;
+html {
+    background: #eee7f7 !important;
 }
 
 body.esora-page {
-    position: relative;
-
-    min-height: 100vh;
-
-    color: var(--esora-text);
-
-    /*
-       LARGE SOFT BACKGROUND
-    */
-
     background:
         radial-gradient(
-            ellipse at 5% 8%,
-            rgba(203, 184, 241, 0.75) 0%,
-            rgba(203, 184, 241, 0.35) 20%,
-            transparent 48%
+            circle at 8% 12%,
+            rgba(201, 181, 237, 0.45) 0,
+            rgba(201, 181, 237, 0) 260px
         ),
-
         radial-gradient(
-            ellipse at 95% 10%,
-            rgba(241, 225, 213, 0.90) 0%,
-            rgba(241, 225, 213, 0.35) 23%,
-            transparent 50%
+            circle at 92% 20%,
+            rgba(221, 208, 243, 0.6) 0,
+            rgba(221, 208, 243, 0) 300px
         ),
-
         radial-gradient(
-            ellipse at 8% 90%,
-            rgba(232, 223, 248, 0.85) 0%,
-            rgba(232, 223, 248, 0.30) 28%,
-            transparent 55%
+            circle at 15% 88%,
+            rgba(245, 232, 223, 0.7) 0,
+            rgba(245, 232, 223, 0) 300px
         ),
-
-        radial-gradient(
-            ellipse at 92% 82%,
-            rgba(203, 184, 241, 0.42) 0%,
-            transparent 48%
-        ),
-
         linear-gradient(
             135deg,
-            #e8e0f0 0%,
-            #eee7f2 45%,
-            #e9e0ee 100%
+            #f3edf9 0%,
+            #fffaf7 42%,
+            #f0eafa 100%
         ) !important;
 
-    overflow-x: hidden;
+    color: var(--esora-text);
 }
 
 body.esora-page * {
@@ -101,238 +83,82 @@ body.esora-page * {
 
 
 /* =========================================================
-   BACKGROUND PAPER TEXTURE
-========================================================= */
-
-body.esora-page {
-    background-image:
-
-        repeating-linear-gradient(
-            0deg,
-            rgba(255,255,255,0.10) 0px,
-            rgba(255,255,255,0.10) 1px,
-            transparent 1px,
-            transparent 5px
-        ),
-
-        radial-gradient(
-            ellipse at 5% 8%,
-            rgba(203, 184, 241, 0.75) 0%,
-            rgba(203, 184, 241, 0.35) 20%,
-            transparent 48%
-        ),
-
-        radial-gradient(
-            ellipse at 95% 10%,
-            rgba(241, 225, 213, 0.90) 0%,
-            rgba(241, 225, 213, 0.35) 23%,
-            transparent 50%
-        ),
-
-        radial-gradient(
-            ellipse at 8% 90%,
-            rgba(232, 223, 248, 0.85) 0%,
-            rgba(232, 223, 248, 0.30) 28%,
-            transparent 55%
-        ),
-
-        radial-gradient(
-            ellipse at 92% 82%,
-            rgba(203, 184, 241, 0.42) 0%,
-            transparent 48%
-        ),
-
-        linear-gradient(
-            135deg,
-            #e8e0f0 0%,
-            #eee7f2 45%,
-            #e9e0ee 100%
-        ) !important;
-}
-
-
-/* =========================================================
-   FLOATING DECORATIONS
+   DECORATIVE PAGE ATMOSPHERE
 ========================================================= */
 
 body.esora-page::before {
-    content:
-        "✦"
-        "      ✧"
-        "          ♡"
-        "\A"
-        "     ˚"
-        "          ✦"
-        "   ✧";
-
+    content: "✦   ·   ♡   ·   ✦   ·   ♡";
     position: fixed;
-
     top: 55px;
     left: 25px;
-
     z-index: 0;
 
-    color: rgba(125, 103, 164, 0.42);
-
+    color: rgba(142, 117, 189, 0.18);
     font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 10px;
 
-    font-size: 17px;
-
-    line-height: 2.3;
-
-    letter-spacing: 7px;
-
-    white-space: pre;
-
+    transform: rotate(-12deg);
     pointer-events: none;
-
-    transform: rotate(-8deg);
 }
-
-
-/* =========================================================
-   RIGHT SIDE DECORATION
-========================================================= */
 
 body.esora-page::after {
-    content:
-        "♡"
-        "      ✧"
-        "   ✦"
-        "\A"
-        "        ˚"
-        "   ✧"
-        "       ♡";
-
+    content: "✧  ❀  ✧";
     position: fixed;
-
-    right: 25px;
-    bottom: 65px;
-
+    right: 35px;
+    bottom: 45px;
     z-index: 0;
 
-    color: rgba(125, 103, 164, 0.38);
-
+    color: rgba(182, 159, 202, 0.22);
     font-family: Georgia, serif;
+    font-size: 26px;
+    letter-spacing: 8px;
 
-    font-size: 18px;
-
-    line-height: 2.4;
-
-    letter-spacing: 6px;
-
-    white-space: pre;
-
+    transform: rotate(10deg);
     pointer-events: none;
-
-    transform: rotate(8deg);
 }
 
 
 /* =========================================================
-   MAIN CONTAINER
+   MAIN PROFILE
 ========================================================= */
 
 .esora-profile {
     position: relative;
-
-    z-index: 2;
+    z-index: 1;
 
     width: min(1100px, calc(100% - 30px));
+    margin: 55px auto;
 
-    margin: 65px auto;
+    padding: 18px;
 
-    background: var(--esora-paper);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 253, 251, 0.97),
+            rgba(250, 246, 252, 0.97)
+        );
+
+    border: 1px solid rgba(214, 201, 223, 0.9);
+    box-shadow:
+        0 18px 50px rgba(91, 70, 110, 0.12),
+        0 3px 12px rgba(91, 70, 110, 0.05);
 
     color: var(--esora-text);
-
     font-family: Arial, Helvetica, sans-serif;
-
-    border: 1px solid rgba(157, 136, 200, 0.28);
-
-    box-shadow:
-        0 25px 60px rgba(81, 72, 91, 0.14),
-        0 8px 20px rgba(81, 72, 91, 0.08);
 }
 
 
-/* =========================================================
-   PAPER SHEET BEHIND PROFILE
-========================================================= */
+/* decorative inner border */
 
 .esora-profile::before {
     content: "";
-
     position: absolute;
+    inset: 8px;
 
-    z-index: -2;
+    border: 1px dashed rgba(142, 117, 189, 0.22);
 
-    top: -18px;
-    left: 22px;
-    right: 22px;
-    bottom: 18px;
-
-    background: #f5eef9;
-
-    border: 1px solid rgba(157, 136, 200, 0.18);
-
-    transform: rotate(-1deg);
-
-    box-shadow:
-        0 10px 25px rgba(81, 72, 91, 0.08);
-}
-
-
-/* =========================================================
-   LITTLE NOTE BESIDE PROFILE
-========================================================= */
-
-.esora-profile::after {
-    content:
-        "little things"
-        "\A"
-        "────────────"
-        "\A"
-        "☐ remember"
-        "\A"
-        "☐ breathe"
-        "\A"
-        "☐ take a break"
-        "\A"
-        "☐ be kind"
-        "\A"
-        "\A"
-        "♡";
-
-    position: absolute;
-
-    z-index: -3;
-
-    width: 145px;
-
-    right: -108px;
-    top: 210px;
-
-    padding: 19px 17px;
-
-    background: #f3e8c9;
-
-    border: 1px solid rgba(141, 123, 112, 0.18);
-
-    color: #8d7b70;
-
-    font-family: Georgia, serif;
-
-    font-size: 10px;
-
-    line-height: 1.75;
-
-    white-space: pre-wrap;
-
-    transform: rotate(5deg);
-
-    box-shadow:
-        0 9px 20px rgba(81,72,91,0.11);
+    pointer-events: none;
 }
 
 
@@ -344,7 +170,6 @@ body.esora-page::after {
     position: relative;
 
     display: grid;
-
     grid-template-columns: 1fr 360px;
 
     min-height: 390px;
@@ -353,75 +178,59 @@ body.esora-page::after {
 
     background:
         radial-gradient(
-            circle at 12% 18%,
-            rgba(255,255,255,0.75),
-            transparent 120px
+            circle at 15% 20%,
+            rgba(255, 255, 255, 0.8) 0,
+            rgba(255, 255, 255, 0) 180px
         ),
-
-        radial-gradient(
-            circle at 75% 85%,
-            rgba(255,255,255,0.50),
-            transparent 160px
-        ),
-
         linear-gradient(
             135deg,
             #eee5fa 0%,
-            #e8dff8 48%,
-            #f1e6df 100%
+            #f7effa 50%,
+            #f4e5dc 100%
         );
 
     border: 1px solid var(--esora-line);
 }
 
 
-/* =========================================================
-   HERO DECORATIVE SHAPES
-========================================================= */
+/* decorative circles */
 
 .esora-hero::before {
     content: "";
 
     position: absolute;
+    width: 220px;
+    height: 220px;
 
-    width: 190px;
-    height: 190px;
-
-    top: -105px;
-    left: -75px;
-
-    border: 1px solid rgba(157,136,200,0.22);
+    right: 280px;
+    top: -90px;
 
     border-radius: 50%;
 
+    background: rgba(255, 255, 255, 0.25);
+
     box-shadow:
-        30px 30px 0 rgba(157,136,200,0.06),
-        60px 60px 0 rgba(157,136,200,0.04),
-        90px 90px 0 rgba(157,136,200,0.025);
+        120px 160px 0 rgba(201, 181, 237, 0.16),
+        -280px 300px 0 rgba(255, 255, 255, 0.2);
 
     pointer-events: none;
 }
 
 
-/* =========================================================
-   HERO LITTLE SYMBOLS
-========================================================= */
+/* little decoration */
 
 .esora-hero::after {
-    content: "✦    ✧    ♡";
-
+    content: "✦  ♡  ✧";
     position: absolute;
 
-    right: 380px;
+    left: 42px;
     bottom: 25px;
 
-    color: rgba(157,136,200,0.34);
+    color: rgba(142, 117, 189, 0.35);
 
     font-family: Georgia, serif;
-
-    font-size: 14px;
-
-    letter-spacing: 8px;
+    font-size: 18px;
+    letter-spacing: 7px;
 
     pointer-events: none;
 }
@@ -433,105 +242,90 @@ body.esora-page::after {
 
 .esora-hero-info {
     position: relative;
-
     z-index: 2;
 
     padding: 65px 55px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
 
-/* =========================================================
-   LABEL
-========================================================= */
+/* small dossier label */
 
 .esora-label {
     display: inline-block;
 
+    width: fit-content;
+
     margin-bottom: 18px;
+    padding: 7px 13px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border: 1px solid rgba(142, 117, 189, 0.22);
 
     color: var(--esora-purple-dark);
 
-    font-size: 11px;
-
+    font-size: 10px;
     font-weight: bold;
-
     letter-spacing: 3px;
-}
-
-.esora-label::after {
-    content: "";
-
-    display: block;
-
-    width: 45px;
-    height: 1px;
-
-    margin-top: 8px;
-
-    background: var(--esora-purple);
+    text-transform: uppercase;
 }
 
 
-/* =========================================================
-   HERO TITLE
-========================================================= */
+/* name */
 
 .esora-hero h1 {
     margin: 0;
 
     color: var(--esora-dark);
 
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(42px, 6vw, 72px);
-
     line-height: 0.95;
-
     font-weight: 700;
 
-    letter-spacing: -2px;
+    text-shadow:
+        2px 2px 0 rgba(255, 255, 255, 0.7);
 }
 
 
-/* =========================================================
-   SUBTITLE
-========================================================= */
+/* subtitle */
 
 .esora-subtitle {
     margin-top: 20px;
 
-    color: var(--esora-gray);
+    color: var(--esora-purple-deep);
 
-    font-size: 14px;
-
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 
-/* =========================================================
-   QUOTE
-========================================================= */
+/* quote */
 
 .esora-quote {
+    position: relative;
+
     max-width: 520px;
 
-    margin-top: 35px;
+    margin-top: 32px;
+    padding: 17px 20px;
 
-    padding-left: 20px;
+    background: rgba(255, 253, 251, 0.62);
 
     border-left: 3px solid var(--esora-purple);
 
     color: var(--esora-text);
 
     font-family: Georgia, serif;
-
     font-size: 15px;
-
     line-height: 1.8;
+
+    box-shadow: 0 5px 20px rgba(91, 70, 110, 0.04);
 }
 
 
@@ -546,40 +340,30 @@ body.esora-page::after {
 
     overflow: hidden;
 
-    background: var(--esora-paper);
+    background:
+        linear-gradient(
+            135deg,
+            #fdf9f7,
+            #eee5f8
+        );
 }
+
+
+/* image frame */
 
 .esora-hero-image::before {
     content: "";
 
     position: absolute;
+    inset: 14px;
 
-    width: 100px;
-    height: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.75);
 
-    top: -5px;
-    left: 40px;
-
-    z-index: 3;
-
-    background: rgba(255,255,255,0.48);
-
-    transform: rotate(-4deg);
+    z-index: 2;
 
     pointer-events: none;
 }
 
-.esora-hero-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 12px;
-
-    border: 1px solid rgba(157,136,200,0.20);
-
-    pointer-events: none;
-}
 
 .esora-hero-image img {
     width: 100%;
@@ -588,6 +372,13 @@ body.esora-page::after {
     display: block;
 
     object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.esora-hero-image:hover img {
+    transform: scale(1.025);
 }
 
 
@@ -597,78 +388,61 @@ body.esora-page::after {
 
 .esora-quick-data {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
-    background:
-        linear-gradient(
-            90deg,
-            #fffdfc,
-            #faf6fb,
-            #fffdfc
-        );
-
     border: 1px solid var(--esora-line);
-
     border-top: 0;
+
+    background: var(--esora-paper);
 }
+
 
 .esora-data-item {
     position: relative;
 
-    padding: 18px;
+    padding: 20px 18px;
 
-    background: transparent;
+    background:
+        linear-gradient(
+            180deg,
+            #fffdfb,
+            #fbf7f5
+        );
 
     border-right: 1px solid var(--esora-line);
-
     border-bottom: 1px solid var(--esora-line);
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease;
 }
 
-.esora-data-item::before {
-    content: "✧";
-
-    position: absolute;
-
-    right: 11px;
-    top: 8px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 10px;
-}
 
 .esora-data-item:hover {
-    background: var(--esora-purple-soft);
-
-    transform: translateY(-1px);
+    background: var(--esora-purple-pale);
 }
+
 
 .esora-data-item:nth-child(4n) {
     border-right: 0;
 }
 
+
 .esora-data-item span {
     display: block;
 
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
-    color: var(--esora-gray);
+    color: var(--esora-text-soft);
 
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-
+    font-size: 9px;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
 }
+
 
 .esora-data-item strong {
     color: var(--esora-dark);
 
+    font-family: Georgia, serif;
     font-size: 14px;
 }
 
@@ -680,53 +454,36 @@ body.esora-page::after {
 .esora-status {
     position: relative;
 
-    overflow: hidden;
-
     margin-top: 20px;
-
-    padding: 22px 25px;
+    padding: 24px 25px;
 
     background:
         linear-gradient(
-            110deg,
-            #f8f5f3,
-            #f4eff9
+            135deg,
+            #f8f2fc,
+            #fff8f4
         );
 
     border: 1px solid var(--esora-line);
 
-    box-shadow:
-        4px 4px 0 rgba(157,136,200,0.07);
+    box-shadow: 0 5px 18px rgba(91, 70, 110, 0.04);
 }
+
+
+/* decorative pin */
 
 .esora-status::before {
-    content: "";
+    content: "●";
 
     position: absolute;
+    top: 10px;
+    right: 14px;
 
-    width: 100px;
-    height: 100px;
+    color: var(--esora-purple);
 
-    right: -35px;
-    top: -40px;
-
-    border: 1px solid rgba(157,136,200,0.18);
-
-    border-radius: 50%;
+    font-size: 9px;
 }
 
-.esora-status::after {
-    content: "✧";
-
-    position: absolute;
-
-    right: 25px;
-    bottom: 10px;
-
-    color: rgba(157,136,200,0.25);
-
-    font-size: 32px;
-}
 
 .esora-status-title {
     margin-bottom: 15px;
@@ -734,19 +491,18 @@ body.esora-page::after {
     color: var(--esora-purple-dark);
 
     font-size: 10px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
 
 .esora-status-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
 }
+
 
 .esora-status-grid span {
     display: block;
@@ -758,15 +514,15 @@ body.esora-page::after {
     font-size: 10px;
 }
 
+
 .esora-status-grid strong {
     color: var(--esora-dark);
-
     font-size: 14px;
 }
 
 
 /* =========================================================
-   HIDE RADIO BUTTONS
+   RADIO BUTTONS
 ========================================================= */
 
 .esora-profile > input[type="radio"] {
@@ -786,29 +542,28 @@ body.esora-page::after {
 ========================================================= */
 
 .esora-navigation {
+    position: relative;
+
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
 
     margin: 30px 0 0;
-
     padding: 9px;
 
     background:
         linear-gradient(
-            90deg,
-            #f2ebfa,
-            #faf5f3,
-            #f2ebfa
+            135deg,
+            #f4edf9,
+            #faf5f2
         );
 
     border: 1px solid var(--esora-line);
 
     box-shadow:
-        0 5px 15px rgba(81,72,91,0.05);
+        0 5px 15px rgba(91, 70, 110, 0.04);
 }
+
 
 .esora-tab {
     position: relative;
@@ -817,44 +572,32 @@ body.esora-page::after {
 
     padding: 14px 16px;
 
-    background: rgba(255,253,252,0.90);
+    background: rgba(255, 253, 251, 0.85);
 
-    border: 1px solid #ded7d3;
+    border: 1px solid #ded5e3;
 
     color: var(--esora-text-soft);
 
     cursor: pointer;
 
-    font-size: 11px;
-
+    font-size: 10px;
     font-weight: bold;
-
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
 
     text-align: center;
-
     text-transform: uppercase;
 
     transition:
         background 0.2s ease,
-        border-color 0.2s ease,
         color 0.2s ease,
+        border 0.2s ease,
         transform 0.2s ease;
 }
 
-.esora-tab::before {
-    content: "·";
-
-    margin-right: 5px;
-
-    color: var(--esora-purple);
-}
 
 .esora-tab:hover {
     background: var(--esora-purple-soft);
-
     border-color: var(--esora-purple);
-
     color: var(--esora-dark);
 
     transform: translateY(-2px);
@@ -862,84 +605,51 @@ body.esora-page::after {
 
 
 /* =========================================================
-   ALL SECTIONS HIDDEN
+   SECTIONS
 ========================================================= */
 
 .esora-section,
 .esora-aesthetic {
-    position: relative;
-
-    overflow: hidden;
-
     display: none;
 
-    margin-top: 20px;
+    position: relative;
 
+    margin-top: 20px;
     padding: 40px;
 
     background:
-        radial-gradient(
-            circle at 100% 0%,
-            rgba(203,184,241,0.16),
-            transparent 190px
-        ),
-
-        radial-gradient(
-            circle at 0% 100%,
-            rgba(241,225,213,0.14),
-            transparent 190px
-        ),
-
         linear-gradient(
             135deg,
-            #fffdfc,
-            #fbf8fc
+            rgba(255, 253, 251, 0.98),
+            rgba(249, 245, 252, 0.98)
         );
 
     border: 1px solid var(--esora-line);
 
     box-shadow:
-        0 5px 18px rgba(81,72,91,0.04);
+        0 8px 25px rgba(91, 70, 110, 0.045);
 }
 
 
-/* =========================================================
-   SECTION DECORATIONS
-========================================================= */
+/* decorative corner */
 
-.esora-section::before,
-.esora-aesthetic::before {
-    content: "✧";
+.esora-section::after,
+.esora-aesthetic::after {
+    content: "✦";
 
     position: absolute;
 
     top: 18px;
     right: 22px;
 
-    color: rgba(157,136,200,0.28);
+    color: var(--esora-purple);
 
-    font-size: 20px;
-}
-
-.esora-section::after,
-.esora-aesthetic::after {
-    content: "";
-
-    position: absolute;
-
-    width: 115px;
-
-    left: 25px;
-    bottom: 20px;
-
-    border-top: 1px dashed rgba(157,136,200,0.20);
-
-    transform: rotate(-3deg);
+    font-size: 16px;
 }
 
 
 /* =========================================================
-   SHOW SELECTED TAB
+   TAB SYSTEM
 ========================================================= */
 
 #esora-profile-tab:checked ~ .esora-navigation
@@ -993,6 +703,9 @@ body.esora-page::after {
     border-color: var(--esora-purple);
 
     color: #ffffff;
+
+    box-shadow:
+        0 5px 12px rgba(142, 117, 189, 0.22);
 }
 
 
@@ -1002,39 +715,33 @@ body.esora-page::after {
 
 .esora-section-heading {
     display: flex;
-
     align-items: center;
-
     gap: 18px;
 
     margin-bottom: 35px;
 }
 
+
 .esora-section-heading > span {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background: var(--esora-purple-soft);
+
+    border: 1px solid var(--esora-lilac);
+
+    border-radius: 50%;
 
     color: var(--esora-purple-dark);
 
-    font-size: 28px;
-
+    font-size: 23px;
     font-weight: bold;
 }
 
-.esora-section-heading > span::after {
-    content: "";
-
-    position: absolute;
-
-    width: 35px;
-    height: 1px;
-
-    left: 50%;
-    bottom: -8px;
-
-    transform: translateX(-50%);
-
-    background: var(--esora-purple);
-}
 
 .esora-section-heading small {
     display: block;
@@ -1043,10 +750,11 @@ body.esora-page::after {
 
     color: var(--esora-gray);
 
-    font-size: 10px;
-
+    font-size: 9px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
 
 .esora-section-heading h2 {
     margin: 0;
@@ -1054,7 +762,6 @@ body.esora-page::after {
     color: var(--esora-dark);
 
     font-family: Georgia, serif;
-
     font-size: 32px;
 }
 
@@ -1071,58 +778,78 @@ body.esora-page::after {
     gap: 35px;
 }
 
+
+.esora-description {
+    position: relative;
+
+    padding-right: 10px;
+}
+
+
 .esora-description p {
     margin: 0 0 18px;
 
     color: var(--esora-text);
 
     font-size: 14px;
-
     line-height: 1.9;
 }
 
+
+/* little quote / note */
+
+.esora-description::before {
+    content: "PERSONAL NOTES";
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 5px 10px;
+
+    background: var(--esora-purple-pale);
+
+    color: var(--esora-purple-dark);
+
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   FACT CARDS
+========================================================= */
+
 .esora-facts {
     display: grid;
-
     gap: 10px;
 }
+
 
 .esora-fact-card {
     position: relative;
 
     padding: 15px 18px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #faf6f3,
+            #f7f1fa
+        );
+
+    border: 1px solid var(--esora-line);
 
     border-left: 3px solid var(--esora-purple);
 
-    box-shadow:
-        2px 3px 0 rgba(203,184,241,0.08);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-.esora-fact-card::after {
-    content: "✦";
-
-    position: absolute;
-
-    right: 12px;
-    top: 9px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 10px;
-}
 
 .esora-fact-card:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        3px 6px 15px rgba(81,72,91,0.07);
+    transform: translateX(3px);
 }
+
 
 .esora-fact-card span {
     display: block;
@@ -1131,10 +858,11 @@ body.esora-page::after {
 
     color: var(--esora-gray);
 
-    font-size: 10px;
-
+    font-size: 9px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
 }
+
 
 .esora-fact-card strong {
     color: var(--esora-dark);
@@ -1142,45 +870,39 @@ body.esora-page::after {
     font-size: 13px;
 }
 
+
+/* =========================================================
+   GOAL CARD
+========================================================= */
+
 .esora-goal {
-    position: relative;
-
     display: flex;
-
     gap: 18px;
-
     align-items: center;
 
-    overflow: hidden;
-
     margin-top: 35px;
+    padding: 22px;
 
-    padding: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #eee5fa,
+            #f8e9e1
+        );
 
-    background: var(--esora-purple-soft);
+    border: 1px solid var(--esora-line);
 
     box-shadow:
-        4px 4px 0 rgba(157,136,200,0.07);
+        0 8px 20px rgba(91, 70, 110, 0.05);
 }
 
-.esora-goal::after {
-    content: "♡";
-
-    position: absolute;
-
-    right: 20px;
-    top: 10px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 32px;
-}
 
 .esora-goal-icon {
     color: var(--esora-purple-dark);
 
     font-size: 30px;
 }
+
 
 .esora-goal span {
     display: block;
@@ -1189,18 +911,18 @@ body.esora-page::after {
 
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-goal strong {
     display: block;
 
     color: var(--esora-dark);
 }
+
 
 .esora-goal small {
     display: block;
@@ -1210,22 +932,37 @@ body.esora-page::after {
     color: var(--esora-gray);
 }
 
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
 .esora-progress,
 .esora-meter {
-    height: 6px;
+    height: 7px;
 
     margin-top: 10px;
 
-    background: #ffffff;
+    background: #eee9ed;
+
+    border-radius: 20px;
 
     overflow: hidden;
 }
+
 
 .esora-progress div,
 .esora-meter div {
     height: 100%;
 
-    background: var(--esora-purple);
+    background:
+        linear-gradient(
+            90deg,
+            var(--esora-purple),
+            var(--esora-purple-dark)
+        );
+
+    border-radius: inherit;
 }
 
 
@@ -1241,9 +978,11 @@ body.esora-page::after {
     gap: 35px;
 }
 
+
 .esora-trait {
     margin-bottom: 22px;
 }
+
 
 .esora-trait > div:first-child {
     display: flex;
@@ -1257,11 +996,17 @@ body.esora-page::after {
     font-size: 11px;
 }
 
+
 .esora-meter {
     margin: 0;
 
-    background: #EEEAE8;
+    background: #eee9ed;
 }
+
+
+/* =========================================================
+   LIKE / DISLIKE
+========================================================= */
 
 .esora-like-columns {
     display: grid;
@@ -1271,40 +1016,36 @@ body.esora-page::after {
     gap: 12px;
 }
 
+
 .esora-list-box {
     position: relative;
 
     padding: 20px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            145deg,
+            #faf6f4,
+            #f6f0fa
+        );
 
-    box-shadow:
-        2px 3px 0 rgba(203,184,241,0.08);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    border: 1px solid var(--esora-line);
 }
 
-.esora-list-box::after {
+
+.esora-list-box::before {
     content: "✦";
 
     position: absolute;
 
-    right: 12px;
-    top: 10px;
+    top: 12px;
+    right: 15px;
 
-    color: rgba(157,136,200,0.20);
+    color: var(--esora-purple);
 
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.esora-list-box:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        3px 6px 15px rgba(81,72,91,0.07);
-}
 
 .esora-list-box h3 {
     margin: 0 0 12px;
@@ -1314,6 +1055,7 @@ body.esora-page::after {
     font-family: Georgia, serif;
 }
 
+
 .esora-list-box ul {
     margin: 0;
 
@@ -1322,7 +1064,6 @@ body.esora-page::after {
     color: var(--esora-text);
 
     font-size: 12px;
-
     line-height: 1.8;
 }
 
@@ -1332,48 +1073,32 @@ body.esora-page::after {
 ========================================================= */
 
 .esora-wardrobe-intro {
-    position: relative;
-
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
-    overflow: hidden;
-
     margin-bottom: 25px;
-
-    padding: 20px;
+    padding: 22px;
 
     background:
         linear-gradient(
-            110deg,
-            var(--esora-purple-soft),
-            #f4edf7
+            135deg,
+            #eee5fa,
+            #f9ebe3
         );
+
+    border: 1px solid var(--esora-line);
 }
 
-.esora-wardrobe-intro::after {
-    content: "✧";
-
-    position: absolute;
-
-    right: 105px;
-    top: 10px;
-
-    color: rgba(157,136,200,0.22);
-
-    font-size: 28px;
-}
 
 .esora-wardrobe-intro strong {
     color: var(--esora-dark);
 
     font-family: Georgia, serif;
-
     font-size: 20px;
 }
+
 
 .esora-wardrobe-intro p {
     margin: 7px 0 0;
@@ -1383,15 +1108,16 @@ body.esora-page::after {
     font-size: 12px;
 }
 
+
 .esora-outfit-count {
     color: var(--esora-purple-dark);
 
     font-size: 30px;
-
     font-weight: bold;
 
     text-align: center;
 }
+
 
 .esora-outfit-count small {
     display: block;
@@ -1399,9 +1125,13 @@ body.esora-page::after {
     color: var(--esora-gray);
 
     font-size: 10px;
-
     font-weight: normal;
 }
+
+
+/* =========================================================
+   WARDROBE GRID
+========================================================= */
 
 .esora-wardrobe-grid {
     display: grid;
@@ -1411,45 +1141,39 @@ body.esora-page::after {
     gap: 18px;
 }
 
-.esora-outfit {
-    position: relative;
 
+.esora-outfit {
     overflow: hidden;
 
-    background: var(--esora-soft);
+    background: var(--esora-paper);
 
     border: 1px solid var(--esora-line);
 
     box-shadow:
-        2px 3px 0 rgba(157,136,200,0.08);
+        0 5px 15px rgba(91, 70, 110, 0.04);
 
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.esora-outfit:nth-child(2) {
-    transform: rotate(0.4deg);
-}
-
-.esora-outfit:nth-child(3) {
-    transform: rotate(-0.4deg);
-}
 
 .esora-outfit:hover {
-    transform: translateY(-4px) rotate(0deg);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 12px 25px rgba(81,72,91,0.10);
+        0 12px 25px rgba(91, 70, 110, 0.1);
 }
+
 
 .esora-outfit-image {
     aspect-ratio: 1 / 1.15;
 
     overflow: hidden;
 
-    background: var(--esora-paper);
+    background: var(--esora-paper-soft);
 }
+
 
 .esora-outfit-image img {
     width: 100%;
@@ -1459,24 +1183,27 @@ body.esora-page::after {
 
     object-fit: cover;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
+
 .esora-outfit:hover .esora-outfit-image img {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
+
 
 .esora-outfit-info {
     padding: 18px;
 }
 
+
 .esora-outfit-info > span {
     color: var(--esora-purple-dark);
 
     font-size: 9px;
-
     letter-spacing: 1.5px;
 }
+
 
 .esora-outfit-info h3 {
     margin: 8px 0 5px;
@@ -1485,6 +1212,7 @@ body.esora-page::after {
 
     font-family: Georgia, serif;
 }
+
 
 .esora-outfit-info p {
     margin: 0;
@@ -1503,37 +1231,41 @@ body.esora-page::after {
     position: relative;
 
     margin-bottom: 25px;
+    padding: 22px;
 
-    padding: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #eee5fa,
+            #f8ebe4
+        );
 
-    background: var(--esora-purple-soft);
-
-    box-shadow:
-        3px 3px 0 rgba(157,136,200,0.07);
+    border: 1px solid var(--esora-line);
 }
+
 
 .esora-relationship-note::after {
     content: "♡";
 
     position: absolute;
 
-    right: 18px;
-    top: 10px;
+    right: 20px;
+    top: 14px;
 
-    color: rgba(157,136,200,0.20);
+    color: rgba(142, 117, 189, 0.35);
 
-    font-size: 24px;
+    font-size: 28px;
 }
+
 
 .esora-relationship-note span {
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-relationship-note p {
     margin: 8px 0 0;
@@ -1543,52 +1275,38 @@ body.esora-page::after {
     font-size: 13px;
 }
 
-.esora-relationship {
-    position: relative;
 
+/* relationship card */
+
+.esora-relationship {
     display: grid;
 
     grid-template-columns: 220px 1fr;
 
     margin-bottom: 20px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #fffdfb,
+            #f9f4fa
+        );
 
     border: 1px solid var(--esora-line);
 
     box-shadow:
-        3px 4px 0 rgba(203,184,241,0.07);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+        0 5px 18px rgba(91, 70, 110, 0.04);
 }
 
-.esora-relationship::after {
-    content: "♡";
-
-    position: absolute;
-
-    right: 14px;
-    bottom: 8px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 18px;
-}
-
-.esora-relationship:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 22px rgba(81,72,91,0.08);
-}
 
 .esora-person-image {
     min-height: 250px;
 
-    background: var(--esora-paper);
+    background: var(--esora-paper-soft);
+
+    overflow: hidden;
 }
+
 
 .esora-person-image img {
     width: 100%;
@@ -1597,11 +1315,20 @@ body.esora-page::after {
     display: block;
 
     object-fit: cover;
+
+    transition: transform 0.4s ease;
 }
+
+
+.esora-relationship:hover .esora-person-image img {
+    transform: scale(1.03);
+}
+
 
 .esora-person-content {
     padding: 28px;
 }
+
 
 .esora-person-header {
     display: flex;
@@ -1611,13 +1338,14 @@ body.esora-page::after {
     gap: 20px;
 }
 
+
 .esora-person-header span {
     color: var(--esora-purple-dark);
 
     font-size: 9px;
-
     letter-spacing: 1px;
 }
+
 
 .esora-person-header h3 {
     margin: 6px 0 0;
@@ -1625,17 +1353,17 @@ body.esora-page::after {
     color: var(--esora-dark);
 
     font-family: Georgia, serif;
-
     font-size: 25px;
 }
+
 
 .esora-person-header > strong {
     color: var(--esora-brown);
 
     font-size: 10px;
-
     letter-spacing: 1px;
 }
+
 
 .esora-heart-level {
     margin: 15px 0;
@@ -1645,6 +1373,7 @@ body.esora-page::after {
     letter-spacing: 3px;
 }
 
+
 .esora-heart-level small {
     display: block;
 
@@ -1653,20 +1382,22 @@ body.esora-page::after {
     color: var(--esora-gray);
 
     font-size: 10px;
-
     letter-spacing: 0;
 }
+
 
 .esora-person-content p {
     color: var(--esora-text);
 
     font-size: 13px;
-
     line-height: 1.8;
 }
 
+
 .esora-relationship-footer {
     padding: 20px;
+
+    background: var(--esora-purple-pale);
 
     color: var(--esora-purple-dark);
 
@@ -1688,30 +1419,17 @@ body.esora-page::after {
     gap: 30px;
 }
 
-.esora-story-image {
-    position: relative;
 
+.esora-story-image {
     min-height: 350px;
 
     overflow: hidden;
 
     background: var(--esora-soft);
 
-    box-shadow:
-        4px 5px 0 rgba(203,184,241,0.10);
+    border: 1px solid var(--esora-line);
 }
 
-.esora-story-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 10px;
-
-    border: 1px solid rgba(255,255,255,0.50);
-
-    pointer-events: none;
-}
 
 .esora-story-image img {
     width: 100%;
@@ -1722,20 +1440,21 @@ body.esora-page::after {
     object-fit: cover;
 }
 
+
 .esora-story-content {
     align-self: center;
 }
+
 
 .esora-story-content > span,
 .esora-old-note > span {
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-story-content h3 {
     margin: 10px 0 20px;
@@ -1743,33 +1462,34 @@ body.esora-page::after {
     color: var(--esora-dark);
 
     font-family: Georgia, serif;
-
     font-size: 28px;
 }
+
 
 .esora-story-content p {
     color: var(--esora-text);
 
     font-size: 13px;
-
     line-height: 1.8;
 }
 
+
 .esora-story-content blockquote {
     margin: 25px 0 0;
-
-    padding: 15px 20px;
+    padding: 17px 20px;
 
     border-left: 3px solid var(--esora-purple);
 
-    background: var(--esora-purple-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #eee5fa,
+            #f8ebe4
+        );
 
     color: var(--esora-text);
 
     font-family: Georgia, serif;
-
-    box-shadow:
-        3px 3px 0 rgba(203,184,241,0.08);
 }
 
 
@@ -1785,9 +1505,8 @@ body.esora-page::after {
     margin-top: 35px;
 }
 
-.esora-timeline-item {
-    position: relative;
 
+.esora-timeline-item {
     display: grid;
 
     grid-template-columns: 60px 1fr;
@@ -1796,50 +1515,41 @@ body.esora-page::after {
 
     padding: 18px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #faf6f4,
+            #f7f1fa
+        );
 
-    border-left: 3px solid var(--esora-purple);
-
-    box-shadow:
-        2px 3px 0 rgba(203,184,241,0.07);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    border: 1px solid var(--esora-line);
 }
 
-.esora-timeline-item:nth-child(even) {
-    border-left-color: var(--esora-brown);
-}
-
-.esora-timeline-item:hover {
-    transform: translateX(3px);
-
-    box-shadow:
-        5px 5px 15px rgba(81,72,91,0.06);
-}
 
 .esora-timeline-item > span {
     color: var(--esora-purple-dark);
 
     font-size: 22px;
-
     font-weight: bold;
 }
+
 
 .esora-timeline-item small {
     color: var(--esora-gray);
 
     font-size: 9px;
-
     letter-spacing: 1.5px;
 }
+
 
 .esora-timeline-item h3 {
     margin: 5px 0;
 
     color: var(--esora-dark);
+
+    font-family: Georgia, serif;
 }
+
 
 .esora-timeline-item p {
     margin: 0;
@@ -1848,6 +1558,11 @@ body.esora-page::after {
 
     font-size: 12px;
 }
+
+
+/* =========================================================
+   THEN / NOW
+========================================================= */
 
 .esora-then-now {
     display: grid;
@@ -1859,39 +1574,29 @@ body.esora-page::after {
     margin-top: 35px;
 }
 
-.esora-then-now > div {
-    position: relative;
 
+.esora-then-now > div {
     padding: 25px;
 
-    background: var(--esora-purple-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #eee5fa,
+            #f8ebe4
+        );
 
-    box-shadow:
-        2px 3px 0 rgba(157,136,200,0.07);
+    border: 1px solid var(--esora-line);
 }
 
-.esora-then-now > div::after {
-    content: "✧";
-
-    position: absolute;
-
-    right: 15px;
-    top: 10px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 17px;
-}
 
 .esora-then-now span {
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-then-now h3 {
     margin: 8px 0 20px;
@@ -1901,11 +1606,13 @@ body.esora-page::after {
     font-family: Georgia, serif;
 }
 
+
 .esora-then-now p {
     color: var(--esora-text);
 
     font-size: 12px;
 }
+
 
 .esora-then-now strong {
     margin-right: 5px;
@@ -1913,19 +1620,61 @@ body.esora-page::after {
     color: var(--esora-dark);
 }
 
+
+/* =========================================================
+   OLD NOTE
+========================================================= */
+
 .esora-old-note {
     position: relative;
 
     margin-top: 30px;
 
-    padding: 25px;
+    padding: 30px;
 
     text-align: center;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #f5effa
+        );
 
-    border: 1px dashed rgba(157,136,200,0.25);
+    border: 1px solid var(--esora-line);
+
+    box-shadow:
+        0 7px 20px rgba(91, 70, 110, 0.04);
 }
+
+
+.esora-old-note::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: 18px;
+    top: 15px;
+
+    color: var(--esora-purple);
+
+    font-size: 14px;
+}
+
+
+.esora-old-note::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: 18px;
+    bottom: 15px;
+
+    color: var(--esora-purple);
+
+    font-size: 14px;
+}
+
 
 .esora-old-note p {
     color: var(--esora-text);
@@ -1933,7 +1682,6 @@ body.esora-page::after {
     font-family: Georgia, serif;
 
     font-size: 15px;
-
     line-height: 1.7;
 }
 
@@ -1950,50 +1698,45 @@ body.esora-page::after {
     gap: 18px;
 }
 
+
 .esora-trivia-grid article {
     position: relative;
 
     padding: 25px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            145deg,
+            #faf6f4,
+            #f7f1fa
+        );
 
-    box-shadow:
-        2px 3px 0 rgba(203,184,241,0.08);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    border: 1px solid var(--esora-line);
 }
 
+
 .esora-trivia-grid article::after {
-    content: "✦";
+    content: "✧";
 
     position: absolute;
 
-    right: 12px;
-    top: 10px;
+    top: 15px;
+    right: 17px;
 
-    color: rgba(157,136,200,0.20);
+    color: var(--esora-purple);
 
-    font-size: 10px;
+    font-size: 14px;
 }
 
-.esora-trivia-grid article:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        3px 6px 15px rgba(81,72,91,0.07);
-}
 
 .esora-trivia-grid article > span {
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-trivia-grid ul {
     margin: 15px 0 0;
@@ -2003,7 +1746,6 @@ body.esora-page::after {
     color: var(--esora-text);
 
     font-size: 12px;
-
     line-height: 1.9;
 }
 
@@ -2013,40 +1755,16 @@ body.esora-page::after {
 ========================================================= */
 
 .esora-secret {
-    position: relative;
-
-    overflow: hidden;
-
-    background: var(--esora-purple-soft) !important;
+    background:
+        linear-gradient(
+            135deg,
+            #eee5fa,
+            #f7e8df
+        ) !important;
 
     text-align: center;
 }
 
-.esora-secret::before {
-    content: "✦";
-
-    position: absolute;
-
-    top: 15px;
-    left: 20px;
-
-    color: rgba(157,136,200,0.25);
-
-    font-size: 18px;
-}
-
-.esora-secret::after {
-    content: "✧";
-
-    position: absolute;
-
-    right: 20px;
-    bottom: 15px;
-
-    color: rgba(157,136,200,0.25);
-
-    font-size: 18px;
-}
 
 .esora-secret > div {
     margin: 20px 0;
@@ -2055,6 +1773,7 @@ body.esora-page::after {
 
     font-size: 35px;
 }
+
 
 .esora-secret p {
     color: var(--esora-text);
@@ -2079,35 +1798,36 @@ body.esora-page::after {
     gap: 10px;
 
     margin-top: 25px;
-
     padding: 18px;
 
     background:
         linear-gradient(
-            90deg,
-            #51485B,
-            #62576e,
-            #51485B
+            135deg,
+            #5b5066,
+            #70617e
         );
+
+    border: 1px solid #665a70;
 }
+
 
 .esora-favorites > span {
     color: #ffffff;
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-favorites > div {
     padding: 12px;
 
-    background: var(--esora-paper);
+    background: rgba(255, 253, 251, 0.96);
 
     text-align: center;
 }
+
 
 .esora-favorites strong {
     display: block;
@@ -2116,6 +1836,7 @@ body.esora-page::after {
 
     font-size: 12px;
 }
+
 
 .esora-favorites small {
     display: block;
@@ -2136,6 +1857,7 @@ body.esora-page::after {
     display: block;
 }
 
+
 .esora-aesthetic-content {
     display: grid;
 
@@ -2143,6 +1865,7 @@ body.esora-page::after {
 
     gap: 25px;
 }
+
 
 .esora-aesthetic-images {
     display: grid;
@@ -2152,9 +1875,8 @@ body.esora-page::after {
     gap: 10px;
 }
 
-.esora-aesthetic-images div {
-    position: relative;
 
+.esora-aesthetic-images div {
     aspect-ratio: 1;
 
     overflow: hidden;
@@ -2162,29 +1884,8 @@ body.esora-page::after {
     background: var(--esora-soft);
 
     border: 1px solid var(--esora-line);
-
-    box-shadow:
-        2px 3px 0 rgba(157,136,200,0.08);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
 }
 
-.esora-aesthetic-images div:nth-child(odd) {
-    transform: rotate(-1deg);
-}
-
-.esora-aesthetic-images div:nth-child(even) {
-    transform: rotate(1deg);
-}
-
-.esora-aesthetic-images div:hover {
-    transform: rotate(0deg) translateY(-3px);
-
-    box-shadow:
-        0 10px 20px rgba(81,72,91,0.09);
-}
 
 .esora-aesthetic-images img {
     width: 100%;
@@ -2194,8 +1895,9 @@ body.esora-page::after {
 
     object-fit: cover;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
+
 
 .esora-aesthetic-images div:hover img {
     transform: scale(1.04);
@@ -2207,38 +1909,27 @@ body.esora-page::after {
 ========================================================= */
 
 .esora-color-palette {
-    position: relative;
-
     padding: 20px;
 
-    background: var(--esora-soft);
+    background:
+        linear-gradient(
+            145deg,
+            #faf6f4,
+            #f4eef9
+        );
 
-    box-shadow:
-        3px 4px 0 rgba(203,184,241,0.08);
+    border: 1px solid var(--esora-line);
 }
 
-.esora-color-palette::after {
-    content: "♡";
-
-    position: absolute;
-
-    right: 15px;
-    top: 12px;
-
-    color: rgba(157,136,200,0.20);
-
-    font-size: 18px;
-}
 
 .esora-color-palette > span {
     color: var(--esora-purple-dark);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
+
 
 .esora-colors {
     display: grid;
@@ -2248,12 +1939,16 @@ body.esora-page::after {
     margin-top: 20px;
 }
 
+
 .esora-colors i {
     display: block;
 
     height: 45px;
 
-    border: 1px solid rgba(81,72,91,0.06);
+    border: 1px solid rgba(255,255,255,0.6);
+
+    box-shadow:
+        0 3px 8px rgba(91, 70, 110, 0.08);
 }
 
 
@@ -2268,40 +1963,21 @@ body.esora-page::after {
 
     justify-content: space-between;
 
-    overflow: hidden;
-
     margin-top: 20px;
 
     padding: 22px;
 
     background:
         linear-gradient(
-            90deg,
-            #51485B,
-            #62576e,
-            #51485B
+            135deg,
+            #574d61,
+            #6d5e79
         );
 
     color: #ffffff;
 
-    font-size: 10px;
-
+    font-size: 9px;
     letter-spacing: 2px;
-}
-
-.esora-footer::after {
-    content: "✦   ✧   ♡   ✧";
-
-    position: absolute;
-
-    right: 20px;
-    bottom: 7px;
-
-    color: rgba(255,255,255,0.18);
-
-    font-family: Georgia, serif;
-
-    letter-spacing: 6px;
 }
 
 
@@ -2311,59 +1987,55 @@ body.esora-page::after {
 
 @media (max-width: 800px) {
 
-    body.esora-page::before,
-    body.esora-page::after {
-        display: none;
-    }
-
-    .esora-profile::after {
-        display: none;
-    }
-
     .esora-profile {
         width: calc(100% - 16px);
 
-        margin: 25px auto;
+        margin: 15px auto;
+
+        padding: 10px;
     }
+
 
     .esora-hero {
         grid-template-columns: 1fr;
     }
 
+
     .esora-hero-image {
         min-height: 300px;
     }
+
 
     .esora-hero-info {
         padding: 40px 25px;
     }
 
-    .esora-hero::after {
-        right: 20px;
-
-        bottom: 310px;
-    }
 
     .esora-quick-data {
         grid-template-columns: repeat(2, 1fr);
     }
 
+
     .esora-data-item:nth-child(4n) {
         border-right: 1px solid var(--esora-line);
     }
+
 
     .esora-data-item:nth-child(2n) {
         border-right: 0;
     }
 
+
     .esora-status-grid {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .esora-section,
     .esora-aesthetic {
         padding: 25px 18px;
     }
+
 
     .esora-profile-layout,
     .esora-personality-layout,
@@ -2372,26 +2044,32 @@ body.esora-page::after {
         grid-template-columns: 1fr;
     }
 
+
     .esora-wardrobe-grid {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .esora-relationship {
         grid-template-columns: 1fr;
     }
 
+
     .esora-person-image {
         min-height: 280px;
     }
+
 
     .esora-then-now,
     .esora-trivia-grid {
         grid-template-columns: 1fr;
     }
 
+
     .esora-favorites {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .esora-favorites > span {
         grid-column: 1 / -1;
@@ -2400,6 +2078,7 @@ body.esora-page::after {
 
         padding: 5px;
     }
+
 
     .esora-aesthetic-images {
         grid-template-columns: 1fr 1fr;
@@ -2419,33 +2098,43 @@ body.esora-page::after {
         grid-template-columns: 1fr 1fr;
     }
 
+
     .esora-tab {
         min-width: 0;
     }
+
 
     .esora-wardrobe-grid {
         grid-template-columns: 1fr;
     }
 
+
     .esora-status-grid {
         grid-template-columns: 1fr;
     }
+
 
     .esora-aesthetic-images {
         grid-template-columns: 1fr 1fr;
     }
 
+
+    .esora-hero h1 {
+        font-size: 44px;
+    }
+
+
     .esora-section-heading h2 {
         font-size: 26px;
     }
 
-    .esora-hero h1 {
-        font-size: 48px;
+
+    .esora-like-columns {
+        grid-template-columns: 1fr;
     }
 
-    .esora-footer {
-        flex-direction: column;
 
-        gap: 8px;
+    .esora-favorites {
+        grid-template-columns: 1fr;
     }
 }
