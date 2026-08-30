@@ -1,150 +1,88 @@
 /* =========================================================
    ✦ SEIRAN ACADEMY — ONE MORE TOMORROW ✦
-   Pink + Sage Green / Creative School
+   Creative Academy / Pink + Sage Green
+========================================================= */
+
+
+/* =========================================================
+   SEIRAN VARIABLES
 ========================================================= */
 
 .seiran-page {
 
-    /* =====================================================
-       COLOR PALETTE
-    ===================================================== */
+    --seiran-pink: #d95b78;
+    --seiran-pink-dark: #a9435c;
+    --seiran-pink-light: #f8dfe6;
 
-    --academy-accent: #d95b78;
-    --academy-accent-dark: #a9425b;
+    --seiran-green: #789b83;
+    --seiran-green-dark: #52745e;
+    --seiran-green-light: #e1ede4;
 
-    --academy-green: #789b83;
-    --academy-green-dark: #52745e;
-    --academy-green-soft: #dce9df;
+    --seiran-cream: #fff8f3;
+    --seiran-paper: #fffdf9;
 
-    --academy-soft: #f7dfe5;
-    --academy-pale: #fff6f7;
+    --seiran-text: #40393b;
+    --seiran-muted: #8c8083;
 
-    --academy-paper: #fffdf9;
-    --academy-cream: #f3eadf;
-
-    --academy-border: #e5d8d0;
-
-    --academy-text: #40393b;
-    --academy-muted: #8c8083;
-
-
-    /* =====================================================
-       PAGE
-    ===================================================== */
+    --seiran-border: #e5d8d0;
 
     position: relative;
 
     min-height: 100vh;
 
-    color: var(--academy-text);
+    color: var(--seiran-text);
 
-    background-color: #fff8f5;
+    background-color: #fff8f3;
 
     background-image:
 
-        /* tiny pink petals */
-
         radial-gradient(
             circle at 8% 12%,
-            rgba(217,91,120,.25) 0 3px,
+            rgba(217,91,120,.18) 0 3px,
             transparent 4px
         ),
 
         radial-gradient(
-            circle at 17% 35%,
-            rgba(217,91,120,.18) 0 4px,
+            circle at 92% 18%,
+            rgba(217,91,120,.15) 0 4px,
             transparent 5px
         ),
 
         radial-gradient(
-            circle at 91% 16%,
-            rgba(217,91,120,.20) 0 3px,
-            transparent 4px
-        ),
-
-        radial-gradient(
-            circle at 82% 62%,
-            rgba(217,91,120,.16) 0 4px,
+            circle at 12% 72%,
+            rgba(120,155,131,.18) 0 4px,
             transparent 5px
         ),
 
         radial-gradient(
-            circle at 13% 78%,
-            rgba(217,91,120,.14) 0 3px,
-            transparent 4px
-        ),
-
-
-        /* tiny green leaves */
-
-        radial-gradient(
-            ellipse at 93% 38%,
-            rgba(120,155,131,.24) 0 4px,
+            circle at 88% 75%,
+            rgba(120,155,131,.16) 0 4px,
             transparent 5px
         ),
 
         radial-gradient(
-            ellipse at 6% 55%,
-            rgba(120,155,131,.20) 0 4px,
-            transparent 5px
+            ellipse at 10% 10%,
+            rgba(248,223,230,.85),
+            transparent 35%
         ),
 
         radial-gradient(
-            ellipse at 73% 91%,
-            rgba(120,155,131,.18) 0 5px,
-            transparent 6px
+            ellipse at 90% 35%,
+            rgba(225,237,228,.85),
+            transparent 38%
         ),
-
-
-        /* pink glow */
-
-        radial-gradient(
-            ellipse at 12% 8%,
-            rgba(247,223,229,.9),
-            transparent 34%
-        ),
-
-        radial-gradient(
-            ellipse at 92% 24%,
-            rgba(250,226,231,.8),
-            transparent 32%
-        ),
-
-
-        /* green glow */
-
-        radial-gradient(
-            ellipse at 5% 70%,
-            rgba(220,233,223,.85),
-            transparent 34%
-        ),
-
-        radial-gradient(
-            ellipse at 96% 78%,
-            rgba(220,233,223,.8),
-            transparent 36%
-        ),
-
-        radial-gradient(
-            ellipse at 52% 105%,
-            rgba(229,238,228,.9),
-            transparent 42%
-        ),
-
-
-        /* soft base */
 
         linear-gradient(
             135deg,
             #fffaf7 0%,
-            #fff4f4 30%,
-            #f9f1eb 58%,
-            #f0f5ef 100%
+            #fff3f4 38%,
+            #f8f1ec 68%,
+            #eef5ef 100%
         );
 
     background-attachment: fixed;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -156,103 +94,99 @@
 
     content: "";
 
-    position: absolute;
+    position: fixed;
 
     inset: 0;
 
     pointer-events: none;
 
-    opacity: .28;
+    z-index: 0;
+
+    opacity: .3;
 
     background-image:
 
         repeating-linear-gradient(
             0deg,
-            rgba(100,80,70,.025) 0px,
-            rgba(100,80,70,.025) 1px,
+            rgba(80,70,65,.025) 0,
+            rgba(80,70,65,.025) 1px,
             transparent 1px,
             transparent 5px
         ),
 
         repeating-linear-gradient(
             90deg,
-            rgba(120,100,90,.018) 0px,
-            rgba(120,100,90,.018) 1px,
+            rgba(80,70,65,.018) 0,
+            rgba(80,70,65,.018) 1px,
             transparent 1px,
             transparent 7px
         );
-
-    z-index: 0;
 }
 
 
 /* =========================================================
-   DECORATIVE SAKURA / LEAVES
+   DECORATION
 ========================================================= */
 
 .seiran-page::after {
 
-    content: "✿  ❀  ✿  ❀  ✿";
+    content: "✿   ❀   ✿";
 
-    position: absolute;
+    position: fixed;
 
-    top: 35px;
+    right: -20px;
 
-    right: -15px;
+    top: 90px;
 
-    color: rgba(217,91,120,.17);
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 55px;
-
-    letter-spacing: 18px;
-
-    transform: rotate(-12deg);
+    z-index: 2;
 
     pointer-events: none;
 
-    z-index: 1;
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    letter-spacing: 12px;
+
+    color: rgba(217,91,120,.18);
+
+    transform: rotate(-10deg);
 }
 
 
 /* =========================================================
-   FLOATING DECORATIONS
+   HEADER
 ========================================================= */
 
-.seiran-page .academy-floating {
+.seiran-page .site-header {
 
-    position: fixed;
+    background: rgba(255,250,247,.94);
 
-    pointer-events: none;
-
-    z-index: 5;
-
-    opacity: .55;
-
-    color: var(--academy-accent);
-}
-
-
-.seiran-page .academy-pencil {
-
-    color: var(--academy-green);
+    border-bottom: 1px solid rgba(217,91,120,.16);
 
 }
 
 
-.seiran-page .academy-star {
+.seiran-page .mini-logo span {
 
-    color: var(--academy-accent);
+    color: var(--seiran-pink);
 
 }
 
 
-.seiran-page .academy-heart {
+.seiran-page .nav-item span {
 
-    color: var(--academy-accent);
+    color: var(--seiran-green-dark);
+
+}
+
+
+.seiran-page .nav-item:hover,
+.seiran-page .nav-item.active {
+
+    color: var(--seiran-pink-dark);
+
+    background: var(--seiran-pink-light);
 
 }
 
@@ -265,7 +199,13 @@
 
     position: relative;
 
-    background: transparent;
+    max-width: 1250px;
+
+    min-height: 780px;
+
+    margin: 0 auto 80px;
+
+    padding: 100px 30px;
 
 }
 
@@ -276,44 +216,128 @@
 
 .seiran-page .academy-paper {
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.96),
-            rgba(255,250,247,.96)
-        );
+    position: relative;
 
-    border-color: var(--academy-border);
+    z-index: 5;
+
+    width: min(780px, 88vw);
+
+    min-height: 570px;
+
+    margin: auto;
+
+    padding: 75px 65px 55px;
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 31px,
+            rgba(120,155,131,.07) 32px
+        ),
+
+        var(--seiran-paper);
+
+    border: 1px solid var(--seiran-border);
 
     box-shadow:
-        0 20px 50px rgba(120,90,90,.10),
-        0 4px 12px rgba(120,90,90,.06);
+        0 25px 55px rgba(70,50,45,.14);
+
+    transform: rotate(-1deg);
 }
 
 
-/* paper accent */
+/* tape */
+
+.seiran-page .paper-tape {
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 34px;
+
+    top: -16px;
+
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(221,198,151,.55);
+}
+
+
+/* =========================================================
+   HERO NUMBER
+========================================================= */
 
 .seiran-page .academy-number {
 
-    color: var(--academy-green);
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+    color: var(--seiran-green-dark);
+
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.seiran-page .academy-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    text-align: center;
+
 }
 
 
 .seiran-page .academy-heading h1 {
 
-    color: var(--academy-text);
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: .9;
+
+    font-weight: 600;
+
 }
 
 
 .seiran-page .academy-heading h1 em {
 
-    color: var(--academy-accent);
+    display: block;
+
+    color: var(--seiran-pink);
+
+    font-weight: 600;
+
 }
 
 
 .seiran-page .heading-heart {
 
-    color: var(--academy-accent);
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 38px;
+
+    color: var(--seiran-pink);
+
 }
 
 
@@ -323,25 +347,64 @@
 
 .seiran-page .academy-motto {
 
-    color: var(--academy-green-dark);
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+    color: var(--seiran-green-dark);
 
 }
 
 
 .seiran-page .academy-motto span {
 
-    color: var(--academy-accent);
+    margin: 0 7px;
+
+    color: var(--seiran-pink);
 
 }
 
 
 /* =========================================================
-   DESCRIPTION
+   HERO TEXT
 ========================================================= */
 
 .seiran-page .academy-lead {
 
-    color: var(--academy-accent-dark);
+    max-width: 560px;
+
+    margin: 30px auto 20px;
+
+    text-align: center;
+
+    color: var(--seiran-pink-dark);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+.seiran-page .academy-description {
+
+    max-width: 580px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: var(--seiran-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
 
 }
 
@@ -352,15 +415,20 @@
 
 .seiran-page .academy-divider {
 
+    width: 80%;
+
+    height: 1px;
+
+    margin: 30px auto;
+
     background:
         linear-gradient(
             90deg,
             transparent,
-            var(--academy-soft),
-            var(--academy-green-soft),
+            var(--seiran-pink-light),
+            var(--seiran-green-light),
             transparent
         );
-
 }
 
 
@@ -368,16 +436,46 @@
    FACTS
 ========================================================= */
 
+.seiran-page .academy-facts {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    text-align: center;
+
+}
+
+
+.seiran-page .academy-facts div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
 .seiran-page .academy-facts span {
 
-    color: var(--academy-green-dark);
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+
+    color: var(--seiran-green-dark);
 
 }
 
 
 .seiran-page .academy-facts strong {
 
-    color: var(--academy-text);
+    font-size: 11px;
 
 }
 
@@ -388,9 +486,37 @@
 
 .seiran-page .academy-stamp {
 
-    color: rgba(120,155,131,.55);
+    position: absolute;
 
-    border-color: rgba(120,155,131,.45);
+    right: 28px;
+
+    bottom: 25px;
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(120,155,131,.45);
+
+    border-radius: 50%;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    color: rgba(82,116,94,.55);
+
+    transform: rotate(8deg);
 }
 
 
@@ -400,68 +526,154 @@
 
 .seiran-page .academy-polaroid {
 
-    background: #fffdfb;
+    position: absolute;
 
-    box-shadow:
-        0 18px 35px rgba(100,80,75,.12);
+    z-index: 8;
+
+    width: 220px;
+
+    padding: 12px 12px 18px;
+
+    background: white;
+
+    box-shadow: 0 12px 28px rgba(80,60,55,.12);
+}
+
+
+.seiran-page .polaroid-campus {
+
+    left: 4%;
+
+    top: 80px;
+
+    transform: rotate(-8deg);
 }
 
 
 .seiran-page .polaroid-image {
 
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     background:
         linear-gradient(
             135deg,
-            #f8dfe4,
-            #e1eee3
+            #f7dce3,
+            #dcebe0
         );
+
+}
+
+
+.seiran-page .polaroid-image span {
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: rgba(70,65,65,.45);
+
 }
 
 
 .seiran-page .academy-polaroid p {
 
-    color: var(--academy-green-dark);
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 17px;
+
+    color: var(--seiran-green-dark);
 
 }
 
 
 /* =========================================================
-   NOTES
+   NOTE
 ========================================================= */
 
 .seiran-page .academy-note {
 
+    position: absolute;
+
+    z-index: 10;
+
+    right: 3%;
+
+    top: 100px;
+
+    width: 170px;
+
+    padding: 22px;
+
     background:
         linear-gradient(
             135deg,
-            #fff0f2,
-            #f8e3e7
+            #fff0f3,
+            #f8e1e7
         );
 
-    border-color: #ebcbd2;
+    border: 1px solid #ebcbd2;
 
-    box-shadow:
-        0 12px 25px rgba(150,90,105,.10);
+    box-shadow: 0 12px 25px rgba(130,80,95,.10);
+
+    transform: rotate(6deg);
 }
 
 
 .seiran-page .academy-note small {
 
-    color: var(--academy-green-dark);
+    display: block;
+
+    color: var(--seiran-green-dark);
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
 
 }
 
 
 .seiran-page .academy-note strong {
 
-    color: var(--academy-accent-dark);
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 25px;
+
+    line-height: 1.05;
+
+    color: var(--seiran-pink-dark);
 
 }
 
 
-.seiran-page .academy-note span {
+.seiran-page .academy-note > span {
 
-    color: var(--academy-accent);
+    display: block;
+
+    margin-top: 10px;
+
+    text-align: right;
+
+    color: var(--seiran-pink);
+
+    font-size: 22px;
 
 }
 
@@ -472,63 +684,152 @@
 
 .seiran-page .academy-mini-note {
 
+    position: absolute;
+
+    z-index: 9;
+
+    left: 4%;
+
+    bottom: 80px;
+
+    width: 165px;
+
+    padding: 20px;
+
     background:
         linear-gradient(
             135deg,
             #edf5ef,
-            #e3eee5
+            #e1ede4
         );
 
-    border-color: #cbdccf;
+    border: 1px solid #cbdccf;
 
-    box-shadow:
-        0 12px 25px rgba(80,110,90,.09);
+    box-shadow: 0 12px 25px rgba(70,100,80,.10);
+
+    transform: rotate(-5deg);
 }
 
 
 .seiran-page .academy-mini-note span {
 
-    color: var(--academy-green-dark);
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: var(--seiran-green-dark);
 
 }
 
 
 .seiran-page .academy-mini-note strong {
 
-    color: #486450;
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 24px;
+
+    line-height: 1.05;
+
+    color: var(--seiran-green-dark);
 
 }
 
 
 /* =========================================================
-   SECTION TITLES
+   SECTIONS
 ========================================================= */
+
+.seiran-page .academy-section {
+
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 80px 55px;
+
+    background: rgba(255,253,249,.88);
+
+    border: 1px solid rgba(229,216,208,.8);
+
+    box-shadow: 0 20px 50px rgba(70,50,45,.09);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.seiran-page .section-title {
+
+    max-width: 720px;
+
+    margin-bottom: 55px;
+}
+
+
+.seiran-page .section-title.centered {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    text-align: center;
+}
+
 
 .seiran-page .section-title > span {
 
-    color: var(--academy-green-dark);
+    display: block;
 
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .2em;
+
+    color: var(--seiran-green-dark);
 }
 
 
 .seiran-page .section-title h2 {
 
-    color: var(--academy-text);
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 62px);
+
+    line-height: 1;
+
+    font-weight: 600;
 
 }
 
 
 .seiran-page .section-title h2 em {
 
-    color: var(--academy-accent);
+    color: var(--seiran-pink);
 
 }
 
 
 .seiran-page .section-title p {
 
-    color: var(--academy-muted);
+    margin-top: 20px;
 
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: var(--seiran-muted);
 }
 
 
@@ -536,148 +837,155 @@
    ABOUT
 ========================================================= */
 
-.seiran-page .about-big {
+.seiran-page .about-layout {
 
-    color: var(--academy-accent-dark);
+    display: grid;
 
+    grid-template-columns: 1.4fr .8fr;
+
+    gap: 65px;
+
+    align-items: start;
+}
+
+
+.seiran-page .about-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.seiran-page .about-text p {
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    color: var(--seiran-muted);
+}
+
+
+.seiran-page .about-text .about-big {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    line-height: 1.35;
+
+    color: var(--seiran-pink-dark);
 }
 
 
 /* =========================================================
-   NOTEBOOK CARD
+   NOTEBOOK
 ========================================================= */
 
 .seiran-page .notebook-card {
+
+    padding: 30px;
 
     background:
         linear-gradient(
             145deg,
             #fffdf9,
-            #f4f8f2
+            #edf5ef
         );
 
-    border-color: #d5dfd6;
+    border: 1px solid #d5dfd6;
 
-    box-shadow:
-        0 15px 35px rgba(80,100,85,.08);
+    box-shadow: 0 15px 35px rgba(70,100,80,.08);
+
+    transform: rotate(1deg);
 }
 
 
 .seiran-page .notebook-label {
 
-    color: var(--academy-green-dark);
+    display: block;
 
+    margin-bottom: 15px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    color: var(--seiran-green-dark);
 }
 
 
 .seiran-page .notebook-card h3 {
 
-    color: var(--academy-text);
+    font-family: "Playfair Display", serif;
 
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+.seiran-page .notebook-card ul {
+
+    padding-left: 18px;
+
+}
+
+
+.seiran-page .notebook-card li {
+
+    margin-bottom: 9px;
+
+    font-size: 12px;
+
+    color: var(--seiran-muted);
 }
 
 
 .seiran-page .notebook-card li::marker {
 
-    color: var(--academy-accent);
-
+    color: var(--seiran-pink);
 }
 
 
 .seiran-page .notebook-doodle {
 
-    color: var(--academy-accent);
+    margin-top: 20px;
 
+    font-size: 20px;
+
+    color: var(--seiran-pink);
 }
 
 
 /* =========================================================
-   CAMPUS SECTION
+   CAMPUS
 ========================================================= */
 
-.seiran-page .campus-section {
+.seiran-page .campus-grid {
 
-    position: relative;
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
 }
 
 
 .seiran-page .campus-card {
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.95),
-            rgba(249,246,239,.95)
-        );
+    position: relative;
 
-    border-color: var(--academy-border);
+    min-height: 250px;
 
-    box-shadow:
-        0 15px 30px rgba(100,80,75,.07);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-
-.seiran-page .campus-card:hover {
-
-    transform: translateY(-5px);
-
-    border-color: #d8b9c0;
-
-    box-shadow:
-        0 20px 40px rgba(120,80,90,.12);
-}
-
-
-.seiran-page .campus-number {
-
-    color: var(--academy-green);
-
-}
-
-
-.seiran-page .campus-icon {
-
-    color: var(--academy-accent);
-
-}
-
-
-.seiran-page .campus-card h3 {
-
-    color: var(--academy-text);
-
-}
-
-
-/* =========================================================
-   STUDENTS
-========================================================= */
-
-.seiran-page .student-total strong {
-
-    color: var(--academy-accent);
-
-}
-
-
-.seiran-page .student-total span {
-
-    color: var(--academy-green-dark);
-
-}
-
-
-/* =========================================================
-   STUDENT CARDS
-========================================================= */
-
-.seiran-page .student-card {
+    padding: 32px;
 
     background:
         linear-gradient(
@@ -686,15 +994,132 @@
             #f5f8f3
         );
 
-    border-color: var(--academy-border);
+    border: 1px solid var(--seiran-border);
 
-    box-shadow:
-        0 12px 28px rgba(100,80,75,.07);
+    box-shadow: 0 12px 28px rgba(80,65,60,.07);
 
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+    transition: .25s ease;
+}
+
+
+.seiran-page .campus-card:hover {
+
+    transform: translateY(-6px) rotate(-.4deg);
+
+    box-shadow: 0 20px 35px rgba(100,70,80,.11);
+
+}
+
+
+.seiran-page .campus-number {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 17px;
+
+    color: var(--seiran-green);
+
+}
+
+
+.seiran-page .campus-icon {
+
+    margin: 20px 0;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 35px;
+
+    color: var(--seiran-pink);
+}
+
+
+.seiran-page .campus-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+
+.seiran-page .campus-card p {
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: var(--seiran-muted);
+}
+
+
+/* =========================================================
+   STUDENT HEADER
+========================================================= */
+
+.seiran-page .student-total {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.seiran-page .student-total strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    color: var(--seiran-pink);
+}
+
+
+.seiran-page .student-total span {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: var(--seiran-green-dark);
+}
+
+
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.seiran-page .students-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.seiran-page .student-card {
+
+    display: block;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--seiran-border);
+
+    box-shadow: 0 10px 25px rgba(80,65,60,.06);
+
+    transition: .25s ease;
 }
 
 
@@ -702,55 +1127,102 @@
 
     transform: translateY(-6px);
 
-    border-color: #d9b8c0;
+    border-color: #ddb9c2;
 
-    box-shadow:
-        0 20px 40px rgba(120,80,90,.12);
+    box-shadow: 0 18px 35px rgba(110,70,80,.12);
+}
+
+
+.seiran-page .student-image {
+
+    position: relative;
+
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8dfe5,
+            #e1eee4
+        );
 }
 
 
 .seiran-page .student-index {
 
-    color: var(--academy-green-dark);
+    position: absolute;
 
+    top: 12px;
+
+    left: 13px;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 16px;
+
+    color: var(--seiran-green-dark);
+
+    z-index: 2;
+}
+
+
+.seiran-page .student-image .image-placeholder {
+
+    position: static;
+
+    color: rgba(75,70,70,.4);
+
+}
+
+
+.seiran-page .student-content {
+
+    padding: 18px;
 }
 
 
 .seiran-page .student-content > span {
 
-    color: var(--academy-green-dark);
+    display: block;
 
+    margin-bottom: 7px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+
+    color: var(--seiran-green-dark);
 }
 
 
 .seiran-page .student-content h3 {
 
-    color: var(--academy-text);
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
 
 }
 
 
 .seiran-page .student-content p {
 
-    color: var(--academy-accent);
+    margin-top: 8px;
 
-}
+    font-size: 9px;
 
+    font-weight: 700;
 
-/* =========================================================
-   IMAGE PLACEHOLDER
-========================================================= */
-
-.seiran-page .image-placeholder {
-
-    background:
-        linear-gradient(
-            135deg,
-            #f8dfe4,
-            #e1eee4
-        );
-
-    color: rgba(80,70,70,.45);
+    color: var(--seiran-pink);
 
 }
 
@@ -759,102 +1231,183 @@
    MEMORIES
 ========================================================= */
 
-.seiran-page .memories-section {
+.seiran-page .memory-board {
 
     position: relative;
 
-}
+    min-height: 520px;
 
-
-.seiran-page .memory-board {
+    padding: 50px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,249,245,.7),
-            rgba(237,245,238,.7)
+            #f6e3df,
+            #e4eee5
         );
+
+    border: 1px solid #d9ddd5;
+
+    overflow: hidden;
 }
 
 
 .seiran-page .memory-photo {
 
-    box-shadow:
-        0 12px 25px rgba(100,80,75,.12);
+    position: absolute;
+
+    width: 240px;
+
+    height: 175px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    padding: 10px;
+
+    box-shadow: 0 10px 25px rgba(80,70,65,.12);
+
 }
 
 
-.seiran-page .memory-one {
+.seiran-page .memory-photo span {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
 
     background:
         linear-gradient(
             135deg,
             #f7dfe4,
-            #e5eee4
+            #dcebe0
         );
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: rgba(70,65,65,.45);
+}
+
+
+.seiran-page .memory-one {
+
+    left: 8%;
+
+    top: 55px;
+
+    transform: rotate(-7deg);
 }
 
 
 .seiran-page .memory-two {
 
-    background:
-        linear-gradient(
-            135deg,
-            #e0eee3,
-            #f8e1e5
-        );
+    right: 8%;
+
+    top: 45px;
+
+    transform: rotate(6deg);
 }
 
 
 .seiran-page .memory-three {
 
-    background:
-        linear-gradient(
-            135deg,
-            #f6e4d8,
-            #dcebe0
-        );
+    left: 20%;
+
+    bottom: 35px;
+
+    transform: rotate(4deg);
 }
 
 
 /* =========================================================
-   MEMORY PAPER
+   MEMORY NOTE
 ========================================================= */
 
 .seiran-page .memory-paper {
 
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 220px;
+
+    padding: 25px;
+
+    transform: translate(-50%, -50%) rotate(-2deg);
+
     background:
         linear-gradient(
             145deg,
-            #fff8f6,
+            #fff9f7,
             #edf5ef
         );
 
-    border-color: #d9dcd1;
+    border: 1px solid #d9dcd1;
 
-    box-shadow:
-        0 15px 30px rgba(90,90,75,.10);
+    box-shadow: 0 15px 30px rgba(80,75,65,.10);
+
+    text-align: center;
 }
 
 
 .seiran-page .memory-paper small {
 
-    color: var(--academy-green-dark);
+    display: block;
 
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: var(--seiran-green-dark);
 }
 
 
 .seiran-page .memory-paper strong {
 
-    color: var(--academy-accent-dark);
+    display: block;
 
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 29px;
+
+    line-height: 1.05;
+
+    color: var(--seiran-pink-dark);
 }
 
 
 .seiran-page .memory-paper span {
 
-    color: var(--academy-accent);
+    display: block;
 
+    margin-top: 12px;
+
+    font-size: 22px;
+
+    color: var(--seiran-pink);
 }
 
 
@@ -864,81 +1417,67 @@
 
 .seiran-page .academy-bottom-nav {
 
-    border-color: var(--academy-border);
+    max-width: 1180px;
+
+    margin: 0 auto 70px;
+
+    padding: 30px 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-top: 1px solid var(--seiran-border);
 
 }
 
 
 .seiran-page .back-academies {
 
-    color: var(--academy-green-dark);
+    font-size: 10px;
 
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color: var(--seiran-green-dark);
+
+}
+
+
+.seiran-page .next-academy {
+
+    text-align: right;
 }
 
 
 .seiran-page .next-academy span {
 
-    color: var(--academy-green-dark);
+    display: block;
 
+    margin-bottom: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .15em;
+
+    color: var(--seiran-green-dark);
 }
 
 
 .seiran-page .next-academy strong {
 
-    color: var(--academy-accent);
+    color: var(--seiran-pink);
 
-}
+    font-family: "Playfair Display", serif;
 
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.seiran-page .site-header {
-
-    background:
-        rgba(255,250,247,.90);
-
-    border-bottom-color:
-        rgba(220,200,200,.55);
-
-    backdrop-filter: blur(12px);
-}
-
-
-.seiran-page .mini-logo {
-
-    color: var(--academy-text);
-
-}
-
-
-.seiran-page .mini-logo span {
-
-    color: var(--academy-accent);
-
-}
-
-
-.seiran-page .nav-item {
-
-    color: var(--academy-muted);
-
-}
-
-
-.seiran-page .nav-item:hover,
-.seiran-page .nav-item.active {
-
-    color: var(--academy-accent);
-
-}
-
-
-.seiran-page .nav-item span {
-
-    color: var(--academy-green-dark);
-
+    font-size: 20px;
 }
 
 
@@ -951,143 +1490,250 @@
     background:
         linear-gradient(
             135deg,
-            #edf4ee,
-            #f9e9eb
+            #e9f2eb,
+            #f7e5e8
         );
 
-    border-top-color: #d7ddd6;
+    color: var(--seiran-text);
 
+    border-top: 1px solid #d6dfd8;
 }
 
 
 .seiran-page .footer-logo span {
 
-    color: var(--academy-accent);
-
+    color: var(--seiran-pink);
 }
 
 
 .seiran-page .footer-logo h2 em {
 
-    color: var(--academy-accent);
-
+    color: var(--seiran-pink-dark);
 }
 
 
 .seiran-page .footer-links span {
 
-    color: var(--academy-green-dark);
+    color: var(--seiran-green-dark);
 
 }
 
 
 .seiran-page .footer-links a:hover {
 
-    color: var(--academy-accent);
+    color: var(--seiran-pink);
 
 }
 
 
 /* =========================================================
-   EXTRA SAKURA PETALS
+   RESPONSIVE
 ========================================================= */
 
-.seiran-page .academy-hero::before {
+@media (max-width: 1000px) {
 
-    content: "✿";
+    .seiran-page .academy-hero {
 
-    position: absolute;
+        min-height: 720px;
 
-    top: 120px;
-    left: 4%;
+    }
 
-    font-size: 32px;
+    .seiran-page .academy-polaroid {
 
-    color: rgba(217,91,120,.20);
+        opacity: .75;
 
-    transform: rotate(20deg);
+        transform: scale(.85) rotate(-7deg);
 
-    pointer-events: none;
+    }
+
+    .seiran-page .academy-note {
+
+        transform: scale(.85) rotate(5deg);
+
+    }
+
+    .seiran-page .students-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .seiran-page .about-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .seiran-page .campus-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
 }
 
 
-.seiran-page .academy-section:nth-of-type(2)::before {
+@media (max-width: 700px) {
 
-    content: "❀";
+    .seiran-page .academy-hero {
 
-    position: absolute;
+        min-height: auto;
 
-    right: 5%;
-    margin-top: -20px;
+        padding: 70px 15px;
 
-    font-size: 28px;
+    }
 
-    color: rgba(217,91,120,.18);
+    .seiran-page .academy-paper {
 
-    pointer-events: none;
+        width: 100%;
+
+        padding: 60px 25px 45px;
+
+    }
+
+    .seiran-page .academy-heading h1 {
+
+        font-size: 55px;
+
+    }
+
+    .seiran-page .academy-polaroid {
+
+        display: none;
+
+    }
+
+    .seiran-page .academy-note {
+
+        display: none;
+
+    }
+
+    .seiran-page .academy-mini-note {
+
+        display: none;
+
+    }
+
+    .seiran-page .academy-facts {
+
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+
+    }
+
+    .seiran-page .academy-section {
+
+        margin-bottom: 30px;
+
+        padding: 55px 22px;
+
+    }
+
+    .seiran-page .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .seiran-page .students-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .seiran-page .memory-board {
+
+        min-height: 600px;
+
+    }
+
+    .seiran-page .memory-photo {
+
+        width: 170px;
+
+        height: 125px;
+
+    }
+
+    .seiran-page .memory-one {
+
+        left: 3%;
+
+        top: 35px;
+
+    }
+
+    .seiran-page .memory-two {
+
+        right: 3%;
+
+        top: 170px;
+
+    }
+
+    .seiran-page .memory-three {
+
+        left: 3%;
+
+        bottom: 35px;
+
+    }
+
+    .seiran-page .memory-paper {
+
+        width: 190px;
+
+    }
+
+    .seiran-page .academy-bottom-nav {
+
+        padding: 25px 22px;
+
+    }
+
 }
 
 
-/* =========================================================
-   GREEN LEAF DECORATION
-========================================================= */
+@media (max-width: 430px) {
 
-.seiran-page .campus-section::after {
+    .seiran-page .students-grid {
 
-    content: "⌁  ❧";
+        grid-template-columns: 1fr;
 
-    position: absolute;
+    }
 
-    bottom: 20px;
-    left: 4%;
+    .seiran-page .student-image {
 
-    color: rgba(82,116,94,.20);
+        height: 330px;
 
-    font-size: 38px;
+    }
 
-    transform: rotate(-10deg);
+    .seiran-page .academy-heading h1 {
 
-    pointer-events: none;
-}
+        font-size: 45px;
 
+    }
 
-/* =========================================================
-   SEIRAN BODY BACKGROUND
-   This overrides the old brown academy background.
-========================================================= */
+    .seiran-page .heading-heart {
 
-body.seiran-page {
+        font-size: 28px;
 
-    background-color: #fff8f5 !important;
+    }
 
-    background-image:
-        radial-gradient(
-            ellipse at 10% 10%,
-            rgba(247,223,229,.9),
-            transparent 35%
-        ),
-        radial-gradient(
-            ellipse at 90% 20%,
-            rgba(250,226,231,.8),
-            transparent 32%
-        ),
-        radial-gradient(
-            ellipse at 5% 75%,
-            rgba(220,233,223,.85),
-            transparent 35%
-        ),
-        radial-gradient(
-            ellipse at 95% 80%,
-            rgba(220,233,223,.75),
-            transparent 36%
-        ),
-        linear-gradient(
-            135deg,
-            #fffaf7 0%,
-            #fff4f4 35%,
-            #f8f0ea 60%,
-            #eef5ef 100%
-        ) !important;
+    .seiran-page .academy-bottom-nav {
 
-    background-attachment: fixed !important;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .seiran-page .next-academy {
+
+        text-align: left;
+
+    }
+
 }
