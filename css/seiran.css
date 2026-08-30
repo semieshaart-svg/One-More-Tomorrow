@@ -1,82 +1,147 @@
+```css
 /* =========================================================
    ✦ SEIRAN ACADEMY — ONE MORE TOMORROW ✦
-   Pink + Sage Green / Scrapbook Academy
+   CREATIVE ACADEMY
+   PINK + SAGE GREEN EDITION
 ========================================================= */
 
 
 /* =========================================================
-   COLOR PALETTE
+   01 — PAGE VARIABLES
 ========================================================= */
 
 .seiran-page {
 
-    --academy-pink: #d95b78;
-    --academy-pink-dark: #a9425b;
-    --academy-pink-soft: #f7dfe5;
-    --academy-pink-pale: #fff5f6;
+    --seiran-pink: #d95b78;
+    --seiran-pink-dark: #a9445d;
+    --seiran-pink-soft: #f7dfe5;
+    --seiran-pink-pale: #fff3f5;
 
-    --academy-sage: #789b83;
-    --academy-sage-dark: #52745e;
-    --academy-sage-soft: #dce9df;
-    --academy-sage-pale: #f2f7f3;
+    --seiran-green: #789b83;
+    --seiran-green-dark: #52745e;
+    --seiran-green-soft: #dce9df;
+    --seiran-green-pale: #f0f6f1;
 
-    --academy-paper: #fffdf9;
-    --academy-paper-warm: #faf4ee;
+    --seiran-cream: #fffaf5;
+    --seiran-paper: #fffdf9;
+    --seiran-text: #40393b;
+    --seiran-muted: #8c8083;
 
-    --academy-text: #40393b;
-    --academy-muted: #8c8083;
+    --seiran-border: #e5d8d0;
 
-    --academy-border: #e5d8d0;
+    position: relative;
 
+    min-height: 100vh;
+
+    color: var(--seiran-text);
+
+    overflow-x: hidden;
 }
 
 
 /* =========================================================
-   SEIRAN PAGE BACKGROUND
+   02 — SEIRAN BACKGROUND
 ========================================================= */
 
+/* IMPORTANT:
+   The background is applied directly to the BODY.
+   This makes it work even if .seiran-page is the body itself.
+*/
+
 body.seiran-page {
+
+    min-height: 100vh;
 
     background-color: #fff8f5 !important;
 
     background-image:
 
+        /* pink glow — top left */
+
         radial-gradient(
-            ellipse at 8% 8%,
-            rgba(247, 214, 222, .95),
-            transparent 32%
+            ellipse at 5% 5%,
+            rgba(247,223,229,.95) 0%,
+            rgba(247,223,229,.55) 18%,
+            transparent 38%
+        ),
+
+        /* pink glow — top right */
+
+        radial-gradient(
+            ellipse at 95% 18%,
+            rgba(250,225,231,.9) 0%,
+            rgba(250,225,231,.5) 20%,
+            transparent 38%
+        ),
+
+        /* green glow — left */
+
+        radial-gradient(
+            ellipse at 3% 65%,
+            rgba(220,233,223,.95) 0%,
+            rgba(220,233,223,.55) 20%,
+            transparent 40%
+        ),
+
+        /* green glow — right */
+
+        radial-gradient(
+            ellipse at 98% 75%,
+            rgba(220,233,223,.9) 0%,
+            rgba(220,233,223,.5) 20%,
+            transparent 40%
+        ),
+
+        /* bottom green */
+
+        radial-gradient(
+            ellipse at 50% 110%,
+            rgba(222,235,224,.95),
+            transparent 45%
+        ),
+
+        /* tiny pink dots */
+
+        radial-gradient(
+            circle at 12% 25%,
+            rgba(217,91,120,.18) 0 3px,
+            transparent 4px
         ),
 
         radial-gradient(
-            ellipse at 92% 15%,
-            rgba(248, 220, 226, .85),
-            transparent 30%
+            circle at 88% 42%,
+            rgba(217,91,120,.15) 0 4px,
+            transparent 5px
         ),
 
         radial-gradient(
-            ellipse at 4% 72%,
-            rgba(216, 232, 220, .9),
-            transparent 35%
+            circle at 18% 88%,
+            rgba(217,91,120,.13) 0 3px,
+            transparent 4px
+        ),
+
+        /* tiny green dots */
+
+        radial-gradient(
+            circle at 94% 10%,
+            rgba(120,155,131,.18) 0 4px,
+            transparent 5px
         ),
 
         radial-gradient(
-            ellipse at 96% 78%,
-            rgba(220, 235, 224, .85),
-            transparent 35%
+            circle at 7% 48%,
+            rgba(120,155,131,.16) 0 4px,
+            transparent 5px
         ),
 
-        radial-gradient(
-            ellipse at 50% 45%,
-            rgba(255, 244, 244, .8),
-            transparent 48%
-        ),
+        /* overall soft gradient */
 
         linear-gradient(
             135deg,
             #fffaf7 0%,
-            #fff4f5 30%,
-            #f9f1ed 58%,
-            #eef6ef 100%
+            #fff5f5 30%,
+            #faf2ec 57%,
+            #eef5ef 100%
         ) !important;
 
     background-attachment: fixed !important;
@@ -85,89 +150,148 @@ body.seiran-page {
 
 
 /* =========================================================
-   PAGE DECORATIONS
+   03 — SOFT PAPER TEXTURE
 ========================================================= */
 
 body.seiran-page::before {
 
-    content:
-        "✿     ❀          ✿"
-        "\A"
-        "      ❧       ❀"
-        "\A"
-        "✿          ❧       ✿";
+    content: "";
 
     position: fixed;
 
     inset: 0;
 
-    padding: 70px 5vw;
-
-    color: rgba(217, 91, 120, .11);
-
-    font-family:
-        "Patrick Hand",
-        cursive;
-
-    font-size: 30px;
-
-    line-height: 8;
-
-    letter-spacing: 10px;
+    z-index: 0;
 
     pointer-events: none;
 
-    z-index: 0;
+    opacity: .22;
 
-    white-space: pre;
+    background-image:
+
+        repeating-linear-gradient(
+            0deg,
+            rgba(80,65,60,.025) 0,
+            rgba(80,65,60,.025) 1px,
+            transparent 1px,
+            transparent 6px
+        ),
+
+        repeating-linear-gradient(
+            90deg,
+            rgba(80,65,60,.018) 0,
+            rgba(80,65,60,.018) 1px,
+            transparent 1px,
+            transparent 8px
+        );
 
 }
 
+
+/* =========================================================
+   04 — DECORATIVE FLOWERS
+========================================================= */
 
 body.seiran-page::after {
 
-    content: "❧       ❧       ❧";
+    content: "✿   ❀   ✿";
 
     position: fixed;
 
-    right: -35px;
-
-    bottom: 35px;
-
-    color: rgba(82, 116, 94, .14);
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 58px;
-
-    letter-spacing: 18px;
-
-    transform: rotate(-12deg);
-
-    pointer-events: none;
-
-    z-index: 0;
-
-}
-
-
-/* =========================================================
-   KEEP PAGE CONTENT ABOVE DECORATIONS
-========================================================= */
-
-body.seiran-page > * {
-
-    position: relative;
+    right: -15px;
+    top: 100px;
 
     z-index: 1;
 
+    pointer-events: none;
+
+    color: rgba(217,91,120,.17);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    letter-spacing: 15px;
+
+    transform: rotate(-10deg);
+
 }
 
 
 /* =========================================================
-   FLOATING DECORATIONS
+   05 — KEEP CONTENT ABOVE BACKGROUND
+========================================================= */
+
+.seiran-page > * {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   06 — HEADER
+========================================================= */
+
+.seiran-page .site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    background: rgba(255,250,247,.91) !important;
+
+    border-bottom: 1px solid rgba(217,91,120,.16) !important;
+
+    backdrop-filter: blur(14px);
+
+}
+
+
+.seiran-page .mini-logo {
+
+    color: var(--seiran-text);
+
+}
+
+
+.seiran-page .mini-logo span {
+
+    color: var(--seiran-pink);
+
+}
+
+
+.seiran-page .nav-item {
+
+    color: var(--seiran-muted);
+
+}
+
+
+.seiran-page .nav-item span {
+
+    color: var(--seiran-green-dark);
+
+}
+
+
+.seiran-page .nav-item:hover,
+.seiran-page .nav-item.active {
+
+    color: var(--seiran-pink-dark);
+
+    background: var(--seiran-pink-soft);
+
+}
+
+
+/* =========================================================
+   07 — FLOATING DECORATIONS
 ========================================================= */
 
 .seiran-page .academy-floating {
@@ -178,9 +302,9 @@ body.seiran-page > * {
 
     pointer-events: none;
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
+
+    opacity: .7;
 
 }
 
@@ -188,12 +312,11 @@ body.seiran-page > * {
 .seiran-page .academy-pencil {
 
     left: 24px;
-
     top: 42%;
 
-    color: var(--academy-sage);
+    color: var(--seiran-green);
 
-    font-size: 42px;
+    font-size: 40px;
 
     transform: rotate(-30deg);
 
@@ -202,13 +325,12 @@ body.seiran-page > * {
 
 .seiran-page .academy-star {
 
-    right: 28px;
-
+    right: 25px;
     top: 28%;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
-    font-size: 38px;
+    font-size: 35px;
 
     transform: rotate(15deg);
 
@@ -217,19 +339,18 @@ body.seiran-page > * {
 
 .seiran-page .academy-heart {
 
-    right: 30px;
+    right: 28px;
+    bottom: 18%;
 
-    bottom: 20%;
+    color: var(--seiran-pink);
 
-    color: var(--academy-pink-soft);
-
-    font-size: 55px;
+    font-size: 48px;
 
 }
 
 
 /* =========================================================
-   HERO
+   08 — HERO
 ========================================================= */
 
 .seiran-page .academy-hero {
@@ -263,30 +384,30 @@ body.seiran-page > * {
 
     z-index: 5;
 
-    width: min(900px, 94vw);
+    width: min(900px, 92vw);
 
-    padding: 80px 80px 60px;
+    padding: 80px 75px 60px;
 
     background:
 
         repeating-linear-gradient(
             0deg,
-            transparent,
+            transparent 0,
             transparent 31px,
-            rgba(120, 155, 131, .055) 32px
+            rgba(120,155,131,.075) 32px
         ),
 
         linear-gradient(
             145deg,
             rgba(255,255,255,.98),
             rgba(255,250,247,.98)
-        );
+        ) !important;
 
-    border: 1px solid var(--academy-border);
+    border: 1px solid var(--seiran-border);
 
     box-shadow:
-        0 25px 65px rgba(80, 55, 65, .14),
-        0 5px 15px rgba(80, 55, 65, .06);
+        0 25px 65px rgba(80,60,60,.14),
+        0 5px 15px rgba(80,60,60,.06);
 
     transform: rotate(.6deg);
 
@@ -294,7 +415,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   PAPER TAPE
+   TAPE
 ========================================================= */
 
 .seiran-page .paper-tape {
@@ -302,19 +423,16 @@ body.seiran-page > * {
     position: absolute;
 
     top: -17px;
-
     left: 50%;
 
     width: 150px;
-
     height: 34px;
 
     transform:
         translateX(-50%)
         rotate(-2deg);
 
-    background:
-        rgba(238, 207, 218, .68);
+    background: rgba(230,207,166,.65);
 
 }
 
@@ -327,7 +445,7 @@ body.seiran-page > * {
 
     margin-bottom: 25px;
 
-    color: var(--academy-sage);
+    color: var(--seiran-green-dark);
 
     font-size: 9px;
 
@@ -357,11 +475,11 @@ body.seiran-page > * {
 
 .seiran-page .heading-heart {
 
-    color: var(--academy-pink);
+    flex-shrink: 0;
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    color: var(--seiran-pink);
+
+    font-family: "Patrick Hand", cursive;
 
     font-size: 45px;
 
@@ -372,14 +490,11 @@ body.seiran-page > * {
 
     margin: 0;
 
-    color: var(--academy-text);
+    color: var(--seiran-text);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
-    font-size:
-        clamp(60px, 9vw, 105px);
+    font-size: clamp(58px, 9vw, 105px);
 
     font-weight: 600;
 
@@ -394,7 +509,7 @@ body.seiran-page > * {
 
     display: block;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
     font-weight: 600;
 
@@ -402,18 +517,16 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   MOTTO
+   HERO TEXT
 ========================================================= */
 
 .seiran-page .academy-motto {
 
     margin-top: 28px;
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 24px;
 
@@ -426,14 +539,10 @@ body.seiran-page > * {
 
     margin: 0 8px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
 }
 
-
-/* =========================================================
-   HERO TEXT
-========================================================= */
 
 .seiran-page .academy-lead {
 
@@ -443,9 +552,7 @@ body.seiran-page > * {
 
     color: #5f5754;
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 20px;
 
@@ -474,27 +581,18 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   DIVIDER
+   HERO DIVIDER
 ========================================================= */
 
 .seiran-page .academy-divider {
 
     width: 100%;
 
-    height: 2px;
-
     margin: 38px auto 25px;
 
-    border: none;
+    border: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #f1cbd3,
-            #d5e5d9,
-            transparent
-        );
+    border-top: 1px dashed #dfd2d0;
 
 }
 
@@ -507,8 +605,7 @@ body.seiran-page > * {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 
@@ -530,7 +627,7 @@ body.seiran-page > * {
 
 .seiran-page .academy-facts span {
 
-    color: var(--academy-sage);
+    color: var(--seiran-green-dark);
 
     font-size: 8px;
 
@@ -543,7 +640,7 @@ body.seiran-page > * {
 
 .seiran-page .academy-facts strong {
 
-    color: var(--academy-text);
+    color: var(--seiran-text);
 
     font-size: 11px;
 
@@ -559,21 +656,17 @@ body.seiran-page > * {
     position: absolute;
 
     top: 48px;
-
     right: 45px;
 
     width: 90px;
-
     height: 90px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    border:
-        2px solid rgba(120,155,131,.45);
+    border: 2px solid rgba(120,155,131,.48);
 
     border-radius: 50%;
 
@@ -595,7 +688,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   POLAROID
+   09 — POLAROID
 ========================================================= */
 
 .seiran-page .academy-polaroid {
@@ -611,7 +704,7 @@ body.seiran-page > * {
     background: #fff;
 
     box-shadow:
-        0 15px 30px rgba(70,55,60,.13);
+        0 15px 30px rgba(70,55,55,.13);
 
 }
 
@@ -634,27 +727,26 @@ body.seiran-page > * {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
 
-    text-align: center;
-
     background:
         linear-gradient(
             135deg,
-            #f5dce2,
-            #dfece3
+            #f7dfe5,
+            #e0eee3
         );
 
-    color: #8f8987;
+    color: #8c807e;
 
     font-size: 8px;
 
     font-weight: 700;
 
     letter-spacing: .14em;
+
+    text-align: center;
 
 }
 
@@ -663,11 +755,9 @@ body.seiran-page > * {
 
     margin: 10px 0 0;
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 15px;
 
@@ -677,7 +767,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   YELLOW NOTE
+   10 — YELLOW NOTE
 ========================================================= */
 
 .seiran-page .academy-note {
@@ -696,19 +786,17 @@ body.seiran-page > * {
 
     background:
         linear-gradient(
-            145deg,
-            #fff1c7,
-            #f9e8b5
+            135deg,
+            #fff1b8,
+            #f9e8a9
         );
 
     box-shadow:
-        0 12px 25px rgba(80,65,40,.11);
+        0 10px 25px rgba(70,55,40,.12);
 
     transform: rotate(6deg);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
 }
 
@@ -717,7 +805,7 @@ body.seiran-page > * {
 
     display: block;
 
-    color: #6f6961;
+    color: var(--seiran-green-dark);
 
     font-size: 13px;
 
@@ -730,7 +818,7 @@ body.seiran-page > * {
 
     margin-top: 7px;
 
-    color: var(--academy-pink-dark);
+    color: var(--seiran-pink-dark);
 
     font-size: 22px;
 
@@ -745,7 +833,7 @@ body.seiran-page > * {
 
     margin-top: 10px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
     font-size: 22px;
 
@@ -753,7 +841,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   SAGE MINI NOTE
+   11 — GREEN MINI NOTE
 ========================================================= */
 
 .seiran-page .academy-mini-note {
@@ -761,7 +849,6 @@ body.seiran-page > * {
     position: absolute;
 
     right: 7%;
-
     bottom: 95px;
 
     z-index: 8;
@@ -770,21 +857,19 @@ body.seiran-page > * {
 
     background:
         linear-gradient(
-            145deg,
+            135deg,
             #edf5ef,
-            #dfece2
+            #dce9df
         );
 
     border: 1px solid #d1dfd4;
 
     box-shadow:
-        0 10px 25px rgba(50,70,55,.09);
+        0 10px 25px rgba(60,80,65,.10);
 
     transform: rotate(-5deg);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
 }
 
@@ -793,7 +878,7 @@ body.seiran-page > * {
 
     display: block;
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 10px;
 
@@ -812,13 +897,11 @@ body.seiran-page > * {
 
     font-size: 18px;
 
-    line-height: 1.1;
-
 }
 
 
 /* =========================================================
-   GENERAL SECTIONS
+   12 — MAIN SECTIONS
 ========================================================= */
 
 .seiran-page .academy-section {
@@ -835,13 +918,13 @@ body.seiran-page > * {
         linear-gradient(
             145deg,
             rgba(255,255,255,.98),
-            rgba(255,250,248,.97)
-        );
+            rgba(255,250,247,.97)
+        ) !important;
 
-    border: 1px solid var(--academy-border);
+    border: 1px solid var(--seiran-border);
 
     box-shadow:
-        0 20px 50px rgba(75,55,65,.10);
+        0 20px 50px rgba(80,60,60,.11);
 
 }
 
@@ -862,7 +945,6 @@ body.seiran-page > * {
 .seiran-page .section-title.centered {
 
     margin-left: auto;
-
     margin-right: auto;
 
     text-align: center;
@@ -876,7 +958,7 @@ body.seiran-page > * {
 
     margin-bottom: 13px;
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 9px;
 
@@ -891,14 +973,11 @@ body.seiran-page > * {
 
     margin: 0;
 
-    color: var(--academy-text);
+    color: var(--seiran-text);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
-    font-size:
-        clamp(40px, 5vw, 62px);
+    font-size: clamp(40px, 5vw, 62px);
 
     font-weight: 600;
 
@@ -909,7 +988,7 @@ body.seiran-page > * {
 
 .seiran-page .section-title h2 em {
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
 }
 
@@ -918,15 +997,17 @@ body.seiran-page > * {
 
     margin-top: 18px;
 
-    color: var(--academy-muted);
+    color: var(--seiran-muted);
 
     font-size: 13px;
+
+    line-height: 1.7;
 
 }
 
 
 /* =========================================================
-   ABOUT
+   13 — ABOUT
 ========================================================= */
 
 .seiran-page .about-layout {
@@ -957,11 +1038,9 @@ body.seiran-page > * {
 
 .seiran-page .about-text .about-big {
 
-    color: #403a37;
+    color: var(--seiran-pink-dark);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 25px;
 
@@ -985,14 +1064,14 @@ body.seiran-page > * {
     background:
         linear-gradient(
             145deg,
-            #edf5ef,
-            #e2eee5
+            #fff1f3,
+            #eaf3ec
         );
 
-    border: 1px solid #ceded2;
+    border: 1px solid #e2ddd7;
 
     box-shadow:
-        7px 8px 0 rgba(120,155,131,.10);
+        0 12px 28px rgba(80,70,70,.08);
 
     transform: rotate(1.5deg);
 
@@ -1001,7 +1080,7 @@ body.seiran-page > * {
 
 .seiran-page .notebook-label {
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 8px;
 
@@ -1016,15 +1095,11 @@ body.seiran-page > * {
 
     margin: 16px 0 22px;
 
-    color: #443b38;
+    color: var(--seiran-text);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 24px;
-
-    line-height: 1.2;
 
 }
 
@@ -1063,7 +1138,7 @@ body.seiran-page > * {
 
     left: 0;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
 }
 
@@ -1072,11 +1147,9 @@ body.seiran-page > * {
 
     margin-top: 20px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 24px;
 
@@ -1086,15 +1159,14 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   CAMPUS
+   14 — CAMPUS
 ========================================================= */
 
 .seiran-page .campus-grid {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 
@@ -1105,16 +1177,18 @@ body.seiran-page > * {
 
     position: relative;
 
+    min-width: 0;
+
     padding: 32px 28px 35px;
 
     background:
         linear-gradient(
             145deg,
-            #fffdfb,
-            #f4f9f5
+            #ffffff,
+            #f7faf7
         );
 
-    border: 1px solid var(--academy-border);
+    border: 1px solid var(--seiran-border);
 
     transition:
         transform .3s ease,
@@ -1130,10 +1204,10 @@ body.seiran-page > * {
         translateY(-7px)
         rotate(-.5deg);
 
-    border-color: #cbded1;
+    border-color: #d9b7c0;
 
     box-shadow:
-        0 15px 30px rgba(70,80,70,.10);
+        0 15px 30px rgba(80,60,65,.11);
 
 }
 
@@ -1143,16 +1217,13 @@ body.seiran-page > * {
     position: absolute;
 
     top: 17px;
-
     right: 20px;
 
-    color: var(--academy-sage);
+    color: var(--seiran-green);
 
     font-size: 9px;
 
     font-weight: 700;
-
-    letter-spacing: .1em;
 
 }
 
@@ -1161,11 +1232,9 @@ body.seiran-page > * {
 
     margin-bottom: 18px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 38px;
 
@@ -1176,11 +1245,9 @@ body.seiran-page > * {
 
     margin: 0 0 12px;
 
-    color: #413a37;
+    color: var(--seiran-text);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 24px;
 
@@ -1201,7 +1268,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   STUDENTS
+   15 — STUDENTS
 ========================================================= */
 
 .seiran-page .students-section {
@@ -1216,7 +1283,6 @@ body.seiran-page > * {
     position: absolute;
 
     top: 75px;
-
     right: 60px;
 
     display: flex;
@@ -1230,11 +1296,9 @@ body.seiran-page > * {
 
 .seiran-page .student-total strong {
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 28px;
 
@@ -1243,7 +1307,7 @@ body.seiran-page > * {
 
 .seiran-page .student-total span {
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 8px;
 
@@ -1262,8 +1326,7 @@ body.seiran-page > * {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
     gap: 18px;
 
@@ -1274,16 +1337,13 @@ body.seiran-page > * {
 
     display: block;
 
+    min-width: 0;
+
     overflow: hidden;
 
-    background:
-        linear-gradient(
-            145deg,
-            #fffdfb,
-            #f5faf6
-        );
+    background: #fff;
 
-    border: 1px solid var(--academy-border);
+    border: 1px solid var(--seiran-border);
 
     text-decoration: none;
 
@@ -1315,17 +1375,13 @@ body.seiran-page > * {
         translateY(-8px)
         rotate(0deg);
 
-    border-color: #dfc1c8;
+    border-color: #d9b7c0;
 
     box-shadow:
-        0 16px 32px rgba(75,55,65,.12);
+        0 16px 32px rgba(80,60,65,.14);
 
 }
 
-
-/* =========================================================
-   STUDENT IMAGE
-========================================================= */
 
 .seiran-page .student-image {
 
@@ -1338,15 +1394,24 @@ body.seiran-page > * {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background:
         linear-gradient(
             145deg,
-            #f6dfe4,
-            #e3eee5
+            #f8dfe5,
+            #e6f0e8
         );
+
+}
+
+
+.seiran-page .student-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 
 }
 
@@ -1358,14 +1423,11 @@ body.seiran-page > * {
     z-index: 2;
 
     top: 12px;
-
     left: 13px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-green-dark);
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
     font-size: 18px;
 
@@ -1374,7 +1436,7 @@ body.seiran-page > * {
 
 .seiran-page .image-placeholder {
 
-    color: #9b8c89;
+    color: #9b898e;
 
     font-size: 8px;
 
@@ -1389,10 +1451,6 @@ body.seiran-page > * {
 }
 
 
-/* =========================================================
-   STUDENT INFO
-========================================================= */
-
 .seiran-page .student-content {
 
     padding: 18px;
@@ -1402,7 +1460,7 @@ body.seiran-page > * {
 
 .seiran-page .student-content > span {
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 7px;
 
@@ -1417,11 +1475,9 @@ body.seiran-page > * {
 
     margin: 7px 0 0;
 
-    color: #403936;
+    color: var(--seiran-text);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 17px;
 
@@ -1434,26 +1490,17 @@ body.seiran-page > * {
 
     margin: 9px 0 0;
 
-    color: #948984;
+    color: var(--seiran-pink);
 
     font-size: 9px;
 
     font-weight: 700;
 
-    transition: color .2s ease;
-
-}
-
-
-.seiran-page .student-card:hover .student-content p {
-
-    color: var(--academy-pink);
-
 }
 
 
 /* =========================================================
-   MEMORY BOARD
+   16 — MEMORIES
 ========================================================= */
 
 .seiran-page .memory-board {
@@ -1465,40 +1512,22 @@ body.seiran-page > * {
     overflow: hidden;
 
     background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(247,220,225,.95),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 85% 75%,
-            rgba(215,231,219,.95),
-            transparent 32%
-        ),
-
         linear-gradient(
             135deg,
-            #f8e9e8,
-            #eaf2eb
+            #f8e3e7,
+            #e3eee5
         );
 
-    border: 1px solid #ddd8d1;
+    border: 1px solid #d8dcd4;
 
 }
 
-
-/* =========================================================
-   MEMORY PHOTOS
-========================================================= */
 
 .seiran-page .memory-photo {
 
     position: absolute;
 
     width: 255px;
-
     height: 190px;
 
     padding: 11px;
@@ -1506,7 +1535,6 @@ body.seiran-page > * {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     background: white;
@@ -1528,8 +1556,8 @@ body.seiran-page > * {
     background:
         linear-gradient(
             135deg,
-            #f6dfe2,
-            #dfece3
+            #f7dfe5,
+            #dfece2
         );
 
 }
@@ -1541,7 +1569,7 @@ body.seiran-page > * {
 
     z-index: 2;
 
-    color: #8d8985;
+    color: #8e8180;
 
     font-size: 8px;
 
@@ -1552,14 +1580,9 @@ body.seiran-page > * {
 }
 
 
-/* =========================================================
-   MEMORY POSITIONS
-========================================================= */
-
 .seiran-page .memory-one {
 
     left: 9%;
-
     top: 55px;
 
     transform: rotate(-7deg);
@@ -1570,7 +1593,6 @@ body.seiran-page > * {
 .seiran-page .memory-two {
 
     right: 9%;
-
     top: 55px;
 
     transform: rotate(6deg);
@@ -1581,7 +1603,6 @@ body.seiran-page > * {
 .seiran-page .memory-three {
 
     left: 29%;
-
     bottom: 40px;
 
     transform: rotate(4deg);
@@ -1600,7 +1621,6 @@ body.seiran-page > * {
     z-index: 5;
 
     left: 50%;
-
     top: 50%;
 
     width: 205px;
@@ -1614,20 +1634,18 @@ body.seiran-page > * {
     background:
         linear-gradient(
             145deg,
-            #fff8f5,
+            #fff0f2,
             #edf5ef
         );
 
-    border: 1px solid #dedbd3;
+    border: 1px solid #e0dcd4;
 
     box-shadow:
-        0 12px 27px rgba(57,42,32,.12);
+        0 12px 27px rgba(57,42,32,.13);
 
     text-align: center;
 
-    font-family:
-        "Patrick Hand",
-        cursive;
+    font-family: "Patrick Hand", cursive;
 
 }
 
@@ -1636,7 +1654,7 @@ body.seiran-page > * {
 
     display: block;
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 9px;
 
@@ -1651,7 +1669,7 @@ body.seiran-page > * {
 
     margin-top: 10px;
 
-    color: var(--academy-pink-dark);
+    color: var(--seiran-pink-dark);
 
     font-size: 24px;
 
@@ -1666,7 +1684,7 @@ body.seiran-page > * {
 
     margin-top: 10px;
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
     font-size: 23px;
 
@@ -1674,18 +1692,16 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   BOTTOM NAVIGATION
+   17 — BOTTOM NAVIGATION
 ========================================================= */
 
 .seiran-page .academy-bottom-nav {
 
     max-width: 1180px;
 
-    margin:
-        0 auto 80px;
+    margin: 0 auto 80px;
 
-    padding:
-        0 60px;
+    padding: 0 60px;
 
     display: flex;
 
@@ -1698,7 +1714,7 @@ body.seiran-page > * {
 
 .seiran-page .back-academies {
 
-    color: var(--academy-sage-dark);
+    color: var(--seiran-green-dark);
 
     font-size: 9px;
 
@@ -1711,7 +1727,7 @@ body.seiran-page > * {
 
 .seiran-page .back-academies:hover {
 
-    color: var(--academy-pink);
+    color: var(--seiran-pink);
 
 }
 
@@ -1726,14 +1742,12 @@ body.seiran-page > * {
 
     gap: 5px;
 
-    text-decoration: none;
-
 }
 
 
 .seiran-page .next-academy span {
 
-    color: var(--academy-sage);
+    color: var(--seiran-muted);
 
     font-size: 8px;
 
@@ -1744,11 +1758,9 @@ body.seiran-page > * {
 
 .seiran-page .next-academy strong {
 
-    color: var(--academy-pink-dark);
+    color: var(--seiran-pink-dark);
 
-    font-family:
-        "Playfair Display",
-        serif;
+    font-family: "Playfair Display", serif;
 
     font-size: 20px;
 
@@ -1759,13 +1771,86 @@ body.seiran-page > * {
 
 .seiran-page .next-academy:hover strong {
 
-    color: var(--academy-pink);
+    color: var(--seiran-green-dark);
 
 }
 
 
 /* =========================================================
-   EXTRA DECORATIONS
+   18 — FOOTER
+========================================================= */
+
+.seiran-page .site-footer {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7f0e9,
+            #f9e6ea
+        ) !important;
+
+    color: var(--seiran-text);
+
+    border-top: 1px solid #d7ddd6;
+
+}
+
+
+.seiran-page .footer-logo span {
+
+    color: var(--seiran-pink);
+
+}
+
+
+.seiran-page .footer-logo h2 {
+
+    color: var(--seiran-text);
+
+}
+
+
+.seiran-page .footer-logo h2 em {
+
+    color: var(--seiran-pink);
+
+}
+
+
+.seiran-page .footer-logo p {
+
+    color: var(--seiran-muted);
+
+}
+
+
+.seiran-page .footer-links span {
+
+    color: var(--seiran-green-dark);
+
+}
+
+
+.seiran-page .footer-links a {
+
+    color: var(--seiran-text);
+
+}
+
+
+.seiran-page .footer-links a:hover {
+
+    color: var(--seiran-pink);
+
+}
+
+
+/* =========================================================
+   19 — LITTLE DECORATIONS
 ========================================================= */
 
 .seiran-page .academy-hero::before {
@@ -1774,13 +1859,12 @@ body.seiran-page > * {
 
     position: absolute;
 
+    left: 4%;
     top: 120px;
 
-    left: 4%;
+    color: rgba(217,91,120,.2);
 
-    color: rgba(217,91,120,.18);
-
-    font-size: 34px;
+    font-size: 32px;
 
     transform: rotate(20deg);
 
@@ -1796,12 +1880,11 @@ body.seiran-page > * {
     position: absolute;
 
     right: 5%;
+    top: 25px;
 
-    top: 30px;
+    color: rgba(217,91,120,.18);
 
-    color: rgba(217,91,120,.16);
-
-    font-size: 30px;
+    font-size: 28px;
 
     pointer-events: none;
 
@@ -1810,17 +1893,16 @@ body.seiran-page > * {
 
 .seiran-page .campus-section::after {
 
-    content: "❧";
+    content: "⌁  ❧";
 
     position: absolute;
 
+    left: 4%;
     bottom: 20px;
 
-    left: 4%;
+    color: rgba(82,116,94,.20);
 
-    color: rgba(82,116,94,.17);
-
-    font-size: 40px;
+    font-size: 38px;
 
     transform: rotate(-10deg);
 
@@ -1830,7 +1912,7 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   MOBILE
+   20 — MOBILE / TABLET
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -1847,16 +1929,12 @@ body.seiran-page > * {
     .seiran-page .students-grid {
 
         grid-template-columns:
-            repeat(3, 1fr);
+            repeat(3, minmax(0, 1fr));
 
     }
 
 }
 
-
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 800px) {
 
@@ -1864,16 +1942,16 @@ body.seiran-page > * {
 
         min-height: auto;
 
-        padding:
-            70px 15px;
+        padding: 80px 15px;
 
     }
 
 
     .seiran-page .academy-paper {
 
-        padding:
-            70px 30px 45px;
+        width: 100%;
+
+        padding: 70px 30px 45px;
 
     }
 
@@ -1896,6 +1974,8 @@ body.seiran-page > * {
 
         grid-template-columns: 1fr;
 
+        gap: 40px;
+
     }
 
 
@@ -1909,7 +1989,7 @@ body.seiran-page > * {
     .seiran-page .students-grid {
 
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2, minmax(0, 1fr));
 
     }
 
@@ -1927,25 +2007,21 @@ body.seiran-page > * {
 
     .seiran-page .academy-section {
 
-        padding:
-            60px 25px;
+        margin-bottom: 35px;
+
+        padding: 60px 25px;
 
     }
 
 
     .seiran-page .academy-bottom-nav {
 
-        padding:
-            0 25px;
+        padding: 0 25px;
 
     }
 
 }
 
-
-/* =========================================================
-   PHONE
-========================================================= */
 
 @media (max-width: 560px) {
 
@@ -2020,7 +2096,6 @@ body.seiran-page > * {
     .seiran-page .memory-one {
 
         left: 3%;
-
         top: 35px;
 
     }
@@ -2029,7 +2104,6 @@ body.seiran-page > * {
     .seiran-page .memory-two {
 
         right: 3%;
-
         top: 190px;
 
     }
@@ -2038,7 +2112,6 @@ body.seiran-page > * {
     .seiran-page .memory-three {
 
         left: 8%;
-
         bottom: 40px;
 
     }
@@ -2074,33 +2147,29 @@ body.seiran-page > * {
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   21 — EXTRA SAFETY
+   Prevents images / links / cards from breaking the grid.
 ========================================================= */
 
-@media (max-width: 380px) {
+.seiran-page .academy-section *,
+.seiran-page .academy-hero * {
 
-    .seiran-page .academy-heading h1 {
+    max-width: 100%;
 
-        font-size: 45px;
-
-    }
-
-
-    .seiran-page .academy-paper {
-
-        padding-left: 20px;
-
-        padding-right: 20px;
-
-    }
+}
 
 
-    .seiran-page .academy-section {
+.seiran-page .academy-section img,
+.seiran-page .academy-hero img {
 
-        padding-left: 18px;
+    height: auto;
 
-        padding-right: 18px;
+}
 
-    }
+
+.seiran-page .academy-section a,
+.seiran-page .academy-hero a {
+
+    text-decoration: none;
 
 }
