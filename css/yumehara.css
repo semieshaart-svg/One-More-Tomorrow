@@ -1,0 +1,1964 @@
+/* =========================================================
+   YUMEHARA ACADEMY
+   dreamy • artistic • expressive
+========================================================= */
+
+.yumehara-page {
+
+    --yumehara-accent: #9d8bd6;
+    --yumehara-accent-dark: #7161a8;
+
+    --yumehara-soft: #e9e2f8;
+    --yumehara-pale: #f8f5ff;
+
+    --yumehara-paper: #fffdfb;
+    --yumehara-cream: #f4eef9;
+
+    --yumehara-dark: #302b3a;
+    --yumehara-muted: #88808f;
+
+    --yumehara-border: #e5deeb;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(157,139,214,.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 70%, rgba(157,139,214,.07) 0 2px, transparent 3px),
+        #f7f4f8;
+
+    color: var(--yumehara-dark);
+
+    position: relative;
+}
+
+
+/* =========================================================
+   FLOATING DECORATIONS
+========================================================= */
+
+.yumehara-floating {
+
+    position: fixed;
+
+    z-index: 2;
+
+    color: var(--yumehara-accent);
+
+    pointer-events: none;
+
+    font-family: "Patrick Hand", cursive;
+
+    opacity: .65;
+}
+
+
+/* stars */
+
+.yumehara-star {
+
+    font-size: 32px;
+
+    animation:
+        yumeharaFloat 5s ease-in-out infinite;
+
+}
+
+.yumehara-star.star-one {
+
+    top: 18%;
+    left: 5%;
+
+}
+
+.yumehara-star.star-two {
+
+    top: 68%;
+    right: 5%;
+
+    font-size: 24px;
+
+    animation-delay: 1.5s;
+
+}
+
+
+/* little sparkle */
+
+.yumehara-sparkle {
+
+    font-size: 18px;
+
+    top: 35%;
+    right: 8%;
+
+    animation:
+        yumeharaPulse 3s ease-in-out infinite;
+
+}
+
+
+/* paint mark */
+
+.yumehara-paint {
+
+    font-size: 25px;
+
+    bottom: 20%;
+    left: 7%;
+
+    transform: rotate(-12deg);
+
+}
+
+
+/* dreamy floating animation */
+
+@keyframes yumeharaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+
+}
+
+@keyframes yumeharaPulse {
+
+    0%,
+    100% {
+        opacity: .3;
+        transform: scale(.9);
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.yumehara-page .academy-hero {
+
+    position: relative;
+
+    min-height: 850px;
+
+    padding: 150px 30px 130px;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   DREAMY BACKGROUND BLOBS
+========================================================= */
+
+.yumehara-page .academy-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: 80px;
+    left: -170px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(157,139,214,.18),
+            rgba(157,139,214,0)
+        );
+
+    pointer-events: none;
+
+}
+
+.yumehara-page .academy-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    bottom: -230px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210,192,240,.25),
+            rgba(210,192,240,0)
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   MAIN PAPER
+========================================================= */
+
+.yumehara-page .academy-paper {
+
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 70px 75px 65px;
+
+    background: var(--yumehara-paper);
+
+    border: 1px solid var(--yumehara-border);
+
+    box-shadow:
+        0 25px 70px rgba(70,55,90,.10),
+        0 5px 15px rgba(70,55,90,.05);
+
+    transform: rotate(-.7deg);
+
+}
+
+
+/* paper texture */
+
+.yumehara-page .academy-paper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .35;
+
+    background-image:
+        radial-gradient(
+            rgba(120,100,140,.08) .7px,
+            transparent .7px
+        );
+
+    background-size: 7px 7px;
+
+}
+
+
+/* =========================================================
+   PAPER TAPE
+========================================================= */
+
+.yumehara-page .paper-tape {
+
+    position: absolute;
+
+    width: 150px;
+    height: 30px;
+
+    top: -14px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    background: rgba(220,208,242,.75);
+
+    box-shadow:
+        0 2px 5px rgba(60,40,80,.08);
+
+}
+
+
+/* =========================================================
+   ACADEMY NUMBER
+========================================================= */
+
+.yumehara-page .academy-number {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--yumehara-accent);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.yumehara-page .academy-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.yumehara-page .heading-heart {
+
+    color: var(--yumehara-accent);
+
+    font-size: 34px;
+
+    transform: rotate(-10deg);
+
+}
+
+
+.yumehara-page .academy-heading h1 {
+
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: .95;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+}
+
+
+.yumehara-page .academy-heading h1 em {
+
+    display: block;
+
+    color: var(--yumehara-accent);
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   MOTTO
+========================================================= */
+
+.yumehara-page .academy-motto {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 28px;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 20px;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+.yumehara-page .academy-motto span {
+
+    color: var(--yumehara-accent);
+
+    padding: 0 8px;
+
+}
+
+
+/* =========================================================
+   LEAD
+========================================================= */
+
+.yumehara-page .academy-lead {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 35px 0 20px;
+
+    max-width: 590px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: var(--yumehara-dark);
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.yumehara-page .academy-description {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 590px;
+
+    margin: 0;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.yumehara-page .academy-divider {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 35px 0;
+
+    background: var(--yumehara-border);
+
+}
+
+
+.yumehara-page .academy-divider::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    padding: 0 12px;
+
+    background: var(--yumehara-paper);
+
+    color: var(--yumehara-accent);
+
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.yumehara-page .academy-facts {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.yumehara-page .academy-facts div {
+
+    padding: 15px 0;
+
+}
+
+
+.yumehara-page .academy-facts span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .academy-facts strong {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   STAMP
+========================================================= */
+
+.yumehara-page .academy-stamp {
+
+    position: absolute;
+
+    z-index: 3;
+
+    right: 35px;
+    bottom: 35px;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        2px dashed
+        rgba(157,139,214,.55);
+
+    border-radius: 50%;
+
+    color: var(--yumehara-accent);
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    transform: rotate(8deg);
+
+    opacity: .8;
+
+}
+
+
+/* =========================================================
+   DREAMY CAMPUS POLAROID
+========================================================= */
+
+.yumehara-page .academy-polaroid {
+
+    position: absolute;
+
+    z-index: 4;
+
+    background: #fff;
+
+    padding: 12px 12px 30px;
+
+    width: 250px;
+
+    box-shadow:
+        0 15px 35px rgba(50,40,70,.12);
+
+}
+
+
+.yumehara-page .polaroid-campus {
+
+    right: 7%;
+
+    top: 250px;
+
+    transform: rotate(6deg);
+
+}
+
+
+.yumehara-page .academy-polaroid .polaroid-image {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eee7fa,
+            #f8f4ff
+        );
+
+    border:
+        1px solid
+        var(--yumehara-border);
+
+}
+
+
+.yumehara-page .academy-polaroid .polaroid-image span {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .academy-polaroid p {
+
+    margin: 12px 5px 0;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 17px;
+
+    color: var(--yumehara-dark);
+
+}
+
+
+/* =========================================================
+   DREAM NOTE
+========================================================= */
+
+.yumehara-page .academy-note {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 6%;
+
+    top: 430px;
+
+    width: 205px;
+
+    padding: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2ecfc,
+            #ebe3f8
+        );
+
+    box-shadow:
+        0 12px 30px rgba(70,50,90,.10);
+
+    transform: rotate(-5deg);
+
+}
+
+
+.yumehara-page .academy-note::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+
+    left: 45px;
+
+    width: 95px;
+
+    height: 20px;
+
+    background:
+        rgba(213,199,237,.8);
+
+    transform: rotate(2deg);
+
+}
+
+
+.yumehara-page .academy-note small {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent-dark);
+
+}
+
+
+.yumehara-page .academy-note strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+}
+
+
+.yumehara-page .academy-note span {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--yumehara-accent);
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================================
+   MINI NOTE
+========================================================= */
+
+.yumehara-page .academy-mini-note {
+
+    position: absolute;
+
+    z-index: 4;
+
+    right: 9%;
+
+    bottom: 95px;
+
+    padding: 15px 18px;
+
+    background: #fff;
+
+    border:
+        1px solid
+        var(--yumehara-border);
+
+    box-shadow:
+        0 10px 25px rgba(60,50,80,.08);
+
+    transform: rotate(-4deg);
+
+}
+
+
+.yumehara-page .academy-mini-note span {
+
+    display: block;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent);
+
+    margin-bottom: 7px;
+
+}
+
+
+.yumehara-page .academy-mini-note strong {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 19px;
+
+    line-height: 1.1;
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.yumehara-page .academy-section {
+
+    position: relative;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 110px 30px;
+
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.yumehara-page .section-title > span {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .section-title h2 {
+
+    margin: 0;
+
+    max-width: 700px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+}
+
+
+.yumehara-page .section-title h2 em {
+
+    color: var(--yumehara-accent);
+
+    font-weight: 500;
+
+}
+
+
+.yumehara-page .section-title p {
+
+    margin-top: 18px;
+
+    color: var(--yumehara-muted);
+
+    font-size: 14px;
+
+}
+
+
+.yumehara-page .section-title.centered {
+
+    text-align: center;
+
+}
+
+
+.yumehara-page .section-title.centered h2 {
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.yumehara-page .about-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, .8fr);
+
+    gap: 90px;
+
+    margin-top: 65px;
+
+}
+
+
+.yumehara-page .about-text {
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+.yumehara-page .about-text p {
+
+    margin-bottom: 25px;
+
+}
+
+
+.yumehara-page .about-text .about-big {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 28px;
+
+    line-height: 1.45;
+
+    color: var(--yumehara-dark);
+
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+.yumehara-page .notebook-card {
+
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #f8f4fb
+        );
+
+    border: 1px solid var(--yumehara-border);
+
+    box-shadow:
+        0 12px 30px rgba(70,50,90,.08);
+
+    transform: rotate(2deg);
+
+}
+
+
+.yumehara-page .notebook-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 42px;
+
+    border-top:
+        1px dashed
+        var(--yumehara-border);
+
+}
+
+
+.yumehara-page .notebook-label {
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .notebook-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+}
+
+
+.yumehara-page .notebook-card ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.yumehara-page .notebook-card li {
+
+    padding: 9px 0;
+
+    border-bottom:
+        1px dashed
+        var(--yumehara-border);
+
+    font-size: 13px;
+
+}
+
+
+.yumehara-page .notebook-card li::before {
+
+    content: "✦";
+
+    margin-right: 9px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .notebook-doodle {
+
+    margin-top: 25px;
+
+    font-family: "Patrick Hand", cursive;
+
+    color: var(--yumehara-accent);
+
+    font-size: 21px;
+
+    transform: rotate(-4deg);
+
+}
+
+
+/* =========================================================
+   CAMPUS LIFE
+========================================================= */
+
+.yumehara-page .campus-section {
+
+    max-width: 1200px;
+
+}
+
+
+.yumehara-page .campus-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+
+    margin-top: 60px;
+
+}
+
+
+.yumehara-page .campus-card {
+
+    position: relative;
+
+    padding: 35px 30px 40px;
+
+    min-height: 270px;
+
+    background: #fff;
+
+    border:
+        1px solid
+        var(--yumehara-border);
+
+    box-shadow:
+        0 12px 30px rgba(60,45,80,.06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.yumehara-page .campus-card:nth-child(1) {
+
+    transform: rotate(-1deg);
+
+}
+
+.yumehara-page .campus-card:nth-child(2) {
+
+    transform: translateY(12px) rotate(.7deg);
+
+}
+
+.yumehara-page .campus-card:nth-child(3) {
+
+    transform: rotate(-.8deg);
+
+}
+
+
+.yumehara-page .campus-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0);
+
+    box-shadow:
+        0 20px 40px rgba(60,45,80,.10);
+
+}
+
+
+.yumehara-page .campus-number {
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 18px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .campus-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 50%;
+
+    background: var(--yumehara-soft);
+
+    color: var(--yumehara-accent-dark);
+
+    font-size: 21px;
+
+}
+
+
+.yumehara-page .campus-card h3 {
+
+    margin: 0 0 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+}
+
+
+.yumehara-page .campus-card p {
+
+    margin: 0;
+
+    color: var(--yumehara-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   STUDENTS
+========================================================= */
+
+.yumehara-page .students-section {
+
+    max-width: 1200px;
+
+}
+
+
+.yumehara-page .student-total {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin:
+        40px 0 35px;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+.yumehara-page .student-total strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 50px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .student-total span {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   STUDENT GRID
+========================================================= */
+
+.yumehara-page .students-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.yumehara-page .student-card {
+
+    display: block;
+
+    background: #fff;
+
+    border:
+        1px solid
+        var(--yumehara-border);
+
+    color: var(--yumehara-dark);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(60,45,80,.06);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.yumehara-page .student-card:nth-child(odd) {
+
+    transform: rotate(-1deg);
+
+}
+
+
+.yumehara-page .student-card:nth-child(even) {
+
+    transform: rotate(1deg);
+
+}
+
+
+.yumehara-page .student-card:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(0);
+
+    box-shadow:
+        0 18px 35px rgba(60,45,80,.12);
+
+}
+
+
+/* future students */
+
+.yumehara-page .student-future {
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            #faf8fd,
+            #faf8fd 8px,
+            #f5f1fa 8px,
+            #f5f1fa 16px
+        );
+
+}
+
+
+.yumehara-page .student-image {
+
+    position: relative;
+
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eee7fa,
+            #faf7ff
+        );
+
+    overflow: hidden;
+
+}
+
+
+.yumehara-page .student-image::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    color: rgba(157,139,214,.35);
+
+    font-size: 22px;
+
+}
+
+
+.yumehara-page .student-index {
+
+    position: absolute;
+
+    top: 12px;
+    left: 14px;
+
+    z-index: 2;
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 17px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .image-placeholder {
+
+    font-family: "Patrick Hand", cursive;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .technical-corner {
+
+    position: absolute;
+
+    bottom: 10px;
+    right: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    color: rgba(90,75,110,.5);
+
+}
+
+
+/* student content */
+
+.yumehara-page .student-content {
+
+    padding: 20px;
+
+}
+
+
+.yumehara-page .student-content > span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .student-content h3 {
+
+    margin: 0 0 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+}
+
+
+.yumehara-page .student-content p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+/* =========================================================
+   MEMORY / ARCHIVE
+========================================================= */
+
+.yumehara-page .memories-section {
+
+    max-width: 1200px;
+
+}
+
+
+.yumehara-page .memory-board {
+
+    position: relative;
+
+    min-height: 470px;
+
+    margin-top: 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0eafb,
+            #faf8ff
+        );
+
+    border:
+        1px solid
+        var(--yumehara-border);
+
+    overflow: hidden;
+
+}
+
+
+/* dreamy stars in archive */
+
+.yumehara-page .memory-board::before {
+
+    content:
+        "✦   ✧      ✦       ⋆";
+
+    position: absolute;
+
+    top: 30px;
+    left: 40px;
+
+    color: rgba(157,139,214,.35);
+
+    font-size: 22px;
+
+    letter-spacing: 12px;
+
+}
+
+
+.yumehara-page .memory-photo {
+
+    position: absolute;
+
+    width: 250px;
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border:
+        8px solid
+        #fff;
+
+    box-shadow:
+        0 12px 30px rgba(50,40,70,.12);
+
+}
+
+
+.yumehara-page .memory-photo span {
+
+    font-family: "Patrick Hand", cursive;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .memory-one {
+
+    left: 8%;
+    top: 90px;
+
+    transform: rotate(-7deg);
+
+}
+
+
+.yumehara-page .memory-two {
+
+    left: 36%;
+    top: 70px;
+
+    transform: rotate(4deg);
+
+}
+
+
+.yumehara-page .memory-three {
+
+    right: 8%;
+    top: 115px;
+
+    transform: rotate(-3deg);
+
+}
+
+
+.yumehara-page .memory-paper {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    width: 270px;
+
+    padding: 22px;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(50,40,70,.10);
+
+    text-align: center;
+
+}
+
+
+.yumehara-page .memory-paper small {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent);
+
+}
+
+
+.yumehara-page .memory-paper strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+
+}
+
+
+.yumehara-page .memory-paper span {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--yumehara-accent);
+
+    font-size: 22px;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.yumehara-page .academy-bottom-nav {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding:
+        30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.yumehara-page .academy-bottom-nav a {
+
+    color: var(--yumehara-dark);
+
+    text-decoration: none;
+
+}
+
+
+.yumehara-page .back-academies {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-accent) !important;
+
+}
+
+
+.yumehara-page .next-academy {
+
+    text-align: right;
+
+}
+
+
+.yumehara-page .next-academy span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--yumehara-muted);
+
+}
+
+
+.yumehara-page .next-academy strong {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.yumehara-page .site-footer {
+
+    border-top:
+        1px solid
+        var(--yumehara-border);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .yumehara-page .academy-polaroid {
+
+        opacity: .8;
+
+        transform: scale(.8) rotate(5deg);
+
+    }
+
+    .yumehara-page .academy-note {
+
+        opacity: .8;
+
+        transform: scale(.8) rotate(-5deg);
+
+    }
+
+    .yumehara-page .students-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .yumehara-page .academy-hero {
+
+        padding:
+            110px 18px 90px;
+
+    }
+
+
+    .yumehara-page .academy-paper {
+
+        padding:
+            55px 30px;
+
+        transform: none;
+
+    }
+
+
+    .yumehara-page .academy-heading h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .yumehara-page .academy-facts {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .yumehara-page .academy-polaroid,
+    .yumehara-page .academy-note,
+    .yumehara-page .academy-mini-note {
+
+        display: none;
+
+    }
+
+
+    .yumehara-page .about-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .yumehara-page .campus-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .yumehara-page .campus-card:nth-child(2) {
+
+        transform: none;
+
+    }
+
+
+    .yumehara-page .students-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .yumehara-page .memory-board {
+
+        min-height: 650px;
+
+    }
+
+
+    .yumehara-page .memory-photo {
+
+        width: 190px;
+        height: 140px;
+
+    }
+
+
+    .yumehara-page .memory-one {
+
+        left: 5%;
+        top: 80px;
+
+    }
+
+
+    .yumehara-page .memory-two {
+
+        right: 5%;
+        left: auto;
+        top: 190px;
+
+    }
+
+
+    .yumehara-page .memory-three {
+
+        left: 12%;
+        right: auto;
+        top: 310px;
+
+    }
+
+
+    .yumehara-page .memory-paper {
+
+        bottom: 25px;
+
+        width: 230px;
+
+    }
+
+
+    .yumehara-page .academy-bottom-nav {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .yumehara-page .next-academy {
+
+        text-align: left;
+
+    }
+
+}
