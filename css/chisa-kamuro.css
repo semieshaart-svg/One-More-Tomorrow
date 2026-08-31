@@ -6,24 +6,17 @@
 
 
 /* =========================================================
-   ✦ CHISA PALETTE
+   ✦ CHISA PALETTE — SCRAPBOOK EDITION
 ========================================================= */
 
 :root {
-    --chisa-lavender: #cbb8ee;
-    --chisa-lavender-dark: #9178bd;
-    --chisa-lavender-soft: #eee6fa;
+    --chisa-green: #41918a;
+    --chisa-green-dark: #005253;
+    --chisa-green-soft: #e3f1ef;
 
-    --chisa-pink: #e8b9c9;
-    --chisa-pink-dark: #bd8197;
-    --chisa-pink-soft: #f8e8ee;
-
-    --chisa-teal: #41918a;
-    --chisa-teal-dark: #286f6b;
-    --chisa-teal-soft: #e4f2f0;
-
-    --chisa-brown: #b99480;
-    --chisa-brown-dark: #796056;
+    --chisa-pink: #e8aeb7;
+    --chisa-pink-dark: #c87582;
+    --chisa-pink-soft: #fce3df;
 
     --chisa-cream: #fffaf3;
     --chisa-paper: #fffdf9;
@@ -31,17 +24,16 @@
 
     --chisa-line: #e4d8d1;
 
-    --chisa-text: #625b61;
-    --chisa-text-soft: #928991;
-    --chisa-dark: #514753;
+    --chisa-text: #596563;
+    --chisa-text-soft: #8b9997;
+    --chisa-dark: #005253;
 
     --chisa-shadow:
-        0 12px 30px rgba(75, 57, 72, 0.13);
+        0 12px 30px rgba(45, 70, 67, 0.13);
 
     --chisa-soft-shadow:
-        0 6px 18px rgba(75, 57, 72, 0.10);
+        0 6px 18px rgba(45, 70, 67, 0.10);
 }
-
 
 /* =========================================================
    ✦ PAGE RESET
