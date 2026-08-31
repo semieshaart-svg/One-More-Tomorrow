@@ -63,10 +63,11 @@ body.sayori-page {
 
     background:
         linear-gradient(
-            rgba(232, 245, 255, 0.35),
-            rgba(255, 253, 251, 0.35)
+            rgba(242, 231, 245, 0.25),
+            rgba(242, 231, 245, 0.25)
         ),
-        #ffffff !important;
+        url("https://i.pinimg.com/1200x/cb/88/71/cb8871e84d83ade275838f3c915b5999.jpg")
+        center center / cover fixed no-repeat !important;
 }
 
 
