@@ -1,24 +1,102 @@
 /* =========================================================
-   CHISA KAMURO
-   CSS ONLY
-   NO JAVASCRIPT
+   ✦ CHISA KAMURO
+   COZY SCRAPBOOK / PAPER EDITION
+   CSS ONLY — NO JAVASCRIPT
 ========================================================= */
 
 
 /* =========================================================
-   PAGE RESET
+   ✦ CHISA PALETTE
+========================================================= */
+
+:root {
+    --chisa-lavender: #cbb8ee;
+    --chisa-lavender-dark: #9178bd;
+    --chisa-lavender-soft: #eee6fa;
+
+    --chisa-pink: #e8b9c9;
+    --chisa-pink-dark: #bd8197;
+    --chisa-pink-soft: #f8e8ee;
+
+    --chisa-teal: #41918a;
+    --chisa-teal-dark: #286f6b;
+    --chisa-teal-soft: #e4f2f0;
+
+    --chisa-brown: #b99480;
+    --chisa-brown-dark: #796056;
+
+    --chisa-cream: #fffaf3;
+    --chisa-paper: #fffdf9;
+    --chisa-paper-warm: #f8f0e7;
+
+    --chisa-line: #e4d8d1;
+
+    --chisa-text: #625b61;
+    --chisa-text-soft: #928991;
+    --chisa-dark: #514753;
+
+    --chisa-shadow:
+        0 12px 30px rgba(75, 57, 72, 0.13);
+
+    --chisa-soft-shadow:
+        0 6px 18px rgba(75, 57, 72, 0.10);
+}
+
+
+/* =========================================================
+   ✦ PAGE RESET
 ========================================================= */
 
 html,
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: #ffffff !important;
+}
+
+html {
+    min-height: 100%;
 }
 
 body.chisa-page {
-    background: #ffffff !important;
-    color: #2d3333;
+    min-height: 100vh;
+
+    color: var(--chisa-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(242, 231, 245, 0.25),
+            rgba(242, 231, 245, 0.25)
+        ),
+        url("https://i.pinimg.com/1200x/cb/88/71/cb8871e84d83ade275838f3c915b5999.jpg")
+        center center / cover fixed no-repeat !important;
+}
+
+body.chisa-page::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255,255,255,0.38),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(203,184,238,0.16),
+            transparent 32%
+        );
 }
 
 body.chisa-page * {
@@ -27,233 +105,895 @@ body.chisa-page * {
 
 
 /* =========================================================
-   MAIN CONTAINER
+   ✦ MAIN PROFILE
 ========================================================= */
 
 .chisa-profile {
-    width: min(1100px, calc(100% - 30px));
-    margin: 40px auto;
-    background: #ffffff;
-    color: #2d3333;
-    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+
+    width: min(1100px, calc(100% - 34px));
+
+    margin: 70px auto;
+
+    color: var(--chisa-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 
 /* =========================================================
-   HERO
+   ✦ DECORATIVE PROFILE ELEMENTS
+========================================================= */
+
+.chisa-profile::before {
+    content: "✦  ·  ♡  ·  ✦";
+
+    position: absolute;
+
+    top: -38px;
+    left: 25px;
+
+    color: rgba(255,255,255,0.88);
+
+    font-size: 15px;
+
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 2px 5px rgba(70,50,60,0.18);
+
+    pointer-events: none;
+}
+
+.chisa-profile::after {
+    content: "CHISA'S LITTLE CORNER ♡";
+
+    position: absolute;
+
+    right: 18px;
+    bottom: -35px;
+
+    color: rgba(255,255,255,0.9);
+
+    font-family: Georgia, serif;
+
+    font-size: 10px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    transform: rotate(-2deg);
+
+    text-shadow:
+        0 2px 5px rgba(70,50,60,0.18);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ✦ HERO — PAPER SHEET
 ========================================================= */
 
 .chisa-hero {
+    position: relative;
+
     display: grid;
-    grid-template-columns: 1fr 360px;
+
+    grid-template-columns:
+        1fr 360px;
+
     min-height: 390px;
-    background: #fce3df;
-    border: 1px solid #e7d8d5;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,253,249,0.98),
+            rgba(249,241,250,0.97)
+        );
+
+    border:
+        1px solid rgba(205,188,196,0.75);
+
+    box-shadow:
+        0 18px 40px rgba(61,45,54,0.18);
+
+    transform:
+        rotate(-0.35deg);
 }
 
+
+/* =========================================================
+   ✦ HERO WASHI TAPE
+========================================================= */
+
+.chisa-hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: 42%;
+
+    width: 125px;
+    height: 35px;
+
+    z-index: 5;
+
+    background:
+        linear-gradient(
+            rgba(203,184,238,0.72),
+            rgba(232,217,248,0.72)
+        );
+
+    opacity: 0.85;
+
+    transform:
+        rotate(2deg);
+
+    box-shadow:
+        0 2px 5px rgba(60,45,55,0.08);
+}
+
+
+/* =========================================================
+   ✦ HERO DECORATION
+========================================================= */
+
+.chisa-hero::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 25px;
+    top: 22px;
+
+    z-index: 6;
+
+    color:
+        var(--chisa-pink);
+
+    font-size: 28px;
+
+    transform:
+        rotate(8deg);
+}
+
+
+/* =========================================================
+   ✦ HERO INFO
+========================================================= */
+
 .chisa-hero-info {
-    padding: 65px 55px;
+    position: relative;
+
+    padding:
+        65px 55px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
+
+/* little handwritten note */
+
+.chisa-hero-info::before {
+    content: "dear diary...";
+
+    position: absolute;
+
+    top: 32px;
+    left: 55px;
+
+    color:
+        var(--chisa-pink-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    transform:
+        rotate(-4deg);
+}
+
+
+/* =========================================================
+   ✦ LABEL
+========================================================= */
+
 .chisa-label {
     display: inline-block;
+
     margin-bottom: 18px;
-    color: #41918a;
-    font-size: 11px;
+
+    color:
+        var(--chisa-teal);
+
+    font-size: 10px;
+
     font-weight: bold;
+
     letter-spacing: 3px;
+
+    text-transform: uppercase;
 }
+
+
+/* =========================================================
+   ✦ TITLE
+========================================================= */
 
 .chisa-hero h1 {
     margin: 0;
-    color: #005253;
-    font-size: clamp(42px, 6vw, 72px);
-    line-height: 0.95;
-    font-weight: 700;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -2px;
 }
+
+
+/* =========================================================
+   ✦ SUBTITLE
+========================================================= */
 
 .chisa-subtitle {
     margin-top: 20px;
-    color: #6f7e7c;
-    font-size: 14px;
-    letter-spacing: 1px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
 }
+
+
+/* =========================================================
+   ✦ QUOTE
+========================================================= */
 
 .chisa-quote {
-    max-width: 520px;
-    margin-top: 35px;
-    padding-left: 20px;
-    border-left: 3px solid #41918a;
-    color: #596563;
-    font-family: Georgia, serif;
-    font-size: 15px;
-    line-height: 1.8;
+    position: relative;
+
+    max-width:
+        520px;
+
+    margin-top:
+        35px;
+
+    padding:
+        16px 20px 16px 25px;
+
+    border-left:
+        3px solid var(--chisa-teal);
+
+    background:
+        rgba(255,255,255,0.52);
+
+    color:
+        var(--chisa-text);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+    box-shadow:
+        0 4px 12px rgba(70,50,60,0.05);
 }
 
+
+/* =========================================================
+   ✦ HERO IMAGE — POLAROID
+========================================================= */
+
 .chisa-hero-image {
-    min-height: 390px;
-    background: #ffffff;
-    overflow: hidden;
+    position: relative;
+
+    min-height:
+        390px;
+
+    padding:
+        18px;
+
+    background:
+        var(--chisa-paper-warm);
+
+    overflow:
+        visible;
+
+    border-left:
+        1px solid var(--chisa-line);
 }
+
+
+/* tape */
+
+.chisa-hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    right: 55px;
+
+    width: 95px;
+    height: 27px;
+
+    z-index: 5;
+
+    background:
+        rgba(232,185,201,0.68);
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* image */
 
 .chisa-hero-image img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: cover;
+
+    border:
+        8px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(60,45,55,0.17);
+
+    transform:
+        rotate(1.4deg);
 }
 
 
 /* =========================================================
-   QUICK DATA
+   ✦ QUICK DATA
 ========================================================= */
 
 .chisa-quick-data {
+    position: relative;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid #e7d8d5;
-    border-top: 0;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top:
+        18px;
+
+    background:
+        var(--chisa-paper);
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        var(--chisa-soft-shadow);
+
+    transform:
+        rotate(0.2deg);
 }
+
+
+/* little label */
+
+.chisa-quick-data::before {
+    content: "✎ little facts";
+
+    position: absolute;
+
+    top: -25px;
+    right: 20px;
+
+    color:
+        rgba(255,255,255,0.9);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        10px;
+
+    font-style:
+        italic;
+
+    transform:
+        rotate(-3deg);
+}
+
 
 .chisa-data-item {
-    padding: 18px;
-    background: #ffffff;
-    border-right: 1px solid #e7d8d5;
-    border-bottom: 1px solid #e7d8d5;
+    position: relative;
+
+    padding:
+        20px;
+
+    background:
+        rgba(255,253,249,0.96);
+
+    border-right:
+        1px dashed var(--chisa-line);
+
+    border-bottom:
+        1px dashed var(--chisa-line);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
-.chisa-data-item:nth-child(4n) {
-    border-right: 0;
+
+.chisa-data-item:hover {
+    background:
+        var(--chisa-lavender-soft);
+
+    transform:
+        translateY(-3px)
+        rotate(-0.5deg);
 }
+
+
+.chisa-data-item:nth-child(4n) {
+    border-right:
+        0;
+}
+
 
 .chisa-data-item span {
     display: block;
-    margin-bottom: 6px;
-    color: #8b9997;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+
+    margin-bottom:
+        6px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
 }
 
+
 .chisa-data-item strong {
-    color: #005253;
-    font-size: 14px;
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   STATUS
+   ✦ STATUS — LITTLE NOTE
 ========================================================= */
 
 .chisa-status {
-    margin-top: 20px;
-    padding: 22px 25px;
-    background: #f8f4f2;
-    border: 1px solid #e7d8d5;
+    position: relative;
+
+    margin-top:
+        28px;
+
+    padding:
+        28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7d9,
+            #fff4dc
+        );
+
+    border:
+        1px solid #eadfbd;
+
+    box-shadow:
+        4px 7px 18px rgba(90,70,45,0.12);
+
+    transform:
+        rotate(0.55deg);
 }
 
-.chisa-status-title {
-    margin-bottom: 15px;
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+
+/* pin */
+
+.chisa-status::before {
+    content: "";
+
+    position: absolute;
+
+    top: -8px;
+    left: 50%;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--chisa-pink);
+
+    box-shadow:
+        0 2px 5px rgba(60,45,55,0.2);
+
+    transform:
+        translateX(-50%);
 }
+
+
+.chisa-status-title {
+    margin-bottom:
+        18px;
+
+    color:
+        var(--chisa-teal);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
 
 .chisa-status-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        20px;
 }
+
 
 .chisa-status-grid span {
     display: block;
-    margin-bottom: 5px;
-    color: #8b9997;
-    font-size: 10px;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
 }
 
+
 .chisa-status-grid strong {
-    color: #005253;
-    font-size: 14px;
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   HIDE RADIO BUTTONS
+   ✦ HIDE RADIO BUTTONS
 ========================================================= */
 
 .chisa-profile > input[type="radio"] {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+    position:
+        absolute !important;
+
+    width:
+        1px !important;
+
+    height:
+        1px !important;
+
+    opacity:
+        0 !important;
+
+    pointer-events:
+        none !important;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   ✦ NAVIGATION — PAPER TABS
 ========================================================= */
 
 .chisa-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 30px 0 0;
-    padding: 8px;
-    background: #f8f4f2;
-    border: 1px solid #e7d8d5;
+    position: relative;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin:
+        38px 0 0;
+
+    padding:
+        10px;
+
+    background:
+        rgba(255,250,246,0.92);
+
+    border:
+        1px solid rgba(220,205,198,0.9);
+
+    box-shadow:
+        0 7px 18px rgba(60,45,55,0.10);
+
+    transform:
+        rotate(-0.15deg);
 }
+
+
+/* navigation label */
+
+.chisa-navigation::before {
+    content:
+        "♡ CHISA'S NOTES";
+
+    position:
+        absolute;
+
+    top:
+        -20px;
+
+    left:
+        12px;
+
+    color:
+        rgba(255,255,255,0.92);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        10px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        1px;
+}
+
 
 .chisa-tab {
-    flex: 1 1 120px;
-    padding: 14px 16px;
-    background: #ffffff;
-    border: 1px solid #ded4d1;
-    color: #65716f;
-    cursor: pointer;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
+    position:
+        relative;
+
+    flex:
+        1 1 120px;
+
+    padding:
+        14px 16px;
+
+    background:
+        var(--chisa-paper);
+
+    border:
+        1px solid #ded5d1;
+
+    color:
+        var(--chisa-text-soft);
+
+    cursor:
+        pointer;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1.5px;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        all 0.2s ease;
+
+    box-shadow:
+        0 2px 5px rgba(60,45,55,0.05);
 }
 
+
+.chisa-tab:nth-child(odd) {
+    transform:
+        rotate(-0.7deg);
+}
+
+
+.chisa-tab:nth-child(even) {
+    transform:
+        rotate(0.5deg);
+}
+
+
 .chisa-tab:hover {
-    background: #fce3df;
-    border-color: #41918a;
-    color: #005253;
+    background:
+        var(--chisa-pink-soft);
+
+    border-color:
+        var(--chisa-pink);
+
+    color:
+        var(--chisa-dark);
+
+    transform:
+        translateY(-3px)
+        rotate(0deg);
 }
 
 
 /* =========================================================
-   ALL SECTIONS HIDDEN
+   ✦ SECTIONS
 ========================================================= */
 
 .chisa-section,
 .chisa-aesthetic {
-    display: none;
-    margin-top: 20px;
-    padding: 40px;
-    background: #ffffff;
-    border: 1px solid #e7d8d5;
+    display:
+        none;
+
+    position:
+        relative;
+
+    margin-top:
+        25px;
+
+    padding:
+        42px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,253,249,0.98),
+            rgba(250,246,242,0.98)
+        );
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 14px 32px rgba(60,45,55,0.13);
+
+    overflow:
+        hidden;
+}
+
+
+/* decorative corner */
+
+.chisa-section::before,
+.chisa-aesthetic::before {
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    top:
+        17px;
+
+    right:
+        22px;
+
+    color:
+        var(--chisa-pink);
+
+    font-size:
+        22px;
+
+    opacity:
+        0.7;
+
+    transform:
+        rotate(12deg);
+}
+
+
+/* paper texture */
+
+.chisa-section::after,
+.chisa-aesthetic::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(203,184,238,0.07) 0,
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(232,185,201,0.08) 0,
+            transparent 25%
+        );
 }
 
 
 /* =========================================================
-   SHOW SELECTED TAB
+   ✦ TAB DISPLAY
+   IMPORTANT: STRUCTURE UNCHANGED
 ========================================================= */
 
 #chisa-profile-tab:checked ~ .chisa-navigation
     + .chisa-section-profile,
 
 #chisa-personality-tab:checked ~ .chisa-navigation
-    + .chisa-section-profile + .chisa-section-personality,
+    + .chisa-section-profile
+    + .chisa-section-personality,
 
 #chisa-wardrobe-tab:checked ~ .chisa-navigation
     + .chisa-section-profile
@@ -280,12 +1020,13 @@ body.chisa-page * {
     + .chisa-section-relationships
     + .chisa-section-story
     + .chisa-section-trivia {
-    display: block;
+    display:
+        block;
 }
 
 
 /* =========================================================
-   ACTIVE TAB
+   ✦ ACTIVE TAB
 ========================================================= */
 
 #chisa-profile-tab:checked ~ .chisa-navigation label[for="chisa-profile-tab"],
@@ -294,779 +1035,1980 @@ body.chisa-page * {
 #chisa-relationships-tab:checked ~ .chisa-navigation label[for="chisa-relationships-tab"],
 #chisa-story-tab:checked ~ .chisa-navigation label[for="chisa-story-tab"],
 #chisa-trivia-tab:checked ~ .chisa-navigation label[for="chisa-trivia-tab"] {
-    background: #41918a;
-    border-color: #41918a;
-    color: #ffffff;
+    background:
+        var(--chisa-lavender);
+
+    border-color:
+        var(--chisa-lavender-dark);
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(145,120,189,0.25);
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   ✦ SECTION HEADING
 ========================================================= */
 
 .chisa-section-heading {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-bottom:
+        38px;
+
+    padding-bottom:
+        18px;
+
+    border-bottom:
+        1px dashed var(--chisa-line);
 }
+
 
 .chisa-section-heading > span {
-    color: #41918a;
-    font-size: 28px;
-    font-weight: bold;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--chisa-lavender-soft);
+
+    color:
+        var(--chisa-lavender-dark);
+
+    font-size:
+        25px;
+
+    box-shadow:
+        0 4px 10px rgba(100,80,120,0.10);
 }
+
 
 .chisa-section-heading small {
-    display: block;
-    margin-bottom: 5px;
-    color: #8b9997;
-    font-size: 10px;
-    letter-spacing: 2px;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
 }
 
+
 .chisa-section-heading h2 {
-    margin: 0;
-    color: #005253;
-    font-family: Georgia, serif;
-    font-size: 32px;
+    margin:
+        0;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        32px;
 }
 
 
 /* =========================================================
-   PROFILE
+   ✦ PROFILE
 ========================================================= */
 
 .chisa-profile-layout {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.6fr 1fr;
+
+    gap:
+        35px;
 }
+
 
 .chisa-description p {
-    margin: 0 0 18px;
-    color: #596563;
-    font-size: 14px;
-    line-height: 1.9;
+    margin:
+        0 0 18px;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
 }
+
+
+.chisa-description p:first-child {
+    padding-left:
+        20px;
+
+    border-left:
+        3px solid var(--chisa-teal);
+}
+
+
+/* facts */
 
 .chisa-facts {
-    display: grid;
-    gap: 10px;
+    display:
+        grid;
+
+    gap:
+        12px;
 }
+
 
 .chisa-fact-card {
-    padding: 15px 18px;
-    background: #f8f4f2;
-    border-left: 3px solid #41918a;
+    position:
+        relative;
+
+    padding:
+        16px 18px;
+
+    background:
+        var(--chisa-paper-warm);
+
+    border-left:
+        3px solid var(--chisa-lavender);
+
+    box-shadow:
+        0 3px 8px rgba(70,50,60,0.05);
+
+    transition:
+        transform 0.2s ease;
 }
+
+
+.chisa-fact-card:hover {
+    transform:
+        translateX(4px)
+        rotate(-0.4deg);
+}
+
 
 .chisa-fact-card span {
-    display: block;
-    margin-bottom: 5px;
-    color: #8b9997;
-    font-size: 10px;
-    text-transform: uppercase;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
 }
+
 
 .chisa-fact-card strong {
-    color: #005253;
-    font-size: 13px;
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        13px;
 }
+
+
+/* =========================================================
+   ✦ GOAL
+========================================================= */
 
 .chisa-goal {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    margin-top: 35px;
-    padding: 20px;
-    background: #fce3df;
+    position:
+        relative;
+
+    display:
+        flex;
+
+    gap:
+        18px;
+
+    align-items:
+        center;
+
+    margin-top:
+        35px;
+
+    padding:
+        22px;
+
+    background:
+        var(--chisa-lavender-soft);
+
+    border:
+        1px dashed var(--chisa-lavender);
+
+    transform:
+        rotate(-0.3deg);
 }
+
 
 .chisa-goal-icon {
-    color: #dc6a75;
-    font-size: 30px;
+    color:
+        var(--chisa-pink-dark);
+
+    font-size:
+        30px;
 }
+
 
 .chisa-goal span {
-    display: block;
-    margin-bottom: 5px;
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--chisa-lavender-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .chisa-goal strong {
-    display: block;
-    color: #005253;
+    display:
+        block;
+
+    color:
+        var(--chisa-dark);
 }
 
+
 .chisa-goal small {
-    display: block;
-    margin-top: 5px;
-    color: #777;
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--chisa-text-soft);
 }
+
+
+/* =========================================================
+   ✦ PROGRESS
+========================================================= */
 
 .chisa-progress,
 .chisa-meter {
-    height: 6px;
-    margin-top: 10px;
-    background: #ffffff;
-    overflow: hidden;
+    height:
+        7px;
+
+    margin-top:
+        10px;
+
+    background:
+        #eee8e5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
 }
+
 
 .chisa-progress div,
 .chisa-meter div {
-    height: 100%;
-    background: #41918a;
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--chisa-teal),
+            var(--chisa-lavender)
+        );
+
+    border-radius:
+        10px;
 }
 
 
 /* =========================================================
-   PERSONALITY
+   ✦ PERSONALITY
 ========================================================= */
 
 .chisa-personality-layout {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap:
+        35px;
 }
+
 
 .chisa-trait {
-    margin-bottom: 22px;
+    margin-bottom:
+        22px;
 }
+
 
 .chisa-trait > div:first-child {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 7px;
-    color: #596563;
-    font-size: 11px;
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        11px;
 }
+
 
 .chisa-meter {
-    margin: 0;
-    background: #f0e9e6;
+    margin:
+        0;
 }
+
 
 .chisa-like-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        12px;
 }
+
 
 .chisa-list-box {
-    padding: 20px;
-    background: #f8f4f2;
+    position:
+        relative;
+
+    padding:
+        20px;
+
+    background:
+        var(--chisa-pink-soft);
+
+    border:
+        1px solid #ecd8df;
+
+    transform:
+        rotate(-0.4deg);
 }
+
+
+.chisa-list-box:nth-child(2) {
+    background:
+        var(--chisa-lavender-soft);
+
+    transform:
+        rotate(0.4deg);
+}
+
 
 .chisa-list-box h3 {
-    margin: 0 0 12px;
-    color: #005253;
-    font-family: Georgia, serif;
+    margin:
+        0 0 12px;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
 }
 
+
 .chisa-list-box ul {
-    margin: 0;
-    padding-left: 17px;
-    color: #687270;
-    font-size: 12px;
-    line-height: 1.8;
+    margin:
+        0;
+
+    padding-left:
+        17px;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
 }
 
 
 /* =========================================================
-   WARDROBE
+   ✦ WARDROBE
 ========================================================= */
 
 .chisa-wardrobe-intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding: 20px;
-    background: #fce3df;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        var(--chisa-pink-soft);
+
+    border:
+        1px dashed var(--chisa-pink);
+
+    transform:
+        rotate(0.3deg);
 }
+
 
 .chisa-wardrobe-intro strong {
-    color: #005253;
-    font-family: Georgia, serif;
-    font-size: 20px;
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        20px;
 }
+
 
 .chisa-wardrobe-intro p {
-    margin: 7px 0 0;
-    color: #687270;
-    font-size: 12px;
+    margin:
+        7px 0 0;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        12px;
 }
+
 
 .chisa-outfit-count {
-    color: #41918a;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        30px;
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
 }
+
 
 .chisa-outfit-count small {
-    display: block;
-    color: #777;
-    font-size: 10px;
-    font-weight: normal;
+    display:
+        block;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
+
+    font-weight:
+        normal;
 }
+
 
 .chisa-wardrobe-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        22px;
 }
+
 
 .chisa-outfit {
-    overflow: hidden;
-    background: #f8f4f2;
-    border: 1px solid #e7d8d5;
+    position:
+        relative;
+
+    overflow:
+        visible;
+
+    background:
+        var(--chisa-paper);
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 7px 15px rgba(60,45,55,0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+.chisa-outfit:nth-child(odd) {
+    transform:
+        rotate(-1deg);
+}
+
+
+.chisa-outfit:nth-child(even) {
+    transform:
+        rotate(0.8deg);
+}
+
+
+.chisa-outfit:hover {
+    transform:
+        translateY(-7px)
+        rotate(0deg);
+
+    box-shadow:
+        0 14px 25px rgba(60,45,55,0.16);
+}
+
 
 .chisa-outfit-image {
-    aspect-ratio: 1 / 1.15;
-    overflow: hidden;
-    background: #ffffff;
+    aspect-ratio:
+        1 / 1.15;
+
+    padding:
+        8px;
+
+    overflow:
+        hidden;
+
+    background:
+        #ffffff;
 }
+
 
 .chisa-outfit-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
+
 
 .chisa-outfit-info {
-    padding: 18px;
+    padding:
+        18px;
 }
+
 
 .chisa-outfit-info > span {
-    color: #41918a;
-    font-size: 9px;
-    letter-spacing: 1.5px;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
 }
+
 
 .chisa-outfit-info h3 {
-    margin: 8px 0 5px;
-    color: #005253;
-    font-family: Georgia, serif;
+    margin:
+        8px 0 5px;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
 }
 
+
 .chisa-outfit-info p {
-    margin: 0;
-    color: #777;
-    font-size: 11px;
+    margin:
+        0;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
 }
 
 
 /* =========================================================
-   RELATIONSHIPS
+   ✦ RELATIONSHIPS
 ========================================================= */
 
 .chisa-relationship-note {
-    margin-bottom: 25px;
-    padding: 20px;
-    background: #fce3df;
+    position:
+        relative;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        #fff5cf;
+
+    border:
+        1px solid #e8dcaf;
+
+    box-shadow:
+        3px 5px 12px rgba(80,65,40,0.09);
+
+    transform:
+        rotate(-0.4deg);
 }
+
+
+.chisa-relationship-note::before {
+    content:
+        "📌";
+
+    position:
+        absolute;
+
+    top:
+        -14px;
+
+    left:
+        25px;
+
+    font-size:
+        22px;
+}
+
 
 .chisa-relationship-note span {
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .chisa-relationship-note p {
-    margin: 8px 0 0;
-    color: #687270;
-    font-size: 13px;
+    margin:
+        8px 0 0;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
 }
+
 
 .chisa-relationship {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    margin-bottom: 20px;
-    border: 1px solid #e7d8d5;
-    background: #f8f4f2;
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid var(--chisa-line);
+
+    background:
+        var(--chisa-paper);
+
+    box-shadow:
+        0 7px 16px rgba(60,45,55,0.09);
 }
+
 
 .chisa-person-image {
-    min-height: 250px;
-    background: #ffffff;
+    min-height:
+        250px;
+
+    padding:
+        8px;
+
+    background:
+        var(--chisa-paper-warm);
 }
+
 
 .chisa-person-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
+
 
 .chisa-person-content {
-    padding: 28px;
+    padding:
+        28px;
 }
+
 
 .chisa-person-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
 }
+
 
 .chisa-person-header span {
-    color: #41918a;
-    font-size: 9px;
-    letter-spacing: 1px;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1px;
 }
+
 
 .chisa-person-header h3 {
-    margin: 6px 0 0;
-    color: #005253;
-    font-family: Georgia, serif;
-    font-size: 25px;
+    margin:
+        6px 0 0;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        25px;
 }
+
 
 .chisa-person-header > strong {
-    color: #dc6a75;
-    font-size: 10px;
-    letter-spacing: 1px;
+    color:
+        var(--chisa-brown);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
 }
+
 
 .chisa-heart-level {
-    margin: 15px 0;
-    color: #dc6a75;
-    letter-spacing: 3px;
+    margin:
+        15px 0;
+
+    color:
+        var(--chisa-pink-dark);
+
+    letter-spacing:
+        3px;
 }
+
 
 .chisa-heart-level small {
-    display: block;
-    margin-top: 5px;
-    color: #888;
-    font-size: 10px;
-    letter-spacing: 0;
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0;
 }
+
 
 .chisa-person-content p {
-    color: #687270;
-    font-size: 13px;
-    line-height: 1.8;
+    color:
+        var(--chisa-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 }
 
+
 .chisa-relationship-footer {
-    padding: 20px;
-    color: #41918a;
-    font-family: Georgia, serif;
-    text-align: center;
+    padding:
+        20px;
+
+    color:
+        var(--chisa-teal);
+
+    font-family:
+        Georgia, serif;
+
+    text-align:
+        center;
+
+    border-top:
+        1px dashed var(--chisa-line);
 }
 
 
 /* =========================================================
-   STORY
+   ✦ STORY
 ========================================================= */
 
 .chisa-story {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 30px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap:
+        30px;
 }
+
 
 .chisa-story-image {
-    min-height: 350px;
-    background: #f8f4f2;
+    min-height:
+        350px;
+
+    padding:
+        9px;
+
+    background:
+        var(--chisa-paper);
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 7px 17px rgba(60,45,55,0.10);
+
+    transform:
+        rotate(-1deg);
 }
+
 
 .chisa-story-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
 
+
 .chisa-story-content {
-    align-self: center;
+    align-self:
+        center;
 }
+
 
 .chisa-story-content > span,
 .chisa-old-note > span {
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .chisa-story-content h3 {
-    margin: 10px 0 20px;
-    color: #005253;
-    font-family: Georgia, serif;
-    font-size: 28px;
+    margin:
+        10px 0 20px;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        28px;
 }
+
 
 .chisa-story-content p {
-    color: #687270;
-    font-size: 13px;
-    line-height: 1.8;
+    color:
+        var(--chisa-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 }
+
 
 .chisa-story-content blockquote {
-    margin: 25px 0 0;
-    padding: 15px 20px;
-    border-left: 3px solid #41918a;
-    background: #fce3df;
-    color: #596563;
-    font-family: Georgia, serif;
-}
+    margin:
+        25px 0 0;
 
-.chisa-timeline {
-    display: grid;
-    gap: 12px;
-    margin-top: 35px;
-}
+    padding:
+        17px 20px;
 
-.chisa-timeline-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 18px;
-    padding: 18px;
-    background: #f8f4f2;
-}
+    border-left:
+        3px solid var(--chisa-teal);
 
-.chisa-timeline-item > span {
-    color: #41918a;
-    font-size: 22px;
-    font-weight: bold;
-}
+    background:
+        var(--chisa-teal-soft);
 
-.chisa-timeline-item small {
-    color: #8b9997;
-    font-size: 9px;
-    letter-spacing: 1.5px;
-}
+    color:
+        var(--chisa-text);
 
-.chisa-timeline-item h3 {
-    margin: 5px 0;
-    color: #005253;
-}
+    font-family:
+        Georgia, serif;
 
-.chisa-timeline-item p {
-    margin: 0;
-    color: #687270;
-    font-size: 12px;
-}
-
-.chisa-then-now {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin-top: 35px;
-}
-
-.chisa-then-now > div {
-    padding: 25px;
-    background: #fce3df;
-}
-
-.chisa-then-now span {
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.chisa-then-now h3 {
-    margin: 8px 0 20px;
-    color: #005253;
-    font-family: Georgia, serif;
-}
-
-.chisa-then-now p {
-    color: #687270;
-    font-size: 12px;
-}
-
-.chisa-then-now strong {
-    margin-right: 5px;
-    color: #005253;
-}
-
-.chisa-old-note {
-    margin-top: 30px;
-    padding: 25px;
-    text-align: center;
-    background: #f8f4f2;
-}
-
-.chisa-old-note p {
-    color: #596563;
-    font-family: Georgia, serif;
-    font-size: 15px;
-    line-height: 1.7;
+    line-height:
+        1.7;
 }
 
 
 /* =========================================================
-   TRIVIA
+   ✦ TIMELINE
+========================================================= */
+
+.chisa-timeline {
+    display:
+        grid;
+
+    gap:
+        12px;
+
+    margin-top:
+        35px;
+}
+
+
+.chisa-timeline-item {
+    display:
+        grid;
+
+    grid-template-columns:
+        60px 1fr;
+
+    gap:
+        18px;
+
+    padding:
+        18px;
+
+    background:
+        var(--chisa-paper-warm);
+
+    border-left:
+        3px solid var(--chisa-lavender);
+
+    box-shadow:
+        0 3px 9px rgba(60,45,55,0.05);
+}
+
+
+.chisa-timeline-item > span {
+    color:
+        var(--chisa-lavender-dark);
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
+}
+
+
+.chisa-timeline-item small {
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.chisa-timeline-item h3 {
+    margin:
+        5px 0;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.chisa-timeline-item p {
+    margin:
+        0;
+
+    color:
+        var(--chisa-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ THEN / NOW
+========================================================= */
+
+.chisa-then-now {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
+
+    margin-top:
+        35px;
+}
+
+
+.chisa-then-now > div {
+    padding:
+        25px;
+
+    background:
+        var(--chisa-lavender-soft);
+
+    border:
+        1px dashed var(--chisa-lavender);
+}
+
+
+.chisa-then-now > div:nth-child(2) {
+    background:
+        var(--chisa-pink-soft);
+
+    border-color:
+        var(--chisa-pink);
+}
+
+
+.chisa-then-now span {
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.chisa-then-now h3 {
+    margin:
+        8px 0 20px;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.chisa-then-now p {
+    color:
+        var(--chisa-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.chisa-then-now strong {
+    margin-right:
+        5px;
+
+    color:
+        var(--chisa-dark);
+}
+
+
+/* =========================================================
+   ✦ OLD NOTE
+========================================================= */
+
+.chisa-old-note {
+    position:
+        relative;
+
+    margin-top:
+        30px;
+
+    padding:
+        27px;
+
+    text-align:
+        center;
+
+    background:
+        #fff5cf;
+
+    border:
+        1px solid #e8dcaf;
+
+    box-shadow:
+        3px 5px 12px rgba(80,65,40,0.08);
+
+    transform:
+        rotate(0.4deg);
+}
+
+
+.chisa-old-note p {
+    color:
+        var(--chisa-text);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ TRIVIA
 ========================================================= */
 
 .chisa-trivia-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
 }
+
 
 .chisa-trivia-grid article {
-    padding: 25px;
-    background: #f8f4f2;
+    padding:
+        25px;
+
+    background:
+        var(--chisa-paper-warm);
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 4px 10px rgba(60,45,55,0.06);
 }
+
+
+.chisa-trivia-grid article:nth-child(even) {
+    background:
+        var(--chisa-lavender-soft);
+}
+
 
 .chisa-trivia-grid article > span {
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .chisa-trivia-grid ul {
-    margin: 15px 0 0;
-    padding-left: 18px;
-    color: #687270;
-    font-size: 12px;
-    line-height: 1.9;
-}
+    margin:
+        15px 0 0;
 
-.chisa-secret {
-    background: #fce3df !important;
-    text-align: center;
-}
+    padding-left:
+        18px;
 
-.chisa-secret > div {
-    margin: 20px 0;
-    color: #dc6a75;
-    font-size: 35px;
-}
+    color:
+        var(--chisa-text);
 
-.chisa-secret p {
-    color: #596563;
-    font-family: Georgia, serif;
-    line-height: 1.7;
-}
+    font-size:
+        12px;
 
-.chisa-favorites {
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 1fr);
-    align-items: center;
-    gap: 10px;
-    margin-top: 25px;
-    padding: 18px;
-    background: #005253;
-}
-
-.chisa-favorites > span {
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.chisa-favorites > div {
-    padding: 12px;
-    background: #ffffff;
-    text-align: center;
-}
-
-.chisa-favorites strong {
-    display: block;
-    color: #005253;
-    font-size: 12px;
-}
-
-.chisa-favorites small {
-    display: block;
-    margin-top: 4px;
-    color: #888;
-    font-size: 9px;
+    line-height:
+        1.9;
 }
 
 
 /* =========================================================
-   AESTHETIC
+   ✦ SECRET
+========================================================= */
+
+.chisa-secret {
+    background:
+        linear-gradient(
+            135deg,
+            #eee4fa,
+            #f9e6ed
+        ) !important;
+
+    text-align:
+        center;
+
+    border:
+        1px dashed var(--chisa-pink);
+}
+
+
+.chisa-secret > div {
+    margin:
+        20px 0;
+
+    color:
+        var(--chisa-pink-dark);
+
+    font-size:
+        35px;
+}
+
+
+.chisa-secret p {
+    color:
+        var(--chisa-text);
+
+    font-family:
+        Georgia, serif;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ FAVORITES
+========================================================= */
+
+.chisa-favorites {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr repeat(4, 1fr);
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+
+    padding:
+        18px;
+
+    background:
+        var(--chisa-dark);
+
+    box-shadow:
+        0 7px 15px rgba(50,40,50,0.15);
+}
+
+
+.chisa-favorites > span {
+    color:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.chisa-favorites > div {
+    padding:
+        12px;
+
+    background:
+        var(--chisa-paper);
+
+    text-align:
+        center;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.chisa-favorites > div:hover {
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
+
+
+.chisa-favorites strong {
+    display:
+        block;
+
+    color:
+        var(--chisa-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        12px;
+}
+
+
+.chisa-favorites small {
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        var(--chisa-text-soft);
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   ✦ AESTHETIC
 ========================================================= */
 
 .chisa-aesthetic {
-    display: block;
+    display:
+        block;
 }
+
 
 .chisa-aesthetic-content {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 25px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 220px;
+
+    gap:
+        25px;
 }
+
 
 .chisa-aesthetic-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        14px;
 }
+
 
 .chisa-aesthetic-images div {
-    aspect-ratio: 1;
-    overflow: hidden;
-    background: #f8f4f2;
+    aspect-ratio:
+        1;
+
+    overflow:
+        hidden;
+
+    padding:
+        6px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 5px 12px rgba(60,45,55,0.09);
 }
+
+
+.chisa-aesthetic-images div:nth-child(odd) {
+    transform:
+        rotate(-1deg);
+}
+
+
+.chisa-aesthetic-images div:nth-child(even) {
+    transform:
+        rotate(1deg);
+}
+
 
 .chisa-aesthetic-images img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
+    width:
+        100%;
 
-.chisa-color-palette {
-    padding: 20px;
-    background: #f8f4f2;
-}
+    height:
+        100%;
 
-.chisa-color-palette > span {
-    color: #41918a;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+    display:
+        block;
 
-.chisa-colors {
-    display: grid;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.chisa-colors i {
-    display: block;
-    height: 45px;
+    object-fit:
+        cover;
 }
 
 
 /* =========================================================
-   FOOTER
+   ✦ COLOR PALETTE
+========================================================= */
+
+.chisa-color-palette {
+    padding:
+        20px;
+
+    background:
+        var(--chisa-paper-warm);
+
+    border:
+        1px solid var(--chisa-line);
+
+    box-shadow:
+        0 5px 12px rgba(60,45,55,0.06);
+}
+
+
+.chisa-color-palette > span {
+    color:
+        var(--chisa-teal);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.chisa-colors {
+    display:
+        grid;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+}
+
+
+.chisa-colors i {
+    display:
+        block;
+
+    height:
+        45px;
+
+    border-radius:
+        2px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+
+/* =========================================================
+   ✦ FOOTER
 ========================================================= */
 
 .chisa-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 22px;
-    background: #005253;
-    color: #ffffff;
-    font-size: 10px;
-    letter-spacing: 2px;
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        25px;
+
+    padding:
+        22px 25px;
+
+    background:
+        rgba(81,71,83,0.95);
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    box-shadow:
+        0 9px 18px rgba(50,40,50,0.15);
+}
+
+
+.chisa-footer::before {
+    content:
+        "♡";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        -14px;
+
+    padding:
+        4px 9px;
+
+    background:
+        var(--chisa-pink);
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
 }
 
 
 /* =========================================================
-   MOBILE
+   ✦ MOBILE
 ========================================================= */
 
 @media (max-width: 800px) {
 
     .chisa-profile {
-        width: calc(100% - 16px);
-        margin: 15px auto;
+        width:
+            calc(100% - 18px);
+
+        margin:
+            40px auto;
     }
+
+
+    body.chisa-page {
+        background-attachment:
+            scroll !important;
+    }
+
 
     .chisa-hero {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+
+        transform:
+            rotate(0);
     }
+
 
     .chisa-hero-image {
-        min-height: 300px;
+        min-height:
+            300px;
+
+        border-left:
+            0;
+
+        border-top:
+            1px solid var(--chisa-line);
     }
+
 
     .chisa-hero-info {
-        padding: 40px 25px;
+        padding:
+            55px 25px 40px;
     }
+
+
+    .chisa-hero-info::before {
+        left:
+            25px;
+    }
+
 
     .chisa-quick-data {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
+
 
     .chisa-data-item:nth-child(4n) {
-        border-right: 1px solid #e7d8d5;
+        border-right:
+            1px dashed var(--chisa-line);
     }
+
 
     .chisa-data-item:nth-child(2n) {
-        border-right: 0;
+        border-right:
+            0;
     }
 
+
     .chisa-status-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .chisa-section,
     .chisa-aesthetic {
-        padding: 25px 18px;
+        padding:
+            30px 20px;
     }
+
 
     .chisa-profile-layout,
     .chisa-personality-layout,
     .chisa-story,
     .chisa-aesthetic-content {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .chisa-wardrobe-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .chisa-relationship {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
+
     .chisa-person-image {
-        min-height: 280px;
+        min-height:
+            280px;
     }
+
 
     .chisa-then-now,
     .chisa-trivia-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .chisa-favorites {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .chisa-favorites > span {
-        grid-column: 1 / -1;
-        text-align: center;
-        padding: 5px;
+        grid-column:
+            1 / -1;
+
+        text-align:
+            center;
+
+        padding:
+            5px;
     }
 
+
     .chisa-aesthetic-images {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 }
 
 
+/* =========================================================
+   ✦ SMALL MOBILE
+========================================================= */
+
 @media (max-width: 500px) {
 
-    .chisa-navigation {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .chisa-profile {
+        width:
+            calc(100% - 12px);
+
+        margin:
+            30px auto;
     }
+
+
+    .chisa-navigation {
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
 
     .chisa-tab {
-        min-width: 0;
+        min-width:
+            0;
+
+        padding:
+            12px 7px;
+
+        font-size:
+            9px;
     }
+
+
+    .chisa-hero h1 {
+        font-size:
+            45px;
+    }
+
+
+    .chisa-hero-image {
+        min-height:
+            280px;
+    }
+
 
     .chisa-wardrobe-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .chisa-status-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
+
     .chisa-aesthetic-images {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .chisa-section-heading h2 {
+        font-size:
+            26px;
+    }
+
+
+    .chisa-section-heading > span {
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            21px;
+    }
+
+
+    .chisa-favorites {
+        grid-template-columns:
+            1fr 1fr;
     }
 }
