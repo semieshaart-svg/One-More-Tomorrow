@@ -1,12 +1,15 @@
 /* =========================================================
-   SAYORI MATSUDA
-   CSS ONLY
-   NO JAVASCRIPT
+   ✦ SAYORI MATSUDA
+   COZY DESK / SCRAPBOOK EDITION
+   CSS ONLY — NO JAVASCRIPT
+
+   ✦ INFORMATION / HTML STRUCTURE — UNCHANGED
+   ✦ SAYORI COLOR PALETTE — UNCHANGED
 ========================================================= */
 
 
 /* =========================================================
-   SAYORI COLOR PALETTE
+   ✦ SAYORI COLOR PALETTE
 ========================================================= */
 
 :root {
@@ -25,23 +28,76 @@
     --sayori-text: #5B6870;
     --sayori-text-soft: #89969D;
     --sayori-dark: #405663;
+
+    --sayori-shadow:
+        0 12px 30px rgba(64, 86, 99, 0.13);
+
+    --sayori-soft-shadow:
+        0 6px 18px rgba(64, 86, 99, 0.10);
 }
 
 
 /* =========================================================
-   PAGE RESET
+   ✦ PAGE RESET
 ========================================================= */
 
 html,
 body {
     margin: 0 !important;
     padding: 0 !important;
-    background: #ffffff !important;
+}
+
+html {
+    min-height: 100%;
 }
 
 body.sayori-page {
-    background: #ffffff !important;
+    min-height: 100vh;
+
     color: var(--sayori-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(232, 245, 255, 0.35),
+            rgba(255, 253, 251, 0.35)
+        ),
+        #ffffff !important;
+}
+
+
+/* soft scrapbook glow */
+
+body.sayori-page::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(165, 215, 255, 0.22),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 75%,
+            rgba(244, 182, 194, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 55% 45%,
+            rgba(184, 230, 213, 0.10),
+            transparent 35%
+        );
 }
 
 body.sayori-page * {
@@ -50,225 +106,939 @@ body.sayori-page * {
 
 
 /* =========================================================
-   MAIN CONTAINER
+   ✦ MAIN PROFILE
 ========================================================= */
 
 .sayori-profile {
-    width: min(1100px, calc(100% - 30px));
-    margin: 40px auto;
-    background: var(--sayori-paper);
-    color: var(--sayori-text);
-    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+
+    width:
+        min(1100px, calc(100% - 34px));
+
+    margin:
+        70px auto;
+
+    color:
+        var(--sayori-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 
 /* =========================================================
-   HERO
+   ✦ DECORATIVE SCRAPBOOK DETAILS
+========================================================= */
+
+.sayori-profile::before {
+    content: "✦  ·  ♡  ·  ✦";
+
+    position: absolute;
+
+    top: -40px;
+    left: 25px;
+
+    color:
+        rgba(114, 184, 232, 0.75);
+
+    font-size: 15px;
+
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 2px 5px rgba(64,86,99,0.12);
+
+    pointer-events: none;
+}
+
+.sayori-profile::after {
+    content: "SAYORI'S LITTLE CORNER ♡";
+
+    position: absolute;
+
+    right: 18px;
+    bottom: -38px;
+
+    color:
+        rgba(114, 184, 232, 0.75);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 10px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    transform:
+        rotate(-2deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ✦ HERO — PAPER SHEET
 ========================================================= */
 
 .sayori-hero {
+    position: relative;
+
     display: grid;
-    grid-template-columns: 1fr 360px;
-    min-height: 390px;
-    background: var(--sayori-blue-soft);
-    border: 1px solid var(--sayori-line);
-}
 
-.sayori-hero-info {
-    padding: 65px 55px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    grid-template-columns:
+        1fr 360px;
 
-.sayori-label {
-    display: inline-block;
-    margin-bottom: 18px;
-    color: var(--sayori-blue-dark);
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
+    min-height:
+        390px;
 
-.sayori-hero h1 {
-    margin: 0;
-    color: var(--sayori-dark);
-    font-size: clamp(42px, 6vw, 72px);
-    line-height: 0.95;
-    font-weight: 700;
-}
-
-.sayori-subtitle {
-    margin-top: 20px;
-    color: var(--sayori-text-soft);
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.sayori-quote {
-    max-width: 520px;
-    margin-top: 35px;
-    padding-left: 20px;
-    border-left: 3px solid var(--sayori-pink);
-    color: var(--sayori-text);
-    font-family: Georgia, serif;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.sayori-hero-image {
-    min-height: 390px;
-    background: var(--sayori-paper);
     overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,253,251,0.98),
+            rgba(232,245,255,0.94)
+        );
+
+    border:
+        1px solid rgba(220,235,243,0.95);
+
+    box-shadow:
+        0 18px 40px rgba(64,86,99,0.17);
+
+    transform:
+        rotate(-0.35deg);
 }
 
-.sayori-hero-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+
+/* washi tape */
+
+.sayori-hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    left: 42%;
+
+    width: 125px;
+    height: 35px;
+
+    z-index: 5;
+
+    background:
+        linear-gradient(
+            rgba(165,215,255,0.78),
+            rgba(232,245,255,0.78)
+        );
+
+    opacity:
+        0.9;
+
+    transform:
+        rotate(2deg);
+
+    box-shadow:
+        0 2px 5px rgba(64,86,99,0.08);
+}
+
+
+/* little heart */
+
+.sayori-hero::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 25px;
+    top: 22px;
+
+    z-index: 6;
+
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        28px;
+
+    transform:
+        rotate(8deg);
 }
 
 
 /* =========================================================
-   QUICK DATA
+   ✦ HERO INFO
+========================================================= */
+
+.sayori-hero-info {
+    position: relative;
+
+    padding:
+        65px 55px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+/* handwritten note */
+
+.sayori-hero-info::before {
+    content: "dear diary...";
+
+    position: absolute;
+
+    top: 32px;
+    left: 55px;
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        12px;
+
+    font-style:
+        italic;
+
+    transform:
+        rotate(-4deg);
+}
+
+
+/* label */
+
+.sayori-label {
+    display:
+        inline-block;
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* title */
+
+.sayori-hero h1 {
+    margin:
+        0;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(42px, 6vw, 72px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -2px;
+}
+
+
+/* subtitle */
+
+.sayori-subtitle {
+    margin-top:
+        20px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* quote */
+
+.sayori-quote {
+    position: relative;
+
+    max-width:
+        520px;
+
+    margin-top:
+        35px;
+
+    padding:
+        16px 20px 16px 25px;
+
+    border-left:
+        3px solid var(--sayori-pink);
+
+    background:
+        rgba(255,255,255,0.62);
+
+    color:
+        var(--sayori-text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+    box-shadow:
+        0 4px 12px rgba(64,86,99,0.05);
+}
+
+
+/* =========================================================
+   ✦ HERO IMAGE — POLAROID
+========================================================= */
+
+.sayori-hero-image {
+    position:
+        relative;
+
+    min-height:
+        390px;
+
+    padding:
+        18px;
+
+    background:
+        var(--sayori-soft);
+
+    overflow:
+        visible;
+
+    border-left:
+        1px solid var(--sayori-line);
+}
+
+
+/* pink tape */
+
+.sayori-hero-image::before {
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -10px;
+
+    right:
+        55px;
+
+    width:
+        95px;
+
+    height:
+        27px;
+
+    z-index:
+        5;
+
+    background:
+        rgba(244,182,194,0.72);
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* image */
+
+.sayori-hero-image img {
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    border:
+        8px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(64,86,99,0.17);
+
+    transform:
+        rotate(1.4deg);
+}
+
+
+/* =========================================================
+   ✦ QUICK DATA
 ========================================================= */
 
 .sayori-quick-data {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid var(--sayori-line);
-    border-top: 0;
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top:
+        18px;
+
+    background:
+        var(--sayori-paper);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        var(--sayori-soft-shadow);
+
+    transform:
+        rotate(0.2deg);
 }
+
+
+/* label */
+
+.sayori-quick-data::before {
+    content:
+        "✎ little facts";
+
+    position:
+        absolute;
+
+    top:
+        -25px;
+
+    right:
+        20px;
+
+    color:
+        rgba(114,184,232,0.78);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        10px;
+
+    font-style:
+        italic;
+
+    transform:
+        rotate(-3deg);
+}
+
 
 .sayori-data-item {
-    padding: 18px;
-    background: var(--sayori-paper);
-    border-right: 1px solid var(--sayori-line);
-    border-bottom: 1px solid var(--sayori-line);
+    position:
+        relative;
+
+    padding:
+        20px;
+
+    background:
+        rgba(255,253,251,0.97);
+
+    border-right:
+        1px dashed var(--sayori-line);
+
+    border-bottom:
+        1px dashed var(--sayori-line);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
+
+
+.sayori-data-item:hover {
+    background:
+        var(--sayori-blue-soft);
+
+    transform:
+        translateY(-3px)
+        rotate(-0.5deg);
+}
+
 
 .sayori-data-item:nth-child(4n) {
-    border-right: 0;
+    border-right:
+        0;
 }
+
 
 .sayori-data-item span {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
 }
 
+
 .sayori-data-item strong {
-    color: var(--sayori-dark);
-    font-size: 14px;
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   CURRENT STATUS
+   ✦ CURRENT STATUS — SCRAPBOOK NOTE
 ========================================================= */
 
 .sayori-status {
-    margin-top: 20px;
-    padding: 22px 25px;
-    background: var(--sayori-soft);
-    border: 1px solid var(--sayori-line);
+    position:
+        relative;
+
+    margin-top:
+        28px;
+
+    padding:
+        28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFF9D9,
+            #FFF2A8
+        );
+
+    border:
+        1px solid rgba(220,205,145,0.75);
+
+    box-shadow:
+        4px 7px 18px rgba(90,70,45,0.12);
+
+    transform:
+        rotate(0.55deg);
 }
+
+
+/* pin */
+
+.sayori-status::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        -8px;
+
+    left:
+        50%;
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--sayori-pink);
+
+    box-shadow:
+        0 2px 5px rgba(64,86,99,0.20);
+
+    transform:
+        translateX(-50%);
+}
+
 
 .sayori-status-title {
-    margin-bottom: 15px;
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    margin-bottom:
+        18px;
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-status-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        20px;
 }
+
 
 .sayori-status-grid span {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
 }
 
+
 .sayori-status-grid strong {
-    color: var(--sayori-dark);
-    font-size: 14px;
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   HIDE RADIO BUTTONS
+   ✦ HIDE RADIO BUTTONS
 ========================================================= */
 
 .sayori-profile > input[type="radio"] {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+    position:
+        absolute !important;
+
+    width:
+        1px !important;
+
+    height:
+        1px !important;
+
+    opacity:
+        0 !important;
+
+    pointer-events:
+        none !important;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   ✦ NAVIGATION — SCRAPBOOK TABS
 ========================================================= */
 
 .sayori-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 30px 0 0;
-    padding: 8px;
-    background: var(--sayori-soft);
-    border: 1px solid var(--sayori-line);
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin:
+        38px 0 0;
+
+    padding:
+        10px;
+
+    background:
+        rgba(245,250,253,0.94);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 7px 18px rgba(64,86,99,0.10);
+
+    transform:
+        rotate(-0.15deg);
 }
+
+
+/* label */
+
+.sayori-navigation::before {
+    content:
+        "♡ SAYORI'S NOTES";
+
+    position:
+        absolute;
+
+    top:
+        -20px;
+
+    left:
+        12px;
+
+    color:
+        rgba(114,184,232,0.8);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        10px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        1px;
+}
+
 
 .sayori-tab {
-    flex: 1 1 120px;
-    padding: 14px 16px;
-    background: var(--sayori-paper);
-    border: 1px solid #D5E5ED;
-    color: var(--sayori-text-soft);
-    cursor: pointer;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
+    position:
+        relative;
+
+    flex:
+        1 1 120px;
+
+    padding:
+        14px 16px;
+
+    background:
+        var(--sayori-paper);
+
+    border:
+        1px solid #D5E5ED;
+
+    color:
+        var(--sayori-text-soft);
+
+    cursor:
+        pointer;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1.5px;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        all 0.2s ease;
+
+    box-shadow:
+        0 2px 5px rgba(64,86,99,0.05);
 }
+
+
+/* handmade uneven tabs */
+
+.sayori-tab:nth-child(odd) {
+    transform:
+        rotate(-0.7deg);
+}
+
+.sayori-tab:nth-child(even) {
+    transform:
+        rotate(0.5deg);
+}
+
 
 .sayori-tab:hover {
-    background: var(--sayori-blue-soft);
-    border-color: var(--sayori-blue);
-    color: var(--sayori-dark);
+    background:
+        var(--sayori-blue-soft);
+
+    border-color:
+        var(--sayori-blue);
+
+    color:
+        var(--sayori-dark);
+
+    transform:
+        translateY(-3px)
+        rotate(0deg);
 }
 
 
 /* =========================================================
-   ALL SECTIONS HIDDEN
+   ✦ SECTIONS
 ========================================================= */
 
-.sayori-section {
-    display: none;
-    margin-top: 20px;
-    padding: 40px;
-    background: var(--sayori-paper);
-    border: 1px solid var(--sayori-line);
+.sayori-section,
+.sayori-aesthetic {
+    display:
+        none;
+
+    position:
+        relative;
+
+    margin-top:
+        25px;
+
+    padding:
+        42px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,253,251,0.98),
+            rgba(245,250,253,0.98)
+        );
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 14px 32px rgba(64,86,99,0.13);
+
+    overflow:
+        hidden;
+}
+
+
+/* decorative corner */
+
+.sayori-section::before,
+.sayori-aesthetic::before {
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    top:
+        17px;
+
+    right:
+        22px;
+
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        22px;
+
+    opacity:
+        0.75;
+
+    transform:
+        rotate(12deg);
+}
+
+
+/* soft paper decoration */
+
+.sayori-section::after,
+.sayori-aesthetic::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(165,215,255,0.08) 0,
+            transparent 24%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(244,182,194,0.09) 0,
+            transparent 25%
+        );
 }
 
 
 /* =========================================================
-   SHOW SELECTED TAB
+   ✦ TAB DISPLAY
 ========================================================= */
 
 #sayori-profile-tab:checked ~ .sayori-navigation
@@ -303,12 +1073,13 @@ body.sayori-page * {
     + .sayori-section-story
     + .sayori-section-relationships
     + .sayori-section-gallery {
-    display: block;
+    display:
+        block;
 }
 
 
 /* =========================================================
-   ACTIVE TAB
+   ✦ ACTIVE TAB
 ========================================================= */
 
 #sayori-profile-tab:checked ~ .sayori-navigation label[for="sayori-profile-tab"],
@@ -317,917 +1088,2229 @@ body.sayori-page * {
 #sayori-story-tab:checked ~ .sayori-navigation label[for="sayori-story-tab"],
 #sayori-relationships-tab:checked ~ .sayori-navigation label[for="sayori-relationships-tab"],
 #sayori-gallery-tab:checked ~ .sayori-navigation label[for="sayori-gallery-tab"] {
-    background: var(--sayori-blue);
-    border-color: var(--sayori-blue);
-    color: #ffffff;
+    background:
+        var(--sayori-blue);
+
+    border-color:
+        var(--sayori-blue-dark);
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(114,184,232,0.25);
 }
 
 
 /* =========================================================
-   SECTION HEADING
+   ✦ SECTION HEADING
 ========================================================= */
 
 .sayori-section-heading {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-bottom:
+        38px;
+
+    padding-bottom:
+        18px;
+
+    border-bottom:
+        1px dashed var(--sayori-line);
 }
+
 
 .sayori-section-heading > span {
-    color: var(--sayori-blue-dark);
-    font-size: 28px;
-    font-weight: bold;
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--sayori-blue-soft);
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        25px;
+
+    box-shadow:
+        0 4px 10px rgba(100,150,180,0.10);
 }
+
 
 .sayori-section-heading small {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    letter-spacing: 2px;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
 }
 
+
 .sayori-section-heading h2 {
-    margin: 0;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
-    font-size: 32px;
+    margin:
+        0;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        32px;
 }
 
 
 /* =========================================================
-   PROFILE
+   ✦ PROFILE
 ========================================================= */
 
 .sayori-profile-layout {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.6fr 1fr;
+
+    gap:
+        35px;
 }
+
 
 .sayori-description p {
-    margin: 0 0 18px;
-    color: var(--sayori-text);
-    font-size: 14px;
-    line-height: 1.9;
+    margin:
+        0 0 18px;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
 }
+
+
+/* first paragraph like a handwritten note */
+
+.sayori-description p:first-child {
+    padding-left:
+        20px;
+
+    border-left:
+        3px solid var(--sayori-pink);
+}
+
 
 .sayori-facts {
-    display: grid;
-    gap: 10px;
+    display:
+        grid;
+
+    gap:
+        12px;
 }
+
 
 .sayori-fact-card {
-    padding: 15px 18px;
-    background: var(--sayori-soft);
-    border-left: 3px solid var(--sayori-blue);
+    position:
+        relative;
+
+    padding:
+        16px 18px;
+
+    background:
+        var(--sayori-soft);
+
+    border-left:
+        3px solid var(--sayori-blue);
+
+    box-shadow:
+        0 3px 8px rgba(64,86,99,0.05);
+
+    transition:
+        transform 0.2s ease;
 }
+
+
+.sayori-fact-card:hover {
+    transform:
+        translateX(4px)
+        rotate(-0.4deg);
+}
+
 
 .sayori-fact-card span {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    text-transform: uppercase;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
 }
+
 
 .sayori-fact-card strong {
-    color: var(--sayori-dark);
-    font-size: 13px;
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        13px;
 }
+
+
+/* quote box */
 
 .sayori-quote-box {
-    margin: 30px 0;
-    padding: 20px 25px;
-    background: var(--sayori-blue-soft);
-    border-left: 3px solid var(--sayori-pink);
+    position:
+        relative;
+
+    margin:
+        30px 0;
+
+    padding:
+        22px 25px;
+
+    background:
+        var(--sayori-blue-soft);
+
+    border:
+        1px dashed var(--sayori-blue);
+
+    border-left:
+        3px solid var(--sayori-pink);
+
+    box-shadow:
+        3px 5px 12px rgba(64,86,99,0.07);
+
+    transform:
+        rotate(-0.3deg);
 }
+
 
 .sayori-quote-box > span {
-    color: var(--sayori-pink);
-    font-family: Georgia, serif;
-    font-size: 35px;
-    line-height: 0;
+    color:
+        var(--sayori-pink);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        35px;
+
+    line-height:
+        0;
 }
+
 
 .sayori-quote-box p {
-    margin: 5px 0 8px;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
-    font-size: 15px;
-    line-height: 1.7;
+    margin:
+        5px 0 8px;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
 }
+
 
 .sayori-quote-box small {
-    color: var(--sayori-text-soft);
+    color:
+        var(--sayori-text-soft);
 }
+
 
 .sayori-mini-facts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
 }
+
 
 .sayori-mini-facts > div {
-    padding: 15px;
-    background: var(--sayori-soft);
+    padding:
+        15px;
+
+    background:
+        var(--sayori-soft);
+
+    border:
+        1px solid var(--sayori-line);
 }
+
 
 .sayori-mini-facts span {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    text-transform: uppercase;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        10px;
+
+    text-transform:
+        uppercase;
 }
+
 
 .sayori-mini-facts strong {
-    color: var(--sayori-dark);
-    font-size: 12px;
+    color:
+        var(--sayori-dark);
+
+    font-size:
+        12px;
 }
+
+
+/* goal note */
 
 .sayori-goal {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    margin-top: 35px;
-    padding: 20px;
-    background: var(--sayori-blue-soft);
+    position:
+        relative;
+
+    display:
+        flex;
+
+    gap:
+        18px;
+
+    align-items:
+        center;
+
+    margin-top:
+        35px;
+
+    padding:
+        22px;
+
+    background:
+        var(--sayori-blue-soft);
+
+    border:
+        1px dashed var(--sayori-blue);
+
+    transform:
+        rotate(-0.3deg);
 }
+
 
 .sayori-goal-icon {
-    color: var(--sayori-pink);
-    font-size: 30px;
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        30px;
 }
+
 
 .sayori-goal span {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-goal strong {
-    display: block;
-    color: var(--sayori-dark);
+    display:
+        block;
+
+    color:
+        var(--sayori-dark);
 }
 
+
 .sayori-goal small {
-    display: block;
-    margin-top: 5px;
-    color: var(--sayori-text-soft);
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--sayori-text-soft);
 }
+
+
+/* progress */
 
 .sayori-progress,
 .sayori-meter {
-    height: 6px;
-    margin-top: 10px;
-    background: #ffffff;
-    overflow: hidden;
+    height:
+        7px;
+
+    margin-top:
+        10px;
+
+    background:
+        #EAF1F5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
 }
+
 
 .sayori-progress div,
 .sayori-meter div {
-    height: 100%;
-    background: var(--sayori-blue);
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--sayori-pink),
+            var(--sayori-blue)
+        );
+
+    border-radius:
+        10px;
 }
 
 
 /* =========================================================
-   PERSONALITY
+   ✦ PERSONALITY
 ========================================================= */
 
 .sayori-personality-layout {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 35px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap:
+        35px;
 }
+
 
 .sayori-trait {
-    margin-bottom: 22px;
+    margin-bottom:
+        22px;
 }
+
 
 .sayori-trait > div:first-child {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 7px;
-    color: var(--sayori-text);
-    font-size: 11px;
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        11px;
 }
 
-.sayori-meter {
-    margin: 0;
-    background: #EAF1F5;
-}
-
-.sayori-meter div {
-    background: var(--sayori-blue);
-}
 
 .sayori-like-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        12px;
 }
+
 
 .sayori-list-box {
-    padding: 20px;
-    background: var(--sayori-soft);
-    border-top: 2px solid var(--sayori-mint);
+    position:
+        relative;
+
+    padding:
+        20px;
+
+    background:
+        var(--sayori-blue-soft);
+
+    border:
+        1px solid var(--sayori-line);
+
+    border-top:
+        3px solid var(--sayori-mint);
+
+    box-shadow:
+        0 4px 10px rgba(64,86,99,0.06);
+
+    transform:
+        rotate(-0.4deg);
 }
+
 
 .sayori-list-box:nth-child(2) {
-    border-top-color: var(--sayori-pink);
+    background:
+        #FFF5F7;
+
+    border-top-color:
+        var(--sayori-pink);
+
+    transform:
+        rotate(0.4deg);
 }
+
 
 .sayori-list-box:nth-child(3) {
-    border-top-color: var(--sayori-yellow);
+    background:
+        #FFFBE3;
+
+    border-top-color:
+        var(--sayori-yellow);
 }
+
 
 .sayori-list-box:nth-child(4) {
-    border-top-color: var(--sayori-blue);
+    background:
+        var(--sayori-blue-soft);
+
+    border-top-color:
+        var(--sayori-blue);
 }
+
 
 .sayori-list-box h3 {
-    margin: 0 0 12px;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
+    margin:
+        0 0 12px;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
 }
 
+
 .sayori-list-box ul {
-    margin: 0;
-    padding-left: 17px;
-    color: var(--sayori-text);
-    font-size: 12px;
-    line-height: 1.8;
+    margin:
+        0;
+
+    padding-left:
+        17px;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
 }
 
 
 /* =========================================================
-   TRIVIA
+   ✦ TRIVIA
 ========================================================= */
 
 .sayori-trivia-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
 }
+
 
 .sayori-trivia-grid article {
-    padding: 25px;
-    background: var(--sayori-soft);
+    padding:
+        25px;
+
+    background:
+        var(--sayori-soft);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 4px 10px rgba(64,86,99,0.06);
+
+    transform:
+        rotate(-0.25deg);
 }
+
+
+.sayori-trivia-grid article:nth-child(even) {
+    background:
+        var(--sayori-blue-soft);
+
+    transform:
+        rotate(0.35deg);
+}
+
 
 .sayori-trivia-grid article > span {
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-trivia-grid ul {
-    margin: 15px 0 0;
-    padding-left: 18px;
-    color: var(--sayori-text);
-    font-size: 12px;
-    line-height: 1.9;
+    margin:
+        15px 0 0;
+
+    padding-left:
+        18px;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.9;
 }
+
+
+/* secret */
 
 .sayori-secret {
-    background: var(--sayori-blue-soft) !important;
-    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            var(--sayori-blue-soft),
+            #FFF1F4
+        ) !important;
+
+    text-align:
+        center;
+
+    border:
+        1px dashed var(--sayori-pink) !important;
 }
+
 
 .sayori-secret > div {
-    margin: 20px 0;
-    color: var(--sayori-pink);
-    font-size: 35px;
+    margin:
+        20px 0;
+
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        35px;
 }
+
 
 .sayori-secret p {
-    color: var(--sayori-text);
-    font-family: Georgia, serif;
-    line-height: 1.7;
+    color:
+        var(--sayori-text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    line-height:
+        1.7;
 }
+
+
+/* favorites */
 
 .sayori-favorites {
-    display: grid;
-    grid-template-columns: 1fr repeat(4, 1fr);
-    align-items: center;
-    gap: 10px;
-    margin-top: 25px;
-    padding: 18px;
-    background: var(--sayori-dark);
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr repeat(4, 1fr);
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+
+    padding:
+        18px;
+
+    background:
+        var(--sayori-dark);
+
+    box-shadow:
+        0 7px 15px rgba(64,86,99,0.15);
 }
+
 
 .sayori-favorites > span {
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-favorites > div {
-    padding: 12px;
-    background: var(--sayori-paper);
-    text-align: center;
+    padding:
+        12px;
+
+    background:
+        var(--sayori-paper);
+
+    text-align:
+        center;
+
+    transition:
+        transform 0.2s ease;
 }
+
+
+.sayori-favorites > div:hover {
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
+
 
 .sayori-favorites strong {
-    display: block;
-    color: var(--sayori-dark);
-    font-size: 12px;
+    display:
+        block;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        12px;
 }
 
+
 .sayori-favorites small {
-    display: block;
-    margin-top: 4px;
-    color: var(--sayori-text-soft);
-    font-size: 9px;
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
 }
 
 
 /* =========================================================
-   STORY
+   ✦ STORY
 ========================================================= */
 
 .sayori-story {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 30px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap:
+        30px;
 }
+
 
 .sayori-story-image {
-    min-height: 350px;
-    background: var(--sayori-soft);
-    overflow: hidden;
+    min-height:
+        350px;
+
+    padding:
+        9px;
+
+    background:
+        var(--sayori-paper);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 7px 17px rgba(64,86,99,0.10);
+
+    transform:
+        rotate(-1deg);
 }
+
 
 .sayori-story-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
 
+
 .sayori-story-content {
-    align-self: center;
+    align-self:
+        center;
 }
+
 
 .sayori-story-content > span,
 .sayori-old-note > span {
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-story-content h3 {
-    margin: 10px 0 20px;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
-    font-size: 28px;
+    margin:
+        10px 0 20px;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        28px;
 }
+
 
 .sayori-story-content p {
-    color: var(--sayori-text);
-    font-size: 13px;
-    line-height: 1.8;
+    color:
+        var(--sayori-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 }
+
 
 .sayori-story-content blockquote {
-    margin: 25px 0 0;
-    padding: 15px 20px;
-    border-left: 3px solid var(--sayori-pink);
-    background: var(--sayori-blue-soft);
-    color: var(--sayori-text);
-    font-family: Georgia, serif;
+    margin:
+        25px 0 0;
+
+    padding:
+        17px 20px;
+
+    border-left:
+        3px solid var(--sayori-pink);
+
+    background:
+        var(--sayori-blue-soft);
+
+    color:
+        var(--sayori-text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    line-height:
+        1.7;
 }
+
+
+/* timeline */
 
 .sayori-timeline {
-    display: grid;
-    gap: 12px;
-    margin-top: 35px;
+    display:
+        grid;
+
+    gap:
+        12px;
+
+    margin-top:
+        35px;
 }
+
 
 .sayori-timeline-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 18px;
-    padding: 18px;
-    background: var(--sayori-soft);
-    border-left: 3px solid var(--sayori-mint);
+    display:
+        grid;
+
+    grid-template-columns:
+        60px 1fr;
+
+    gap:
+        18px;
+
+    padding:
+        18px;
+
+    background:
+        var(--sayori-soft);
+
+    border-left:
+        3px solid var(--sayori-mint);
+
+    box-shadow:
+        0 3px 9px rgba(64,86,99,0.05);
 }
+
 
 .sayori-timeline-item:nth-child(2) {
-    border-left-color: var(--sayori-yellow);
+    border-left-color:
+        var(--sayori-yellow);
 }
+
 
 .sayori-timeline-item.current {
-    border-left-color: var(--sayori-pink);
-    background: var(--sayori-blue-soft);
+    border-left-color:
+        var(--sayori-pink);
+
+    background:
+        var(--sayori-blue-soft);
 }
+
 
 .sayori-timeline-item > span {
-    color: var(--sayori-blue-dark);
-    font-size: 22px;
-    font-weight: bold;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
 }
+
 
 .sayori-timeline-item small {
-    color: var(--sayori-text-soft);
-    font-size: 9px;
-    letter-spacing: 1.5px;
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
 }
+
 
 .sayori-timeline-item h3 {
-    margin: 5px 0;
-    color: var(--sayori-dark);
+    margin:
+        5px 0;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
 }
+
 
 .sayori-timeline-item p {
-    margin: 0;
-    color: var(--sayori-text);
-    font-size: 12px;
+    margin:
+        0;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
 }
+
+
+/* then / now */
 
 .sayori-then-now {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    margin-top: 35px;
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
+
+    margin-top:
+        35px;
 }
+
 
 .sayori-then-now > div {
-    padding: 25px;
-    background: var(--sayori-blue-soft);
+    padding:
+        25px;
+
+    background:
+        var(--sayori-blue-soft);
+
+    border:
+        1px dashed var(--sayori-blue);
 }
+
 
 .sayori-then-now > div:first-child {
-    background: #F4FBF8;
+    background:
+        #F4FBF8;
+
+    border-color:
+        var(--sayori-mint);
 }
+
 
 .sayori-then-now span {
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-then-now h3 {
-    margin: 8px 0 20px;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
+    margin:
+        8px 0 20px;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
 }
+
 
 .sayori-then-now p {
-    color: var(--sayori-text);
-    font-size: 12px;
+    color:
+        var(--sayori-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
 }
+
 
 .sayori-then-now strong {
-    margin-right: 5px;
-    color: var(--sayori-dark);
+    margin-right:
+        5px;
+
+    color:
+        var(--sayori-dark);
 }
+
+
+/* old note */
 
 .sayori-old-note {
-    margin-top: 30px;
-    padding: 25px;
-    text-align: center;
-    background: var(--sayori-soft);
-    border-top: 2px dashed var(--sayori-blue);
+    position:
+        relative;
+
+    margin-top:
+        30px;
+
+    padding:
+        27px;
+
+    text-align:
+        center;
+
+    background:
+        var(--sayori-yellow);
+
+    border:
+        1px solid #E8DFA8;
+
+    box-shadow:
+        3px 5px 12px rgba(80,70,40,0.08);
+
+    transform:
+        rotate(0.4deg);
 }
+
 
 .sayori-old-note p {
-    color: var(--sayori-text);
-    font-family: Georgia, serif;
-    font-size: 15px;
-    line-height: 1.7;
+    color:
+        var(--sayori-text);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
 }
+
 
 .sayori-old-note small {
-    color: var(--sayori-text-soft);
+    color:
+        var(--sayori-text-soft);
 }
+
+
+/* unfinished */
 
 .sayori-unfinished {
-    margin-top: 25px;
-    padding: 30px;
-    background: var(--sayori-pink);
-    text-align: center;
+    position:
+        relative;
+
+    margin-top:
+        25px;
+
+    padding:
+        30px;
+
+    background:
+        var(--sayori-pink);
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 7px 16px rgba(64,86,99,0.10);
+
+    transform:
+        rotate(-0.35deg);
 }
+
 
 .sayori-unfinished > div {
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-size: 30px;
+    margin-bottom:
+        10px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        30px;
 }
+
 
 .sayori-unfinished > span {
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        #ffffff;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
 
+
 .sayori-unfinished p {
-    max-width: 600px;
-    margin: 12px auto 0;
-    color: #ffffff;
-    font-family: Georgia, serif;
-    font-size: 14px;
-    line-height: 1.7;
+    max-width:
+        600px;
+
+    margin:
+        12px auto 0;
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
 }
 
 
 /* =========================================================
-   RELATIONSHIPS
+   ✦ RELATIONSHIPS
 ========================================================= */
 
 .sayori-relationship-note {
-    margin-bottom: 25px;
-    padding: 20px;
-    background: var(--sayori-blue-soft);
+    position:
+        relative;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        #FFFBE3;
+
+    border:
+        1px solid #E8DFA8;
+
+    box-shadow:
+        3px 5px 12px rgba(80,70,40,0.09);
+
+    transform:
+        rotate(-0.4deg);
 }
+
+
+.sayori-relationship-note::before {
+    content:
+        "📌";
+
+    position:
+        absolute;
+
+    top:
+        -14px;
+
+    left:
+        25px;
+
+    font-size:
+        22px;
+}
+
 
 .sayori-relationship-note span {
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-relationship-note p {
-    margin: 8px 0 0;
-    color: var(--sayori-text);
-    font-size: 13px;
-    line-height: 1.7;
+    margin:
+        8px 0 0;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
 }
+
 
 .sayori-relationship {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    margin-bottom: 20px;
-    border: 1px solid var(--sayori-line);
-    background: var(--sayori-soft);
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid var(--sayori-line);
+
+    background:
+        var(--sayori-paper);
+
+    box-shadow:
+        0 7px 16px rgba(64,86,99,0.09);
 }
+
 
 .sayori-person-image {
-    min-height: 250px;
-    background: var(--sayori-paper);
-    overflow: hidden;
+    min-height:
+        250px;
+
+    padding:
+        8px;
+
+    background:
+        var(--sayori-soft);
 }
+
 
 .sayori-person-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
+
 
 .sayori-person-content {
-    padding: 28px;
+    padding:
+        28px;
 }
+
 
 .sayori-person-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
 }
+
 
 .sayori-person-header span {
-    color: var(--sayori-blue-dark);
-    font-size: 9px;
-    letter-spacing: 1px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1px;
 }
+
 
 .sayori-person-header h3 {
-    margin: 6px 0 0;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
-    font-size: 25px;
+    margin:
+        6px 0 0;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        25px;
 }
+
 
 .sayori-person-header small {
-    display: block;
-    margin-top: 4px;
-    color: var(--sayori-text-soft);
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        var(--sayori-text-soft);
 }
+
 
 .sayori-person-header > strong {
-    color: var(--sayori-pink);
-    font-size: 10px;
-    letter-spacing: 1px;
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
 }
+
 
 .sayori-heart-level {
-    margin: 15px 0;
-    color: var(--sayori-pink);
-    letter-spacing: 3px;
+    margin:
+        15px 0;
+
+    color:
+        var(--sayori-pink);
+
+    letter-spacing:
+        3px;
 }
+
 
 .sayori-heart-level small {
-    display: block;
-    margin-top: 5px;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    letter-spacing: 0;
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0;
 }
+
 
 .sayori-person-content p {
-    color: var(--sayori-text);
-    font-size: 13px;
-    line-height: 1.8;
+    color:
+        var(--sayori-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 }
 
+
 .sayori-relationship-footer {
-    padding: 20px;
-    color: var(--sayori-blue-dark);
-    font-family: Georgia, serif;
-    text-align: center;
+    padding:
+        20px;
+
+    color:
+        var(--sayori-blue-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    text-align:
+        center;
+
+    border-top:
+        1px dashed var(--sayori-line);
 }
 
 
 /* =========================================================
-   GALLERY / WARDROBE
+   ✦ GALLERY / WARDROBE
 ========================================================= */
 
 .sayori-wardrobe-intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding: 20px;
-    background: var(--sayori-blue-soft);
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        #FFF1F4;
+
+    border:
+        1px dashed var(--sayori-pink);
+
+    transform:
+        rotate(0.3deg);
 }
+
 
 .sayori-wardrobe-intro strong {
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
-    font-size: 20px;
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        20px;
 }
+
 
 .sayori-wardrobe-intro p {
-    margin: 7px 0 0;
-    color: var(--sayori-text);
-    font-size: 12px;
+    margin:
+        7px 0 0;
+
+    color:
+        var(--sayori-text);
+
+    font-size:
+        12px;
 }
+
 
 .sayori-outfit-count {
-    color: var(--sayori-blue-dark);
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
+    color:
+        var(--sayori-pink);
+
+    font-size:
+        30px;
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
 }
+
 
 .sayori-outfit-count small {
-    display: block;
-    color: var(--sayori-text-soft);
-    font-size: 10px;
-    font-weight: normal;
+    display:
+        block;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        9px;
+
+    font-weight:
+        normal;
 }
+
 
 .sayori-wardrobe-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        22px;
 }
+
 
 .sayori-outfit {
-    overflow: hidden;
-    background: var(--sayori-soft);
-    border: 1px solid var(--sayori-line);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position:
+        relative;
+
+    overflow:
+        visible;
+
+    background:
+        var(--sayori-paper);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 7px 15px rgba(64,86,99,0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+.sayori-outfit:nth-child(odd) {
+    transform:
+        rotate(-1deg);
+}
+
+
+.sayori-outfit:nth-child(even) {
+    transform:
+        rotate(0.8deg);
+}
+
 
 .sayori-outfit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(100, 150, 180, 0.12);
+    transform:
+        translateY(-7px)
+        rotate(0deg);
+
+    box-shadow:
+        0 14px 25px rgba(64,86,99,0.16);
 }
+
 
 .sayori-outfit-image {
-    aspect-ratio: 1 / 1.15;
-    overflow: hidden;
-    background: var(--sayori-paper);
+    aspect-ratio:
+        1 / 1.15;
+
+    padding:
+        8px;
+
+    overflow:
+        hidden;
+
+    background:
+        #ffffff;
 }
+
 
 .sayori-outfit-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
+
 
 .sayori-outfit-info {
-    padding: 18px;
+    padding:
+        18px;
 }
+
 
 .sayori-outfit-info > span {
-    color: var(--sayori-blue-dark);
-    font-size: 9px;
-    letter-spacing: 1.5px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
 }
+
 
 .sayori-outfit-info h3 {
-    margin: 8px 0 5px;
-    color: var(--sayori-dark);
-    font-family: Georgia, serif;
+    margin:
+        8px 0 5px;
+
+    color:
+        var(--sayori-dark);
+
+    font-family:
+        Georgia,
+        serif;
 }
 
+
 .sayori-outfit-info p {
-    margin: 0;
-    color: var(--sayori-text-soft);
-    font-size: 11px;
+    margin:
+        0;
+
+    color:
+        var(--sayori-text-soft);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
 }
 
 
 /* =========================================================
-   AESTHETIC
+   ✦ AESTHETIC
 ========================================================= */
 
 .sayori-aesthetic {
-    display: block;
-    margin-top: 20px;
-    padding: 40px;
-    background: var(--sayori-paper);
-    border: 1px solid var(--sayori-line);
+    display:
+        block;
 }
+
 
 .sayori-aesthetic-content {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 25px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 220px;
+
+    gap:
+        25px;
 }
+
 
 .sayori-aesthetic-images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        14px;
 }
+
 
 .sayori-aesthetic-images div {
-    aspect-ratio: 1;
-    overflow: hidden;
-    background: var(--sayori-soft);
+    aspect-ratio:
+        1;
+
+    overflow:
+        hidden;
+
+    padding:
+        6px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 5px 12px rgba(64,86,99,0.09);
 }
+
+
+.sayori-aesthetic-images div:nth-child(odd) {
+    transform:
+        rotate(-1deg);
+}
+
+
+.sayori-aesthetic-images div:nth-child(even) {
+    transform:
+        rotate(1deg);
+}
+
 
 .sayori-aesthetic-images img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
 }
+
+
+/* palette */
 
 .sayori-color-palette {
-    padding: 20px;
-    background: var(--sayori-soft);
+    padding:
+        20px;
+
+    background:
+        var(--sayori-soft);
+
+    border:
+        1px solid var(--sayori-line);
+
+    box-shadow:
+        0 5px 12px rgba(64,86,99,0.06);
 }
+
 
 .sayori-color-palette > span {
-    color: var(--sayori-blue-dark);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color:
+        var(--sayori-blue-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
 }
+
 
 .sayori-colors {
-    display: grid;
-    gap: 10px;
-    margin-top: 20px;
+    display:
+        grid;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
 }
 
+
 .sayori-colors i {
-    display: block;
-    height: 45px;
+    display:
+        block;
+
+    height:
+        45px;
+
+    border-radius:
+        2px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0,0,0,0.04);
 }
 
 
 /* =========================================================
-   FOOTER
+   ✦ FOOTER
 ========================================================= */
 
 .sayori-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    padding: 22px;
-    background: var(--sayori-dark);
-    color: #ffffff;
-    font-size: 10px;
-    letter-spacing: 2px;
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        25px;
+
+    padding:
+        22px 25px;
+
+    background:
+        rgba(64,86,99,0.96);
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    box-shadow:
+        0 9px 18px rgba(64,86,99,0.15);
+}
+
+
+.sayori-footer::before {
+    content:
+        "♡";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        -14px;
+
+    padding:
+        4px 9px;
+
+    background:
+        var(--sayori-pink);
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
 }
 
 
 /* =========================================================
-   MOBILE
+   ✦ MOBILE
 ========================================================= */
 
 @media (max-width: 800px) {
 
     .sayori-profile {
-        width: calc(100% - 16px);
-        margin: 15px auto;
+        width:
+            calc(100% - 18px);
+
+        margin:
+            40px auto;
     }
+
 
     .sayori-hero {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
+
+        transform:
+            rotate(0);
     }
+
 
     .sayori-hero-image {
-        min-height: 300px;
+        min-height:
+            300px;
+
+        border-left:
+            0;
+
+        border-top:
+            1px solid var(--sayori-line);
     }
+
 
     .sayori-hero-info {
-        padding: 40px 25px;
+        padding:
+            55px 25px 40px;
     }
+
+
+    .sayori-hero-info::before {
+        left:
+            25px;
+    }
+
 
     .sayori-quick-data {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
+
 
     .sayori-data-item:nth-child(4n) {
-        border-right: 1px solid var(--sayori-line);
+        border-right:
+            1px dashed var(--sayori-line);
     }
+
 
     .sayori-data-item:nth-child(2n) {
-        border-right: 0;
+        border-right:
+            0;
     }
 
+
     .sayori-status-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .sayori-section,
     .sayori-aesthetic {
-        padding: 25px 18px;
+        padding:
+            30px 20px;
     }
+
 
     .sayori-profile-layout,
     .sayori-personality-layout,
     .sayori-story,
     .sayori-aesthetic-content {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .sayori-wardrobe-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .sayori-relationship {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
+
     .sayori-person-image {
-        min-height: 280px;
+        min-height:
+            280px;
     }
+
 
     .sayori-then-now,
     .sayori-trivia-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .sayori-favorites {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
+
 
     .sayori-favorites > span {
-        grid-column: 1 / -1;
-        text-align: center;
-        padding: 5px;
+        grid-column:
+            1 / -1;
+
+        text-align:
+            center;
+
+        padding:
+            5px;
     }
 
+
     .sayori-aesthetic-images {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 }
 
 
+/* =========================================================
+   ✦ SMALL MOBILE
+========================================================= */
+
 @media (max-width: 500px) {
 
-    .sayori-navigation {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .sayori-profile {
+        width:
+            calc(100% - 12px);
+
+        margin:
+            30px auto;
     }
+
+
+    .sayori-navigation {
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
 
     .sayori-tab {
-        min-width: 0;
+        min-width:
+            0;
+
+        padding:
+            12px 7px;
+
+        font-size:
+            9px;
     }
+
+
+    .sayori-hero h1 {
+        font-size:
+            45px;
+    }
+
+
+    .sayori-hero-image {
+        min-height:
+            280px;
+    }
+
 
     .sayori-wardrobe-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .sayori-status-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
-    .sayori-mini-facts {
-        grid-template-columns: 1fr;
-    }
 
     .sayori-aesthetic-images {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .sayori-section-heading h2 {
+        font-size:
+            26px;
+    }
+
+
+    .sayori-section-heading > span {
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            21px;
+    }
+
+
+    .sayori-favorites {
+        grid-template-columns:
+            1fr 1fr;
     }
 }
