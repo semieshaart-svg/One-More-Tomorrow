@@ -66,7 +66,7 @@ body {
             rgba(255, 255, 255, 0.18),
             rgba(255, 255, 255, 0.18)
         ),
-        url("https://i.pinimg.com/736x/12/cc/b1/12ccb14b565c41569edcb52564a9cd85.jpg");
+        url("../images/background.jpg");
 
     background-size: cover;
     background-position: center center;
@@ -76,7 +76,6 @@ body {
     min-height: 100vh;
 
     overflow-x: hidden;
-
 }
 
 a {
