@@ -1,0 +1,1030 @@
+/* =========================================================
+   ✦ MARIKA KURATA — EDITORIAL SCRAPBOOK CSS ✦
+   HTML REMAINS UNCHANGED
+   accent: #A9515C
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --marika-accent: #A9515C;
+    --marika-dark: #35292c;
+    --marika-muted: #9b8d90;
+
+    --marika-paper: #fffdfb;
+    --marika-paper-warm: #faf5f2;
+    --marika-soft: #f7edef;
+    --marika-line: #eadfe1;
+
+    --marika-shadow:
+        0 12px 35px rgba(76, 45, 51, .08);
+
+    --marika-shadow-soft:
+        0 5px 18px rgba(76, 45, 51, .06);
+}
+
+
+/* =========================================================
+   PAGE BACKGROUND
+========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(169,81,92,.06) 0,
+            rgba(169,81,92,0) 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(169,81,92,.045) 0,
+            rgba(169,81,92,0) 30%
+        ),
+        #f6f1ee !important;
+
+    color: var(--marika-dark);
+}
+
+
+/* =========================================================
+   MAIN FRAME
+========================================================= */
+
+.container-i.card {
+    background: transparent !important;
+}
+
+.container-i.card > .container-fluid {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.98),
+            rgba(255,251,249,.98)
+        ) !important;
+
+    border: 1px solid var(--marika-line) !important;
+
+    box-shadow:
+        0 20px 60px rgba(60,35,40,.10),
+        0 2px 8px rgba(60,35,40,.04) !important;
+
+    border-radius: 3px !important;
+
+    overflow: hidden;
+}
+
+
+/* decorative vertical line */
+
+.container-i.card > .container-fluid::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 14px;
+
+    width: 1px;
+
+    background: rgba(169,81,92,.07);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.container-i.card p,
+.container-i.card li,
+.container-i.card div {
+    color: var(--marika-dark);
+}
+
+.container-i.card .text-muted,
+.container-i.card .faded {
+    color: var(--marika-muted) !important;
+}
+
+.container-i.card a {
+    transition:
+        color .25s ease,
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.container-i.card .d-flex.justify-content-between.align-items-end.mb-4 {
+    position: relative;
+
+    border-bottom:
+        1px solid var(--marika-line) !important;
+
+    padding-bottom: 22px !important;
+}
+
+.container-i.card .d-flex.justify-content-between.align-items-end.mb-4::after {
+    content: "♡";
+
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 0 10px;
+
+    background: var(--marika-paper);
+
+    color: var(--marika-accent);
+
+    font-size: 13px;
+}
+
+
+/* title */
+
+.container-i.card
+[style*="font-size:32px"] {
+    color: var(--marika-accent) !important;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px !important;
+
+    font-weight: 500 !important;
+
+    letter-spacing: 4px !important;
+}
+
+
+/* small title */
+
+.container-i.card
+[style*="letter-spacing:4px"] {
+    color: var(--marika-muted) !important;
+}
+
+
+/* header heart */
+
+.container-i.card
+[style*="width:45px"][style*="height:45px"] {
+    width: 48px !important;
+    height: 48px !important;
+
+    border:
+        1px solid rgba(169,81,92,.35) !important;
+
+    background: var(--marika-soft);
+
+    color: var(--marika-accent) !important;
+
+    transition: all .3s ease;
+}
+
+.container-i.card
+[style*="width:45px"][style*="height:45px"]:hover {
+    transform: rotate(-8deg) scale(1.08);
+    background: var(--marika-accent);
+    color: white !important;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+========================================================= */
+
+.container-i.card
+[style*="min-height:420px"] {
+    position: relative;
+
+    border:
+        1px solid var(--marika-line);
+
+    background-color: var(--marika-paper-warm);
+
+    box-shadow: var(--marika-shadow-soft);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.container-i.card
+[style*="min-height:420px"]:hover {
+    transform: translateY(-4px) rotate(-.4deg);
+
+    box-shadow: var(--marika-shadow);
+}
+
+
+/* little photo corner */
+
+.container-i.card
+[style*="min-height:420px"]::after {
+    content: "PHOTO / 002";
+
+    position: absolute;
+
+    right: 12px;
+    bottom: 10px;
+
+    padding: 5px 8px;
+
+    background: rgba(255,255,255,.88);
+
+    color: var(--marika-accent);
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PERSONAL INFORMATION
+========================================================= */
+
+.container-i.card
+[style*="Personal Information"] {
+    color: var(--marika-accent) !important;
+}
+
+
+/* information cells */
+
+.container-i.card
+[style*="font-size:16px"] {
+    color: var(--marika-dark) !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    letter-spacing: .2px;
+}
+
+
+/* mini labels */
+
+.container-i.card
+[style*="font-size:8px"][style*="letter-spacing:2px"] {
+    color: var(--marika-muted) !important;
+}
+
+
+/* intro quote */
+
+.container-i.card
+[style*="border-left:3px solid #A9515C"] {
+    background:
+        linear-gradient(
+            90deg,
+            var(--marika-soft),
+            rgba(247,237,239,.45)
+        ) !important;
+
+    border-left:
+        3px solid var(--marika-accent) !important;
+
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.container-i.card .nav.nav-pills {
+    position: relative;
+
+    border-top:
+        1px solid var(--marika-line) !important;
+
+    border-bottom:
+        1px solid var(--marika-line) !important;
+
+    background: rgba(250,245,243,.65);
+
+    padding: 5px 0;
+}
+
+
+/* nav links */
+
+.container-i.card .nav-pills .nav-link {
+    position: relative;
+
+    color: var(--marika-muted) !important;
+
+    background: transparent !important;
+
+    border-radius: 0 !important;
+
+    font-size: 9px !important;
+
+    letter-spacing: 2px;
+
+    transition:
+        color .25s ease,
+        background .25s ease;
+}
+
+
+/* hover */
+
+.container-i.card .nav-pills .nav-link:hover {
+    color: var(--marika-accent) !important;
+
+    background:
+        rgba(169,81,92,.05) !important;
+}
+
+
+/* active */
+
+.container-i.card .nav-pills .nav-link.active {
+    color: var(--marika-accent) !important;
+
+    background:
+        rgba(169,81,92,.08) !important;
+
+    font-weight: 600;
+}
+
+
+/* active underline */
+
+.container-i.card .nav-pills .nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25%;
+    right: 25%;
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--marika-accent);
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.container-i.card
+[style*="font-size:12px"][style*="font-weight:600"] {
+    color: var(--marika-accent) !important;
+}
+
+
+/* =========================================================
+   ABOUT TAB
+========================================================= */
+
+.container-i.card .tab-pane {
+    animation:
+        marikaFade .45s ease both;
+}
+
+@keyframes marikaFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* about paragraphs */
+
+.container-i.card .tab-pane p {
+    line-height: 1.85;
+    font-size: 14px;
+}
+
+
+/* large quote */
+
+.container-i.card
+[style*="font-size:22px"] {
+    color: var(--marika-accent) !important;
+}
+
+
+/* =========================================================
+   ABOUT MAIN IMAGE
+========================================================= */
+
+.container-i.card
+[style*="height:390px"] {
+    background:
+        linear-gradient(
+            135deg,
+            #faf5f3,
+            #fff
+        ) !important;
+
+    border: 0 !important;
+}
+
+
+/* outer image frame */
+
+.container-i.card
+[style*="position:relative"][style*="padding:10px"][style*="border:1px solid #eee"] {
+    border:
+        1px solid var(--marika-line) !important;
+
+    box-shadow:
+        8px 8px 0 rgba(169,81,92,.07);
+
+    background: white !important;
+}
+
+
+/* =========================================================
+   STATUS CARDS
+========================================================= */
+
+.container-i.card
+[style*="border-radius:14px"] {
+    border:
+        1px solid var(--marika-line) !important;
+
+    box-shadow:
+        0 4px 15px rgba(70,40,45,.035);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.container-i.card
+[style*="border-radius:14px"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(70,40,45,.07);
+}
+
+
+/* =========================================================
+   ACCENT BOXES
+========================================================= */
+
+.container-i.card
+[style*="background:#A9515C"] {
+    background:
+        linear-gradient(
+            135deg,
+            #A9515C,
+            #914550
+        ) !important;
+
+    box-shadow:
+        0 10px 25px rgba(169,81,92,.18);
+}
+
+
+/* progress */
+
+.container-i.card .progress {
+    overflow: hidden;
+
+    background:
+        #eee4e5 !important;
+}
+
+.container-i.card .progress div {
+    background:
+        var(--marika-accent) !important;
+
+    height: 100%;
+}
+
+
+/* =========================================================
+   CHARACTER TAB
+========================================================= */
+
+.container-i.card .progress {
+    border-radius: 99px !important;
+}
+
+.container-i.card .progress > div {
+    border-radius: 99px;
+
+    transition:
+        width .8s ease;
+}
+
+
+/* character lists */
+
+.container-i.card ul {
+    line-height: 1.9;
+}
+
+.container-i.card li::marker {
+    color: var(--marika-accent);
+}
+
+
+/* =========================================================
+   TRIVIA
+========================================================= */
+
+.container-i.card
+[style*="height:425px"] {
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--marika-accent)
+        transparent;
+}
+
+
+/* cards */
+
+.container-i.card
+[style*="border-radius:14px"][style*="padding:16px"] {
+    background:
+        rgba(255,255,255,.9) !important;
+}
+
+
+/* trivia icon circles */
+
+.container-i.card
+[style*="width:38px"][style*="height:38px"],
+.container-i.card
+[style*="width:42px"][style*="height:42px"] {
+    background:
+        var(--marika-accent) !important;
+
+    box-shadow:
+        0 5px 15px rgba(169,81,92,.18);
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.container-i.card
+[style*="min-height:300px"] {
+    background:
+        #fff !important;
+
+    box-shadow:
+        var(--marika-shadow-soft);
+}
+
+
+/* childhood overlay */
+
+.container-i.card
+[style*="background:rgba(255,255,255,.92)"] {
+    border:
+        1px solid var(--marika-line);
+}
+
+
+/* story chapter */
+
+.container-i.card
+[style*="border-left:3px solid #A9515C"] {
+    border-left:
+        3px solid var(--marika-accent) !important;
+}
+
+
+/* chapter cards */
+
+.container-i.card
+[style*="border:1px solid #eee"][style*="padding:18px"] {
+    background:
+        #fff !important;
+
+    box-shadow:
+        0 5px 18px rgba(70,40,45,.04);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.container-i.card
+[style*="border:1px solid #eee"][style*="padding:18px"]:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(70,40,45,.08);
+}
+
+
+/* =========================================================
+   THEN / NOW
+========================================================= */
+
+.container-i.card
+[style*="background:#fafafa"][style*="border-radius:14px"] {
+    background:
+        var(--marika-paper-warm) !important;
+}
+
+.container-i.card
+[style*="border:1px solid #A9515C"][style*="border-radius:14px"] {
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            var(--marika-soft)
+        ) !important;
+
+    border:
+        1px solid var(--marika-accent) !important;
+}
+
+
+/* =========================================================
+   OLD NOTE
+========================================================= */
+
+.container-i.card
+[style*="background:#f9f0f2"] {
+    position: relative;
+
+    background:
+        #f8eeef !important;
+
+    border:
+        1px solid #ead5d9 !important;
+
+    box-shadow:
+        4px 5px 0 rgba(169,81,92,.05);
+}
+
+.container-i.card
+[style*="background:#f9f0f2"]::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: -9px;
+    right: 18px;
+
+    color: var(--marika-accent);
+
+    background: #fff;
+
+    padding: 2px 6px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RELATIONSHIPS
+========================================================= */
+
+.container-i.card a[href*="toyhou.se"] {
+    color:
+        var(--marika-accent) !important;
+
+    text-decoration: none;
+}
+
+.container-i.card a[href*="toyhou.se"]:hover {
+    opacity: .7;
+}
+
+
+/* relationship portraits */
+
+.container-i.card img[style*="width:115px"] {
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+
+    border:
+        5px solid var(--marika-soft) !important;
+}
+
+.container-i.card img[style*="width:115px"]:hover {
+    transform:
+        scale(1.05)
+        rotate(2deg);
+
+    border-color:
+        rgba(169,81,92,.25) !important;
+}
+
+
+/* relationship cards */
+
+.container-i.card
+[style*="border:1px solid #eee"][style*="padding:20px"] {
+    border:
+        1px solid var(--marika-line) !important;
+
+    box-shadow:
+        0 5px 18px rgba(70,40,45,.04);
+}
+
+
+/* relationship hearts */
+
+.container-i.card
+.fa-heart {
+    color: var(--marika-accent);
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.container-i.card
+.carousel-inner {
+    overflow: visible;
+}
+
+
+/* gallery cards */
+
+.container-i.card
+.carousel-item [style*="padding:10px"] {
+    background:
+        #fff !important;
+
+    border:
+        1px solid var(--marika-line) !important;
+
+    box-shadow:
+        5px 7px 0 rgba(169,81,92,.045);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.container-i.card
+.carousel-item [style*="padding:10px"]:hover {
+    transform:
+        translateY(-5px)
+        rotate(-.5deg);
+
+    box-shadow:
+        10px 14px 25px rgba(70,40,45,.10);
+}
+
+
+/* gallery image */
+
+.container-i.card
+.carousel-item img {
+    transition:
+        transform .5s ease;
+}
+
+.container-i.card
+.carousel-item [style*="overflow:hidden"]:hover img {
+    transform:
+        scale(1.035);
+}
+
+
+/* carousel arrows */
+
+.container-i.card
+.carousel a[data-slide] {
+    color:
+        var(--marika-accent) !important;
+
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+}
+
+.container-i.card
+.carousel a[data-slide]:hover {
+    opacity: .6;
+
+    transform:
+        scale(1.2);
+}
+
+
+/* =========================================================
+   AESTHETIC
+========================================================= */
+
+.container-i.card
+[style*="Visual notes"] {
+    color:
+        var(--marika-muted) !important;
+}
+
+
+/* aesthetic images */
+
+.container-i.card
+[style*="height:150px"] {
+    position: relative;
+
+    border:
+        1px solid rgba(169,81,92,.12);
+
+    filter:
+        saturate(.88)
+        contrast(.96);
+
+    transition:
+        transform .35s ease,
+        filter .35s ease,
+        box-shadow .35s ease;
+}
+
+.container-i.card
+[style*="height:150px"]:hover {
+    transform:
+        scale(1.025);
+
+    filter:
+        saturate(1)
+        contrast(1);
+
+    box-shadow:
+        0 8px 20px rgba(70,40,45,.10);
+}
+
+
+/* alternating scrapbook rotation */
+
+.container-i.card
+[style*="height:150px"]:nth-child(odd) {
+    transform: rotate(-.7deg);
+}
+
+.container-i.card
+[style*="height:150px"]:nth-child(even) {
+    transform: rotate(.7deg);
+}
+
+.container-i.card
+[style*="height:150px"]:nth-child(odd):hover,
+.container-i.card
+[style*="height:150px"]:nth-child(even):hover {
+    transform:
+        scale(1.025)
+        rotate(0);
+}
+
+
+/* =========================================================
+   COLOR PALETTE
+========================================================= */
+
+.container-i.card
+[style*="height:22px"] {
+    transition:
+        transform .25s ease,
+        height .25s ease;
+}
+
+.container-i.card
+[style*="height:22px"]:hover {
+    height: 30px !important;
+}
+
+
+/* =========================================================
+   LITTLE DECORATIVE DETAILS
+========================================================= */
+
+/* add subtle hearts before section headers */
+
+.container-i.card
+.tab-pane > .text-uppercase:first-child::after {
+    content: "  ♡";
+
+    color:
+        rgba(169,81,92,.45);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.container-i.card ::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container-i.card ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.container-i.card ::-webkit-scrollbar-thumb {
+    background:
+        rgba(169,81,92,.35);
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .container-i.card > .container-fluid {
+        padding: 15px !important;
+    }
+
+    .container-i.card > .container-fluid::before {
+        left: 7px;
+    }
+
+    .container-i.card
+    [style*="font-size:32px"] {
+        font-size: 25px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .container-i.card
+    .nav.nav-pills {
+        flex-wrap: wrap;
+    }
+
+    .container-i.card
+    .nav-pills .nav-item {
+        width: 50%;
+        text-align: center;
+    }
+
+    .container-i.card
+    .nav-pills .nav-link {
+        padding:
+            12px 5px !important;
+    }
+
+    .container-i.card
+    [style*="height:390px"] {
+        height: 330px !important;
+    }
+
+    .container-i.card
+    [style*="height:350px"] {
+        height: 280px !important;
+    }
+
+    .container-i.card
+    [style*="height:150px"] {
+        height: 115px !important;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container-i.card
+    [style*="font-size:32px"] {
+        font-size: 21px !important;
+    }
+
+    .container-i.card
+    .nav-pills .nav-item {
+        width: 100%;
+    }
+
+}
