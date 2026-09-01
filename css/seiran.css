@@ -2496,9 +2496,13 @@
 }
 
 /* =========================================================
-   FIRST STUDENT — HIDE CHARACTER ART TEXT
+   FIRST STUDENT — HIDE CHARACTER ART TEXT ONLY
 ========================================================= */
 
 .student-card:first-child .image-placeholder {
+    display: none;
+}
+
+.student-card:first-child .student-image > span {
     display: none;
 }
