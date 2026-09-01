@@ -1,13 +1,12 @@
 /* =========================================================
    ✦ NEZUKO GAKKO
-   COZY SCRAPBOOK / STUDENT ARCHIVE
+   COZY SCRAPBOOK / PAPER EDITION
    CSS ONLY — NO JAVASCRIPT
-   accent: #F8961E
 ========================================================= */
 
 
 /* =========================================================
-   ✦ NEZUKO PALETTE
+   ✦ NEZUKO PALETTE — SCRAPBOOK EDITION
 ========================================================= */
 
 :root {
@@ -18,8 +17,14 @@
     --nezuko-orange-pale: #FFF8ED;
 
     --nezuko-red: #C62A45;
+    --nezuko-red-dark: #A91F38;
+    --nezuko-red-soft: #FBE3E7;
+
     --nezuko-green: #64CE9E;
+    --nezuko-green-soft: #E5F7EE;
+
     --nezuko-peach: #EDB394;
+    --nezuko-peach-soft: #FCEDE5;
 
     --nezuko-cream: #FFFDF8;
     --nezuko-paper: #FFFFFF;
@@ -29,14 +34,14 @@
     --nezuko-line-dark: #D9C9BD;
 
     --nezuko-text: #5D5653;
-    --nezuko-muted: #9B9290;
+    --nezuko-text-soft: #9B9290;
     --nezuko-dark: #403B3A;
 
     --nezuko-shadow:
-        0 12px 30px rgba(80,60,45,.10);
+        0 12px 30px rgba(80, 60, 45, 0.13);
 
     --nezuko-soft-shadow:
-        0 5px 16px rgba(80,60,45,.07);
+        0 6px 18px rgba(80, 60, 45, 0.10);
 }
 
 
@@ -50,9 +55,17 @@ body {
     padding: 0 !important;
 }
 
-body {
+html {
+    min-height: 100%;
+}
 
-    color: var(--nezuko-text);
+
+body.nezuko-page {
+
+    min-height: 100vh;
+
+    color:
+        var(--nezuko-text);
 
     font-family:
         Arial,
@@ -62,8 +75,8 @@ body {
     background:
 
         linear-gradient(
-            rgba(255,250,242,.35),
-            rgba(255,250,242,.35)
+            rgba(255, 250, 242, 0.30),
+            rgba(255, 250, 242, 0.30)
         ),
 
         url("https://i.pinimg.com/1200x/cb/88/71/cb8871e84d83ade275838f3c915b5999.jpg")
@@ -71,9 +84,9 @@ body {
 }
 
 
-/* soft atmospheric overlay */
+/* atmospheric overlay */
 
-body::before {
+body.nezuko-page::before {
 
     content: "";
 
@@ -88,28 +101,40 @@ body::before {
     background:
 
         radial-gradient(
-            circle at 10% 15%,
-            rgba(255,255,255,.55),
-            transparent 28%
+            circle at 15% 15%,
+            rgba(255,255,255,0.42),
+            transparent 30%
         ),
 
         radial-gradient(
-            circle at 90% 80%,
-            rgba(248,150,30,.08),
-            transparent 30%
+            circle at 85% 80%,
+            rgba(248,150,30,0.10),
+            transparent 32%
         );
 }
 
 
+body.nezuko-page * {
+    box-sizing: border-box;
+}
+
+
 /* =========================================================
-   ✦ MAIN FRAME
+   ✦ MAIN PROFILE
 ========================================================= */
 
-.container-i {
+.nezuko-profile {
 
     position: relative;
 
-    color: var(--nezuko-text);
+    width:
+        min(1100px, calc(100% - 34px));
+
+    margin:
+        70px auto;
+
+    color:
+        var(--nezuko-text);
 
     font-family:
         Arial,
@@ -118,244 +143,243 @@ body::before {
 }
 
 
-/* main white sheet */
-
-.container-i > .container-fluid {
-
-    position: relative;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,.98),
-            rgba(255,252,247,.98)
-        ) !important;
-
-    border:
-        1px solid var(--nezuko-line) !important;
-
-    box-shadow:
-        0 18px 45px rgba(65,50,40,.16) !important;
-
-    overflow: hidden;
-
-}
-
-
 /* =========================================================
-   ✦ PAPER DECORATIONS
+   ✦ DECORATIVE PROFILE ELEMENTS
 ========================================================= */
 
-.container-i > .container-fluid::before {
+.nezuko-profile::before {
 
     content:
-        "✦  ·  ♡  ·  ✦  ·  ♡";
+        "✦  ·  ♡  ·  ✦";
 
     position: absolute;
 
-    top: 8px;
-    right: 25px;
+    top:
+        -38px;
+
+    left:
+        25px;
 
     color:
-        rgba(248,150,30,.22);
+        rgba(255,255,255,0.90);
 
-    font-family:
-        Georgia,
-        serif;
+    font-size:
+        15px;
 
-    font-size: 14px;
+    letter-spacing:
+        8px;
 
-    letter-spacing: 6px;
+    text-shadow:
+        0 2px 5px rgba(70,50,40,0.18);
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 
-.container-i > .container-fluid::after {
+.nezuko-profile::after {
 
     content:
         "NEZUKO'S LITTLE ARCHIVE ♡";
 
     position: absolute;
 
-    bottom: 42px;
-    left: 25px;
+    right:
+        18px;
+
+    bottom:
+        -35px;
 
     color:
-        rgba(198,42,69,.25);
+        rgba(255,255,255,0.92);
 
     font-family:
-        Georgia,
-        serif;
-
-    font-size: 8px;
-
-    font-style: italic;
-
-    letter-spacing: 2px;
-
-    transform:
-        rotate(-3deg);
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   ✦ HEADER
-========================================================= */
-
-.container-i .container-fluid > .d-flex.justify-content-between.align-items-end {
-
-    position: relative;
-
-    padding-top: 18px;
-
-    border-bottom:
-        2px solid var(--nezuko-orange) !important;
-}
-
-
-/* tiny label */
-
-.container-i .container-fluid > .d-flex
-.justify-content-between.align-items-end
-.text-uppercase.faded {
-
-    color:
-        var(--nezuko-muted) !important;
+        Georgia, serif;
 
     font-size:
-        8px !important;
+        10px;
+
+    font-style:
+        italic;
 
     letter-spacing:
-        4px !important;
-}
-
-
-/* Nezuko name */
-
-.container-i .container-fluid > .d-flex
-.justify-content-between.align-items-end
-.text-uppercase:not(.faded) {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        34px !important;
-
-    font-weight:
-        700 !important;
-
-    letter-spacing:
-        2px !important;
-}
-
-
-/* heart circle */
-
-.container-i .container-fluid > .d-flex
-.justify-content-between.align-items-end
-[style*="border-radius:50%"] {
-
-    position: relative;
-
-    background:
-        var(--nezuko-orange-pale);
-
-    border:
-        1px solid var(--nezuko-orange) !important;
-
-    color:
-        var(--nezuko-orange) !important;
-
-    box-shadow:
-        0 4px 12px rgba(248,150,30,.12);
+        2px;
 
     transform:
-        rotate(5deg);
+        rotate(-2deg);
+
+    text-shadow:
+        0 2px 5px rgba(70,50,40,0.18);
+
+    pointer-events:
+        none;
 }
 
 
 /* =========================================================
-   ✦ PROFILE INTRO
+   ✦ HERO — PAPER SHEET
 ========================================================= */
 
-.container-i .container-fluid > .row.no-gutters.mb-4 {
+.nezuko-hero {
 
-    position: relative;
+    position:
+        relative;
 
-    padding:
-        10px 5px 5px;
-}
+    display:
+        grid;
 
-
-/* =========================================================
-   ✦ MAIN PORTRAIT
-========================================================= */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-4 {
-
-    position: relative;
-}
-
-
-/* frame around first image */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-4 > div {
-
-    position: relative;
+    grid-template-columns:
+        1fr 360px;
 
     min-height:
-        420px !important;
+        390px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,253,249,0.98),
+            rgba(255,248,237,0.97)
+        );
 
     border:
-        8px solid #fff;
-
-    outline:
-        1px solid var(--nezuko-line);
+        1px solid rgba(220,205,193,0.80);
 
     box-shadow:
-        7px 10px 22px rgba(70,55,45,.13);
+        0 18px 40px rgba(70,50,40,0.18);
 
     transform:
-        rotate(-1deg);
-
-    background-color:
-        var(--nezuko-paper-warm);
+        rotate(-0.35deg);
 }
 
 
-/* little tape */
+/* =========================================================
+   ✦ HERO WASHI TAPE
+========================================================= */
 
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-4::before {
+.nezuko-hero::before {
 
     content: "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    z-index: 5;
+    top:
+        -12px;
 
-    top: -8px;
-    left: 40%;
+    left:
+        42%;
 
-    width: 90px;
-    height: 25px;
+    width:
+        125px;
+
+    height:
+        35px;
+
+    z-index:
+        5;
 
     background:
-        rgba(248,150,30,.35);
+        linear-gradient(
+            rgba(248,150,30,0.55),
+            rgba(255,194,112,0.55)
+        );
+
+    opacity:
+        0.85;
+
+    transform:
+        rotate(2deg);
+
+    box-shadow:
+        0 2px 5px rgba(60,45,35,0.08);
+}
+
+
+/* =========================================================
+   ✦ HERO DECORATION
+========================================================= */
+
+.nezuko-hero::after {
+
+    content:
+        "♡";
+
+    position:
+        absolute;
+
+    right:
+        25px;
+
+    top:
+        22px;
+
+    z-index:
+        6;
+
+    color:
+        var(--nezuko-red);
+
+    font-size:
+        28px;
+
+    transform:
+        rotate(8deg);
+}
+
+
+/* =========================================================
+   ✦ HERO INFO
+========================================================= */
+
+.nezuko-hero-info {
+
+    position:
+        relative;
+
+    padding:
+        65px 55px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+}
+
+
+/* handwritten note */
+
+.nezuko-hero-info::before {
+
+    content:
+        "dear diary...";
+
+    position:
+        absolute;
+
+    top:
+        32px;
+
+    left:
+        55px;
+
+    color:
+        var(--nezuko-orange-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        12px;
+
+    font-style:
+        italic;
 
     transform:
         rotate(-4deg);
@@ -363,1250 +387,683 @@ body::before {
 
 
 /* =========================================================
-   ✦ PERSONAL INFORMATION
+   ✦ LABEL
 ========================================================= */
 
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8 {
+.nezuko-label {
 
-    color:
-        var(--nezuko-text);
-}
-
-
-/* section title */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8
-.text-uppercase.mb-3 {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    font-size:
-        10px !important;
-
-    font-weight:
-        700 !important;
-
-    letter-spacing:
-        3px !important;
-}
-
-
-/* info labels */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8
-.faded.text-uppercase {
-
-    color:
-        var(--nezuko-muted) !important;
-
-    font-size:
-        8px !important;
-
-    letter-spacing:
-        2px !important;
-}
-
-
-/* information values */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8
-.faded.text-uppercase + div {
-
-    color:
-        var(--nezuko-dark);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        15px !important;
-
-    padding-top:
-        2px;
-
-}
-
-
-/* theme/song link */
-
-.container-i a {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    transition:
-        color .2s ease,
-        opacity .2s ease;
-}
-
-.container-i a:hover {
-
-    color:
-        var(--nezuko-orange-dark) !important;
-
-    opacity:
-        .8;
-
-    text-decoration:
-        none;
-}
-
-
-/* =========================================================
-   ✦ CURRENT STATUS NOTE
-========================================================= */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8
-.mt-4.p-4 {
-
-    position: relative;
-
-    background:
-        var(--nezuko-orange-pale) !important;
-
-    border-left:
-        3px solid var(--nezuko-orange) !important;
-
-    box-shadow:
-        3px 5px 12px rgba(80,60,45,.06);
-
-    transform:
-        rotate(.3deg);
-}
-
-
-/* status title */
-
-.container-i .container-fluid
-.row.no-gutters.mb-4
-.col-lg-8
-.mt-4.p-4
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* =========================================================
-   ✦ NAVIGATION
-========================================================= */
-
-.container-i .nav.nav-pills {
-
-    position: relative;
-
-    gap: 6px;
-
-    padding:
-        8px 4px;
-
-    border-top:
-        1px solid var(--nezuko-line) !important;
-
-    border-bottom:
-        1px solid var(--nezuko-line) !important;
-}
-
-
-/* navigation tabs */
-
-.container-i .nav-pills .nav-link {
-
-    position: relative;
-
-    color:
-        var(--nezuko-muted) !important;
-
-    background:
-        transparent !important;
-
-    border:
-        1px solid transparent;
-
-    border-radius:
-        2px !important;
-
-    font-size:
-        9px !important;
-
-    letter-spacing:
-        2px !important;
-
-    transition:
-        all .2s ease;
-
-}
-
-
-/* hover */
-
-.container-i .nav-pills .nav-link:hover {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    background:
-        var(--nezuko-orange-pale) !important;
-
-    border-color:
-        var(--nezuko-orange-soft);
-}
-
-
-/* active */
-
-.container-i .nav-pills .nav-link.active {
-
-    color:
-        #fff !important;
-
-    background:
-        var(--nezuko-orange) !important;
-
-    border-color:
-        var(--nezuko-orange-dark);
-
-    box-shadow:
-        0 4px 10px rgba(248,150,30,.18);
-
-    transform:
-        rotate(-.5deg);
-}
-
-
-/* =========================================================
-   ✦ TAB CONTENT
-========================================================= */
-
-.container-i .tab-content {
-
-    position: relative;
-
-    padding-top:
-        5px;
-}
-
-
-/* all tab panes */
-
-.container-i .tab-pane {
-
-    color:
-        var(--nezuko-text);
-}
-
-
-/* =========================================================
-   ✦ SECTION TITLES
-========================================================= */
-
-.container-i .tab-pane
-.text-uppercase.mb-3,
-.container-i .tab-pane
-.text-uppercase.mb-4 {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    font-weight:
-        700 !important;
-
-    letter-spacing:
-        2px !important;
-}
-
-
-/* =========================================================
-   ✦ ABOUT
-========================================================= */
-
-#ONE {
-
-    position: relative;
-}
-
-
-/* paragraphs */
-
-#ONE p {
-
-    color:
-        var(--nezuko-text);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.9;
+    display:
+        inline-block;
 
     margin-bottom:
         18px;
-}
-
-
-/* first paragraph */
-
-#ONE .col-lg-7 > p:first-of-type {
-
-    padding-left:
-        18px;
-
-    border-left:
-        3px solid var(--nezuko-orange);
-}
-
-
-/* quote */
-
-#ONE .col-lg-7
-.p-4.mt-4 {
-
-    position: relative;
-
-    background:
-        var(--nezuko-orange-pale) !important;
-
-    border-left:
-        3px solid var(--nezuko-orange) !important;
-
-    box-shadow:
-        0 4px 12px rgba(80,60,45,.05);
-
-    transform:
-        rotate(-.3deg);
-}
-
-
-/* giant quote symbol */
-
-#ONE .col-lg-7
-.p-4.mt-4 > div:first-child {
 
     color:
-        var(--nezuko-orange) !important;
-}
+        var(--nezuko-orange);
 
+    font-size:
+        10px;
 
-/* quote author */
+    font-weight:
+        bold;
 
-#ONE .col-lg-7
-.p-4.mt-4 .text-uppercase {
+    letter-spacing:
+        3px;
 
-    color:
-        var(--nezuko-muted) !important;
+    text-transform:
+        uppercase;
 }
 
 
 /* =========================================================
-   ✦ MINI FACTS
+   ✦ TITLE
 ========================================================= */
 
-#ONE .col-lg-7 .row.mt-4
-.text-uppercase {
+.nezuko-hero h1 {
 
-    color:
-        var(--nezuko-muted) !important;
-
-    font-size:
-        8px !important;
-
-    letter-spacing:
-        2px !important;
-}
-
-
-#ONE .col-lg-7 .row.mt-4
-.text-uppercase + div {
+    margin:
+        0;
 
     color:
         var(--nezuko-dark);
 
     font-family:
-        Georgia,
-        serif;
+        Georgia, serif;
 
     font-size:
-        13px;
+        clamp(42px, 6vw, 72px);
+
+    line-height:
+        0.95;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -2px;
 }
 
 
 /* =========================================================
-   ✦ ABOUT RIGHT IMAGE
+   ✦ SUBTITLE
 ========================================================= */
 
-#ONE .col-lg-5 > div:first-child {
+.nezuko-subtitle {
 
-    position: relative;
+    margin-top:
+        20px;
 
-    border:
-        1px solid var(--nezuko-line) !important;
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =========================================================
+   ✦ QUOTE
+========================================================= */
+
+.nezuko-quote {
+
+    position:
+        relative;
+
+    max-width:
+        520px;
+
+    margin-top:
+        35px;
+
+    padding:
+        16px 20px 16px 25px;
+
+    border-left:
+        3px solid var(--nezuko-orange);
 
     background:
-        var(--nezuko-paper-warm) !important;
+        rgba(255,248,237,0.72);
+
+    color:
+        var(--nezuko-text);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+
+    box-shadow:
+        0 4px 12px rgba(70,50,40,0.05);
+}
+
+
+/* =========================================================
+   ✦ HERO IMAGE — POLAROID
+========================================================= */
+
+.nezuko-hero-image {
+
+    position:
+        relative;
+
+    min-height:
+        390px;
+
+    padding:
+        18px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    overflow:
+        visible;
+
+    border-left:
+        1px solid var(--nezuko-line);
+}
+
+
+/* tape */
+
+.nezuko-hero-image::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -10px;
+
+    right:
+        55px;
+
+    width:
+        95px;
+
+    height:
+        27px;
+
+    z-index:
+        5;
+
+    background:
+        rgba(248,150,30,0.40);
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* image */
+
+.nezuko-hero-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    border:
+        8px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(60,45,35,0.17);
+
+    transform:
+        rotate(1.4deg);
+}
+
+
+/* =========================================================
+   ✦ QUICK DATA
+========================================================= */
+
+.nezuko-quick-data {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top:
+        18px;
+
+    background:
+        var(--nezuko-paper);
+
+    border:
+        1px solid var(--nezuko-line);
 
     box-shadow:
         var(--nezuko-soft-shadow);
 
     transform:
-        rotate(1deg);
+        rotate(0.2deg);
 }
 
 
-/* actual image */
+.nezuko-quick-data::before {
 
-#ONE .col-lg-5 img {
+    content:
+        "✎ little facts";
+
+    position:
+        absolute;
+
+    top:
+        -25px;
+
+    right:
+        20px;
+
+    color:
+        rgba(255,255,255,0.92);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        10px;
+
+    font-style:
+        italic;
+
+    transform:
+        rotate(-3deg);
+}
+
+
+.nezuko-data-item {
+
+    position:
+        relative;
+
+    padding:
+        20px;
 
     background:
-        #fff;
+        rgba(255,253,249,0.96);
 
-    border:
-        7px solid #fff;
+    border-right:
+        1px dashed var(--nezuko-line);
 
-    box-shadow:
-        0 6px 16px rgba(70,55,45,.10);
+    border-bottom:
+        1px dashed var(--nezuko-line);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
 
-/* caption */
+.nezuko-data-item:hover {
 
-#ONE .col-lg-5
-.d-flex.justify-content-between {
+    background:
+        var(--nezuko-orange-pale);
 
-    color:
-        var(--nezuko-muted);
+    transform:
+        translateY(-3px)
+        rotate(-0.5deg);
 }
 
 
-/* archive number */
+.nezuko-data-item:nth-child(4n) {
+    border-right:
+        0;
+}
 
-#ONE .col-lg-5
-.d-flex.justify-content-between
-div:last-child {
+
+.nezuko-data-item span {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
 
     color:
-        var(--nezuko-orange) !important;
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+
+    text-transform:
+        uppercase;
+}
+
+
+.nezuko-data-item strong {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   ✦ CURRENTLY CARD
+   ✦ STATUS — LITTLE NOTE
 ========================================================= */
 
-#ONE .col-lg-5 .p-4.mt-4 {
+.nezuko-status {
 
-    border:
-        1px solid var(--nezuko-line) !important;
+    position:
+        relative;
 
-    border-radius:
-        8px !important;
+    margin-top:
+        28px;
 
-    background:
-        #fff !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-}
-
-
-/* title */
-
-#ONE .col-lg-5 .p-4.mt-4
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* labels */
-
-#ONE .col-lg-5 .p-4.mt-4
-.text-uppercase.text-muted {
-
-    color:
-        var(--nezuko-muted) !important;
-}
-
-
-/* =========================================================
-   ✦ PERSONAL GOAL
-========================================================= */
-
-#ONE .col-lg-5
-.mt-3[style*="background:#F8961E"] {
+    padding:
+        28px;
 
     background:
         linear-gradient(
             135deg,
-            var(--nezuko-orange),
-            #F6A93C
-        ) !important;
+            #FFF8DF,
+            #FFF3D9
+        );
 
-    border-radius:
-        8px !important;
+    border:
+        1px solid #EADDBD;
 
     box-shadow:
-        0 7px 18px rgba(248,150,30,.18);
+        4px 7px 18px rgba(90,70,45,0.12);
 
     transform:
-        rotate(-.4deg);
+        rotate(0.55deg);
+}
+
+
+.nezuko-status::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -8px;
+
+    left:
+        50%;
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--nezuko-orange);
+
+    box-shadow:
+        0 2px 5px rgba(60,45,35,0.20);
+
+    transform:
+        translateX(-50%);
+}
+
+
+.nezuko-status-title {
+
+    margin-bottom:
+        18px;
+
+    color:
+        var(--nezuko-orange-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-status-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        20px;
+}
+
+
+.nezuko-status-grid span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+}
+
+
+.nezuko-status-grid strong {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        14px;
 }
 
 
 /* =========================================================
-   ✦ CHARACTER
+   ✦ HIDE RADIO BUTTONS
 ========================================================= */
 
-#TWO {
+.nezuko-profile > input[type="radio"] {
 
-    padding-top:
-        10px;
+    position:
+        absolute !important;
+
+    width:
+        1px !important;
+
+    height:
+        1px !important;
+
+    opacity:
+        0 !important;
+
+    pointer-events:
+        none !important;
 }
 
 
-/* personality labels */
+/* =========================================================
+   ✦ NAVIGATION — PAPER TABS
+========================================================= */
 
-#TWO .text-uppercase.small {
+.nezuko-navigation {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin:
+        38px 0 0;
+
+    padding:
+        10px;
+
+    background:
+        rgba(255,250,246,0.92);
+
+    border:
+        1px solid rgba(220,205,198,0.9);
+
+    box-shadow:
+        0 7px 18px rgba(60,45,35,0.10);
+
+    transform:
+        rotate(-0.15deg);
+}
+
+
+.nezuko-navigation::before {
+
+    content:
+        "♡ NEZUKO'S NOTES";
+
+    position:
+        absolute;
+
+    top:
+        -20px;
+
+    left:
+        12px;
 
     color:
-        var(--nezuko-text);
+        rgba(255,255,255,0.94);
+
+    font-family:
+        Georgia, serif;
 
     font-size:
-        9px !important;
+        10px;
+
+    font-style:
+        italic;
+
+    letter-spacing:
+        1px;
+}
+
+
+.nezuko-tab {
+
+    position:
+        relative;
+
+    flex:
+        1 1 120px;
+
+    padding:
+        14px 16px;
+
+    background:
+        var(--nezuko-paper);
+
+    border:
+        1px solid #DED5D1;
+
+    color:
+        var(--nezuko-text-soft);
+
+    cursor:
+        pointer;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
 
     letter-spacing:
         1.5px;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        all 0.2s ease;
+
+    box-shadow:
+        0 2px 5px rgba(60,45,35,0.05);
 }
 
 
-/* progress background */
+.nezuko-tab:nth-child(odd) {
+    transform:
+        rotate(-0.7deg);
+}
 
-#TWO .progress {
+
+.nezuko-tab:nth-child(even) {
+    transform:
+        rotate(0.5deg);
+}
+
+
+.nezuko-tab:hover {
 
     background:
-        #EEE8E2 !important;
+        var(--nezuko-orange-soft);
 
-    border-radius:
-        10px !important;
+    border-color:
+        var(--nezuko-orange);
+
+    color:
+        var(--nezuko-dark);
+
+    transform:
+        translateY(-3px)
+        rotate(0deg);
+}
+
+
+/* =========================================================
+   ✦ SECTIONS
+========================================================= */
+
+.nezuko-section,
+.nezuko-aesthetic {
+
+    display:
+        none;
+
+    position:
+        relative;
+
+    margin-top:
+        25px;
+
+    padding:
+        42px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,253,249,0.98),
+            rgba(250,246,242,0.98)
+        );
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 14px 32px rgba(60,45,35,0.13);
 
     overflow:
         hidden;
 }
 
 
-/* progress bars */
-
-#TWO .progress > div {
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--nezuko-orange),
-            var(--nezuko-peach)
-        ) !important;
-
-    border-radius:
-        10px;
-}
-
-
-/* trait headings */
-
-#TWO .col-lg-4
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    font-size:
-        10px !important;
-
-    font-weight:
-        700 !important;
-
-    letter-spacing:
-        2px !important;
-}
-
-
-/* lists */
-
-#TWO ul {
-
-    color:
-        var(--nezuko-text);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.9;
-}
-
-
-/* =========================================================
-   ✦ TRIVIA
-========================================================= */
-
-#THREE {
-
-    scrollbar-width:
-        thin;
-
-    scrollbar-color:
-        var(--nezuko-orange)
-        var(--nezuko-paper-warm);
-}
-
-
-/* trivia cards */
-
-#THREE .row .col-md-6 > div,
-#THREE > div > div > div {
-
-    border:
-        1px solid var(--nezuko-line) !important;
-
-    border-radius:
-        10px !important;
-
-    background:
-        #fff !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-}
-
-
-/* trivia headings */
-
-#THREE .text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* list text */
-
-#THREE ul {
-
-    color:
-        var(--nezuko-text);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.8;
-}
-
-
-/* =========================================================
-   ✦ TRIVIA FAVORITES
-========================================================= */
-
-#THREE > div:nth-last-child(2) {
-
-    background:
-        var(--nezuko-orange-pale) !important;
-}
-
-
-/* =========================================================
-   ✦ CURRENTLY ORANGE BAR
-========================================================= */
-
-#THREE [style*="background:#F8961E"] {
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--nezuko-orange),
-            #F6A93C
-        ) !important;
-
-    border-radius:
-        9px !important;
-
-    box-shadow:
-        0 6px 16px rgba(248,150,30,.15);
-}
-
-
-/* =========================================================
-   ✦ STORY
-========================================================= */
-
-#FOUR {
-
-    padding-top:
-        10px;
-}
-
-
-/* story icon */
-
-#FOUR .d-flex.align-items-center
-div:first-child {
-
-    background:
-        var(--nezuko-orange) !important;
-
-    box-shadow:
-        0 5px 12px rgba(248,150,30,.15);
-}
-
-
-/* story title */
-
-#FOUR .d-flex.align-items-center
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* childhood image */
-
-#FOUR [style*="background-image"] {
-
-    border-radius:
-        3px;
-}
-
-
-/* story paragraphs */
-
-#FOUR p {
-
-    color:
-        var(--nezuko-text);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.85;
-}
-
-
-/* chapter border */
-
-#FOUR .border-left {
-
-    border-left:
-        3px solid var(--nezuko-orange) !important;
-}
-
-
-/* chapter cards */
-
-#FOUR .col-md-4 > div {
-
-    border:
-        1px solid var(--nezuko-line) !important;
-
-    border-radius:
-        9px !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-
-#FOUR .col-md-4 > div:hover {
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 10px 20px rgba(70,55,45,.10);
-}
-
-
-/* age */
-
-#FOUR .col-md-4
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* =========================================================
-   ✦ THEN / NOW
-========================================================= */
-
-#FOUR .row.mb-5 .col-md-6 > div {
-
-    border-radius:
-        9px !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-}
-
-
-/* THEN */
-
-#FOUR .row.mb-5
-.col-md-6:first-child > div {
-
-    background:
-        var(--nezuko-paper-warm) !important;
-}
-
-
-/* NOW */
-
-#FOUR .row.mb-5
-.col-md-6:last-child > div {
-
-    border:
-        1px solid var(--nezuko-orange) !important;
-
-    background:
-        var(--nezuko-orange-pale) !important;
-}
-
-
-/* =========================================================
-   ✦ OLD NOTE
-========================================================= */
-
-#FOUR [style*="background:#fff9f4"] {
-
-    position:
-        relative;
-
-    background:
-        #FFF8EF !important;
-
-    border:
-        1px solid #EEDCCB !important;
-
-    box-shadow:
-        4px 7px 16px rgba(70,55,45,.08);
-
-    transform:
-        rotate(-.6deg) !important;
-}
-
-
-/* =========================================================
-   ✦ RELATIONSHIPS
-========================================================= */
-
-#FIVE {
-
-    padding-top:
-        10px;
-}
-
-
-/* social archive */
-
-#FIVE .text-uppercase {
-
-    color:
-        var(--nezuko-orange);
-}
-
-
-/* relationship cards */
-
-#FIVE .mb-4[style*="border:1px solid #eee"] {
-
-    position:
-        relative;
-
-    border:
-        1px solid var(--nezuko-line) !important;
-
-    background:
-        #fff !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-
-#FIVE .mb-4[style*="border:1px solid #eee"]:hover {
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 11px 22px rgba(70,55,45,.10);
-}
-
-
-/* avatars */
-
-#FIVE img {
-
-    border:
-        5px solid var(--nezuko-orange-pale) !important;
-
-    box-shadow:
-        0 3px 10px rgba(70,55,45,.08);
-}
-
-
-/* relationship names */
-
-#FIVE a[style*="font-size:20px"] {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    font-family:
-        Georgia,
-        serif;
-
-    transition:
-        opacity .2s ease;
-}
-
-
-#FIVE a[style*="font-size:20px"]:hover {
-
-    opacity:
-        .7;
-}
-
-
-/* relationship number */
-
-#FIVE [style*="border-radius:50%"] {
-
-    background:
-        var(--nezuko-orange) !important;
-}
-
-
-/* hearts */
-
-#FIVE .fa-heart {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* relationship descriptions */
-
-#FIVE p {
-
-    color:
-        var(--nezuko-text);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.8;
-}
-
-
-/* =========================================================
-   ✦ GALLERY / WARDROBE
-========================================================= */
-
-#SIX {
-
-    padding-top:
-        10px;
-}
-
-
-/* gallery cards */
-
-#SIX .carousel-item .col-md-4 > div {
-
-    position:
-        relative;
-
-    border:
-        1px solid var(--nezuko-line) !important;
-
-    background:
-        #fff !important;
-
-    box-shadow:
-        var(--nezuko-soft-shadow);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-
-/* alternating scrapbook rotation */
-
-#SIX .carousel-item
-.col-md-4:nth-child(odd) > div {
-
-    transform:
-        rotate(-.7deg);
-}
-
-
-#SIX .carousel-item
-.col-md-4:nth-child(even) > div {
-
-    transform:
-        rotate(.6deg);
-}
-
-
-#SIX .carousel-item
-.col-md-4 > div:hover {
-
-    transform:
-        translateY(-5px)
-        rotate(0deg);
-
-    box-shadow:
-        0 12px 24px rgba(70,55,45,.13);
-}
-
-
-/* outfit image background */
-
-#SIX .carousel-item
-.col-md-4 > div > div:first-child {
-
-    background:
-        var(--nezuko-paper-warm) !important;
-}
-
-
-/* outfit images */
-
-#SIX .carousel-item img {
-
-    transition:
-        transform .3s ease;
-}
-
-
-#SIX .carousel-item
-.col-md-4 > div:hover img {
-
-    transform:
-        scale(1.02);
-}
-
-
-/* outfit labels */
-
-#SIX .text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* carousel icons */
-
-#SIX .carousel-item i {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* carousel arrows */
-
-#SIX a[data-slide] {
-
-    color:
-        var(--nezuko-orange) !important;
-
-    transition:
-        opacity .2s ease;
-}
-
-
-#SIX a[data-slide]:hover {
-
-    opacity:
-        .6;
-}
-
-
-/* =========================================================
-   ✦ AESTHETIC
-========================================================= */
-
-.container-i .container-fluid
-.mt-5.pt-4 {
-
-    position:
-        relative;
-
-    border-top:
-        1px solid var(--nezuko-line) !important;
-}
-
-
-/* aesthetic title */
-
-.container-i .container-fluid
-.mt-5.pt-4
-.text-uppercase {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* aesthetic images */
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mx-n1 > div > div {
-
-    position:
-        relative;
-
-    border:
-        5px solid #fff;
-
-    outline:
-        1px solid var(--nezuko-line);
-
-    box-shadow:
-        0 5px 12px rgba(70,55,45,.08);
-
-    transition:
-        transform .2s ease;
-}
-
-
-/* scrapbook rotation */
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mx-n1 > div:nth-child(odd) > div {
-
-    transform:
-        rotate(-1deg);
-}
-
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mx-n1 > div:nth-child(even) > div {
-
-    transform:
-        rotate(1deg);
-}
-
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mx-n1 > div > div:hover {
-
-    transform:
-        rotate(0)
-        scale(1.02);
-}
-
-
-/* =========================================================
-   ✦ COLOR PALETTE
-========================================================= */
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mt-2 .col > div {
-
-    height:
-        24px !important;
-
-    border:
-        1px solid rgba(255,255,255,.7);
-
-    transition:
-        transform .2s ease;
-}
-
-
-.container-i .container-fluid
-.mt-5.pt-4
-.row.no-gutters.mt-2 .col > div:hover {
-
-    transform:
-        scaleY(1.25);
-}
-
-
-/* =========================================================
-   ✦ CREDIT
-========================================================= */
-
-.container-i .container-fluid
-.text-center.py-2 {
-
-    position:
-        relative;
-
-    color:
-        #A89AAA !important;
-
-    font-size:
-        7px !important;
-
-    letter-spacing:
-        2px !important;
-
-    border-top:
-        1px dashed var(--nezuko-line);
-
-    margin-top:
-        18px;
-}
-
-
-.container-i .container-fluid
-.text-center.py-2 a {
-
-    color:
-        var(--nezuko-orange) !important;
-}
-
-
-/* =========================================================
-   ✦ DECORATIVE ORANGE MARKS
-========================================================= */
-
-#ONE::before {
+.nezuko-section::before,
+.nezuko-aesthetic::before {
 
     content:
         "✦";
@@ -1615,73 +1072,1447 @@ div:first-child {
         absolute;
 
     top:
-        10px;
+        17px;
 
     right:
-        12px;
+        22px;
 
     color:
-        rgba(248,150,30,.25);
+        var(--nezuko-orange);
 
     font-size:
         22px;
 
-    transform:
-        rotate(15deg);
+    opacity:
+        0.65;
 
-    pointer-events:
-        none;
+    transform:
+        rotate(12deg);
 }
 
 
-#THREE::before {
+.nezuko-section::after,
+.nezuko-aesthetic::after {
 
     content:
-        "♡";
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(248,150,30,0.06) 0,
+            transparent 24%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(198,42,69,0.06) 0,
+            transparent 25%
+        );
+}
+
+
+/* =========================================================
+   ✦ TAB DISPLAY
+   IMPORTANT: STRUCTURE UNCHANGED
+========================================================= */
+
+#nezuko-profile-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile,
+
+#nezuko-personality-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile
+    + .nezuko-section-personality,
+
+#nezuko-wardrobe-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile
+    + .nezuko-section-personality
+    + .nezuko-section-wardrobe,
+
+#nezuko-relationships-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile
+    + .nezuko-section-personality
+    + .nezuko-section-wardrobe
+    + .nezuko-section-relationships,
+
+#nezuko-story-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile
+    + .nezuko-section-personality
+    + .nezuko-section-wardrobe
+    + .nezuko-section-relationships
+    + .nezuko-section-story,
+
+#nezuko-trivia-tab:checked ~ .nezuko-navigation
+    + .nezuko-section-profile
+    + .nezuko-section-personality
+    + .nezuko-section-wardrobe
+    + .nezuko-section-relationships
+    + .nezuko-section-story
+    + .nezuko-section-trivia {
+
+    display:
+        block;
+}
+
+
+/* =========================================================
+   ✦ ACTIVE TAB
+========================================================= */
+
+#nezuko-profile-tab:checked ~ .nezuko-navigation label[for="nezuko-profile-tab"],
+#nezuko-personality-tab:checked ~ .nezuko-navigation label[for="nezuko-personality-tab"],
+#nezuko-wardrobe-tab:checked ~ .nezuko-navigation label[for="nezuko-wardrobe-tab"],
+#nezuko-relationships-tab:checked ~ .nezuko-navigation label[for="nezuko-relationships-tab"],
+#nezuko-story-tab:checked ~ .nezuko-navigation label[for="nezuko-story-tab"],
+#nezuko-trivia-tab:checked ~ .nezuko-navigation label[for="nezuko-trivia-tab"] {
+
+    background:
+        var(--nezuko-orange);
+
+    border-color:
+        var(--nezuko-orange-dark);
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 4px 10px rgba(248,150,30,0.25);
+}
+
+
+/* =========================================================
+   ✦ SECTION HEADING
+========================================================= */
+
+.nezuko-section-heading {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-bottom:
+        38px;
+
+    padding-bottom:
+        18px;
+
+    border-bottom:
+        1px dashed var(--nezuko-line);
+}
+
+
+.nezuko-section-heading > span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--nezuko-orange-soft);
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        25px;
+
+    box-shadow:
+        0 4px 10px rgba(248,150,30,0.12);
+}
+
+
+.nezuko-section-heading small {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        2px;
+
+    text-transform:
+        uppercase;
+}
+
+
+.nezuko-section-heading h2 {
+
+    margin:
+        0;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        32px;
+}
+
+
+/* =========================================================
+   ✦ PROFILE
+========================================================= */
+
+.nezuko-profile-layout {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.6fr 1fr;
+
+    gap:
+        35px;
+}
+
+
+.nezuko-description p {
+
+    margin:
+        0 0 18px;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.9;
+}
+
+
+.nezuko-description p:first-child {
+
+    padding-left:
+        20px;
+
+    border-left:
+        3px solid var(--nezuko-orange);
+}
+
+
+/* facts */
+
+.nezuko-facts {
+
+    display:
+        grid;
+
+    gap:
+        12px;
+}
+
+
+.nezuko-fact-card {
+
+    position:
+        relative;
+
+    padding:
+        16px 18px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    border-left:
+        3px solid var(--nezuko-orange);
+
+    box-shadow:
+        0 3px 8px rgba(70,50,40,0.05);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.nezuko-fact-card:hover {
+
+    transform:
+        translateX(4px)
+        rotate(-0.4deg);
+}
+
+
+.nezuko-fact-card span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+}
+
+
+.nezuko-fact-card strong {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        13px;
+}
+
+
+/* =========================================================
+   ✦ GOAL
+========================================================= */
+
+.nezuko-goal {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    gap:
+        18px;
+
+    align-items:
+        center;
+
+    margin-top:
+        35px;
+
+    padding:
+        22px;
+
+    background:
+        var(--nezuko-orange-soft);
+
+    border:
+        1px dashed var(--nezuko-orange);
+
+    transform:
+        rotate(-0.3deg);
+}
+
+
+.nezuko-goal-icon {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        30px;
+}
+
+
+.nezuko-goal span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--nezuko-orange-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-goal strong {
+
+    display:
+        block;
+
+    color:
+        var(--nezuko-dark);
+}
+
+
+.nezuko-goal small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--nezuko-text-soft);
+}
+
+
+/* =========================================================
+   ✦ PROGRESS
+========================================================= */
+
+.nezuko-progress,
+.nezuko-meter {
+
+    height:
+        7px;
+
+    margin-top:
+        10px;
+
+    background:
+        #EEE8E2;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        10px;
+}
+
+
+.nezuko-progress div,
+.nezuko-meter div {
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--nezuko-orange),
+            var(--nezuko-peach)
+        );
+
+    border-radius:
+        10px;
+}
+
+
+/* =========================================================
+   ✦ PERSONALITY
+========================================================= */
+
+.nezuko-personality-layout {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap:
+        35px;
+}
+
+
+.nezuko-trait {
+
+    margin-bottom:
+        22px;
+}
+
+
+.nezuko-trait > div:first-child {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        11px;
+}
+
+
+.nezuko-meter {
+    margin:
+        0;
+}
+
+
+.nezuko-like-columns {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        12px;
+}
+
+
+.nezuko-list-box {
+
+    position:
+        relative;
+
+    padding:
+        20px;
+
+    background:
+        var(--nezuko-orange-pale);
+
+    border:
+        1px solid #F0DCC7;
+
+    transform:
+        rotate(-0.4deg);
+}
+
+
+.nezuko-list-box:nth-child(2) {
+
+    background:
+        var(--nezuko-green-soft);
+
+    border-color:
+        #D1E9DD;
+
+    transform:
+        rotate(0.4deg);
+}
+
+
+.nezuko-list-box h3 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.nezuko-list-box ul {
+
+    margin:
+        0;
+
+    padding-left:
+        17px;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   ✦ WARDROBE
+========================================================= */
+
+.nezuko-wardrobe-intro {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        var(--nezuko-orange-soft);
+
+    border:
+        1px dashed var(--nezuko-orange);
+
+    transform:
+        rotate(0.3deg);
+}
+
+
+.nezuko-wardrobe-intro strong {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        20px;
+}
+
+
+.nezuko-wardrobe-intro p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+}
+
+
+.nezuko-outfit-count {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        30px;
+
+    font-weight:
+        bold;
+
+    text-align:
+        center;
+}
+
+
+.nezuko-outfit-count small {
+
+    display:
+        block;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+
+    font-weight:
+        normal;
+}
+
+
+.nezuko-wardrobe-grid {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        22px;
+}
+
+
+.nezuko-outfit {
+
+    position:
+        relative;
+
+    overflow:
+        visible;
+
+    background:
+        var(--nezuko-paper);
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 7px 15px rgba(60,45,35,0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.nezuko-outfit:nth-child(odd) {
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.nezuko-outfit:nth-child(even) {
+
+    transform:
+        rotate(0.8deg);
+}
+
+
+.nezuko-outfit:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(0deg);
+
+    box-shadow:
+        0 14px 25px rgba(60,45,35,0.16);
+}
+
+
+.nezuko-outfit-image {
+
+    aspect-ratio:
+        1 / 1.15;
+
+    padding:
+        8px;
+
+    overflow:
+        hidden;
+
+    background:
+        #ffffff;
+}
+
+
+.nezuko-outfit-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+}
+
+
+.nezuko-outfit-info {
+
+    padding:
+        18px;
+}
+
+
+.nezuko-outfit-info > span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.nezuko-outfit-info h3 {
+
+    margin:
+        8px 0 5px;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.nezuko-outfit-info p {
+
+    margin:
+        0;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   ✦ RELATIONSHIPS
+========================================================= */
+
+.nezuko-relationship-note {
+
+    position:
+        relative;
+
+    margin-bottom:
+        28px;
+
+    padding:
+        22px;
+
+    background:
+        #FFF5CF;
+
+    border:
+        1px solid #E8DCAF;
+
+    box-shadow:
+        3px 5px 12px rgba(80,65,40,0.09);
+
+    transform:
+        rotate(-0.4deg);
+}
+
+
+.nezuko-relationship-note::before {
+
+    content:
+        "📌";
 
     position:
         absolute;
 
     top:
-        12px;
+        -14px;
 
-    right:
-        15px;
-
-    color:
-        rgba(198,42,69,.18);
+    left:
+        25px;
 
     font-size:
-        24px;
+        22px;
+}
 
-    pointer-events:
-        none;
+
+.nezuko-relationship-note span {
+
+    color:
+        var(--nezuko-orange-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-relationship-note p {
+
+    margin:
+        8px 0 0;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+.nezuko-relationship {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid var(--nezuko-line);
+
+    background:
+        var(--nezuko-paper);
+
+    box-shadow:
+        0 7px 16px rgba(60,45,35,0.09);
+}
+
+
+.nezuko-person-image {
+
+    min-height:
+        250px;
+
+    padding:
+        8px;
+
+    background:
+        var(--nezuko-paper-warm);
+}
+
+
+.nezuko-person-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+}
+
+
+.nezuko-person-content {
+
+    padding:
+        28px;
+}
+
+
+.nezuko-person-header {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+
+.nezuko-person-header span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1px;
+}
+
+
+.nezuko-person-header h3 {
+
+    margin:
+        6px 0 0;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        25px;
+}
+
+
+.nezuko-person-header > strong {
+
+    color:
+        var(--nezuko-red);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+}
+
+
+.nezuko-heart-level {
+
+    margin:
+        15px 0;
+
+    color:
+        var(--nezuko-red);
+
+    letter-spacing:
+        3px;
+}
+
+
+.nezuko-heart-level small {
+
+    display:
+        block;
+
+    margin-top:
+        5px;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0;
+}
+
+
+.nezuko-person-content p {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
+}
+
+
+.nezuko-relationship-footer {
+
+    padding:
+        20px;
+
+    color:
+        var(--nezuko-orange-dark);
+
+    font-family:
+        Georgia, serif;
+
+    text-align:
+        center;
+
+    border-top:
+        1px dashed var(--nezuko-line);
 }
 
 
 /* =========================================================
-   ✦ GENERAL TEXT
+   ✦ STORY
 ========================================================= */
 
-.container-i p {
+.nezuko-story {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap:
+        30px;
+}
+
+
+.nezuko-story-image {
+
+    min-height:
+        350px;
+
+    padding:
+        9px;
+
+    background:
+        var(--nezuko-paper);
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 7px 17px rgba(60,45,35,0.10);
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.nezuko-story-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+}
+
+
+.nezuko-story-content {
+
+    align-self:
+        center;
+}
+
+
+.nezuko-story-content > span,
+.nezuko-old-note > span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-story-content h3 {
+
+    margin:
+        10px 0 20px;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        28px;
+}
+
+
+.nezuko-story-content p {
 
     color:
         var(--nezuko-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.8;
 }
 
 
-.container-i .text-muted,
-.container-i .faded {
+.nezuko-story-content blockquote {
+
+    margin:
+        25px 0 0;
+
+    padding:
+        17px 20px;
+
+    border-left:
+        3px solid var(--nezuko-orange);
+
+    background:
+        var(--nezuko-orange-pale);
 
     color:
-        var(--nezuko-muted) !important;
+        var(--nezuko-text);
+
+    font-family:
+        Georgia, serif;
+
+    line-height:
+        1.7;
 }
 
 
-.container-i h1,
-.container-i h2,
-.container-i h3,
-.container-i h4 {
+/* =========================================================
+   ✦ TIMELINE
+========================================================= */
+
+.nezuko-timeline {
+
+    display:
+        grid;
+
+    gap:
+        12px;
+
+    margin-top:
+        35px;
+}
+
+
+.nezuko-timeline-item {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        60px 1fr;
+
+    gap:
+        18px;
+
+    padding:
+        18px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    border-left:
+        3px solid var(--nezuko-orange);
+
+    box-shadow:
+        0 3px 9px rgba(60,45,35,0.05);
+}
+
+
+.nezuko-timeline-item > span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
+}
+
+
+.nezuko-timeline-item small {
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.nezuko-timeline-item h3 {
+
+    margin:
+        5px 0;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.nezuko-timeline-item p {
+
+    margin:
+        0;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ THEN / NOW
+========================================================= */
+
+.nezuko-then-now {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
+
+    margin-top:
+        35px;
+}
+
+
+.nezuko-then-now > div {
+
+    padding:
+        25px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    border:
+        1px dashed var(--nezuko-line-dark);
+}
+
+
+.nezuko-then-now > div:nth-child(2) {
+
+    background:
+        var(--nezuko-orange-pale);
+
+    border-color:
+        var(--nezuko-orange);
+}
+
+
+.nezuko-then-now span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-then-now h3 {
+
+    margin:
+        8px 0 20px;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+}
+
+
+.nezuko-then-now p {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+}
+
+
+.nezuko-then-now strong {
+
+    margin-right:
+        5px;
 
     color:
         var(--nezuko-dark);
@@ -1689,20 +2520,515 @@ div:first-child {
 
 
 /* =========================================================
-   ✦ LINKS
+   ✦ OLD NOTE
 ========================================================= */
 
-.container-i a {
+.nezuko-old-note {
 
-    text-decoration:
-        none;
+    position:
+        relative;
+
+    margin-top:
+        30px;
+
+    padding:
+        27px;
+
+    text-align:
+        center;
+
+    background:
+        #FFF5CF;
+
+    border:
+        1px solid #E8DCAF;
+
+    box-shadow:
+        3px 5px 12px rgba(80,65,40,0.08);
+
+    transform:
+        rotate(0.4deg);
 }
 
 
-.container-i a:hover {
+.nezuko-old-note p {
 
-    text-decoration:
-        none;
+    color:
+        var(--nezuko-text);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ TRIVIA
+========================================================= */
+
+.nezuko-trivia-grid {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        18px;
+}
+
+
+.nezuko-trivia-grid article {
+
+    padding:
+        25px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 4px 10px rgba(60,45,35,0.06);
+}
+
+
+.nezuko-trivia-grid article:nth-child(even) {
+
+    background:
+        var(--nezuko-orange-pale);
+}
+
+
+.nezuko-trivia-grid article > span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-trivia-grid ul {
+
+    margin:
+        15px 0 0;
+
+    padding-left:
+        18px;
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.9;
+}
+
+
+/* =========================================================
+   ✦ SECRET
+========================================================= */
+
+.nezuko-secret {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFF0DA,
+            #FBE3E7
+        ) !important;
+
+    text-align:
+        center;
+
+    border:
+        1px dashed var(--nezuko-orange);
+}
+
+
+.nezuko-secret > div {
+
+    margin:
+        20px 0;
+
+    color:
+        var(--nezuko-red);
+
+    font-size:
+        35px;
+}
+
+
+.nezuko-secret p {
+
+    color:
+        var(--nezuko-text);
+
+    font-family:
+        Georgia, serif;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   ✦ FAVORITES
+========================================================= */
+
+.nezuko-favorites {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr repeat(4, 1fr);
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+
+    padding:
+        18px;
+
+    background:
+        var(--nezuko-dark);
+
+    box-shadow:
+        0 7px 15px rgba(50,40,35,0.15);
+}
+
+
+.nezuko-favorites > span {
+
+    color:
+        #ffffff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-favorites > div {
+
+    padding:
+        12px;
+
+    background:
+        var(--nezuko-paper);
+
+    text-align:
+        center;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.nezuko-favorites > div:hover {
+
+    transform:
+        translateY(-3px)
+        rotate(-1deg);
+}
+
+
+.nezuko-favorites strong {
+
+    display:
+        block;
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        12px;
+}
+
+
+.nezuko-favorites small {
+
+    display:
+        block;
+
+    margin-top:
+        4px;
+
+    color:
+        var(--nezuko-text-soft);
+
+    font-size:
+        9px;
+}
+
+
+/* =========================================================
+   ✦ AESTHETIC
+========================================================= */
+
+.nezuko-aesthetic {
+
+    display:
+        block;
+}
+
+
+.nezuko-aesthetic-content {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 220px;
+
+    gap:
+        25px;
+}
+
+
+.nezuko-aesthetic-images {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        14px;
+}
+
+
+.nezuko-aesthetic-images div {
+
+    aspect-ratio:
+        1;
+
+    overflow:
+        hidden;
+
+    padding:
+        6px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 5px 12px rgba(60,45,35,0.09);
+}
+
+
+.nezuko-aesthetic-images div:nth-child(odd) {
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.nezuko-aesthetic-images div:nth-child(even) {
+
+    transform:
+        rotate(1deg);
+}
+
+
+.nezuko-aesthetic-images img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+}
+
+
+/* =========================================================
+   ✦ COLOR PALETTE
+========================================================= */
+
+.nezuko-color-palette {
+
+    padding:
+        20px;
+
+    background:
+        var(--nezuko-paper-warm);
+
+    border:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 5px 12px rgba(60,45,35,0.06);
+}
+
+
+.nezuko-color-palette > span {
+
+    color:
+        var(--nezuko-orange);
+
+    font-size:
+        9px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+.nezuko-colors {
+
+    display:
+        grid;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+}
+
+
+.nezuko-colors i {
+
+    display:
+        block;
+
+    height:
+        45px;
+
+    border-radius:
+        2px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+
+/* =========================================================
+   ✦ FOOTER
+========================================================= */
+
+.nezuko-footer {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        25px;
+
+    padding:
+        22px 25px;
+
+    background:
+        rgba(64,59,58,0.96);
+
+    color:
+        #ffffff;
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        2px;
+
+    box-shadow:
+        0 9px 18px rgba(50,40,35,0.15);
+}
+
+
+.nezuko-footer::before {
+
+    content:
+        "♡";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        -14px;
+
+    padding:
+        4px 9px;
+
+    background:
+        var(--nezuko-orange);
+
+    color:
+        #ffffff;
+
+    font-size:
+        12px;
+
+    transform:
+        translateX(-50%)
+        rotate(-3deg);
 }
 
 
@@ -1712,127 +3038,160 @@ div:first-child {
 
 @media (max-width: 800px) {
 
-    body {
+    .nezuko-profile {
+
+        width:
+            calc(100% - 18px);
+
+        margin:
+            40px auto;
+    }
+
+
+    body.nezuko-page {
 
         background-attachment:
             scroll !important;
     }
 
 
-    .container-i {
-
-        padding-top:
-            20px !important;
-    }
-
-
-    .container-i > .container-fluid {
-
-        padding:
-            14px !important;
-    }
-
-
-    /* header */
-
-    .container-i .container-fluid >
-    .d-flex.justify-content-between.align-items-end {
-
-        align-items:
-            center !important;
-    }
-
-
-    .container-i .container-fluid >
-    .d-flex.justify-content-between.align-items-end
-    .text-uppercase:not(.faded) {
-
-        font-size:
-            26px !important;
-    }
-
-
-    /* portrait */
-
-    .container-i .container-fluid
-    .row.no-gutters.mb-4
-    .col-lg-4 > div {
-
-        min-height:
-            360px !important;
-    }
-
-
-    /* navigation */
-
-    .container-i .nav.nav-pills {
-
-        display:
-            grid;
+    .nezuko-hero {
 
         grid-template-columns:
-            repeat(3, 1fr);
+            1fr;
 
-        gap:
-            4px;
+        transform:
+            rotate(0);
     }
 
 
-    .container-i .nav-pills .nav-link {
-
-        padding:
-            11px 5px !important;
-
-        font-size:
-            8px !important;
-
-        letter-spacing:
-            1px !important;
-    }
-
-
-    /* tabs */
-
-    #ONE,
-    #TWO,
-    #THREE,
-    #FOUR,
-    #FIVE,
-    #SIX {
+    .nezuko-hero-image {
 
         min-height:
-            auto !important;
+            300px;
+
+        border-left:
+            0;
+
+        border-top:
+            1px solid var(--nezuko-line);
     }
 
 
-    /* about image */
-
-    #ONE .col-lg-5 img {
-
-        height:
-            340px !important;
-    }
-
-
-    /* relationships */
-
-    #FIVE .mb-4[style*="border:1px solid #eee"] {
+    .nezuko-hero-info {
 
         padding:
-            15px !important;
+            55px 25px 40px;
     }
 
 
-    /* aesthetic */
+    .nezuko-hero-info::before {
 
-    .container-i .container-fluid
-    .mt-5.pt-4
-    .row.no-gutters.mx-n1 > div > div {
-
-        height:
-            120px !important;
+        left:
+            25px;
     }
 
+
+    .nezuko-quick-data {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .nezuko-data-item:nth-child(4n) {
+
+        border-right:
+            1px dashed var(--nezuko-line);
+    }
+
+
+    .nezuko-data-item:nth-child(2n) {
+
+        border-right:
+            0;
+    }
+
+
+    .nezuko-status-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .nezuko-section,
+    .nezuko-aesthetic {
+
+        padding:
+            30px 20px;
+    }
+
+
+    .nezuko-profile-layout,
+    .nezuko-personality-layout,
+    .nezuko-story,
+    .nezuko-aesthetic-content {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .nezuko-wardrobe-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .nezuko-relationship {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .nezuko-person-image {
+
+        min-height:
+            280px;
+    }
+
+
+    .nezuko-then-now,
+    .nezuko-trivia-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .nezuko-favorites {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .nezuko-favorites > span {
+
+        grid-column:
+            1 / -1;
+
+        text-align:
+            center;
+
+        padding:
+            5px;
+    }
+
+
+    .nezuko-aesthetic-images {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
 }
 
 
@@ -1842,82 +3201,97 @@ div:first-child {
 
 @media (max-width: 500px) {
 
-    .container-i > .container-fluid {
+    .nezuko-profile {
 
-        padding:
-            10px !important;
+        width:
+            calc(100% - 12px);
+
+        margin:
+            30px auto;
     }
 
 
-    .container-i .container-fluid >
-    .d-flex.justify-content-between.align-items-end
-    .text-uppercase:not(.faded) {
+    .nezuko-navigation {
 
-        font-size:
-            22px !important;
-
-        letter-spacing:
-            1px !important;
-    }
-
-
-    .container-i .container-fluid
-    .nav.nav-pills {
+        display:
+            grid;
 
         grid-template-columns:
-            repeat(2, 1fr);
+            1fr 1fr;
     }
 
 
-    .container-i .nav-pills .nav-link {
+    .nezuko-tab {
+
+        min-width:
+            0;
 
         padding:
-            10px 4px !important;
+            12px 7px;
+
+        font-size:
+            9px;
     }
 
 
-    .container-i .container-fluid
-    .row.no-gutters.mb-4
-    .col-lg-4 > div {
+    .nezuko-hero h1 {
+
+        font-size:
+            45px;
+    }
+
+
+    .nezuko-hero-image {
 
         min-height:
-            300px !important;
+            280px;
     }
 
 
-    #ONE .col-lg-5 img {
+    .nezuko-wardrobe-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .nezuko-status-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .nezuko-aesthetic-images {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .nezuko-section-heading h2 {
+
+        font-size:
+            26px;
+    }
+
+
+    .nezuko-section-heading > span {
+
+        width:
+            42px;
 
         height:
-            300px !important;
+            42px;
+
+        font-size:
+            21px;
     }
 
 
-    #THREE {
+    .nezuko-favorites {
 
-        height:
-            auto !important;
-
-        max-height:
-            none !important;
+        grid-template-columns:
+            1fr 1fr;
     }
-
-
-    #FIVE .d-flex.justify-content-between {
-
-        flex-wrap:
-            wrap;
-
-        gap:
-            8px;
-    }
-
-
-    .container-i .container-fluid
-    .mt-5.pt-4
-    .row.no-gutters.mx-n1 > div > div {
-
-        height:
-            110px !important;
-    }
-
 }
