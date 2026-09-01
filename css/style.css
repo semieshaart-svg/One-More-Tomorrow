@@ -55,7 +55,6 @@ html {
 }
 
 body {
-
     font-family:
         "DM Sans",
         sans-serif;
@@ -63,30 +62,21 @@ body {
     color: var(--ink);
 
     background:
-
         linear-gradient(
-            rgba(116, 83, 55, 0.08),
-            rgba(116, 83, 55, 0.08)
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.18)
         ),
+        url("https://i.pinimg.com/1200x/a0/ff/fe/a0fffe9cb80ea9041fb742876b51a41a.jpg");
 
-        repeating-linear-gradient(
-            90deg,
-            rgba(255,255,255,.04) 0px,
-            rgba(255,255,255,.04) 2px,
-            transparent 2px,
-            transparent 90px
-        ),
-
-        linear-gradient(
-            120deg,
-            var(--wood-light),
-            #b48b63,
-            var(--wood-dark)
-        );
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     min-height: 100vh;
 
     overflow-x: hidden;
+
 }
 
 a {
