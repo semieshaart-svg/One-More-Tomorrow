@@ -1,2899 +1,1923 @@
-<!-- =========================================================
-     NEZUKO GAKKO — ORIGINAL STUDENT PROFILE
-     accent: #F8961E
-========================================================= -->
-
-<div class="container-i card border-0 py-5 px-0" style="margin-top:-54px;">
-
-<!-- MAIN FRAME -->
-<div class="container-fluid p-3 p-md-4" style="
-    max-width:1200px;
-    background:#fff;
-    border:1px solid #eee;
-    box-shadow:0 8px 35px rgba(0,0,0,.06);
-">
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-<div class="d-flex justify-content-between align-items-end mb-4 pb-3"
-style="border-bottom:2px solid #F8961E;">
-
-    <div>
-        <div class="text-uppercase faded"
-        style="font-size:9px; letter-spacing:4px;">
-            Student Profile
-        </div>
-
-        <div class="text-uppercase"
-        style="
-            font-size:32px;
-            line-height:1;
-            letter-spacing:3px;
-            font-weight:600;
-            color:#F8961E;
-        ">
-            Nezuko Gakko
-        </div>
-    </div>
-
-    <div style="
-        width:45px;
-        height:45px;
-        border:1px solid #F8961E;
-        border-radius:50%;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        color:#F8961E;
-        font-size:18px;
-    ">
-        <i class="fas fa-heart"></i>
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     PROFILE INTRO
-========================================================= -->
-
-<div class="row no-gutters mb-4">
-
-    <!-- IMAGE -->
-
-    <div class="col-lg-4 pr-lg-4 mb-4 mb-lg-0">
-
-        <div style="
-            background-image:url(https://f2.toyhou.se/file/f2-toyhou-se/images/126107871_pYVt25oFQ6jMOlw.png);
-            background-size:cover;
-            background-position:center;
-            min-height:420px;
-        "></div>
-
-    </div>
-
-
-    <!-- INFORMATION -->
-
-    <div class="col-lg-8">
-
-        <div class="h-100 d-flex flex-column justify-content-between">
-
-            <div>
-
-                <div class="text-uppercase mb-3"
-                style="
-                    color:#F8961E;
-                    font-size:10px;
-                    letter-spacing:3px;
-                    font-weight:600;
-                ">
-                    Personal Information
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Alias
-                        </div>
-                        <div style="font-size:16px;">Nerdie</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Gender
-                        </div>
-                        <div style="font-size:16px;">Female</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Birthday
-                        </div>
-                        <div style="font-size:16px;">April 13th</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Age
-                        </div>
-                        <div style="font-size:16px;">21</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Height
-                        </div>
-                        <div style="font-size:16px;">163</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Club
-                        </div>
-                        <div style="font-size:16px;">Literature</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Class
-                        </div>
-                        <div style="font-size:16px;">1st Year</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Demeanor
-                        </div>
-                        <div style="font-size:16px;">Shy</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Sign
-                        </div>
-                        <div style="font-size:16px;">Aries</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            CV
-                        </div>
-                        <div style="font-size:16px;">???</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Hobby
-                        </div>
-                        <div style="font-size:16px;">Calligraphy</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            MBTI
-                        </div>
-                        <div style="font-size:16px;">INFP</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Color
-                        </div>
-                        <div style="font-size:16px;">#F8961E</div>
-                    </div>
-
-                    <div class="col-md-6 mb-3">
-                        <div class="faded text-uppercase"
-                        style="font-size:8px;letter-spacing:2px;">
-                            Theme
-                        </div>
-                        <div style="font-size:16px;">
-                            Song Name
-                            <a href="SONG_LINK"
-                            style="color:#F8961E;"
-                            target="_BLANK">
-                                <i class="fas fa-music fa-fw"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- MINI INTRO -->
-
-            <div class="mt-4 p-4"
-            style="
-                background:#fafafa;
-                border-left:3px solid #F8961E;
-            ">
-
-                <div class="text-uppercase mb-2"
-                style="
-                    color:#F8961E;
-                    font-size:9px;
-                    letter-spacing:2px;
-                ">
-                    Current Status
-                </div>
-
-                <div style="font-style:italic;">
-                    "Sorry, I have a lot of work at the council today.
-                    No, I'm not tired at all."
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
-
-<div class="mb-4">
-
-<ul class="nav nav-pills justify-content-center"
-style="
-    border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
-">
-
-<li class="nav-item">
-<a class="nav-link active rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#ONE">
-<i class="fas fa-bookmark mr-1"></i> ABOUT
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#TWO">
-<i class="fas fa-sliders-h mr-1"></i> CHARACTER
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#THREE">
-<i class="fas fa-thumbtack mr-1"></i> TRIVIA
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#FOUR">
-<i class="fas fa-books mr-1"></i> STORY
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#FIVE">
-<i class="fas fa-users mr-1"></i> LINKS
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link rounded-0 px-4 py-3"
-style="font-size:9px;letter-spacing:2px;"
-data-toggle="tab" href="#SIX">
-<i class="fas fa-images mr-1"></i> GALLERY
-</a>
-</li>
-
-</ul>
-
-</div>
-
-
-<!-- =========================================================
-     LARGE TAB AREA
-========================================================= -->
-
-<div class="tab-content">
-
-
-<!-- ================= ABOUT ================= -->
-
-<div class="tab-pane active show" id="ONE"
-style="min-height:560px;">
-
-<div class="row">
-
-<!-- LEFT / TEXT -->
-
-<div class="col-lg-7 pr-lg-5 mb-4 mb-lg-0">
-
-<div class="text-uppercase mb-3"
-style="
-color:#F8961E;
-font-weight:600;
-letter-spacing:2px;
-font-size:12px;
-">
-<i class="far fa-bookmark mr-1"></i>
-About Nezuko
-</div>
-
-<p>
-Nezuko is a quiet and rather timid student who prefers books,
-quiet corners and familiar routines. She often seems distant
-at first, but in reality she simply needs some time to become
-comfortable around people.
-</p>
-
-<p>
-She is especially fond of literature and calligraphy, spending
-most of her free time in the library. Nezuko tends to notice
-small details that others overlook and remembers even the
-tiniest acts of kindness shown to her.
-</p>
-
-<p>
-Although she rarely seeks attention, she secretly wishes she
-could become more confident and courageous. Her current goal
-is to slowly step outside her comfort zone — one small thing
-at a time.
-</p>
-
-<!-- QUOTE -->
-
-<div class="p-4 mt-4"
-style="
-background:#fafafa;
-border-left:3px solid #F8961E;
-">
-
-<div style="
-font-size:22px;
-color:#F8961E;
-line-height:1;
-">
-“
-</div>
-
-<div class="font-italic mt-2">
-I think... being brave doesn't always mean
-not being afraid.
-</div>
-
-<div class="text-uppercase mt-3"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-— Nezuko
-</div>
-
-</div>
-
-<!-- MINI FACTS -->
-
-<div class="row mt-4">
-
-<div class="col-6 mb-3">
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Favorite thing
-</div>
-
-<div style="font-size:14px;">
-Old books ♡
-</div>
-
-</div>
-
-<div class="col-6 mb-3">
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Comfort place
-</div>
-
-<div style="font-size:14px;">
-The library
-</div>
-
-</div>
-
-<div class="col-6">
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Little dream
-</div>
-
-<div style="font-size:14px;">
-Speak without hesitation
-</div>
-
-</div>
-
-<div class="col-6">
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Current mood
-</div>
-
-<div style="font-size:14px;">
-Quiet ♡
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- RIGHT / IMAGE + INFO -->
-
-<div class="col-lg-5">
-
-<!-- MAIN IMAGE -->
-
-<div style="
-position:relative;
-padding:10px;
-border:1px solid #eee;
-background:#fff;
-">
-
-<div style="
-background:#fafafa;
-padding:8px;
-">
-
-<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/126721176_CNbBKiSsPcuJ2ya.jpg"
-style="
-width:100%;
-height:390px;
-object-fit:contain;
-object-position:center;
-">
-
-</div>
-
-</div>
-
-<!-- IMAGE CAPTION -->
-
-<div class="d-flex justify-content-between align-items-center mt-2 px-2">
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Student archive
-</div>
-
-<div style="
-font-size:10px;
-color:#F8961E;
-">
-♡ 001
-</div>
-
-</div>
-
-<!-- CURRENT STATUS -->
-
-<div class="p-4 mt-4"
-style="
-border:1px solid #eee;
-border-radius:14px;
-background:#fff;
-">
-
-<div class="text-uppercase mb-3"
-style="
-font-size:9px;
-letter-spacing:2px;
-color:#F8961E;
-font-weight:600;
-">
-Currently
-</div>
-
-<div class="row">
-
-<div class="col-6 mb-3">
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:1px;
-">
-Doing
-</div>
-
-<div>
-Reading
-</div>
-
-</div>
-
-<div class="col-6 mb-3">
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:1px;
-">
-Location
-</div>
-
-<div>
-Library
-</div>
-
-</div>
-
-<div class="col-6">
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:1px;
-">
-Listening
-</div>
-
-<div>
-Rain
-</div>
-
-</div>
-
-<div class="col-6">
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:1px;
-">
-Thinking
-</div>
-
-<div>
-Too much
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- GOAL -->
-
-<div class="mt-3"
-style="
-background:#F8961E;
-color:#fff;
-border-radius:14px;
-padding:17px 20px;
-">
-
-<div style="
-font-size:8px;
-letter-spacing:2px;
-text-transform:uppercase;
-opacity:.75;
-">
-Personal goal
-</div>
-
-<div style="
-font-size:15px;
-font-weight:600;
-margin-top:4px;
-">
-Become a little braver.
-</div>
-
-<div style="
-font-size:10px;
-margin-top:7px;
-opacity:.8;
-">
-Progress · 32%
-</div>
-
-<div style="
-height:4px;
-background:rgba(255,255,255,.3);
-margin-top:7px;
-">
-
-<div style="
-width:32%;
-height:4px;
-background:#fff;
-"></div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-<!-- ================= CHARACTER ================= -->
-
-<div class="tab-pane" id="TWO"
-style="min-height:560px;">
-
-<div class="text-uppercase mb-4"
-style="
-color:#F8961E;
-font-weight:600;
-letter-spacing:2px;
-font-size:12px;
-">
-<i class="far fa-sliders-h mr-1"></i>
-Character
-</div>
-
-
-<div class="row">
-
-<!-- personality bars -->
-
-<div class="col-lg-8">
-
-<!-- FRIENDLY -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Friendly</span>
-<span>Reserved</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="
-width:80%;
-background:#F8961E;
-"></div>
-</div>
-</div>
-
-
-<!-- POLITE -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Polite</span>
-<span>Blunt</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:85%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- CLEVER -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Clever</span>
-<span>Foolish</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:45%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- SENSITIVE -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Sensitive</span>
-<span>Tough</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:15%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- BRAVE -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Brave</span>
-<span>Timid</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:30%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- SINCERE -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Sincere</span>
-<span>Deceptive</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:75%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- DILIGENT -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Diligent</span>
-<span>Lazy</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:25%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- HUMOROUS -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Humorous</span>
-<span>Serious</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:85%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- AFFECTIONATE -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Affectionate</span>
-<span>Distant</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:90%;background:#F8961E;"></div>
-</div>
-</div>
-
-
-<!-- JEALOUS -->
-
-<div class="mb-4">
-<div class="d-flex justify-content-between text-uppercase small">
-<span>Jealous</span>
-<span>Trusting</span>
-</div>
-
-<div class="progress rounded-0 mt-1"
-style="height:5px;background:#eee;">
-<div style="width:40%;background:#F8961E;"></div>
-</div>
-</div>
-
-</div>
-
-
-<!-- TRAITS -->
-
-<div class="col-lg-4">
-
-<div class="row">
-
-<div class="col-12 mb-4">
-<div class="text-uppercase"
-style="color:#F8961E;font-size:10px;letter-spacing:2px;">
-Likes
-</div>
-<ul class="pl-3">
-<li>Classic literature.</li>
-<li>Night walks.</li>
-<li>Handmade bookmarks.</li>
-</ul>
-</div>
-
-<div class="col-12 mb-4">
-<div class="text-uppercase"
-style="color:#F8961E;font-size:10px;letter-spacing:2px;">
-Dislikes
-</div>
-<ul class="pl-3">
-<li>Timidity.</li>
-<li>Moles.</li>
-<li>Mustard.</li>
-</ul>
-</div>
-
-<div class="col-12 mb-4">
-<div class="text-uppercase"
-style="color:#F8961E;font-size:10px;letter-spacing:2px;">
-Strengths
-</div>
-<ul class="pl-3">
-<li>Gentle heart.</li>
-<li>Pure intentions.</li>
-<li>Deep empathy.</li>
-</ul>
-</div>
-
-<div class="col-12">
-<div class="text-uppercase"
-style="color:#F8961E;font-size:10px;letter-spacing:2px;">
-Flaws
-</div>
-<ul class="pl-3">
-<li>Easily startled.</li>
-<li>Overly submissive.</li>
-<li>Severe self-doubt.</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!--------------------------- SECTION THREE -- TRIVIA ------------------------------------>
-<div class="tab-pane px-4 py-4"
-style="
-height:425px;
-overflow-y:auto;
-overflow-x:hidden;
-"
-id="THREE">
-
-  <!-- TITLE -->
-  <div class="d-flex align-items-center mb-3">
-    <div style="
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    background:#F8961E;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-right:12px;
-    ">
-      <i class="fas fa-sparkles"></i>
-    </div>
-
-    <div>
-      <div style="
-      color:#F8961E;
-      font-size:11pt;
-      font-weight:700;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      ">
-        Trivia
-      </div>
-
-      <div class="small text-muted">
-        little things about Nezuko
-      </div>
-    </div>
-  </div>
-
-
-  <!-- TOP CARDS -->
-  <div class="row no-gutters mx-n2">
-
-
-    <!-- LITTLE THINGS -->
-    <div class="col-md-6 px-2 mb-3">
-
-      <div style="
-      border:1px solid #eee;
-      border-radius:14px;
-      padding:16px;
-      height:100%;
-      background:#fff;
-      ">
-
-        <div class="text-uppercase mb-2"
-        style="
-        color:#F8961E;
-        font-size:9pt;
-        font-weight:700;
-        letter-spacing:1.5px;
-        ">
-          <i class="far fa-heart mr-1"></i>
-          Little things
-        </div>
-
-        <ul class="mb-0 pl-3">
-
-          <li class="mb-2">
-            Always carries two pens, even though she only uses one.
-          </li>
-
-          <li class="mb-2">
-            Gets embarrassed when someone compliments her handwriting.
-          </li>
-
-          <li>
-            Keeps every handmade bookmark she receives.
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <!-- SCHOOL LIFE -->
-    <div class="col-md-6 px-2 mb-3">
-
-      <div style="
-      border:1px solid #eee;
-      border-radius:14px;
-      padding:16px;
-      height:100%;
-      background:#fff;
-      ">
-
-        <div class="text-uppercase mb-2"
-        style="
-        color:#F8961E;
-        font-size:9pt;
-        font-weight:700;
-        letter-spacing:1.5px;
-        ">
-          <i class="far fa-school mr-1"></i>
-          School life
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-6 mb-2">
-            <span class="text-muted small d-block">
-              Club
-            </span>
-            Literature
-          </div>
-
-          <div class="col-6 mb-2">
-            <span class="text-muted small d-block">
-              Favourite place
-            </span>
-            Library
-          </div>
-
-          <div class="col-6">
-            <span class="text-muted small d-block">
-              Usually
-            </span>
-            Arrives early
-          </div>
-
-          <div class="col-6">
-            <span class="text-muted small d-block">
-              After class
-            </span>
-            Reading
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- FAVORITES -->
-  <div style="
-  border:1px solid #eee;
-  border-radius:14px;
-  padding:16px;
-  background:#fff;
-  margin-bottom:16px;
-  ">
-
-    <div class="text-uppercase mb-3"
-    style="
-    color:#F8961E;
-    font-size:9pt;
-    font-weight:700;
-    letter-spacing:1.5px;
-    ">
-      <i class="far fa-star mr-1"></i>
-      Favorites
-    </div>
-
-    <div class="row no-gutters text-center">
-
-      <div class="col-6 col-md-3 px-2 mb-2">
-        <div class="small text-muted text-uppercase"
-        style="letter-spacing:1px;">
-          Book
-        </div>
-        <div style="font-weight:600;">
-          Classic novels
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 px-2 mb-2">
-        <div class="small text-muted text-uppercase"
-        style="letter-spacing:1px;">
-          Drink
-        </div>
-        <div style="font-weight:600;">
-          Milk tea
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 px-2">
-        <div class="small text-muted text-uppercase"
-        style="letter-spacing:1px;">
-          Place
-        </div>
-        <div style="font-weight:600;">
-          Quiet libraries
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 px-2">
-        <div class="small text-muted text-uppercase"
-        style="letter-spacing:1px;">
-          Season
-        </div>
-        <div style="font-weight:600;">
-          Early spring
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- LOWER CARDS -->
-  <div class="row no-gutters mx-n2">
-
-
-    <!-- HABITS -->
-    <div class="col-md-6 px-2 mb-3">
-
-      <div style="
-      border:1px solid #eee;
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      height:100%;
-      ">
-
-        <div class="text-uppercase mb-2"
-        style="
-        color:#F8961E;
-        font-size:9pt;
-        font-weight:700;
-        letter-spacing:1.5px;
-        ">
-          <i class="far fa-clock mr-1"></i>
-          Habits
-        </div>
-
-        <div class="small">
-
-          <div class="d-flex mb-2">
-            <span style="color:#F8961E;" class="mr-2">✦</span>
-            taps her pen when nervous
-          </div>
-
-          <div class="d-flex mb-2">
-            <span style="color:#F8961E;" class="mr-2">✦</span>
-            fixes other people's bookmarks
-          </div>
-
-          <div class="d-flex mb-2">
-            <span style="color:#F8961E;" class="mr-2">✦</span>
-            whispers when embarrassed
-          </div>
-
-          <div class="d-flex">
-            <span style="color:#F8961E;" class="mr-2">✦</span>
-            falls asleep while reading
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- SECRET -->
-    <div class="col-md-6 px-2 mb-3">
-
-      <div style="
-      border:1px solid #eee;
-      border-radius:14px;
-      padding:16px;
-      background:#fff;
-      height:100%;
-      ">
-
-        <div class="text-uppercase mb-2"
-        style="
-        color:#F8961E;
-        font-size:9pt;
-        font-weight:700;
-        letter-spacing:1.5px;
-        ">
-          <i class="far fa-lock mr-1"></i>
-          Secret
-        </div>
-
-        <div class="text-center py-2">
-
-          <div style="
-          font-size:22px;
-          color:#F8961E;
-          margin-bottom:6px;
-          ">
-            ♡
-          </div>
-
-          <div class="font-italic">
-            She secretly wants to become much
-            braver than people think.
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- CURRENTLY -->
-  <div style="
-  border-radius:14px;
-  background:#F8961E;
-  color:#fff;
-  padding:15px 17px;
-  margin-bottom:3px;
-  ">
-
-    <div class="row align-items-center">
-
-      <div class="col-md-3 mb-2 mb-md-0">
-
-        <div style="
-        font-size:8pt;
-        letter-spacing:2px;
-        text-transform:uppercase;
-        opacity:.8;
-        ">
-          Currently
-        </div>
-
-        <div style="
-        font-size:13pt;
-        font-weight:600;
-        ">
-          Nezuko ♡
-        </div>
-
-      </div>
-
-
-      <div class="col-6 col-md-3 mb-2 mb-md-0">
-
-        <div style="
-        font-size:8px;
-        letter-spacing:1px;
-        text-transform:uppercase;
-        opacity:.7;
-        ">
-          Reading
-        </div>
-
-        <div>
-          a classic novel
-        </div>
-
-      </div>
-
-
-      <div class="col-6 col-md-3 mb-2 mb-md-0">
-
-        <div style="
-        font-size:8px;
-        letter-spacing:1px;
-        text-transform:uppercase;
-        opacity:.7;
-        ">
-          Listening
-        </div>
-
-        <div>
-          rainy evenings
-        </div>
-
-      </div>
-
-
-      <div class="col-6 col-md-3">
-
-        <div style="
-        font-size:8px;
-        letter-spacing:1px;
-        text-transform:uppercase;
-        opacity:.7;
-        ">
-          Mood
-        </div>
-
-        <div>
-          ♡ 72% shy
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- ================= STORY ================= -->
-
-<div class="tab-pane" id="FOUR"
-style="min-height:560px;">
-
-<!-- STORY HEADER -->
-
-<div class="d-flex align-items-center mb-4">
-
-<div style="
-width:42px;
-height:42px;
-border-radius:50%;
-background:#F8961E;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-right:14px;
-">
-    <i class="fas fa-book-open"></i>
-</div>
-
-<div>
-    <div style="
-    color:#F8961E;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    ">
-        Her Story
-    </div>
-
-    <div class="small text-muted">
-        little chapters of Nezuko's life
-    </div>
-</div>
-
-</div>
-
-<!-- CHILDHOOD SECTION -->
-
-<div class="row align-items-stretch mb-5">
-
-<!-- CHILDHOOD PHOTO -->
-
-<div class="col-lg-4 mb-4 mb-lg-0">
-
-    <div style="
-    position:relative;
-    height:100%;
-    min-height:300px;
-    background:#fafafa;
-    border:1px solid #eee;
-    padding:10px;
-    ">
-
-        <div style="
-        height:100%;
-        min-height:280px;
-        background-image:url('CHILDHOOD_IMAGE_URL');
-        background-size:cover;
-        background-position:center;
-        "></div>
-
-        <div style="
-        position:absolute;
-        bottom:20px;
-        left:20px;
-        right:20px;
-        background:rgba(255,255,255,.92);
-        padding:10px 12px;
-        text-align:center;
-        ">
-
-            <div style="
-            color:#F8961E;
-            font-size:8px;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            ">
-                childhood
-            </div>
-
-            <div style="font-style:italic;font-size:12px;">
-                "She was always quieter than the others."
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- CHILDHOOD TEXT -->
-
-<div class="col-lg-8">
-
-    <div style="
-    border-left:3px solid #F8961E;
-    padding-left:22px;
-    height:100%;
-    ">
-
-        <div class="text-uppercase mb-2"
-        style="
-        color:#F8961E;
-        font-size:10px;
-        letter-spacing:2px;
-        font-weight:700;
-        ">
-            Chapter I — Childhood
-        </div>
-
-        <h4 style="
-        font-weight:600;
-        margin-bottom:15px;
-        ">
-            Before she became brave.
-        </h4>
-
-        <p>
-            Write Nezuko's childhood story here. This section can
-            describe what she was like as a little girl, her family,
-            the first things she loved, and the experiences that
-            shaped her personality.
-        </p>
-
-        <p>
-            Maybe she was always fond of books and beautiful
-            handwriting, spending quiet afternoons somewhere
-            away from the noisy children around her.
-        </p>
-
-        <div class="mt-4 p-3"
-        style="
-        background:#fafafa;
-        border-radius:10px;
-        ">
-
-            <div class="text-uppercase mb-1"
-            style="
-            color:#F8961E;
-            font-size:8px;
-            letter-spacing:2px;
-            ">
-                childhood memory
-            </div>
-
-            <div style="font-style:italic;">
-                "Write a tiny memory here..."
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- TIMELINE -->
-
-<div class="text-uppercase mb-3"
-style="
-color:#F8961E;
-font-size:10px;
-letter-spacing:2px;
-font-weight:700;
-">
-<i class="far fa-clock mr-1"></i>
-Important Chapters
-</div>
-
-<div class="row mb-5">
-
-<!-- EVENT 1 -->
-
-<div class="col-md-4 mb-3">
-
-    <div style="
-    border:1px solid #eee;
-    border-radius:14px;
-    padding:18px;
-    height:100%;
-    background:#fff;
-    ">
-
-        <div style="
-        color:#F8961E;
-        font-size:9px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-        ">
-            Age 7
-        </div>
-
-        <div style="
-        font-size:17px;
-        font-weight:600;
-        margin:7px 0;
-        ">
-            First love
-        </div>
-
-        <div class="small text-muted">
-            A little event from her childhood
-            that stayed with her.
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- EVENT 2 -->
-
-<div class="col-md-4 mb-3">
-
-    <div style="
-    border:1px solid #eee;
-    border-radius:14px;
-    padding:18px;
-    height:100%;
-    background:#fff;
-    ">
-
-        <div style="
-        color:#F8961E;
-        font-size:9px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-        ">
-            Age 14
-        </div>
-
-        <div style="
-        font-size:17px;
-        font-weight:600;
-        margin:7px 0;
-        ">
-            A turning point
-        </div>
-
-        <div class="small text-muted">
-            Something happened that changed
-            the way she saw herself.
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- EVENT 3 -->
-
-<div class="col-md-4 mb-3">
-
-    <div style="
-    border:1px solid #eee;
-    border-radius:14px;
-    padding:18px;
-    height:100%;
-    background:#fff;
-    ">
-
-        <div style="
-        color:#F8961E;
-        font-size:9px;
-        letter-spacing:2px;
-        text-transform:uppercase;
-        ">
-            Present
-        </div>
-
-        <div style="
-        font-size:17px;
-        font-weight:600;
-        margin:7px 0;
-        ">
-            Becoming brave
-        </div>
-
-        <div class="small text-muted">
-            Her current chapter — and the person
-            she is slowly becoming.
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- THEN / NOW -->
-
-<div class="row mb-5">
-
-<div class="col-md-6 mb-3">
-
-    <div style="
-    background:#fafafa;
-    border-radius:14px;
-    padding:20px;
-    height:100%;
-    ">
-
-        <div class="text-uppercase mb-3"
-        style="
-        color:#F8961E;
-        font-size:9px;
-        letter-spacing:2px;
-        font-weight:700;
-        ">
-            <i class="fas fa-seedling mr-1"></i>
-            Then
-        </div>
-
-        <div class="row">
-
-            <div class="col-6 mb-3">
-                <span class="small text-muted d-block">
-                    Personality
-                </span>
-                Very timid
-            </div>
-
-            <div class="col-6 mb-3">
-                <span class="small text-muted d-block">
-                    Dream
-                </span>
-                To disappear
-            </div>
-
-            <div class="col-6">
-                <span class="small text-muted d-block">
-                    Favourite place
-                </span>
-                Home
-            </div>
-
-            <div class="col-6">
-                <span class="small text-muted d-block">
-                    Biggest fear
-                </span>
-                Being noticed
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="col-md-6 mb-3">
-
-    <div style="
-    border:1px solid #F8961E;
-    border-radius:14px;
-    padding:20px;
-    height:100%;
-    ">
-
-        <div class="text-uppercase mb-3"
-        style="
-        color:#F8961E;
-        font-size:9px;
-        letter-spacing:2px;
-        font-weight:700;
-        ">
-            <i class="fas fa-sun mr-1"></i>
-            Now
-        </div>
-
-        <div class="row">
-
-            <div class="col-6 mb-3">
-                <span class="small text-muted d-block">
-                    Personality
-                </span>
-                Still shy
-            </div>
-
-            <div class="col-6 mb-3">
-                <span class="small text-muted d-block">
-                    Dream
-                </span>
-                To become brave
-            </div>
-
-            <div class="col-6">
-                <span class="small text-muted d-block">
-                    Favourite place
-                </span>
-                Library
-            </div>
-
-            <div class="col-6">
-                <span class="small text-muted d-block">
-                    Biggest fear
-                </span>
-                Disappointing others
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- OLD NOTE -->
-
-<div class="row align-items-center mb-4">
-
-<div class="col-lg-7 mb-3 mb-lg-0">
-
-    <div style="
-    padding:22px;
-    background:#fff9f4;
-    border:1px solid #f1dfd3;
-    border-radius:3px;
-    transform:rotate(-.5deg);
-    ">
-
-        <div class="text-uppercase mb-3"
-        style="
-        color:#F8961E;
-        font-size:8px;
-        letter-spacing:2px;
-        ">
-            Found between the pages of an old notebook
-        </div>
-
-        <div style="
-        font-family:serif;
-        font-size:15px;
-        line-height:1.8;
-        font-style:italic;
-        ">
-            "I think I want to become someone
-            who isn't afraid to speak anymore."
-        </div>
-
-        <div class="text-right mt-2 small text-muted">
-            — Nezuko, years ago
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="col-lg-5">
-
-    <div style="
-    text-align:center;
-    padding:15px;
-    ">
-
-        <div style="
-        font-size:28px;
-        color:#F8961E;
-        ">
-            ♡
-        </div>
-
-        <div class="text-uppercase"
-        style="
-        font-size:8px;
-        letter-spacing:2px;
-        color:#F8961E;
-        ">
-            unfinished chapter
-        </div>
-
-        <div class="small text-muted mt-2">
-            She still has a long way to go.
-            But for the first time, she is actually trying.
-        </div>
-
-    </div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- ================= RELATIONSHIPS ================= -->
-
-<div class="tab-pane" id="FIVE"
-style="min-height:560px;">
-
-<!-- HEADER -->
-
-<div class="d-flex justify-content-between align-items-end mb-4 pb-3"
-style="border-bottom:1px solid #eee;">
-
-<div>
-
-<div class="text-uppercase"
-style="
-color:#F8961E;
-font-size:9px;
-letter-spacing:3px;
-">
-Social archive
-</div>
-
-<div style="
-font-size:24px;
-font-weight:600;
-letter-spacing:1px;
-">
-Relationships
-</div>
-
-</div>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:2px;
-">
-03 connections
-</div>
-
-</div>
-
-<!-- ================= KOHARU ================= -->
-
-<div class="mb-4"
-style="
-border:1px solid #eee;
-background:#fff;
-padding:20px;
-">
-
-<div class="row align-items-center">
-
-<!-- AVATAR -->
-
-<div class="col-sm-auto text-center mb-3 mb-sm-0">
-
-<div style="
-position:relative;
-display:inline-block;
-">
-
-<img src="https://f2.toyhou.se/file/f2-toyhou-se/characters/40952418?1786373504"
-style="
-width:115px;
-height:115px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #fafafa;
-">
-
-<div style="
-position:absolute;
-bottom:0;
-right:0;
-width:27px;
-height:27px;
-border-radius:50%;
-background:#F8961E;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:10px;
-">
-01
-</div>
-
-</div>
-
-</div>
-
-<!-- INFO -->
-
-<div class="col">
-
-<div class="d-flex justify-content-between align-items-start">
-
-<div>
-
-<a href="https://toyhou.se/41001132.koharu-narumiya"
-style="
-font-size:20px;
-font-weight:600;
-color:#F8961E;
-">
-Koharu </a>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:2px;
-margin-top:2px;
-">
-Close friend
-</div>
-
-</div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:1px;
-color:#aaa;
-">
-FRIENDSHIP
-</div>
-
-</div>
-
-<!-- HEART LEVEL -->
-
-<div class="mt-3">
-
-<div style="
-color:#F8961E;
-font-size:14px;
-letter-spacing:3px;
-">
-
-<i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-regular fa-heart text-muted"></i>
-
-</div>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:7px;
-letter-spacing:1px;
-margin-top:4px;
-">
-Relationship level · 4 / 5
-</div>
-
-</div>
-
-<p class="mt-3 mb-0">
-Koharu sometimes sleeps on Nezuko's lap during lunchtime.
-Koharu also lets the girl come to the library to sleep, and
-while she dozes, Nezuko covers her friend with a blanket or
-reads books to her, making her friend's sleep even deeper.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= SHION ================= -->
-
-<div class="mb-4"
-style="
-border:1px solid #eee;
-background:#fff;
-padding:20px;
-">
-
-<div class="row align-items-center">
-
-<div class="col-sm-auto text-center mb-3 mb-sm-0">
-
-<div style="
-position:relative;
-display:inline-block;
-">
-
-<img src="https://f2.toyhou.se/file/f2-toyhou-se/characters/40952435?1786548920"
-style="
-width:115px;
-height:115px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #fafafa;
-">
-
-<div style="
-position:absolute;
-bottom:0;
-right:0;
-width:27px;
-height:27px;
-border-radius:50%;
-background:#F8961E;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:10px;
-">
-02
-</div>
-
-</div>
-
-</div>
-
-<div class="col">
-
-<div class="d-flex justify-content-between align-items-start">
-
-<div>
-
-<a href="https://toyhou.se/40999914.shion-totoki"
-style="
-font-size:20px;
-font-weight:600;
-color:#F8961E;
-">
-Shion </a>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:2px;
-margin-top:2px;
-">
-Role model
-</div>
-
-</div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:1px;
-color:#aaa;
-">
-ADMIRATION
-</div>
-
-</div>
-
-<div class="mt-3">
-
-<div style="
-color:#F8961E;
-font-size:14px;
-letter-spacing:3px;
-">
-
-<i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-regular fa-heart text-muted"></i>
-
-</div>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:7px;
-letter-spacing:1px;
-margin-top:4px;
-">
-Relationship level · 4 / 5
-</div>
-
-</div>
-
-<p class="mt-3 mb-0">
-Nezuko admires Shion's calmness and composure. What many find
-strange about Shion, Nezuko finds attractive. That's why Shion
-is helping Nezuko with the project
-<em>"From Now On, I Am Brave Nezuko."</em>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= CHISA ================= -->
-
-<div class="mb-4"
-style="
-border:1px solid #eee;
-background:#fff;
-padding:20px;
-">
-
-<div class="row align-items-center">
-
-<div class="col-sm-auto text-center mb-3 mb-sm-0">
-
-<div style="
-position:relative;
-display:inline-block;
-">
-
-<img src="https://f2.toyhou.se/file/f2-toyhou-se/characters/40952418?1786373504"
-style="
-width:115px;
-height:115px;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #fafafa;
-">
-
-<div style="
-position:absolute;
-bottom:0;
-right:0;
-width:27px;
-height:27px;
-border-radius:50%;
-background:#F8961E;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:10px;
-">
-03
-</div>
-
-</div>
-
-</div>
-
-<div class="col">
-
-<div class="d-flex justify-content-between align-items-start">
-
-<div>
-
-<a href="https://toyhou.se/41039467.kaoru-higuchi"
-style="
-font-size:20px;
-font-weight:600;
-color:#F8961E;
-">
-Chisa </a>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:2px;
-margin-top:2px;
-">
-Fear / admiration
-</div>
-
-</div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:1px;
-color:#aaa;
-">
-COMPLICATED
-</div>
-
-</div>
-
-<div class="mt-3">
-
-<div style="
-color:#F8961E;
-font-size:14px;
-letter-spacing:3px;
-">
-
-<i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-solid fa-heart"></i> <i class="fa-regular fa-heart text-muted"></i>
-
-</div>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:7px;
-letter-spacing:1px;
-margin-top:4px;
-">
-Relationship level · 4 / 5
-</div>
-
-</div>
-
-<p class="mt-3 mb-0">
-Chisa causes fear and panic in Nezuko — not because of some
-past conflict, but rather the opposite. Since school, Nezuko has
-remembered how Chisa stood up for her, and in the young girl's
-eyes, she became the ideal of confidence and strength. However,
-she still can't bring herself to talk to her calmly.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- FOOTNOTE -->
-
-<div class="text-center mt-4 pt-3"
-style="
-border-top:1px solid #eee;
-">
-
-<span class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-♡ connections are always changing </span>
-
-</div>
-
-</div>
-
-
-
-<!-- ================= GALLERY ================= -->
-
-<div class="tab-pane" id="SIX"
-style="min-height:560px;">
-
-<!-- HEADER -->
-
-<div class="d-flex justify-content-between align-items-end mb-4 pb-3"
-style="border-bottom:1px solid #eee;">
-
-<div>
-
-<div class="text-uppercase"
-style="
-color:#F8961E;
-font-size:9px;
-letter-spacing:3px;
-">
-Wardrobe archive
-</div>
-
-<div style="
-font-size:24px;
-font-weight:600;
-letter-spacing:1px;
-">
-Outfits
-</div>
-
-</div>
-
-<div class="text-uppercase text-muted"
-style="
-font-size:8px;
-letter-spacing:2px;
-">
-Nezuko · 06 looks
-</div>
-
-</div>
-
-<!-- ================= CAROUSEL ================= -->
-
-<div class="carousel slide" id="woop" data-ride="carousel">
-
-<div class="carousel-inner">
-
-<!-- =====================================================
-     PAGE 01
-===================================================== -->
-
-<div class="carousel-item active">
-
-<div class="row">
-
-<!-- PAJAMAS -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="PAJAMAS_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-01 · Pajamas
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-Sleepy morning
-</div>
-
-</div>
-
-<i class="far fa-moon"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SCHOOL -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="SCHOOL_UNIFORM_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-02 · School
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-School uniform
-</div>
-
-</div>
-
-<i class="fas fa-book"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SWIMWEAR -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="SWIMWEAR_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-03 · Swimwear
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-Summer day
-</div>
-
-</div>
-
-<i class="fas fa-sun"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- =====================================================
-     PAGE 02
-===================================================== -->
-
-<div class="carousel-item">
-
-<div class="row">
-
-<!-- CASUAL -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="CASUAL_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-04 · Casual
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-Everyday outfit
-</div>
-
-</div>
-
-<i class="far fa-heart"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- EVENING -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="EVENING_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-05 · Evening
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-Special occasion
-</div>
-
-</div>
-
-<i class="far fa-star"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- SPORTS -->
-
-<div class="col-md-4 mb-4">
-
-<div style="
-border:1px solid #eee;
-background:#fff;
-padding:10px;
-">
-
-<div style="
-height:350px;
-background:#fafafa;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-">
-
-<img src="SPORTS_IMAGE_URL"
-style="
-width:100%;
-height:100%;
-object-fit:contain;
-">
-
-</div>
-
-<div class="d-flex justify-content-between align-items-center mt-3">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#F8961E;
-">
-06 · Sports
-</div>
-
-<div style="
-font-size:13px;
-margin-top:3px;
-">
-Active day
-</div>
-
-</div>
-
-<i class="fas fa-running"
-style="color:#F8961E;"> </i>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= CONTROLS ================= -->
-
-<div class="d-flex justify-content-between align-items-center mt-2">
-
-<div>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-Current collection
-</div>
-
-<div style="
-font-size:12px;
-">
-Nezuko's wardrobe ♡
-</div>
-
-</div>
-
-<div class="d-flex align-items-center">
-
-<a href="#woop"
-data-slide="prev"
-style="
-color:#F8961E;
-text-decoration:none;
-margin-right:20px;
-">
-
-<i class="fal fa-angle-left fa-lg"></i>
-
-</a>
-
-<div class="text-uppercase"
-style="
-font-size:8px;
-letter-spacing:2px;
-color:#aaa;
-">
-01 / 02
-</div>
-
-<a href="#woop"
-data-slide="next"
-style="
-color:#F8961E;
-text-decoration:none;
-margin-left:20px;
-">
-
-<i class="fal fa-angle-right fa-lg"></i>
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================================
-     ALWAYS VISIBLE AESTHETIC
-========================================================= -->
-
-<div class="mt-5 pt-4"
-style="border-top:1px solid #eee;">
-
-<div class="d-flex justify-content-between align-items-center mb-3">
-
-<div class="text-uppercase"
-style="
-font-size:9px;
-letter-spacing:4px;
-color:#F8961E;
-">
-Aesthetic
-</div>
-
-<div class="faded text-uppercase"
-style="font-size:8px;letter-spacing:2px;">
-Visual notes
-</div>
-
-</div>
-
-
-<!-- MOOD IMAGES -->
-
-<div class="row no-gutters mx-n1">
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://i.pinimg.com/736x/8d/3c/cd/8d3ccd98baeccad63b0a202b087b8249.jpg');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://i.pinimg.com/736x/9e/11/cd/9e11cd57c2f73f3bff84c2309f8eb17e.jpg');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://i.pinimg.com/736x/c8/b1/bf/c8b1bfdc99f5c35c241ecbbb85e92ddf.jpg');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://i.pinimg.com/1200x/ef/c4/a1/efc4a16ed4b98fa05048ee21d9d522cb.jpg');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://static.wikia.nocookie.net/gensin-impact/images/e/ed/Icon_Emoji_Paimon%27s_Paintings_49_Linnea_1.png/revision/latest?cb=20260505225951');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://static.wikia.nocookie.net/gensin-impact/images/4/45/Icon_Emoji_Paimon%27s_Paintings_49_Linnea_2.png/revision/latest?cb=20260505225957');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://static.wikia.nocookie.net/gensin-impact/images/0/07/Icon_Emoji_Paimon%27s_Paintings_49_Linnea_3.png/revision/latest?cb=20260521164840');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-<div class="col-md-3 col-6 px-1 mb-2">
-<div style="
-background-image:url('https://static.wikia.nocookie.net/gensin-impact/images/2/2c/Icon_Emoji_Paimon%27s_Paintings_49_Linnea_4.png/revision/latest?cb=20260521164954');
-background-size:cover;
-background-position:center;
-height:150px;
-"></div>
-</div>
-
-</div>
-
-
-<!-- COLOR PALETTE -->
-
-<div class="row no-gutters mt-2">
-
-<div class="col">
-<div style="height:22px;background:#C62A45;"></div>
-</div>
-
-<div class="col">
-<div style="height:22px;background:#64CE9E;"></div>
-</div>
-
-<div class="col">
-<div style="height:22px;background:#EDB394;"></div>
-</div>
-
-<div class="col">
-<div style="height:22px;background:#F8961E;"></div>
-</div>
-
-</div>
-
-</div>
-
-
-  <!-- CREDIT -->
-
-  <div class="text-center py-2"
-       style="
-         font-size:7px;
-         letter-spacing:2px;
-         text-transform:uppercase;
-         color:#a89aaa;
-         opacity:.75;
-       ">
-
-    Designed & coded by
-
-    <a href="https://toyhou.se/Semiesha"
-       style="
-         color:inherit;
-         text-decoration:none;
-       ">
-      semiesha
-    </a>
-
-  </div>
-
-</div>
+/* =========================================================
+   ✦ NEZUKO GAKKO
+   COZY SCRAPBOOK / STUDENT ARCHIVE
+   CSS ONLY — NO JAVASCRIPT
+   accent: #F8961E
+========================================================= */
+
+
+/* =========================================================
+   ✦ NEZUKO PALETTE
+========================================================= */
+
+:root {
+
+    --nezuko-orange: #F8961E;
+    --nezuko-orange-dark: #D86F0C;
+    --nezuko-orange-soft: #FFF0DA;
+    --nezuko-orange-pale: #FFF8ED;
+
+    --nezuko-red: #C62A45;
+    --nezuko-green: #64CE9E;
+    --nezuko-peach: #EDB394;
+
+    --nezuko-cream: #FFFDF8;
+    --nezuko-paper: #FFFFFF;
+    --nezuko-paper-warm: #FAF5EE;
+
+    --nezuko-line: #E8DED5;
+    --nezuko-line-dark: #D9C9BD;
+
+    --nezuko-text: #5D5653;
+    --nezuko-muted: #9B9290;
+    --nezuko-dark: #403B3A;
+
+    --nezuko-shadow:
+        0 12px 30px rgba(80,60,45,.10);
+
+    --nezuko-soft-shadow:
+        0 5px 16px rgba(80,60,45,.07);
+}
+
+
+/* =========================================================
+   ✦ PAGE RESET
+========================================================= */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+
+    color: var(--nezuko-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        linear-gradient(
+            rgba(255,250,242,.35),
+            rgba(255,250,242,.35)
+        ),
+
+        url("https://i.pinimg.com/1200x/cb/88/71/cb8871e84d83ade275838f3c915b5999.jpg")
+        center center / cover fixed no-repeat !important;
+}
+
+
+/* soft atmospheric overlay */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,255,255,.55),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(248,150,30,.08),
+            transparent 30%
+        );
+}
+
+
+/* =========================================================
+   ✦ MAIN FRAME
+========================================================= */
+
+.container-i {
+
+    position: relative;
+
+    color: var(--nezuko-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* main white sheet */
+
+.container-i > .container-fluid {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.98),
+            rgba(255,252,247,.98)
+        ) !important;
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    box-shadow:
+        0 18px 45px rgba(65,50,40,.16) !important;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   ✦ PAPER DECORATIONS
+========================================================= */
+
+.container-i > .container-fluid::before {
+
+    content:
+        "✦  ·  ♡  ·  ✦  ·  ♡";
+
+    position: absolute;
+
+    top: 8px;
+    right: 25px;
+
+    color:
+        rgba(248,150,30,.22);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 6px;
+
+    pointer-events: none;
+}
+
+
+.container-i > .container-fluid::after {
+
+    content:
+        "NEZUKO'S LITTLE ARCHIVE ♡";
+
+    position: absolute;
+
+    bottom: 42px;
+    left: 25px;
+
+    color:
+        rgba(198,42,69,.25);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 8px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    transform:
+        rotate(-3deg);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ✦ HEADER
+========================================================= */
+
+.container-i .container-fluid > .d-flex.justify-content-between.align-items-end {
+
+    position: relative;
+
+    padding-top: 18px;
+
+    border-bottom:
+        2px solid var(--nezuko-orange) !important;
+}
+
+
+/* tiny label */
+
+.container-i .container-fluid > .d-flex
+.justify-content-between.align-items-end
+.text-uppercase.faded {
+
+    color:
+        var(--nezuko-muted) !important;
+
+    font-size:
+        8px !important;
+
+    letter-spacing:
+        4px !important;
+}
+
+
+/* Nezuko name */
+
+.container-i .container-fluid > .d-flex
+.justify-content-between.align-items-end
+.text-uppercase:not(.faded) {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        34px !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+
+/* heart circle */
+
+.container-i .container-fluid > .d-flex
+.justify-content-between.align-items-end
+[style*="border-radius:50%"] {
+
+    position: relative;
+
+    background:
+        var(--nezuko-orange-pale);
+
+    border:
+        1px solid var(--nezuko-orange) !important;
+
+    color:
+        var(--nezuko-orange) !important;
+
+    box-shadow:
+        0 4px 12px rgba(248,150,30,.12);
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* =========================================================
+   ✦ PROFILE INTRO
+========================================================= */
+
+.container-i .container-fluid > .row.no-gutters.mb-4 {
+
+    position: relative;
+
+    padding:
+        10px 5px 5px;
+}
+
+
+/* =========================================================
+   ✦ MAIN PORTRAIT
+========================================================= */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-4 {
+
+    position: relative;
+}
+
+
+/* frame around first image */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-4 > div {
+
+    position: relative;
+
+    min-height:
+        420px !important;
+
+    border:
+        8px solid #fff;
+
+    outline:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        7px 10px 22px rgba(70,55,45,.13);
+
+    transform:
+        rotate(-1deg);
+
+    background-color:
+        var(--nezuko-paper-warm);
+}
+
+
+/* little tape */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-4::before {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: -8px;
+    left: 40%;
+
+    width: 90px;
+    height: 25px;
+
+    background:
+        rgba(248,150,30,.35);
+
+    transform:
+        rotate(-4deg);
+}
+
+
+/* =========================================================
+   ✦ PERSONAL INFORMATION
+========================================================= */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8 {
+
+    color:
+        var(--nezuko-text);
+}
+
+
+/* section title */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8
+.text-uppercase.mb-3 {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        3px !important;
+}
+
+
+/* info labels */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8
+.faded.text-uppercase {
+
+    color:
+        var(--nezuko-muted) !important;
+
+    font-size:
+        8px !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+
+/* information values */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8
+.faded.text-uppercase + div {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        15px !important;
+
+    padding-top:
+        2px;
+
+}
+
+
+/* theme/song link */
+
+.container-i a {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.container-i a:hover {
+
+    color:
+        var(--nezuko-orange-dark) !important;
+
+    opacity:
+        .8;
+
+    text-decoration:
+        none;
+}
+
+
+/* =========================================================
+   ✦ CURRENT STATUS NOTE
+========================================================= */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8
+.mt-4.p-4 {
+
+    position: relative;
+
+    background:
+        var(--nezuko-orange-pale) !important;
+
+    border-left:
+        3px solid var(--nezuko-orange) !important;
+
+    box-shadow:
+        3px 5px 12px rgba(80,60,45,.06);
+
+    transform:
+        rotate(.3deg);
+}
+
+
+/* status title */
+
+.container-i .container-fluid
+.row.no-gutters.mb-4
+.col-lg-8
+.mt-4.p-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* =========================================================
+   ✦ NAVIGATION
+========================================================= */
+
+.container-i .nav.nav-pills {
+
+    position: relative;
+
+    gap: 6px;
+
+    padding:
+        8px 4px;
+
+    border-top:
+        1px solid var(--nezuko-line) !important;
+
+    border-bottom:
+        1px solid var(--nezuko-line) !important;
+}
+
+
+/* navigation tabs */
+
+.container-i .nav-pills .nav-link {
+
+    position: relative;
+
+    color:
+        var(--nezuko-muted) !important;
+
+    background:
+        transparent !important;
+
+    border:
+        1px solid transparent;
+
+    border-radius:
+        2px !important;
+
+    font-size:
+        9px !important;
+
+    letter-spacing:
+        2px !important;
+
+    transition:
+        all .2s ease;
+
+}
+
+
+/* hover */
+
+.container-i .nav-pills .nav-link:hover {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    background:
+        var(--nezuko-orange-pale) !important;
+
+    border-color:
+        var(--nezuko-orange-soft);
+}
+
+
+/* active */
+
+.container-i .nav-pills .nav-link.active {
+
+    color:
+        #fff !important;
+
+    background:
+        var(--nezuko-orange) !important;
+
+    border-color:
+        var(--nezuko-orange-dark);
+
+    box-shadow:
+        0 4px 10px rgba(248,150,30,.18);
+
+    transform:
+        rotate(-.5deg);
+}
+
+
+/* =========================================================
+   ✦ TAB CONTENT
+========================================================= */
+
+.container-i .tab-content {
+
+    position: relative;
+
+    padding-top:
+        5px;
+}
+
+
+/* all tab panes */
+
+.container-i .tab-pane {
+
+    color:
+        var(--nezuko-text);
+}
+
+
+/* =========================================================
+   ✦ SECTION TITLES
+========================================================= */
+
+.container-i .tab-pane
+.text-uppercase.mb-3,
+.container-i .tab-pane
+.text-uppercase.mb-4 {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+
+/* =========================================================
+   ✦ ABOUT
+========================================================= */
+
+#ONE {
+
+    position: relative;
+}
+
+
+/* paragraphs */
+
+#ONE p {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.9;
+
+    margin-bottom:
+        18px;
+}
+
+
+/* first paragraph */
+
+#ONE .col-lg-7 > p:first-of-type {
+
+    padding-left:
+        18px;
+
+    border-left:
+        3px solid var(--nezuko-orange);
+}
+
+
+/* quote */
+
+#ONE .col-lg-7
+.p-4.mt-4 {
+
+    position: relative;
+
+    background:
+        var(--nezuko-orange-pale) !important;
+
+    border-left:
+        3px solid var(--nezuko-orange) !important;
+
+    box-shadow:
+        0 4px 12px rgba(80,60,45,.05);
+
+    transform:
+        rotate(-.3deg);
+}
+
+
+/* giant quote symbol */
+
+#ONE .col-lg-7
+.p-4.mt-4 > div:first-child {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* quote author */
+
+#ONE .col-lg-7
+.p-4.mt-4 .text-uppercase {
+
+    color:
+        var(--nezuko-muted) !important;
+}
+
+
+/* =========================================================
+   ✦ MINI FACTS
+========================================================= */
+
+#ONE .col-lg-7 .row.mt-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-muted) !important;
+
+    font-size:
+        8px !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+
+#ONE .col-lg-7 .row.mt-4
+.text-uppercase + div {
+
+    color:
+        var(--nezuko-dark);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        13px;
+}
+
+
+/* =========================================================
+   ✦ ABOUT RIGHT IMAGE
+========================================================= */
+
+#ONE .col-lg-5 > div:first-child {
+
+    position: relative;
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    background:
+        var(--nezuko-paper-warm) !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+
+    transform:
+        rotate(1deg);
+}
+
+
+/* actual image */
+
+#ONE .col-lg-5 img {
+
+    background:
+        #fff;
+
+    border:
+        7px solid #fff;
+
+    box-shadow:
+        0 6px 16px rgba(70,55,45,.10);
+}
+
+
+/* caption */
+
+#ONE .col-lg-5
+.d-flex.justify-content-between {
+
+    color:
+        var(--nezuko-muted);
+}
+
+
+/* archive number */
+
+#ONE .col-lg-5
+.d-flex.justify-content-between
+div:last-child {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* =========================================================
+   ✦ CURRENTLY CARD
+========================================================= */
+
+#ONE .col-lg-5 .p-4.mt-4 {
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    border-radius:
+        8px !important;
+
+    background:
+        #fff !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+}
+
+
+/* title */
+
+#ONE .col-lg-5 .p-4.mt-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* labels */
+
+#ONE .col-lg-5 .p-4.mt-4
+.text-uppercase.text-muted {
+
+    color:
+        var(--nezuko-muted) !important;
+}
+
+
+/* =========================================================
+   ✦ PERSONAL GOAL
+========================================================= */
+
+#ONE .col-lg-5
+.mt-3[style*="background:#F8961E"] {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--nezuko-orange),
+            #F6A93C
+        ) !important;
+
+    border-radius:
+        8px !important;
+
+    box-shadow:
+        0 7px 18px rgba(248,150,30,.18);
+
+    transform:
+        rotate(-.4deg);
+}
+
+
+/* =========================================================
+   ✦ CHARACTER
+========================================================= */
+
+#TWO {
+
+    padding-top:
+        10px;
+}
+
+
+/* personality labels */
+
+#TWO .text-uppercase.small {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        9px !important;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+/* progress background */
+
+#TWO .progress {
+
+    background:
+        #EEE8E2 !important;
+
+    border-radius:
+        10px !important;
+
+    overflow:
+        hidden;
+}
+
+
+/* progress bars */
+
+#TWO .progress > div {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--nezuko-orange),
+            var(--nezuko-peach)
+        ) !important;
+
+    border-radius:
+        10px;
+}
+
+
+/* trait headings */
+
+#TWO .col-lg-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    font-size:
+        10px !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        2px !important;
+}
+
+
+/* lists */
+
+#TWO ul {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.9;
+}
+
+
+/* =========================================================
+   ✦ TRIVIA
+========================================================= */
+
+#THREE {
+
+    scrollbar-width:
+        thin;
+
+    scrollbar-color:
+        var(--nezuko-orange)
+        var(--nezuko-paper-warm);
+}
+
+
+/* trivia cards */
+
+#THREE .row .col-md-6 > div,
+#THREE > div > div > div {
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    border-radius:
+        10px !important;
+
+    background:
+        #fff !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+}
+
+
+/* trivia headings */
+
+#THREE .text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* list text */
+
+#THREE ul {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   ✦ TRIVIA FAVORITES
+========================================================= */
+
+#THREE > div:nth-last-child(2) {
+
+    background:
+        var(--nezuko-orange-pale) !important;
+}
+
+
+/* =========================================================
+   ✦ CURRENTLY ORANGE BAR
+========================================================= */
+
+#THREE [style*="background:#F8961E"] {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--nezuko-orange),
+            #F6A93C
+        ) !important;
+
+    border-radius:
+        9px !important;
+
+    box-shadow:
+        0 6px 16px rgba(248,150,30,.15);
+}
+
+
+/* =========================================================
+   ✦ STORY
+========================================================= */
+
+#FOUR {
+
+    padding-top:
+        10px;
+}
+
+
+/* story icon */
+
+#FOUR .d-flex.align-items-center
+div:first-child {
+
+    background:
+        var(--nezuko-orange) !important;
+
+    box-shadow:
+        0 5px 12px rgba(248,150,30,.15);
+}
+
+
+/* story title */
+
+#FOUR .d-flex.align-items-center
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* childhood image */
+
+#FOUR [style*="background-image"] {
+
+    border-radius:
+        3px;
+}
+
+
+/* story paragraphs */
+
+#FOUR p {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.85;
+}
+
+
+/* chapter border */
+
+#FOUR .border-left {
+
+    border-left:
+        3px solid var(--nezuko-orange) !important;
+}
+
+
+/* chapter cards */
+
+#FOUR .col-md-4 > div {
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    border-radius:
+        9px !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+#FOUR .col-md-4 > div:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 20px rgba(70,55,45,.10);
+}
+
+
+/* age */
+
+#FOUR .col-md-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* =========================================================
+   ✦ THEN / NOW
+========================================================= */
+
+#FOUR .row.mb-5 .col-md-6 > div {
+
+    border-radius:
+        9px !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+}
+
+
+/* THEN */
+
+#FOUR .row.mb-5
+.col-md-6:first-child > div {
+
+    background:
+        var(--nezuko-paper-warm) !important;
+}
+
+
+/* NOW */
+
+#FOUR .row.mb-5
+.col-md-6:last-child > div {
+
+    border:
+        1px solid var(--nezuko-orange) !important;
+
+    background:
+        var(--nezuko-orange-pale) !important;
+}
+
+
+/* =========================================================
+   ✦ OLD NOTE
+========================================================= */
+
+#FOUR [style*="background:#fff9f4"] {
+
+    position:
+        relative;
+
+    background:
+        #FFF8EF !important;
+
+    border:
+        1px solid #EEDCCB !important;
+
+    box-shadow:
+        4px 7px 16px rgba(70,55,45,.08);
+
+    transform:
+        rotate(-.6deg) !important;
+}
+
+
+/* =========================================================
+   ✦ RELATIONSHIPS
+========================================================= */
+
+#FIVE {
+
+    padding-top:
+        10px;
+}
+
+
+/* social archive */
+
+#FIVE .text-uppercase {
+
+    color:
+        var(--nezuko-orange);
+}
+
+
+/* relationship cards */
+
+#FIVE .mb-4[style*="border:1px solid #eee"] {
+
+    position:
+        relative;
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    background:
+        #fff !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+#FIVE .mb-4[style*="border:1px solid #eee"]:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 11px 22px rgba(70,55,45,.10);
+}
+
+
+/* avatars */
+
+#FIVE img {
+
+    border:
+        5px solid var(--nezuko-orange-pale) !important;
+
+    box-shadow:
+        0 3px 10px rgba(70,55,45,.08);
+}
+
+
+/* relationship names */
+
+#FIVE a[style*="font-size:20px"] {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    font-family:
+        Georgia,
+        serif;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+#FIVE a[style*="font-size:20px"]:hover {
+
+    opacity:
+        .7;
+}
+
+
+/* relationship number */
+
+#FIVE [style*="border-radius:50%"] {
+
+    background:
+        var(--nezuko-orange) !important;
+}
+
+
+/* hearts */
+
+#FIVE .fa-heart {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* relationship descriptions */
+
+#FIVE p {
+
+    color:
+        var(--nezuko-text);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   ✦ GALLERY / WARDROBE
+========================================================= */
+
+#SIX {
+
+    padding-top:
+        10px;
+}
+
+
+/* gallery cards */
+
+#SIX .carousel-item .col-md-4 > div {
+
+    position:
+        relative;
+
+    border:
+        1px solid var(--nezuko-line) !important;
+
+    background:
+        #fff !important;
+
+    box-shadow:
+        var(--nezuko-soft-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+/* alternating scrapbook rotation */
+
+#SIX .carousel-item
+.col-md-4:nth-child(odd) > div {
+
+    transform:
+        rotate(-.7deg);
+}
+
+
+#SIX .carousel-item
+.col-md-4:nth-child(even) > div {
+
+    transform:
+        rotate(.6deg);
+}
+
+
+#SIX .carousel-item
+.col-md-4 > div:hover {
+
+    transform:
+        translateY(-5px)
+        rotate(0deg);
+
+    box-shadow:
+        0 12px 24px rgba(70,55,45,.13);
+}
+
+
+/* outfit image background */
+
+#SIX .carousel-item
+.col-md-4 > div > div:first-child {
+
+    background:
+        var(--nezuko-paper-warm) !important;
+}
+
+
+/* outfit images */
+
+#SIX .carousel-item img {
+
+    transition:
+        transform .3s ease;
+}
+
+
+#SIX .carousel-item
+.col-md-4 > div:hover img {
+
+    transform:
+        scale(1.02);
+}
+
+
+/* outfit labels */
+
+#SIX .text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* carousel icons */
+
+#SIX .carousel-item i {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* carousel arrows */
+
+#SIX a[data-slide] {
+
+    color:
+        var(--nezuko-orange) !important;
+
+    transition:
+        opacity .2s ease;
+}
+
+
+#SIX a[data-slide]:hover {
+
+    opacity:
+        .6;
+}
+
+
+/* =========================================================
+   ✦ AESTHETIC
+========================================================= */
+
+.container-i .container-fluid
+.mt-5.pt-4 {
+
+    position:
+        relative;
+
+    border-top:
+        1px solid var(--nezuko-line) !important;
+}
+
+
+/* aesthetic title */
+
+.container-i .container-fluid
+.mt-5.pt-4
+.text-uppercase {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* aesthetic images */
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mx-n1 > div > div {
+
+    position:
+        relative;
+
+    border:
+        5px solid #fff;
+
+    outline:
+        1px solid var(--nezuko-line);
+
+    box-shadow:
+        0 5px 12px rgba(70,55,45,.08);
+
+    transition:
+        transform .2s ease;
+}
+
+
+/* scrapbook rotation */
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mx-n1 > div:nth-child(odd) > div {
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mx-n1 > div:nth-child(even) > div {
+
+    transform:
+        rotate(1deg);
+}
+
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mx-n1 > div > div:hover {
+
+    transform:
+        rotate(0)
+        scale(1.02);
+}
+
+
+/* =========================================================
+   ✦ COLOR PALETTE
+========================================================= */
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mt-2 .col > div {
+
+    height:
+        24px !important;
+
+    border:
+        1px solid rgba(255,255,255,.7);
+
+    transition:
+        transform .2s ease;
+}
+
+
+.container-i .container-fluid
+.mt-5.pt-4
+.row.no-gutters.mt-2 .col > div:hover {
+
+    transform:
+        scaleY(1.25);
+}
+
+
+/* =========================================================
+   ✦ CREDIT
+========================================================= */
+
+.container-i .container-fluid
+.text-center.py-2 {
+
+    position:
+        relative;
+
+    color:
+        #A89AAA !important;
+
+    font-size:
+        7px !important;
+
+    letter-spacing:
+        2px !important;
+
+    border-top:
+        1px dashed var(--nezuko-line);
+
+    margin-top:
+        18px;
+}
+
+
+.container-i .container-fluid
+.text-center.py-2 a {
+
+    color:
+        var(--nezuko-orange) !important;
+}
+
+
+/* =========================================================
+   ✦ DECORATIVE ORANGE MARKS
+========================================================= */
+
+#ONE::before {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    right:
+        12px;
+
+    color:
+        rgba(248,150,30,.25);
+
+    font-size:
+        22px;
+
+    transform:
+        rotate(15deg);
+
+    pointer-events:
+        none;
+}
+
+
+#THREE::before {
+
+    content:
+        "♡";
+
+    position:
+        absolute;
+
+    top:
+        12px;
+
+    right:
+        15px;
+
+    color:
+        rgba(198,42,69,.18);
+
+    font-size:
+        24px;
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   ✦ GENERAL TEXT
+========================================================= */
+
+.container-i p {
+
+    color:
+        var(--nezuko-text);
+}
+
+
+.container-i .text-muted,
+.container-i .faded {
+
+    color:
+        var(--nezuko-muted) !important;
+}
+
+
+.container-i h1,
+.container-i h2,
+.container-i h3,
+.container-i h4 {
+
+    color:
+        var(--nezuko-dark);
+}
+
+
+/* =========================================================
+   ✦ LINKS
+========================================================= */
+
+.container-i a {
+
+    text-decoration:
+        none;
+}
+
+
+.container-i a:hover {
+
+    text-decoration:
+        none;
+}
+
+
+/* =========================================================
+   ✦ MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    body {
+
+        background-attachment:
+            scroll !important;
+    }
+
+
+    .container-i {
+
+        padding-top:
+            20px !important;
+    }
+
+
+    .container-i > .container-fluid {
+
+        padding:
+            14px !important;
+    }
+
+
+    /* header */
+
+    .container-i .container-fluid >
+    .d-flex.justify-content-between.align-items-end {
+
+        align-items:
+            center !important;
+    }
+
+
+    .container-i .container-fluid >
+    .d-flex.justify-content-between.align-items-end
+    .text-uppercase:not(.faded) {
+
+        font-size:
+            26px !important;
+    }
+
+
+    /* portrait */
+
+    .container-i .container-fluid
+    .row.no-gutters.mb-4
+    .col-lg-4 > div {
+
+        min-height:
+            360px !important;
+    }
+
+
+    /* navigation */
+
+    .container-i .nav.nav-pills {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap:
+            4px;
+    }
+
+
+    .container-i .nav-pills .nav-link {
+
+        padding:
+            11px 5px !important;
+
+        font-size:
+            8px !important;
+
+        letter-spacing:
+            1px !important;
+    }
+
+
+    /* tabs */
+
+    #ONE,
+    #TWO,
+    #THREE,
+    #FOUR,
+    #FIVE,
+    #SIX {
+
+        min-height:
+            auto !important;
+    }
+
+
+    /* about image */
+
+    #ONE .col-lg-5 img {
+
+        height:
+            340px !important;
+    }
+
+
+    /* relationships */
+
+    #FIVE .mb-4[style*="border:1px solid #eee"] {
+
+        padding:
+            15px !important;
+    }
+
+
+    /* aesthetic */
+
+    .container-i .container-fluid
+    .mt-5.pt-4
+    .row.no-gutters.mx-n1 > div > div {
+
+        height:
+            120px !important;
+    }
+
+}
+
+
+/* =========================================================
+   ✦ SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .container-i > .container-fluid {
+
+        padding:
+            10px !important;
+    }
+
+
+    .container-i .container-fluid >
+    .d-flex.justify-content-between.align-items-end
+    .text-uppercase:not(.faded) {
+
+        font-size:
+            22px !important;
+
+        letter-spacing:
+            1px !important;
+    }
+
+
+    .container-i .container-fluid
+    .nav.nav-pills {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .container-i .nav-pills .nav-link {
+
+        padding:
+            10px 4px !important;
+    }
+
+
+    .container-i .container-fluid
+    .row.no-gutters.mb-4
+    .col-lg-4 > div {
+
+        min-height:
+            300px !important;
+    }
+
+
+    #ONE .col-lg-5 img {
+
+        height:
+            300px !important;
+    }
+
+
+    #THREE {
+
+        height:
+            auto !important;
+
+        max-height:
+            none !important;
+    }
+
+
+    #FIVE .d-flex.justify-content-between {
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            8px;
+    }
+
+
+    .container-i .container-fluid
+    .mt-5.pt-4
+    .row.no-gutters.mx-n1 > div > div {
+
+        height:
+            110px !important;
+    }
+
+}
