@@ -1585,6 +1585,27 @@
 
 
 /* =========================================================
+   FIRST STUDENT — IMAGE
+   OTHER STUDENTS KEEP THE PINK GRADIENT
+========================================================= */
+
+.student-card:first-child .student-image {
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,.35),
+            transparent 45%
+        ),
+        url("https://f2.toyhou.se/file/f2-toyhou-se/images/126975555_gq6b7FEmi4OiCRm.png");
+
+    background-size: auto, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+/* =========================================================
    STUDENT CONTENT
 ========================================================= */
 
