@@ -599,8 +599,8 @@
    DREAMY CAMPUS POLAROID
 ========================================================= */
 
-.yumehara-page .academy-polaroid {
-
+.yumehara-page .polaroid-art {
+   
     position: absolute;
 
     z-index: 4;
@@ -1444,8 +1444,8 @@
 }
 
 
-.yumehara-page .technical-corner {
-
+.yumehara-page .creative-corner {
+   
     position: absolute;
 
     bottom: 10px;
