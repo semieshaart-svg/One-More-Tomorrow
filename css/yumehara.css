@@ -148,14 +148,13 @@
 
     position: relative;
 
-    min-height: 850px;
+    min-height: 1050px;
 
-    padding: 150px 30px 130px;
+    padding: 150px 30px 180px;
 
-    overflow: hidden;
+    overflow: visible;
 
 }
-
 
 /* =========================================================
    DREAMY BACKGROUND BLOBS
@@ -599,32 +598,21 @@
    DREAMY CAMPUS POLAROID
 ========================================================= */
 
-.yumehara-page .polaroid-art {
-   
+.yumehara-page .academy-polaroid {
     position: absolute;
-
     z-index: 4;
-
     background: #fff;
-
     padding: 12px 12px 30px;
-
     width: 250px;
 
     box-shadow:
         0 15px 35px rgba(50,40,70,.12);
-
 }
 
-
-.yumehara-page .polaroid-campus {
-
+.yumehara-page .polaroid-art {
     right: 7%;
-
     top: 250px;
-
     transform: rotate(6deg);
-
 }
 
 
