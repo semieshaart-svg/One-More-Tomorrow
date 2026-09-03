@@ -2545,7 +2545,3 @@
 .student-card:nth-child(3) .image-placeholder {
     display: none;
 }
-
-.student-card:nth-child(11) .student-image > span {
-    display: none;
-}
